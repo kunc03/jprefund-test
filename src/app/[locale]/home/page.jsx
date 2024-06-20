@@ -1,10 +1,11 @@
 import { Header } from '@/components/header';
-import { Button } from '@/components/ui/button';
+
 import { Heading } from '@/components/heading';
 import { getTranslations } from 'next-intl/server';
 import { SummaryCard } from './_components/summary-card';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
+import { ButtonCamera } from './_components/button-camera';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -54,9 +55,7 @@ const Home = async ({ params }) => {
       </div>
 
       <div className="fixed bottom-10  w-full md:max-w-md flex justify-center">
-        <Button variant="floating" size="floating">
-          <Image src="/images/qr.svg" alt="logo" width={32} height={32} />
-        </Button>
+        <ButtonCamera />
       </div>
     </>
   );
