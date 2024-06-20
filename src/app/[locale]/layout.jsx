@@ -1,10 +1,10 @@
-import { Inter } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import '@/styles/global.css';
 import { cn } from '@/utils/cn';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Noto_Sans_JP({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -31,7 +31,7 @@ const RootLayout = async ({ children, params }) => {
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="min-h-dvh w-full max-w-md overflow-hidden bg-white border border-gray-50 ">
+          <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white border border-gray-50">
             {children}
           </main>
         </NextIntlClientProvider>

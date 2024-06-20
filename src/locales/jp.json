@@ -5,6 +5,13 @@
   "home": {
     "metaTitle" : "家",
     "metaDescription" : "ホームページ",
-     "title":"家"
+     "title":"家",
+      "recordOfTaxFreePurchases":"免税購入の記録",
+      "refundApplication":"還付申請",
+      "remittanceProcedureCompleted":"送金手続完了",
+      "nonRefundable":"還付不可",
+      "preparationHasNotBeenCompleted":"事前準備が完了していません",
+      "noTaxExemptionRecordsSaved":"免税記録が保存されていません",
+      "voucherQrCodePleaseScan":"バウチャーのQRコードを スキャンしてください"
    }
 }
