@@ -1,0 +1,10 @@
+{
+  "global": {
+   "hello" : "hello word"
+  },
+  "home": {
+   "metaTitle" : "Home",
+   "metaDescription" : "Home page",
+   "title":"Home"
+  }
+}

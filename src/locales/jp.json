@@ -1,0 +1,10 @@
+{
+  "global": {
+   "hello":"ハローワード"
+  },
+  "home": {
+    "metaTitle" : "家",
+    "metaDescription" : "ホームページ",
+     "title":"家"
+   }
+}
