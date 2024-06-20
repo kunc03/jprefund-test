@@ -27,7 +27,7 @@ const Home = async ({ params }) => {
         <SummaryCard title={t('remittanceProcedureCompleted')} />
         <SummaryCard title={t('nonRefundable')} />
       </div>
-      <div className="mt-3 h-9 bg-gray-110 text-white flex justify-center items-center gap-3">
+      <div className="mt-3 h-9 bg-gray-110 text-white flex justify-center items-center gap-3 cursor-pointer">
         <Image src="/images/info.svg" alt="logo" width={20} height={20} />
         <span className="font-medium text-2sm">
           {t('preparationHasNotBeenCompleted')}

@@ -8,7 +8,7 @@ const SummaryCard = ({ title, number = 0, className }) => {
   return (
     <div
       className={cn(
-        'py-1 px-2.5 h-16.5  rounded-lg flex flex-col justify-between whitespace-nowrap',
+        'py-1 px-2.5 h-16.5  rounded-lg flex flex-col justify-between whitespace-nowrap cursor-pointer',
         number > 0 ? 'bg-orange text-white' : 'bg-gray-500 text-gray-400',
         titleLength <= 6 ? 'w-28.5' : 'w-fit',
         className,
