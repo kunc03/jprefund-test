@@ -35,22 +35,22 @@ const Home = async ({ params }) => {
         <ChevronRight />
       </div>
 
-      <div className=" w-full md:max-w-xs mx-auto min-h-[calc(100dvh-256px)] flex justify-center items-center gap-2 flex-col ">
-        <Heading className="font-bold text-lg">
-          {t('noTaxExemptionRecordsSaved')}
-        </Heading>
-        <Heading
-          level="3"
-          className="font-medium text-lg text-center w-52.5 max-w-52.5"
-        >
-          {t('voucherQrCodePleaseScan')}
-        </Heading>
-        <Image
-          src="/images/arrow-down.svg"
-          alt="logo"
-          width={19}
-          height={218}
-        />
+      <div className=" w-full md:max-w-xs mx-auto h-[calc(100dvh-312px)] flex gap-2 flex-col pb-6">
+        <div className="flex justify-center items-center gap-2 flex-col shrink-0 mt-14">
+          <Heading className="font-bold text-lg">
+            {t('noTaxExemptionRecordsSaved')}
+          </Heading>
+          <Heading
+            level="3"
+            className="font-medium text-lg text-center w-52.5 max-w-52.5"
+          >
+            {t('voucherQrCodePleaseScan')}
+          </Heading>
+        </div>
+        <div class="flex flex-col items-center h-full relative ">
+          <div class="w-0.5 bg-gray-400 flex-grow"></div>
+          <div class="w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-400 -mt-1"></div>
+        </div>
       </div>
 
       <div className="fixed bottom-10  w-full md:max-w-md flex justify-center">
