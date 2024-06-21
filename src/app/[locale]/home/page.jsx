@@ -1,5 +1,4 @@
 import { Header } from '@/components/header';
-
 import { Heading } from '@/components/heading';
 import { getTranslations } from 'next-intl/server';
 import { SummaryCard } from './_components/summary-card';

@@ -13,5 +13,11 @@
    "preparationHasNotBeenCompleted":"Preparation has not been completed",
    "noTaxExemptionRecordsSaved":"No tax exemption records saved",
    "voucherQrCodePleaseScan":"Voucher QR code Please scan"
+  },
+  "scan":{
+    "metaTitle" : "Scan",
+    "metaDescription" : "Scan page",
+    "title":"Scan",
+    "receiptScan":"Receipt Scan"
   }
 }
