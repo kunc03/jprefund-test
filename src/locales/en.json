@@ -18,6 +18,9 @@
     "metaTitle" : "Scan",
     "metaDescription" : "Scan page",
     "title":"Scan",
-    "receiptScan":"Receipt Scan"
+    "receiptScan":"Receipt Scan",
+     "qrAlert":"If you cannot read the QR code Please enter the transaction number manually",
+     "send":"Send",
+     "enterTransactionNumber":"Enter transaction number"
   }
 }

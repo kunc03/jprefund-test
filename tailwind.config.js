@@ -69,6 +69,7 @@ module.exports = {
         sm: ['12px', { lineHeight: '22px' }],
         '2sm': ['14px', { lineHeight: '14px' }],
         md: ['15px', { lineHeight: '15px' }],
+        '2md': ['16px', { lineHeight: '26px' }],
         lg: ['18px', { lineHeight: '22px' }],
       },
       padding: {
@@ -81,13 +82,16 @@ module.exports = {
         15: '3.75rem',
         16.5: '4.25rem',
         28.5: '7.5rem',
+        56.5: '14.4375rem',
       },
       width: {
         4.5: '1.125rem',
         16.5: '4.25rem',
         28.5: '7.5rem',
         52.5: '13.125rem',
+        56.5: '14.4375rem',
       },
+      maxWidth: { 56.5: '14.4375rem' },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
