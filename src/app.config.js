@@ -1,5 +1,5 @@
 const locales = ['jp', 'en'];
-const defaultLocale = locales[1];
+const defaultLocale = locales[0];
 const localeDetection = false;
 
 const appConfig = {
