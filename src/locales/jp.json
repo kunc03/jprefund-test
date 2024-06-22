@@ -13,5 +13,14 @@
       "preparationHasNotBeenCompleted":"事前準備が完了していません",
       "noTaxExemptionRecordsSaved":"免税記録が保存されていません",
       "voucherQrCodePleaseScan":"バウチャーのQRコードを スキャンしてください"
-   }
+   },
+   "scan":{
+    "metaTitle" : "スキャン",
+    "metaDescription" : "ページをスキャン",
+    "title":"スキャン",
+    "receiptScan":"レシートスキャン",
+    "qrAlert":"QRコードが読み取れない場合は 取引番号を手入力ください",
+    "send":"送信",
+    "enterTransactionNumber":"取引番号を入力"
+  }
 }

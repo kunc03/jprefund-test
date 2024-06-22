@@ -1,5 +1,4 @@
 import { Header } from '@/components/header';
-
 import { Heading } from '@/components/heading';
 import { getTranslations } from 'next-intl/server';
 import { SummaryCard } from './_components/summary-card';
@@ -29,7 +28,7 @@ const Home = async ({ params }) => {
         <SummaryCard title={t('nonRefundable')} />
       </div>
       <div className="mt-3 h-9 bg-gray-110 text-white flex justify-center items-center gap-3 cursor-pointer">
-        <Image src="/images/info.svg" alt="logo" width={20} height={20} />
+        <Image src="/images/info.svg" alt="info" width={20} height={20} />
         <span className="font-medium text-2sm">
           {t('preparationHasNotBeenCompleted')}
         </span>
