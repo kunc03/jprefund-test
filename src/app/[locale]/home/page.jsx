@@ -5,6 +5,7 @@ import { SummaryCard } from './_components/summary-card';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import { ButtonCamera } from './_components/button-camera';
+import { DetailBottomDrawer } from './_components/detail-bottom-drawer';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -56,6 +57,8 @@ const Home = async ({ params }) => {
       <div className="fixed bottom-10  w-full md:max-w-md flex justify-center">
         <ButtonCamera />
       </div>
+
+      <DetailBottomDrawer />
     </>
   );
 };
