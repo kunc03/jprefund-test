@@ -62,7 +62,14 @@ const DetailBottomDrawer = () => {
             >
               {t('checkReceipt')}
             </Heading>
-            <Image src="/images/close.svg" alt="close" width={16} height={16} />
+            <Image
+              src="/images/close.svg"
+              alt="close"
+              width={16}
+              height={16}
+              className="cursor-pointer"
+              onClick={onCloseDrawer}
+            />
           </div>
         </DrawerHeader>
         <div className="mx-2 flex flex-col gap-6">
