@@ -47,9 +47,9 @@ const Home = async ({ params }) => {
             {t('voucherQrCodePleaseScan')}
           </Heading>
         </div>
-        <div class="flex flex-col items-center h-full relative ">
-          <div class="w-0.5 bg-gray-400 flex-grow"></div>
-          <div class="w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-400 -mt-1"></div>
+        <div className="flex flex-col items-center h-full relative ">
+          <div className="w-0.5 bg-gray-400 flex-grow"></div>
+          <div className="w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-400 -mt-1"></div>
         </div>
       </div>
 
