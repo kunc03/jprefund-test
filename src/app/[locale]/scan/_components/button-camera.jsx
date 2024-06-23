@@ -13,6 +13,11 @@ const ButtonCamera = () => {
       variant="floating"
       size="floating"
       onClick={() => {
+        if (!value) {
+          console.warn('not value selected');
+          return;
+        }
+
         onSelected(value);
         router.push('/home');
       }}
