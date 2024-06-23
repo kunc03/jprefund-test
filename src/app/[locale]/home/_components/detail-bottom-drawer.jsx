@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {
   Drawer,
@@ -14,11 +14,19 @@ import { StoreInformation } from '@/components/store-information';
 import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/utils/number';
 import { ItemDetail } from '@/components/item-detail';
+import { useQrScan } from '@/hooks/use-qr-scan';
 
 const DetailBottomDrawer = () => {
-  const [open, setIsOpen] = useState(true);
+  const [open, setIsOpen] = useState(false);
   const onCloseDrawer = () => setIsOpen(false);
   const t = useTranslations('home');
+  const { selectedValue } = useQrScan();
+
+  useEffect(() => {
+    if (selectedValue) {
+      setIsOpen(true);
+    }
+  }, [selectedValue]);
 
   const rows = [
     {
