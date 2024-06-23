@@ -1,4 +1,3 @@
-import DOMPurify from 'dompurify';
 import { cn } from '@/lib/utils';
 
 const ItemDetail = ({ rows }) => {
