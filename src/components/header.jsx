@@ -3,7 +3,7 @@ import { Badge } from './ui/badge';
 
 const Header = () => {
   return (
-    <div className="flex flex-row h-15 justify-between px-3 py-5 ">
+    <div className="flex flex-row h-15 justify-between px-3 py-5 bg-white">
       <div className="relative ">
         <Image
           src="/images/menu.svg"
