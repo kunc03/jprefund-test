@@ -12,7 +12,9 @@
    "nonRefundable":"Non-refundable",
    "preparationHasNotBeenCompleted":"Preparation has not been completed",
    "noTaxExemptionRecordsSaved":"No tax exemption records saved",
-   "voucherQrCodePleaseScan":"Voucher QR code Please scan"
+   "voucherQrCodePleaseScan":"Voucher QR code Please scan",
+   "checkReceipt":"Check Receipt",
+   "purchaseHistoryHasBeenRegistered":"Purchase history has been registered"
   },
   "scan":{
     "metaTitle" : "Scan",

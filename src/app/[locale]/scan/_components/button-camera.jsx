@@ -6,14 +6,20 @@ import { useQrScan } from '@/hooks/use-qr-scan';
 
 const ButtonCamera = () => {
   const router = useRouter();
-  const { value } = useQrScan();
+  const { value, onSelected } = useQrScan();
 
   return (
     <Button
       variant="floating"
       size="floating"
       onClick={() => {
-        console.log(value);
+        if (!value) {
+          console.warn('not value selected');
+          return;
+        }
+
+        onSelected(value);
+        router.push('/home');
       }}
     >
       <Image src="/images/camera.svg" alt="camera" width={74} height={74} />
