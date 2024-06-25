@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import MenuBar from './_components/Menu';
-import Logo from './_components/Logo';
 import Notification from './_components/Notification';
 import Search from './_components/Search';
 import ButtonProgress from './_components/ButtonProgress';
@@ -12,13 +11,15 @@ import Completed from './completed';
 import Failed from './failed';
 import { ButtonCamera } from '@/app/[locale]/home/_components/button-camera';
 import { motion } from 'framer-motion';
-import { menuSlide, slide, slideBg, slideScanner } from './ui/slide';
+import { slideScanner } from './ui/slide';
 import Image from 'next/image';
-// import Scanner from "./layout-components/Scanner";
+import AdvancePreparation from '@/app/[locale]/dashboard/advance-preparation';
+// import AdvancePreparation from './(.)advance-preparation/page';
 
 const DashboardView = () => {
   const [getItem, setGetItem] = useState('in-progress');
   const [isSearch, setIsSearch] = useState(null);
+  const [advancePrepare, setAdvancePrepare] = useState(false);
 
   const handleIsSearch = (search) => {
     setIsSearch(search);
@@ -40,7 +41,12 @@ const DashboardView = () => {
                 className="flex items-center justify-between text-2xl font-bold text-[#3F3F3F]"
               >
                 {/* Logo */}
-                <Logo />
+                <Image
+                  src="/icons/logo.svg"
+                  width={160}
+                  height={34}
+                  alt="JPrefund icon"
+                />
               </Link>
               <div className="flex gap-4 items-center">
                 <Notification />
@@ -90,7 +96,36 @@ const DashboardView = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col w-full mt-[162px]">
+      <div className="flex flex-col w-full mt-[162px]">
+        <button
+          onClick={() => setAdvancePrepare(!advancePrepare)}
+          className=" bg-[#7A7A7A] w-[451px] text-[14px] h-[37px] px-[20px] py-2 text-white border-2 border-[#7a7a7a] left-0 right-0"
+        >
+          <div className="w-[410px] flex gap-3 justify-between items-center ">
+            <Image
+              src="/icons/i.png"
+              width={150}
+              height={150}
+              alt="require"
+              className="w-[20px] h-[20px]"
+            />
+            Advance preparation is not complete
+            <span>
+              <svg
+                width="9"
+                height="17"
+                viewBox="0 0 9 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.125 0.499403C1.42187 0.499403 1.71875 0.610957 1.92187 0.834064L8.67187 7.71853C9.10937 8.16474 9.10937 8.88187 8.67187 9.34402L1.92187 16.2285C1.45312 16.6428 0.734375 16.5791 0.328125 16.101C-0.03125 15.6707 -0.0312501 15.0333 0.328125 14.603L6.28125 8.53127L0.328124 2.45956C-0.109376 2.01335 -0.109376 1.28028 0.328124 0.834064C0.531249 0.610957 0.828124 0.499403 1.125 0.499403Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
         {getItem === 'in-progress' && <InProgress />}
 
         {getItem === 'completed' && <Completed />}
@@ -98,6 +133,7 @@ const DashboardView = () => {
         {getItem === 'failed' && <Failed />}
       </div>
 
+      {advancePrepare === true && <AdvancePreparation />}
       {!isSearch && (
         <motion.div
           variants={slideScanner}
