@@ -16,6 +16,7 @@ export const generateMetadata = async ({ params }) => {
 const Home = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
+  console.log(locale);
   return (
     <>
       <Header />
