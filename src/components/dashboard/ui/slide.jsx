@@ -54,6 +54,20 @@ export const slideScanner = {
   },
 };
 
+export const slidePrepare = {
+  initial: {
+    x: '180%',
+  },
+  enter: {
+    x: 0,
+    transition: { duration: 0.25, ease: [0.76, 0, 0.24, 1] },
+  },
+  exit: {
+    x: '100%',
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+  },
+};
+
 export const advanceSlide = {
   initial: {
     y: '200%',

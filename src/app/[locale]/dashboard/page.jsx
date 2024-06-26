@@ -15,7 +15,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonCamera } from '../home/_components/button-camera';
 import {
   advanceSlide,
+  slide,
   slideBtn,
+  slidePrepare,
   slideScanner,
 } from '@/components/dashboard/ui/slide';
 import AdvancePreparation from '@/components/dashboard/advance-preparation';
@@ -32,7 +34,7 @@ const DashboardPage = () => {
   return (
     <div className="relative flex flex-col gap-4">
       <div className="w-full relative">
-        <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[446px]">
+        <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[448px]">
           {/* Header */}
           <div className="w-full flex items-center justify-between py-2 px-3 h-[54px] border-b-[1px]">
             <div className="flex justify-center">
@@ -97,36 +99,37 @@ const DashboardPage = () => {
         className={`${openAdvancePreparation ? 'max-h-[87vh] w-[446px]' : 'mt-[203px]'} flex flex-col w-full mt-[162px] duration-200`}
       >
         {/* button advance preparation */}
-        {!openAdvancePreparation && (
-          <button
-            onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
-            className="fixed top-[181px] bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] py-2 text-white border-2 left-[328px]"
+        {!openAdvancePreparation && !isSearch && (
+          <motion.div
+            variants={slidePrepare}
+            animate="enter"
+            exit="exit"
+            initial="initial"
+            className="relative top-[-37px] delay-200 duration-200"
           >
-            <div className="w-[410px] flex gap-3 justify-between items-center ">
-              <Image
-                src="/icons/i.png"
-                width={150}
-                height={150}
-                alt="require"
-                className="w-[20px] h-[20px]"
-              />
-              Advance preparation is not complete
-              <span>
-                <svg
-                  width="9"
-                  height="17"
-                  viewBox="0 0 9 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.125 0.499403C1.42187 0.499403 1.71875 0.610957 1.92187 0.834064L8.67187 7.71853C9.10937 8.16474 9.10937 8.88187 8.67187 9.34402L1.92187 16.2285C1.45312 16.6428 0.734375 16.5791 0.328125 16.101C-0.03125 15.6707 -0.0312501 15.0333 0.328125 14.603L6.28125 8.53127L0.328124 2.45956C-0.109376 2.01335 -0.109376 1.28028 0.328124 0.834064C0.531249 0.610957 0.828124 0.499403 1.125 0.499403Z"
-                    fill="white"
-                  />
-                </svg>
-              </span>
-            </div>
-          </button>
+            <button
+              onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
+              className={`fixed bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] m-[0_2px_0_0] py-2 text-white border-2 text-center`}
+            >
+              <div className="w-[410px] flex gap-1 justify-between items-center px-10">
+                <Image
+                  src="/icons/i.png"
+                  width={150}
+                  height={150}
+                  alt="require"
+                  className="w-[20px] h-[20px]"
+                />
+                Advance preparation is not complete
+                <Image
+                  src="/icons/arrow-right.png"
+                  width={150}
+                  height={150}
+                  alt="require"
+                  className="w-[9px] h-[16px]"
+                />
+              </div>
+            </button>
+          </motion.div>
         )}
 
         {/* show items progress */}

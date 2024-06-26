@@ -31,7 +31,7 @@ const RootLayout = async ({ children, params }) => {
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white border border-gray-50">
+          <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white">
             {children}
           </main>
         </NextIntlClientProvider>

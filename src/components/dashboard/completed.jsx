@@ -17,7 +17,7 @@ const Completed = () => {
             <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
               Remittance is complete
             </h3>
-            S<p className="font-semibold">2024 May 17 at 08:55 AM</p>
+            <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
           <div className="text-xs flex justify-between items-center text-[#909090]">
             <h2 className="">Total purchase price</h2>
