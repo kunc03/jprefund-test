@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import MenuBar from '@/components/dashboard/_components/Menu';
@@ -11,24 +11,48 @@ import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
 import InProgress from '@/components/dashboard/inProgress';
 import Completed from '@/components/dashboard/completed';
 import Failed from '@/components/dashboard/failed';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonCamera } from '../home/_components/button-camera';
-import { slideScanner } from '@/components/dashboard/ui/slide';
+import {
+  advanceSlide,
+  menuSlide,
+  slide,
+  slideBg,
+  slideBtn,
+  slideScanner,
+} from '@/components/dashboard/ui/slide';
+import AdvancePreparation from '@/components/dashboard/advance-preparation';
 
 const DashboardPage = () => {
   const [getItem, setGetItem] = useState('in-progress');
   const [isSearch, setIsSearch] = useState(null);
+  const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
+
+  const buttonRef = useRef(null);
 
   const handleIsSearch = (search) => {
     setIsSearch(search);
   };
 
-  // console.log(isSearch);
+  // const handleClickOutside = (event) => {
+  //   if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+  //     setOpenAdvancePreparation(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   document.addEventListener('click', handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener('click', handleClickOutside);
+  //   };
+  // }, []);
 
   return (
-    <div className="relative flex flex-col gap-4">
+    <div className="relative flex flex-col gap-4" ref={buttonRef}>
       <div className="w-full relative">
         <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[446px]">
+          {/* Header */}
           <div className="w-full flex items-center justify-between py-2 px-3 h-[54px] border-b-[1px]">
             <div className="flex justify-center">
               <MenuBar />
@@ -47,7 +71,7 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          {/* catatan pembelian */}
+          {/* button catatan pembelian */}
           <div className="flex pb-2 gap-2 flex-col text-center">
             <h2 className="font-semibold text-black/70">
               Duty-free purchase records
@@ -88,36 +112,43 @@ const DashboardPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col w-full mt-[162px]">
-        <Link
-          href={'./dashboard/advance-preparation'}
-          className=" bg-[#7A7A7A] w-[451px] text-[14px] h-[37px] px-[20px] py-2 text-white border-2 border-[#7a7a7a] left-0 right-0"
-        >
-          <div className="w-[410px] flex gap-3 justify-between items-center ">
-            <Image
-              src="/icons/i.png"
-              width={150}
-              height={150}
-              alt="require"
-              className="w-[20px] h-[20px]"
-            />
-            Advance preparation is not complete
-            <span>
-              <svg
-                width="9"
-                height="17"
-                viewBox="0 0 9 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.125 0.499403C1.42187 0.499403 1.71875 0.610957 1.92187 0.834064L8.67187 7.71853C9.10937 8.16474 9.10937 8.88187 8.67187 9.34402L1.92187 16.2285C1.45312 16.6428 0.734375 16.5791 0.328125 16.101C-0.03125 15.6707 -0.0312501 15.0333 0.328125 14.603L6.28125 8.53127L0.328124 2.45956C-0.109376 2.01335 -0.109376 1.28028 0.328124 0.834064C0.531249 0.610957 0.828124 0.499403 1.125 0.499403Z"
-                  fill="white"
-                />
-              </svg>
-            </span>
-          </div>
-        </Link>
+      <div
+        className={`${openAdvancePreparation ? 'max-h-[87vh] w-[446px]' : 'mt-[203px]'} flex flex-col w-full mt-[162px] duration-200`}
+      >
+        {/* button advance preparation */}
+        {!openAdvancePreparation && (
+          <button
+            onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
+            className="fixed top-[181px] bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] py-2 text-white border-2 left-[328px]"
+          >
+            <div className="w-[410px] flex gap-3 justify-between items-center ">
+              <Image
+                src="/icons/i.png"
+                width={150}
+                height={150}
+                alt="require"
+                className="w-[20px] h-[20px]"
+              />
+              Advance preparation is not complete
+              <span>
+                <svg
+                  width="9"
+                  height="17"
+                  viewBox="0 0 9 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.125 0.499403C1.42187 0.499403 1.71875 0.610957 1.92187 0.834064L8.67187 7.71853C9.10937 8.16474 9.10937 8.88187 8.67187 9.34402L1.92187 16.2285C1.45312 16.6428 0.734375 16.5791 0.328125 16.101C-0.03125 15.6707 -0.0312501 15.0333 0.328125 14.603L6.28125 8.53127L0.328124 2.45956C-0.109376 2.01335 -0.109376 1.28028 0.328124 0.834064C0.531249 0.610957 0.828124 0.499403 1.125 0.499403Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </div>
+          </button>
+        )}
+
+        {/* show items progress */}
         {getItem === 'in-progress' && <InProgress />}
 
         {getItem === 'completed' && <Completed />}
@@ -125,7 +156,57 @@ const DashboardPage = () => {
         {getItem === 'failed' && <Failed />}
       </div>
 
-      {!isSearch && (
+      {/* popup advance preparation */}
+
+      <AnimatePresence mode="wait">
+        {openAdvancePreparation && (
+          <>
+            <motion.div
+              variants={advanceSlide}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+              className="absolute top-0 py-10 px-5"
+            >
+              <AdvancePreparation />
+
+              <motion.div
+                variants={advanceSlide}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                onClick={() =>
+                  setOpenAdvancePreparation(!openAdvancePreparation)
+                }
+                className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/40 z-[-1]"
+              />
+
+              <motion.button
+                variants={slideBtn}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                className="absolute top-14 right-10"
+                onClick={() =>
+                  setOpenAdvancePreparation(!openAdvancePreparation)
+                }
+              >
+                <Image
+                  src="/icons/close.svg"
+                  width={16}
+                  height={16}
+                  alt="close icon"
+                  className="hover:rotate-90 duration-300"
+                />
+              </motion.button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Scanner */}
+
+      {!isSearch && !openAdvancePreparation && (
         <motion.div
           variants={slideScanner}
           animate="enter"

@@ -14,6 +14,7 @@ const Search = (props) => {
   const handleSearch = () => {
     setSearch(!search);
   };
+
   props.onSearch(search);
 
   const handleClickOutside = (event) => {

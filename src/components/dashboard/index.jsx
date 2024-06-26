@@ -13,7 +13,7 @@ import { ButtonCamera } from '@/app/[locale]/home/_components/button-camera';
 import { motion } from 'framer-motion';
 import { slideScanner } from './ui/slide';
 import Image from 'next/image';
-import AdvancePreparation from '@/app/[locale]/dashboard/advance-preparation';
+import AdvancePreparation from '@/components/dashboard/advance-preparation';
 // import AdvancePreparation from './(.)advance-preparation/page';
 
 const DashboardView = () => {

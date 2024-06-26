@@ -1,21 +1,24 @@
 import Modal from '@/components/Modal';
 import Image from 'next/image';
+// import { useRouter } from 'next/router';
 import React from 'react';
+import ButtonAdvance from '../_components/ButtonAdvancePrepare';
 
 const AdvancePreparation = () => {
-  return (
-    <div className="flex flex-col items-center justify-center p-5 bg-black/40">
-      <div className="relative bg-white flex flex-col items-center justify-center py-5 px-3 text-center rounded-[12px] gap-4">
-        <button className="absolute top-3 right-3">
-          <Image
-            src="/icons/close.svg"
-            width={16}
-            height={16}
-            alt="close icon"
-            className="hover:rotate-90 duration-300"
-          />
-        </button>
+  const [passportRegis, setPassportRegis] = React.useState(false);
+  const [refundRegist, setRefundRegist] = React.useState(false);
 
+  const handlePassportRegis = () => {
+    setPassportRegis(!passportRegis);
+  };
+
+  const handleRefundRegis = () => {
+    setRefundRegist(!refundRegist);
+  };
+
+  return (
+    <>
+      <div className="bg-white flex flex-col items-center justify-center py-5 px-3 text-center rounded-[12px] gap-4">
         <div className="flex flex-col justify-center items-center gap-3">
           <h1 className="text-xl text-center font-bold text-[#DD5C45] w-60">
             Necessary advance preparations
@@ -49,14 +52,20 @@ const AdvancePreparation = () => {
             />
 
             <button
-              // variants={slide}
-              // animate="enter"
-              // exit="exit"
-              // initial="initial"
-              // onClick={handleReset}
-              className="border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] w-[285px] h-[42px] rounded-full text-[15px] font-semibold"
+              onClick={handlePassportRegis}
+              className={`${passportRegis ? 'bg-[#dd5c45] text-white text-[13px] w-[300px]' : 'text-[15px] w-[285px]'} flex items-center justify-center gap-3 border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] h-[42px] rounded-full  font-semibold`}
             >
-              Go to Passport Registration
+              {passportRegis && (
+                <Image
+                  src="/icons/checked.svg"
+                  width={20}
+                  height={20}
+                  alt="check"
+                />
+              )}
+              {passportRegis
+                ? 'Passport registration complete'
+                : 'Go to Passport Registration'}
             </button>
 
             <p className="text-[13px] flex flex-col gap-1">
@@ -81,15 +90,28 @@ const AdvancePreparation = () => {
             />
 
             <button
-              // variants={slide}
-              // animate="enter"
-              // exit="exit"
-              // initial="initial"
-              // onClick={handleReset}
-              className="border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] w-[285px] h-[42px] rounded-full text-[15px] font-semibold"
+              onClick={handleRefundRegis}
+              className={`${refundRegist ? 'bg-[#dd5c45] text-white text-[13px] w-[300px]' : 'text-[15px] w-[285px]'} flex items-center justify-center gap-3 border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] h-[42px] rounded-full  font-semibold`}
+            >
+              {refundRegist && (
+                <Image
+                  src="/icons/checked.svg"
+                  width={20}
+                  height={20}
+                  alt="check"
+                />
+              )}
+              {refundRegist
+                ? 'Refund method registration completed'
+                : 'Register for refund method'}
+            </button>
+
+            {/* <ButtonAdvance
+              onClick={handleRefundRegis}
+              className={refundRegist && 'bg-[#dd5c45]'}
             >
               Register for refund method
-            </button>
+            </ButtonAdvance> */}
 
             <p className="text-[13px]">
               Please register at least one method for receiving your refund:
@@ -98,7 +120,7 @@ const AdvancePreparation = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
