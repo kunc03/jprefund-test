@@ -10,7 +10,7 @@ const Failed = () => {
         <p className="text-center">2024 May 26</p>
         {/* Items */}
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -48,7 +48,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -86,7 +86,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -129,7 +129,7 @@ const Failed = () => {
         <p className="text-center">2024 May 26</p>
         {/* Items */}
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -167,7 +167,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -205,7 +205,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -248,7 +248,7 @@ const Failed = () => {
         <p className="text-center">2024 May 26</p>
         {/* Items */}
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -286,7 +286,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -324,7 +324,7 @@ const Failed = () => {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/detail/status/fail"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">

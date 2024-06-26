@@ -10,14 +10,14 @@ const Completed = () => {
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
             <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
               Remittance is complete
             </h3>
-            <p className="font-semibold">2024 May 17 at 08:55 AM</p>
+            S<p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
           <div className="text-xs flex justify-between items-center text-[#909090]">
             <h2 className="">Total purchase price</h2>
@@ -49,7 +49,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -88,7 +88,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -131,7 +131,7 @@ const Completed = () => {
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -170,7 +170,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -209,7 +209,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -252,7 +252,7 @@ const Completed = () => {
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -291,7 +291,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -330,7 +330,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -373,7 +373,7 @@ const Completed = () => {
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -412,7 +412,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -451,7 +451,7 @@ const Completed = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/complete"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">

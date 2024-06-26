@@ -9,7 +9,7 @@ const InProgress = () => {
         <p className="text-center text-[#3F3F3F]">2024 May 17</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -48,7 +48,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -87,7 +87,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -130,7 +130,7 @@ const InProgress = () => {
         <p className="text-center text-[#3F3F3F]">2024 May 17</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -169,7 +169,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -208,7 +208,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -251,7 +251,7 @@ const InProgress = () => {
         <p className="text-center text-[#3F3F3F]">2024 May 17</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -290,7 +290,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -329,7 +329,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -372,7 +372,7 @@ const InProgress = () => {
         <p className="text-center text-[#3F3F3F]">2024 May 17</p>
         {/* items */}
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -411,7 +411,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">
@@ -450,7 +450,7 @@ const InProgress = () => {
         </Link>
 
         <Link
-          href="#"
+          href="/detail/status/process"
           className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
           <div className="text-xs flex justify-between items-center mb-2">

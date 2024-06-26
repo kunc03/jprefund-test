@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import MenuBar from '@/components/dashboard/_components/Menu';
@@ -15,9 +15,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonCamera } from '../home/_components/button-camera';
 import {
   advanceSlide,
-  menuSlide,
-  slide,
-  slideBg,
   slideBtn,
   slideScanner,
 } from '@/components/dashboard/ui/slide';
@@ -28,28 +25,12 @@ const DashboardPage = () => {
   const [isSearch, setIsSearch] = useState(null);
   const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
 
-  const buttonRef = useRef(null);
-
   const handleIsSearch = (search) => {
     setIsSearch(search);
   };
 
-  // const handleClickOutside = (event) => {
-  //   if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-  //     setOpenAdvancePreparation(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener('click', handleClickOutside);
-
-  //   return () => {
-  //     document.removeEventListener('click', handleClickOutside);
-  //   };
-  // }, []);
-
   return (
-    <div className="relative flex flex-col gap-4" ref={buttonRef}>
+    <div className="relative flex flex-col gap-4">
       <div className="w-full relative">
         <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[446px]">
           {/* Header */}
