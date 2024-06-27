@@ -26,7 +26,7 @@ const RootLayout = async ({ children, params }) => {
     <html lang={locale}>
       <body
         className={cn(
-          'min-h-dvh bg-white/30 antialiased flex flex-col items-center',
+          'min-h-dvh bg-gray-400 antialiased flex flex-col items-center',
           inter.className,
         )}
       >
