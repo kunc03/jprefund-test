@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-const useFormLogin = create((set, get) => ({
+const useFormRef = create((set, get) => ({
   formRef: null,
   setFormRef: (ref) => set({ formRef: ref }),
   submitForm: () => {
@@ -13,4 +13,4 @@ const useFormLogin = create((set, get) => ({
   },
 }));
 
-export { useFormLogin };
+export { useFormRef };

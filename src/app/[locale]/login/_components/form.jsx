@@ -7,13 +7,13 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form as UIForm, FormField } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { useFormLogin } from '../_hooks/use-form-login';
+import { useFormRef } from '@/hooks';
 import { useEffect, useRef } from 'react';
 
 const Form = () => {
   const t = useTranslations('login');
   const formRef = useRef();
-  const { setFormRef } = useFormLogin();
+  const { setFormRef } = useFormRef();
 
   const form = useForm({
     resolver: zodResolver(loginSchema),

@@ -9,3 +9,4 @@ export * from './ui/button';
 export * from './ui/drawer';
 export * from './ui/input';
 export * from './ui/dialog';
+export * from './ui/select';

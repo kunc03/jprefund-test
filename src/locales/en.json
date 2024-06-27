@@ -23,7 +23,19 @@
     "haveAccount": "Already have an account? {login}",
     "useNowWithoutRegistering": "{useNow} without registering",
     "login": "Log in",
-    "useNow": "Use now"
+    "useNow": "Use now",
+    "next": "Next",
+    "form": {
+      "label": {
+        "email": "Email address",
+        "phone": "Telephone number"
+      },
+      "placeholder": {
+        "email": "Email address",
+        "phone": "000-0000-0000",
+        "phoneArea": "Code"
+      }
+    }
   },
   "login": {
     "metaTitle": "Login",
@@ -91,6 +103,16 @@
       "password": {
         "required": "Password is required",
         "min": "Min password is 8"
+      }
+    },
+    "register": {
+      "email": {
+        "required": "Email is required",
+        "invalid": "Format email is wrong"
+      },
+      "phone": {
+        "required": "Phone is required",
+        "invalid": "Format phone is wrong"
       }
     }
   }

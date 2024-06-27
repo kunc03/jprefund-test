@@ -15,6 +15,7 @@ const Input = React.forwardRef(
       disabled = false,
       required = false,
       label = null,
+      pre = null,
       description = null,
       labelClassName,
       className,
@@ -23,13 +24,15 @@ const Input = React.forwardRef(
     },
     ref,
   ) => {
+    const PreInputComp = <div className="px-3">{pre}</div>;
+
     const InputComp = (
       <input
         ref={ref}
         autoComplete="off"
         autoCorrect="off"
         className={cn(
-          'flex w-full bg-white px-2.5 rounded-sm py-[18px] text-.4md border  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-.4md placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
+          'flex w-full bg-white px-2.5 rounded-sm py-18 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
         )}
         disabled={disabled}
@@ -53,10 +56,11 @@ const Input = React.forwardRef(
         <div className="!mt-0 flex flex-1 flex-col ">
           <div
             className={cn(
-              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border-gray-300 focus-within:rounded-sm',
+              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border-gray-300 focus-within:rounded-sm bg-white',
               disabled ? 'cursor-not-allowed' : '',
             )}
           >
+            {pre && PreInputComp}
             <FormControl>{InputComp}</FormControl>
           </div>
           {description && (

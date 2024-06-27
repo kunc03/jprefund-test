@@ -27,6 +27,7 @@ const remPadding = {
   14: pxToEm(14),
   18: pxToEm(18),
   53: pxToEm(53),
+  28: pxToEm(28),
   65: pxToEm(65),
 };
 
@@ -48,6 +49,7 @@ const remSize = {
   53: pxToEm(53),
   68: pxToEm(68),
   73: pxToEm(73),
+  90: pxToEm(90),
   100: pxToEm(100),
   120: pxToEm(120),
   128: pxToEm(128),
@@ -82,6 +84,7 @@ const remFontSize = {
   1521: [pxToEm(15), { lineHeight: pxToEm(21) }],
   1522: [pxToEm(15), { lineHeight: pxToEm(22) }],
   1527: [pxToEm(15), { lineHeight: pxToEm(27) }],
+  1613: [pxToEm(16), { lineHeight: pxToEm(13) }],
   1620.8: [pxToEm(16), { lineHeight: pxToEm(20.8) }],
   1622: [pxToEm(16), { lineHeight: pxToEm(22) }],
   1616: [pxToEm(16), { lineHeight: pxToEm(16) }],

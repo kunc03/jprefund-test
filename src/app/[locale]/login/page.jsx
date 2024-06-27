@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Form, ButtonLogin } from './_components';
+import Link from 'next/link';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -28,7 +29,11 @@ const Login = async ({ params }) => {
       <div className="flex w-full shrink-0 flex-col items-center gap-9">
         <div className="text-center text-1527 text-gray">
           <p className="font-normal">{t('registered')}</p>
-          <p className="font-bold underline">{t('createAccount')}</p>
+          <Link href="/register">
+            <p className="cursor-pointer font-bold underline">
+              {t('createAccount')}
+            </p>
+          </Link>
         </div>
 
         <ButtonLogin />

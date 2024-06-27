@@ -22,7 +22,19 @@
     "haveAccount": "すでにアカウントをお持ちですか? {login}",
     "useNowWithoutRegistering": "登録せずに {useNow}",
     "login": "ログイン",
-    "useNow": "今すぐ使う"
+    "useNow": "今すぐ使う",
+    "next": "次へ",
+    "form": {
+      "label": {
+        "email": "メールアドレス",
+        "phone": "電話番号"
+      },
+      "placeholder": {
+        "email": "メールアドレス",
+        "phone": "000-0000-0000",
+        "phoneArea": "コード"
+      }
+    }
   },
   "login": {
     "metaTitle": "ログイン",
@@ -90,6 +102,16 @@
       "password": {
         "required": "パスワードが必要",
         "min": "最小パスワードは 8 です"
+      }
+    },
+    "register": {
+      "email": {
+        "required": "メールアドレスは必須です",
+        "invalid": "メールの形式が間違っています"
+      },
+      "phone": {
+        "required": "電話番号は必須です",
+        "invalid": "電話機のフォーマットが間違っています"
       }
     }
   }
