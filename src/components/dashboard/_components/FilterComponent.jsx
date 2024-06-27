@@ -96,7 +96,7 @@ const FilterComponent = () => {
               className={` ${
                 refundAmount === 'high-to-low'
                   ? 'border-[#DD5C45]'
-                  : 'border-gray-600  text-[#3F3F3F]'
+                  : 'border-[#cfcece] text-[#3F3F3F]'
               } item flex justify-between items-center p-3 rounded-[4px] text-[13px] border-[2px] mb-2`}
             >
               Refund amount: Highest to Lowest
@@ -176,7 +176,7 @@ const FilterComponent = () => {
                 className={`flex justify-center items-center p-3 border-[2px] rounded-[4px] ${
                   status === 'store_approved'
                     ? 'border-[#DD5C45] text-[#dd5c45]'
-                    : 'border-[#CFCECE] text-gray-600'
+                    : 'border-[#cfcece] text-[#3F3F3F]'
                 } w-full mb-2`}
               >
                 Store Approval
@@ -186,7 +186,7 @@ const FilterComponent = () => {
                 className={`item flex justify-center items-center p-3 border-[2px] rounded-[4px] ${
                   status === 'end_date'
                     ? 'border-[#DD5C45] text-[#dd5c45]'
-                    : 'border-[#CFCECE] text-gray-600'
+                    : 'border-[#cfcece] text-[#3F3F3F]'
                 } w-full mb-2`}
               >
                 End date
@@ -201,9 +201,9 @@ const FilterComponent = () => {
               exit="exit"
               initial="initial"
               onClick={handleReset}
-              className="border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] w-[249px] h-[42px] rounded-full text-[15px] font-semibold"
+              className="border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] w-[70%] h-[42px] rounded-full text-[15px] font-bold font-sans"
             >
-              Reset filters
+              Reset Filters
             </motion.button>
             <motion.button
               variants={slide}
@@ -211,9 +211,9 @@ const FilterComponent = () => {
               animate="enter"
               exit="exit"
               initial="initial"
-              className="bg-[#DD5C45] text-white p-2 w-[249px] h-[42px] rounded-full text-[15px] font-semibold"
+              className="bg-[#DD5C45] text-white p-2 w-[70%] h-[42px] rounded-full text-[15px] font-bold font-sans"
             >
-              Apply filter
+              Apply Filter
             </motion.button>
           </div>
         </div>
