@@ -2,6 +2,29 @@
   "global": {
     "hello": "hello word"
   },
+  "register": {
+    "metaTitle": "Register",
+    "metaDescription": "Register page",
+    "title": "Register",
+    "register": "Register",
+    "registered": "Not registered yet?",
+    "createAccount": "Create an account",
+    "continueWithApple": "Continue with your Apple account",
+    "continueWithGoogle": "Continue with your Google account",
+    "continueWithFacebook": "Continue with Facebook",
+    "continueWithTwitter": "Continue with X account",
+    "continueWithEmail": "Create an account by email",
+    "continueWithPhone": "Create an account with your phone number",
+    "or": "Or",
+    "acceptTermCondition": "By registering, you agree to our {term}, {privacyPolicy} {cookies}.",
+    "term": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "cookies": "and Cookies",
+    "haveAccount": "Already have an account? {login}",
+    "useNowWithoutRegistering": "{useNow} without registering",
+    "login": "Log in",
+    "useNow": "Use now"
+  },
   "login": {
     "metaTitle": "Login",
     "metaDescription": "Login page",

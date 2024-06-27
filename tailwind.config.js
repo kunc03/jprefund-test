@@ -15,6 +15,8 @@ const remBorderRadius = {
 
 const remGap = {
   7: pxToEm(7),
+  8: pxToEm(8),
+  38: pxToEm(38),
 };
 
 const remPadding = {
@@ -26,6 +28,10 @@ const remPadding = {
   18: pxToEm(18),
   53: pxToEm(53),
   65: pxToEm(65),
+};
+
+const remMargin = {
+  28.5: pxToEm(28.5),
 };
 
 const remSize = {
@@ -55,6 +61,7 @@ const remSize = {
   300: pxToEm(300),
   318: pxToEm(318),
   324: pxToEm(324),
+  334: pxToEm(334),
   340: pxToEm(340),
 };
 
@@ -77,10 +84,13 @@ const remFontSize = {
   1527: [pxToEm(15), { lineHeight: pxToEm(27) }],
   1620.8: [pxToEm(16), { lineHeight: pxToEm(20.8) }],
   1622: [pxToEm(16), { lineHeight: pxToEm(22) }],
+  1616: [pxToEm(16), { lineHeight: pxToEm(16) }],
   1626: [pxToEm(16), { lineHeight: pxToEm(26) }],
+  1722: [pxToEm(17), { lineHeight: pxToEm(22) }],
   1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
   2021: [pxToEm(20), { lineHeight: pxToEm(21) }],
   2022: [pxToEm(20), { lineHeight: pxToEm(22) }],
+  2122: [pxToEm(21), { lineHeight: pxToEm(22) }],
 };
 
 const tailwindConfig = {
@@ -161,6 +171,7 @@ const tailwindConfig = {
       width: {
         ...remSize,
       },
+      margin: { ...remMargin },
       minHeight: { ...remSize },
       minWidth: { ...remSize },
       maxWidth: { ...remSize },

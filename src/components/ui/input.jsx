@@ -39,7 +39,7 @@ const Input = React.forwardRef(
     );
 
     if (!hasForm) {
-      return { InputComp };
+      return InputComp;
     }
 
     return (

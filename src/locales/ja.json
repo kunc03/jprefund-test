@@ -2,6 +2,28 @@
   "global": {
     "hello": "ハローワード"
   },
+  "register": {
+    "metaTitle": "登録する",
+    "metaDescription": "登録ページ",
+    "title": "登録する",
+    "register": "登録する",
+    "createAccount": "アカウントを作成",
+    "continueWithApple": "Appleアカウントで続ける",
+    "continueWithGoogle": "Googleアカウントで続ける",
+    "continueWithFacebook": "Facebookアカウントで続ける",
+    "continueWithTwitter": "Xアカウントで続ける",
+    "continueWithEmail": "メールでアカウント作成",
+    "continueWithPhone": "電話番号でアカウント作成",
+    "or": "または",
+    "acceptTermCondition": "登録すると{term}, {privacyPolicy}, {cookies} に同意したものとみなされます",
+    "term": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "cookies": "Cookie の使用",
+    "haveAccount": "すでにアカウントをお持ちですか? {login}",
+    "useNowWithoutRegistering": "登録せずに {useNow}",
+    "login": "ログイン",
+    "useNow": "今すぐ使う"
+  },
   "login": {
     "metaTitle": "ログイン",
     "metaDescription": "ログインページ",
