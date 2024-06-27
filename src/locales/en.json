@@ -2,6 +2,25 @@
   "global": {
    "hello" : "hello word"
   },
+  "login":{
+    "metaTitle" : "Login",
+    "metaDescription" : "Login page",
+    "title":"Login",
+    "login":"Login",
+    "form":{
+      "label":{
+        "email":"Email address or phone number",
+        "password":"Password",
+        "forgetPass":"for those who have forgotten their password"
+      },
+      "placeholder":{
+        "email":"Email address or phone number",
+        "password":"At least 8 alphanumeric characters"
+      }
+    },
+    "registered":"Not registered yet?",
+    "createAccount":"Create an account"
+  },
   "home": {
    "metaTitle" : "Home",
    "metaDescription" : "Home page",
@@ -24,5 +43,20 @@
      "qrAlert":"If you cannot read the QR code Please enter the transaction number manually",
      "send":"Send",
      "enterTransactionNumber":"Enter transaction number"
+  },
+  "zodError":{
+    "login":{
+      "email":{
+        "required":"Email is required",
+        "invalid":"Format email is wrong"
+      },
+      "phone":{
+        "invalid":"Format phone is wrong"
+      },
+      "password":{
+        "required":"Password is required",
+        "min":"Min password is 8"
+      }
+    }
   }
 }
