@@ -13,8 +13,12 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-const DatePicker = ({ label }) => {
-  const [date, setDate] = useState();
+const DatePicker = ({
+  label,
+  onHandleSelected,
+  selectedDate,
+  isSelected = null,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,24 +26,32 @@ const DatePicker = ({ label }) => {
       <PopoverTrigger asChild>
         <Button
           className={cn(
-            'w-full !rounded-4 justify-between text-1313 !bg-white-dark border border-gray-300 hover:!border-red !p-14',
-            !date && 'text-gray-50',
+            'w-full !rounded-4 justify-between text-1313 !p-14',
+            !selectedDate && 'text-gray-50',
+            isSelected
+              ? 'bg-red text-white'
+              : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
           )}
         >
-          {date ? (
-            format(date, 'dd/MM/yy')
+          {selectedDate ? (
+            format(selectedDate, 'dd/MM/yy')
           ) : (
             <span className=" font-medium text-gray-300">{label}</span>
           )}
-          <CalendarIcon className="size-4 text-gray" />
+          <CalendarIcon
+            className={cn(
+              'size-4',
+              isSelected ? 'text-white' : 'text-gray-105',
+            )}
+          />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
         <Calendar
           mode="single"
-          selected={date}
+          selected={selectedDate}
           onSelect={(day, selectedDay, activeModifiers, e) => {
-            setDate(day, selectedDay, activeModifiers, e);
+            onHandleSelected(day, selectedDay, activeModifiers, e);
             setIsOpen(false);
           }}
           initialFocus
