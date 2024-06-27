@@ -6,7 +6,7 @@ export { WarningMessage } from './warning-message';
 export { StatusContainer } from './status-container';
 export { SplashLogo } from './splash-logo';
 export { Logo } from './logo';
-export { DatePicker } from './datepicker';
+export { DatePicker } from './date-picker';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';
