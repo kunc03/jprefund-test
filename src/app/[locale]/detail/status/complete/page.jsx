@@ -1,14 +1,18 @@
+/* eslint-disable react/no-array-index-key */
+
 'use client';
 
-import Header from '../../_components/header';
-import StoreInformation from '../../_components/StoreInformation';
-import Status from '../../_components/statusDetail';
-import DetailRow from '../../_components/DetailRow';
-import TransactionProgress from '../../_components/TransactionProgress';
-import ReceiptList from '../../_components/ReceiptList';
-import WarningMessage from '@/components/WarningMessage';
-import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from 'react';
+
+import { WarningMessage } from '@/components/warning-message';
+
+import DetailRow from '../../_components/DetailRow';
+import Header from '../../_components/header';
+import ReceiptList from '../../_components/ReceiptList';
+import Status from '../../_components/statusDetail';
+import StoreInformation from '../../_components/StoreInformation';
+import TransactionProgress from '../../_components/TransactionProgress';
 
 const IndexPage = () => {
   const receiptData = [
@@ -107,31 +111,30 @@ const IndexPage = () => {
       <StoreInformation data={storeDetail} />
       <Status status={status} />
       <div className="mt-8">
-        <>
-          {details.map((detail, index) => (
-            <DetailRow key={index} {...detail} />
-          ))}
-        </>
+        {details.map((detail, index) => (
+          <DetailRow key={index} {...detail} />
+        ))}
 
-        <div className="my-3 flex justify-end noto-sans-jp-700 text-blue-system px-[33.5px] text-[14px] font-semibold">
+        <div className=" my-3 flex justify-end px-[33.5px] text-1414 font-semibold text-blue-system">
           <button
-            className="flex gap-[10px] items-center"
+            type="button"
+            className="flex items-center gap-[10px]"
             onClick={handleToggle}
           >
             <p>{isOpen ? 'DetailsClose' : 'Receipt details'}</p>
             {isOpen ? (
-              <ChevronUp className="text-sm mb-1" />
+              <ChevronUp className="mb-1 text-sm" />
             ) : (
-              <ChevronDown className="text-sm mb-1" />
+              <ChevronDown className="mb-1 text-sm" />
             )}
           </button>
         </div>
         {isOpen && (
           <>
-            <h1 className="px-[33.5px] text-[18px] noto-sans-jp-400 mt-5">
+            <h1 className="mt-5 px-[33.5px] text-1822 font-normal">
               Purchase Contents:
             </h1>
-            <div id="receipt-list" className="mb-5">
+            <div className="mb-5" id="receipt-list">
               {receiptData.map((item, index) => (
                 <ReceiptList key={index} data={item} />
               ))}
@@ -139,14 +142,14 @@ const IndexPage = () => {
           </>
         )}
       </div>
-      {status != 'rejected' && (
+      {status !== 'rejected' && (
         <div className="mt-5">
           {transactions.map((transaction, index) => (
             <TransactionProgress key={index} {...transaction} />
           ))}
         </div>
       )}
-      {status == 'rejected' && <WarningMessage message={errorMessage} />}
+      {status === 'rejected' && <WarningMessage message={errorMessage} />}
     </>
   );
 };

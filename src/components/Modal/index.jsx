@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
 export default function Modal({ children }) {
@@ -10,9 +8,9 @@ export default function Modal({ children }) {
   return (
     <div
       ref={overlay}
-      className="flex items-center justify-center p-5 bg-black/40"
+      className="flex items-center justify-center bg-black/40 p-5"
     >
-      <div className="relative bg-white flex flex-col items-center justify-center py-5 px-3 text-center rounded-[12px] gap-4">
+      <div className="relative flex flex-col items-center justify-center gap-4 rounded-[12px] bg-white px-3 py-5 text-center">
         {children}
       </div>
     </div>

@@ -1,23 +1,23 @@
-import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
+import * as React from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-2.5xl text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-21 text-1515 font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
         default: 'bg-red text-white hover:bg-red/90',
         floating:
-          'bg-red text-white hover:bg-red/90 rounded-full shadow-floating',
+          'rounded-full bg-red text-white shadow-floating hover:bg-red/90',
         outline:
-          'border border-red bg-white hover:bg-red hover:text-white text-red',
+          'border border-red bg-white text-red hover:bg-red hover:text-white',
       },
       size: {
         default: 'h-11 px-5 py-3.5',
-        floating: 'h-14 w-14',
+        floating: 'size-14',
       },
     },
     defaultVariants: {
@@ -32,8 +32,8 @@ const Button = React.forwardRef(
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       />
     );

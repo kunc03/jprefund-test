@@ -1,28 +1,28 @@
 {
   "global": {
-   "hello" : "hello word"
+    "hello": "hello word"
   },
   "home": {
-   "metaTitle" : "Home",
-   "metaDescription" : "Home page",
-   "title":"Home",
-   "recordOfTaxFreePurchases":"Record of Tax Free Purchases",
-   "refundApplication":"Refund application",
-   "remittanceProcedureCompleted":"Remittance procedure completed",
-   "nonRefundable":"Non-refundable",
-   "preparationHasNotBeenCompleted":"Preparation has not been completed",
-   "noTaxExemptionRecordsSaved":"No tax exemption records saved",
-   "voucherQrCodePleaseScan":"Voucher QR code Please scan",
-   "checkReceipt":"Check Receipt",
-   "purchaseHistoryHasBeenRegistered":"Purchase history has been registered"
+    "metaTitle": "Home",
+    "metaDescription": "Home page",
+    "title": "Home",
+    "recordOfTaxFreePurchases": "Record of Tax Free Purchases",
+    "refundApplication": "Duty-free purchase records",
+    "remittanceProcedureCompleted": "Remittance procedure completed",
+    "nonRefundable": "Non-refundable",
+    "preparationHasNotBeenCompleted": "Advance preparation is not complete",
+    "noTaxExemptionRecordsSaved": "No tax exemption records saved",
+    "voucherQrCodePleaseScan": "Voucher QR code Please scan",
+    "checkReceipt": "Check Receipt",
+    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered"
   },
-  "scan":{
-    "metaTitle" : "Scan",
-    "metaDescription" : "Scan page",
-    "title":"Scan",
-    "receiptScan":"Receipt Scan",
-     "qrAlert":"If you cannot read the QR code Please enter the transaction number manually",
-     "send":"Send",
-     "enterTransactionNumber":"Enter transaction number"
+  "scan": {
+    "metaTitle": "Scan",
+    "metaDescription": "Scan page",
+    "title": "Scan",
+    "receiptScan": "Receipt Scanning",
+    "qrAlert": "If you cannot read the QR code Please enter the transaction number manually",
+    "send": "Send",
+    "enterTransactionNumber": "Enter transaction number"
   }
 }

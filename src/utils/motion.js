@@ -1,4 +1,4 @@
-export const menuSlide = {
+const menuSlide = {
   initial: {
     y: '200%',
   },
@@ -12,21 +12,21 @@ export const menuSlide = {
   },
 };
 
-export const slide = {
+const slide = {
   initial: {
     y: '200%',
   },
-  enter: (i) => ({
+  enter: () => ({
     y: 0,
     transition: { duration: 0.8, ease: [0.76, 0, 0.24, 2] },
   }),
-  exit: (i) => ({
+  exit: () => ({
     y: '100%',
     transition: { duration: 0.9, ease: [0.76, 0, 0.24, 2] },
   }),
 };
 
-export const slideBg = {
+const slideBg = {
   initial: {
     y: '300%',
   },
@@ -40,7 +40,7 @@ export const slideBg = {
   },
 };
 
-export const slideScanner = {
+const slideScanner = {
   initial: {
     y: '180%',
   },
@@ -54,7 +54,7 @@ export const slideScanner = {
   },
 };
 
-export const advanceSlide = {
+const advanceSlide = {
   initial: {
     y: '200%',
   },
@@ -68,7 +68,7 @@ export const advanceSlide = {
   },
 };
 
-export const slideBtn = {
+const slideBtn = {
   initial: {
     x: '100%',
   },
@@ -81,3 +81,5 @@ export const slideBtn = {
     transition: { duration: 0.3, ease: [0.76, 0, 0.24, 1] },
   },
 };
+
+export { menuSlide, slide, slideBg, slideScanner, advanceSlide, slideBtn };

@@ -1,29 +1,23 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 // components/Header.jsx
 
-import React from "react";
 import { ChevronLeft } from 'lucide-react';
-import Link from "next/link";
+import React from 'react';
 
-const Header = ({ title, backLink }) => {
+const Header = ({ title }) => {
   return (
-    <header className=" noto-sans-jp-400 w-full flex items-center px-6 py-[21px] bg-white justify-between relative">
+    <header className="relative flex w-full items-center justify-between bg-white px-6 py-[21px]">
       <a>
-        <ChevronLeft className="text-sm cursor-pointer text-gray-200" />
+        <ChevronLeft className="cursor-pointer text-sm text-gray-200" />
       </a>
-      <h1 className="noto-sans-jp-500 font-[18px] text-gray-100">{title}</h1>
-      <div className="absolute bottom-2 left-0 right-0 h-[2px] bg-gray-500"></div>
+      <h1 className="text-gray-100 font-[18px]">{title}</h1>
+      <div className="absolute inset-x-0 bottom-2 h-[2px] bg-gray-500" />
       <div className="opacity-0">
         <ChevronLeft className="text-sm" />
       </div>
     </header>
   );
-};
-
-const styles = {
-  icon: {
-    fontSize: "24px",
-    cursor: "pointer",
-  },
 };
 
 export default Header;

@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import FilterComponent from './FilterComponent';
-import { slideBg } from '../ui/slide';
+import React, { useEffect, useRef, useState } from 'react';
+
+import { slideBg } from '@/utils';
+import FilterComponent from './filter-component';
 
 const Search = (props) => {
   const [search, setSearch] = useState(false);
@@ -33,14 +33,14 @@ const Search = (props) => {
 
   return (
     <div>
-      <div className="flex items-center" ref={buttonRef}>
-        <button onClick={handleSearch} className="w-[23px] h-[24px]">
+      <div ref={buttonRef} className="flex items-center">
+        <button type="button" className="h-24 w-23" onClick={handleSearch}>
           <Image
-            src="/icons/search.svg"
             alt="search icons"
-            width={150}
-            height={150}
             className=""
+            height={150}
+            src="/icons/search.svg"
+            width={150}
           />
         </button>
 
@@ -48,12 +48,12 @@ const Search = (props) => {
           {search === true && (
             <>
               <motion.div
-                onClick={handleSearch}
-                variants={slideBg}
                 animate="enter"
+                className="absolute -inset-x-px z-10 h-[40vh] bg-gray-200/50"
                 exit="exit"
                 initial="initial"
-                className="absolute left-[-1px] right-[-1px] h-[40vh] bg-gray-200/50 z-10"
+                onClick={handleSearch}
+                variants={slideBg}
               />
               <FilterComponent />
             </>
@@ -64,4 +64,4 @@ const Search = (props) => {
   );
 };
 
-export default Search;
+export { Search };

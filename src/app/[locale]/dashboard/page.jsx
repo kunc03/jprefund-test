@@ -1,27 +1,24 @@
+/* eslint-disable react/button-has-type */
+
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import MenuBar from '@/components/dashboard/_components/Menu';
-import Logo from '@/components/dashboard/_components/Logo';
-import Notification from '@/components/dashboard/_components/Notification';
-import Search from '@/components/dashboard/_components/Search';
-import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
-import InProgress from '@/components/dashboard/inProgress';
-import Completed from '@/components/dashboard/completed';
-import Failed from '@/components/dashboard/failed';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useRef, useState } from 'react';
+
+import { ButtonProgress } from './_components/button-progress';
+import { Logo } from './_components/logo';
+import { MenuBar } from './_components/menu-bar';
+import { Notification } from './_components/notification';
+import { Search } from './_components/search';
+import { AdvancePreparation } from './_components/advance-preparation';
+import { Completed } from './_components/completed';
+import { Failed } from './_components/failed';
+import { InProgress } from './_components/in-progress';
+import { advanceSlide, slideBtn, slideScanner } from '@/utils';
+
 import { ButtonCamera } from '../home/_components/button-camera';
-import {
-  advanceSlide,
-  menuSlide,
-  slide,
-  slideBg,
-  slideBtn,
-  slideScanner,
-} from '@/components/dashboard/ui/slide';
-import AdvancePreparation from '@/components/dashboard/advance-preparation';
 
 const DashboardPage = () => {
   const [getItem, setGetItem] = useState('in-progress');
@@ -34,37 +31,23 @@ const DashboardPage = () => {
     setIsSearch(search);
   };
 
-  // const handleClickOutside = (event) => {
-  //   if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-  //     setOpenAdvancePreparation(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener('click', handleClickOutside);
-
-  //   return () => {
-  //     document.removeEventListener('click', handleClickOutside);
-  //   };
-  // }, []);
-
   return (
-    <div className="relative flex flex-col gap-4" ref={buttonRef}>
-      <div className="w-full relative">
-        <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[446px]">
+    <div ref={buttonRef} className="relative flex flex-col gap-4">
+      <div className="relative w-full">
+        <div className=" fixed flex w-[446px] flex-col gap-2 border-b border-[#DCDCDC] bg-white text-gray-500">
           {/* Header */}
-          <div className="w-full flex items-center justify-between py-2 px-3 h-[54px] border-b-[1px]">
+          <div className="flex h-[54px] w-full items-center justify-between border-b px-3 py-2">
             <div className="flex justify-center">
               <MenuBar />
             </div>
-            <div className="flex justify-between w-[70%] gap-5">
+            <div className="flex w-[70%] justify-between gap-5">
               <Link
-                href="/"
                 className="flex items-center justify-between text-2xl font-bold text-[#3F3F3F]"
+                href="/"
               >
                 <Logo />
               </Link>
-              <div className="flex gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <Notification />
                 <Search onSearch={handleIsSearch} />
               </div>
@@ -72,40 +55,40 @@ const DashboardPage = () => {
           </div>
 
           {/* button catatan pembelian */}
-          <div className="flex pb-2 gap-2 flex-col text-center">
+          <div className="flex flex-col gap-2 pb-2 text-center">
             <h2 className="font-semibold text-black/70">
               Duty-free purchase records
             </h2>
-            <div className="flex justify-between py-1 px-2 w-full ">
+            <div className="flex w-full justify-between px-2 py-1 ">
               <ButtonProgress
-                onClick={() => setGetItem('in-progress')}
-                label="Duty-free purchase records"
                 amount="JPY 20,840"
                 className={`${
                   getItem === 'in-progress'
                     ? 'bg-[#FF9A00] text-white'
                     : 'bg-[#DCDCDC] text-white'
                 }`}
+                label="Duty-free purchase records"
+                onClick={() => setGetItem('in-progress')}
               />
               <ButtonProgress
-                onClick={() => setGetItem('completed')}
-                label="Remittance procedure completed"
                 amount="JPY 17,800"
                 className={`${
                   getItem === 'completed'
                     ? 'bg-[#4F8BE8] text-white'
                     : 'bg-[#DCDCDC] text-white'
                 }`}
+                label="Remittance procedure completed"
+                onClick={() => setGetItem('completed')}
               />
               <ButtonProgress
-                onClick={() => setGetItem('failed')}
-                label="Non-refundable"
                 amount="JPY 0"
                 className={`${
                   getItem === 'failed'
                     ? 'bg-[#B91300] text-white'
                     : 'bg-[#DCDCDC] text-white'
                 } `}
+                label="Non-refundable"
+                onClick={() => setGetItem('failed')}
               />
             </div>
           </div>
@@ -113,29 +96,29 @@ const DashboardPage = () => {
       </div>
 
       <div
-        className={`${openAdvancePreparation ? 'max-h-[87vh] w-[446px]' : 'mt-[203px]'} flex flex-col w-full mt-[162px] duration-200`}
+        className={`${openAdvancePreparation ? 'max-h-[87vh] w-[446px]' : 'mt-[203px]'} mt-[162px] flex w-full flex-col duration-200`}
       >
         {/* button advance preparation */}
         {!openAdvancePreparation && (
           <button
+            className="fixed left-[328px] top-[181px] h-[37px] w-[448px] border-2 border-[#7A7A7A] bg-[#7A7A7A] px-[20px] py-2 text-[14px] text-white"
             onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
-            className="fixed top-[181px] bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] py-2 text-white border-2 left-[328px]"
           >
-            <div className="w-[410px] flex gap-3 justify-between items-center ">
+            <div className="flex w-[410px] items-center justify-between gap-3 ">
               <Image
+                alt="require"
+                className="size-[20px]"
+                height={150}
                 src="/icons/i.png"
                 width={150}
-                height={150}
-                alt="require"
-                className="w-[20px] h-[20px]"
               />
               Advance preparation is not complete
               <span>
                 <svg
-                  width="9"
+                  fill="none"
                   height="17"
                   viewBox="0 0 9 17"
-                  fill="none"
+                  width="9"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -160,47 +143,41 @@ const DashboardPage = () => {
 
       <AnimatePresence mode="wait">
         {openAdvancePreparation && (
-          <>
+          <motion.div
+            animate="enter"
+            className="absolute top-0 px-5 py-10"
+            exit="exit"
+            initial="initial"
+            variants={advanceSlide}
+          >
+            <AdvancePreparation />
+
             <motion.div
-              variants={advanceSlide}
               animate="enter"
+              className="absolute inset-x-0 top-0 z-[-1] flex h-[120vh] flex-col bg-black/40 px-5 py-10"
               exit="exit"
               initial="initial"
-              className="absolute top-0 py-10 px-5"
+              onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
+              variants={advanceSlide}
+            />
+
+            <motion.button
+              animate="enter"
+              className="absolute right-10 top-14"
+              exit="exit"
+              initial="initial"
+              onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
+              variants={slideBtn}
             >
-              <AdvancePreparation />
-
-              <motion.div
-                variants={advanceSlide}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-                onClick={() =>
-                  setOpenAdvancePreparation(!openAdvancePreparation)
-                }
-                className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/40 z-[-1]"
+              <Image
+                alt="close icon"
+                className="duration-300 hover:rotate-90"
+                height={16}
+                src="/icons/close.svg"
+                width={16}
               />
-
-              <motion.button
-                variants={slideBtn}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-                className="absolute top-14 right-10"
-                onClick={() =>
-                  setOpenAdvancePreparation(!openAdvancePreparation)
-                }
-              >
-                <Image
-                  src="/icons/close.svg"
-                  width={16}
-                  height={16}
-                  alt="close icon"
-                  className="hover:rotate-90 duration-300"
-                />
-              </motion.button>
-            </motion.div>
-          </>
+            </motion.button>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -208,11 +185,11 @@ const DashboardPage = () => {
 
       {!isSearch && !openAdvancePreparation && (
         <motion.div
-          variants={slideScanner}
           animate="enter"
+          className="fixed bottom-10 flex w-full justify-center md:max-w-md"
           exit="exit"
           initial="initial"
-          className="fixed bottom-10 w-full md:max-w-md flex justify-center"
+          variants={slideScanner}
         >
           <ButtonCamera />
         </motion.div>

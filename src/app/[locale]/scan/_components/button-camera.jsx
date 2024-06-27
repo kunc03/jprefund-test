@@ -1,8 +1,10 @@
 'use client';
-import { Button } from '@/components/ui/button';
+
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useQrScan } from '@/hooks/use-qr-scan';
+
+import { Button } from '@/components';
+import { useQrScan } from '@/hooks';
 
 const ButtonCamera = () => {
   const router = useRouter();
@@ -10,19 +12,18 @@ const ButtonCamera = () => {
 
   return (
     <Button
-      variant="floating"
-      size="floating"
       onClick={() => {
         if (!value) {
-          console.warn('not value selected');
           return;
         }
 
         onSelected(value);
         router.push('/home');
       }}
+      size="floating"
+      variant="floating"
     >
-      <Image src="/images/camera.svg" alt="camera" width={74} height={74} />
+      <Image alt="camera" height={74} src="/images/camera.svg" width={74} />
     </Button>
   );
 };

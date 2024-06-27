@@ -10,7 +10,7 @@ export const generateMetadata = async ({ params }) => {
 const Home = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
-  return <div>{t('tit')}</div>;
+  return <div>{t('title')}</div>;
 };
 
 export default Home;

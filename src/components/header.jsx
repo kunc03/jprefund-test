@@ -1,35 +1,37 @@
 import Image from 'next/image';
-import { Badge } from './ui/badge';
 
 const Header = () => {
   return (
-    <div className="flex flex-row h-15 justify-between px-3 py-5 ">
-      <div className="relative ">
+    <div className="flex flex-row items-center justify-between border-b border-b-gray-500 px-3 py-5">
+      <div className="relative">
         <Image
-          src="/images/menu.svg"
           alt="menu"
-          width={24}
-          height={24}
           className="cursor-pointer"
+          height={24}
+          src="/images/menu.svg"
+          width={24}
         />
-        <Badge className="absolute -top-3 left-5 ">2</Badge>
+        <span className="absolute -right-1 top-[-3px] size-[10px] rounded-full bg-red-light" />
       </div>
 
-      <Image src="/images/logo.svg" alt="logo" width={164} height={20} />
+      <Image alt="logo" height={20} src="/images/logo.svg" width={164} />
       <div className="flex flex-row gap-2">
+        <div className="relative">
+          <Image
+            alt="notif"
+            className="cursor-pointer"
+            height={24}
+            src="/images/notif.svg"
+            width={24}
+          />
+          <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
+        </div>
         <Image
-          src="/images/notif.svg"
-          alt="notif"
-          width={24}
-          height={24}
-          className="cursor-pointer"
-        />
-        <Image
-          src="/images/search.svg"
           alt="search"
-          width={24}
-          height={24}
           className="cursor-pointer"
+          height={24}
+          src="/images/search.svg"
+          width={24}
         />
       </div>
     </div>

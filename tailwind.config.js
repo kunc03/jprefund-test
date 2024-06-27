@@ -1,6 +1,75 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssAnimate from 'tailwindcss-animate';
 
-module.exports = {
+const pxToEm = ($px) => {
+  return `${$px / 16}rem`;
+};
+
+const remBorderRadius = {
+  1.5: pxToEm(1.5),
+  4: pxToEm(4),
+  8: pxToEm(8),
+  12: pxToEm(12),
+  21: pxToEm(21),
+};
+
+const remGap = {
+  7: pxToEm(7),
+};
+
+const remPadding = {
+  9.5: pxToEm(9.5),
+  10: pxToEm(10),
+  13: pxToEm(13),
+  14: pxToEm(14),
+  18: pxToEm(18),
+  53: pxToEm(53),
+  65: pxToEm(65),
+};
+
+const remSize = {
+  2: pxToEm(2),
+  4: pxToEm(4),
+  5: pxToEm(5),
+  15: pxToEm(15),
+  18: pxToEm(18),
+  23: pxToEm(23),
+  24: pxToEm(24),
+  26: pxToEm(26),
+  42: pxToEm(42),
+  38: pxToEm(38),
+  53: pxToEm(53),
+  68: pxToEm(68),
+  73: pxToEm(73),
+  100: pxToEm(100),
+  120: pxToEm(120),
+  138: pxToEm(138),
+  210: pxToEm(210),
+  231: pxToEm(231),
+  249: pxToEm(249),
+  285: pxToEm(285),
+  300: pxToEm(300),
+  340: pxToEm(340),
+};
+
+const remFontSize = {
+  1010: [pxToEm(10), { lineHeight: pxToEm(10) }],
+  1012: [pxToEm(10), { lineHeight: pxToEm(12) }],
+  1022: [pxToEm(10), { lineHeight: pxToEm(22) }],
+  1222: [pxToEm(12), { lineHeight: pxToEm(22) }],
+  1215.6: [pxToEm(12), { lineHeight: pxToEm(15.6) }],
+  1322: [pxToEm(13), { lineHeight: pxToEm(22) }],
+  1414: [pxToEm(14), { lineHeight: pxToEm(14) }],
+  1422: [pxToEm(14), { lineHeight: pxToEm(22) }],
+  1515: [pxToEm(15), { lineHeight: pxToEm(15) }],
+  1522: [pxToEm(15), { lineHeight: pxToEm(22) }],
+  1620.8: [pxToEm(16), { lineHeight: pxToEm(20.8) }],
+  1626: [pxToEm(16), { lineHeight: pxToEm(26) }],
+  1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
+  2022: [pxToEm(20), { lineHeight: pxToEm(22) }],
+};
+
+const tailwindConfig = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{js,jsx}',
@@ -14,13 +83,16 @@ module.exports = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': pxToEm(1400),
       },
     },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
+      white: {
+        DEFAULT: '#ffffff',
+        dark: '#F9F9F9',
+      },
       black: '#000000',
       green: '#29ad19',
       blue: {
@@ -29,14 +101,13 @@ module.exports = {
       },
       orange: {
         DEFAULT: '#ff9a00',
-        dark: '#dd5c45',
       },
       gray: {
         50: '#fafaf9',
         200: '#909090',
         300: '#bfbfbf',
         400: '#cfcece',
-        500: '#ededed',
+        500: '#DCDCDC',
         110: '#7a7a7a',
         DEFAULT: '#3f3f3f',
       },
@@ -45,13 +116,13 @@ module.exports = {
         light: '#ff0000',
         dark: '#b91300',
       },
-
       shadow: '#000 / 0.15',
     },
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)'],
       },
+
       colors: {
         border: 'hsl(var(--border))',
         background: 'hsl(var(--background))',
@@ -60,45 +131,25 @@ module.exports = {
         ring: 'hsl(var(--ring))',
       },
       borderRadius: {
-        '2.5xl': '1.3125rem',
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        ...remBorderRadius,
       },
-      fontSize: {
-        sm: ['12px', { lineHeight: '22px' }],
-        '.5sm': ['12px', { lineHeight: '15.6px' }],
-        '.7sm': ['13px', { lineHeight: '22px' }],
-        '2sm': ['14px', { lineHeight: '14px' }],
-        '3sm': ['14px', { lineHeight: '22px' }],
-        md: ['15px', { lineHeight: '15px' }],
-        '.5md': ['16px', { lineHeight: '20.8px' }],
-        '2md': ['16px', { lineHeight: '26px' }],
-        lg: ['18px', { lineHeight: '22px' }],
-        '.2xl': ['20px', { lineHeight: '22px' }],
-      },
+      fontSize: { ...remFontSize },
       padding: {
-        2.5: '0.59375rem',
-        3.5: '0.875rem',
-        4.5: '1.125rem',
+        ...remPadding,
       },
       height: {
-        4.5: '1.125rem',
-        10.5: '2.625rem',
-        15: '3.75rem',
-        16.5: '4.25rem',
-        28.5: '7.5rem',
-        56.5: '14.4375rem',
+        ...remSize,
+      },
+      gap: {
+        ...remGap,
       },
       width: {
-        4.5: '1.125rem',
-        10.5: '2.625rem',
-        16.5: '4.25rem',
-        28.5: '7.5rem',
-        52.5: '13.125rem',
-        56.5: '14.4375rem',
+        ...remSize,
       },
-      maxWidth: { 56.5: '14.4375rem' },
+      minHeight: { ...remSize },
+      minWidth: { ...remSize },
+      maxWidth: { ...remSize },
+      maxHeight: { ...remSize },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -119,5 +170,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 };
+
+export default tailwindConfig;

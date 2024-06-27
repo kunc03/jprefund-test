@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 // import Layout from "@/components/Layout";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,38 +6,38 @@ import React from 'react';
 
 const Completed = () => {
   return (
-    <div className="pb-2 pt-[2px] bg-[#F9F9F9]">
-      <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
+    <div className="bg-white-dark pb-2 pt-[2px]">
+      <div className="flex flex-col gap-2 px-2 pt-2 text-gray">
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
-            <h2 className="">Total purchase price</h2>
-            <p className="">JPY 18,300</p>
+          <div className="flex items-center justify-between text-xs text-gray-200">
+            <h2>Total purchase price</h2>
+            <p>JPY 18,300</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 1,830</p>
+            <p className="text-2022 text-red/80">JPY 1,830</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/aeon-mall.svg"
                 alt="Aeon mall logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/aeon-mall.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -49,33 +50,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-50 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 76,200</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 7,620</p>
+            <p className="text-2022 text-red/80">JPY 7,620</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/la-laport.svg"
                 alt="LaLaport logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/la-laport.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -88,33 +89,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 7,150</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 715</p>
+            <p className="text-2022 text-red/80">JPY 715</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/uniqlo.svg"
                 alt="Uniqlo logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/uniqlo.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -127,37 +128,37 @@ const Completed = () => {
         </Link>
       </div>
 
-      <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
+      <div className="flex flex-col gap-2 px-2 pt-2 text-gray">
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 18,300</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 1,830</p>
+            <p className="text-2022 text-red/80">JPY 1,830</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/aeon-mall.svg"
                 alt="Aeon mall logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/aeon-mall.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -170,33 +171,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 76,200</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 7,620</p>
+            <p className="text-2022 text-red/80">JPY 7,620</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/la-laport.svg"
                 alt="LaLaport logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/la-laport.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -209,33 +210,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 7,150</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 715</p>
+            <p className="text-2022 text-red/80">JPY 715</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/uniqlo.svg"
                 alt="Uniqlo logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/uniqlo.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -248,37 +249,37 @@ const Completed = () => {
         </Link>
       </div>
 
-      <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
+      <div className="flex flex-col gap-2 px-2 pt-2 text-gray-500">
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-gray-200">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 18,300</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 1,830</p>
+            <p className="text-2022 text-red/80">JPY 1,830</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/aeon-mall.svg"
                 alt="Aeon mall logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/aeon-mall.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -291,33 +292,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-[#text-gray-200]">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 76,200</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 7,620</p>
+            <p className="text-2022 text-red/80">JPY 7,620</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/la-laport.svg"
                 alt="LaLaport logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/la-laport.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -330,33 +331,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-[#text-gray-200]">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 7,150</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 715</p>
+            <p className="text-2022 text-red/80">JPY 715</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/uniqlo.svg"
                 alt="Uniqlo logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/uniqlo.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -369,37 +370,37 @@ const Completed = () => {
         </Link>
       </div>
 
-      <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
+      <div className="flex flex-col gap-2 px-2 pt-2 text-gray">
         <p className="text-center">2024 May 26</p>
         {/* items */}
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-[#text-gray-200]">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 18,300</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 1,830</p>
+            <p className="text-2022 text-red/80">JPY 1,830</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/aeon-mall.svg"
                 alt="Aeon mall logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/aeon-mall.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -412,33 +413,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-[#text-gray-200]">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 76,200</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 7,620</p>
+            <p className="text-2022 text-red/80">JPY 7,620</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/la-laport.svg"
                 alt="LaLaport logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/la-laport.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -451,33 +452,33 @@ const Completed = () => {
         </Link>
 
         <Link
+          className="flex flex-col gap-1 rounded-md border border-gray-500 bg-white p-3"
           href="#"
-          className="p-3 bg-white flex flex-col gap-1 border-[1px] border-[#DCDCDC] rounded-md"
         >
-          <div className="text-xs flex justify-between items-center mb-2">
-            <h3 className="text-[#4F8BE8] border-[1px] py-1 px-4 border-[#4F8BE8] rounded-[4px]">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <h3 className="rounded-4 border border-blue px-4 py-1 text-blue">
               Remittance is complete
             </h3>
             <p className="font-semibold">2024 May 17 at 08:55 AM</p>
           </div>
-          <div className="text-xs flex justify-between items-center text-[#909090]">
+          <div className="flex items-center justify-between text-xs text-[#text-gray-200]">
             <h2 className="">Total purchase price</h2>
             <p className="">JPY 7,150</p>
           </div>
 
-          <div className="flex justify-between items-center font-semibold">
+          <div className="flex items-center justify-between font-semibold">
             <h2 className="text-xs ">Expected refund amount</h2>
-            <p className="text-[20px] text-[#DD5C45]/80">JPY 715</p>
+            <p className="text-2022 text-red/80">JPY 715</p>
           </div>
 
           <div className="flex items-center gap-[6px]">
-            <div className="p-[10px]">
+            <div className="p-10">
               <Image
-                src="/uniqlo.svg"
                 alt="Uniqlo logo"
-                width={250}
+                className="flex w-38 flex-col border"
                 height={250}
-                className="flex flex-col border-[1px] w-[38px]"
+                src="/uniqlo.svg"
+                width={250}
               />
             </div>
             <div className="text-start">
@@ -493,4 +494,4 @@ const Completed = () => {
   );
 };
 
-export default Completed;
+export { Completed };
