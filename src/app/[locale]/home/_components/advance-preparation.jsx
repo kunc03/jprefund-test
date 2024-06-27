@@ -37,7 +37,7 @@ const AdvancePreparation = () => {
           <ChevronRight />
         </div>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="h-4/5 w-11/12  overflow-y-auto sm:h-max sm:max-w-sm">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-center">
             <p
@@ -92,7 +92,7 @@ const AdvancePreparation = () => {
               variant={passportRegis ? 'default' : 'outline'}
               onClick={() => setPassportRegis((old) => !old)}
               className={cn(
-                'w-318',
+                'sm:w-full md:w-318 gap-4',
                 passportRegis && '!flex-row !justify-start !pl-10',
               )}
             >
@@ -132,8 +132,8 @@ const AdvancePreparation = () => {
               variant={refundRegis ? 'default' : 'outline'}
               onClick={() => setRefundRegis((old) => !old)}
               className={cn(
-                'w-318',
-                refundRegis && '!flex-row !justify-start !pl-10 ',
+                'sm:w-full md:w-318 gap-4',
+                refundRegis && '!flex-row !justify-start !pl-10',
               )}
             >
               {refundRegis && (
