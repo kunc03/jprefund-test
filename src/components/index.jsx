@@ -12,3 +12,4 @@ export * from './ui/drawer';
 export * from './ui/input';
 export * from './ui/dialog';
 export * from './ui/select';
+export * from './ui/input-otp';

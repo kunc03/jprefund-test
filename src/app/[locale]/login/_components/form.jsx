@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { loginSchema } from '../schemas/login-schema';
+import { loginSchema } from '../_schemas/login-schema';
 import { Heading } from '@/components/heading';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';

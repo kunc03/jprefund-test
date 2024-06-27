@@ -1,7 +1,6 @@
 import { z } from 'zod';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^\d{10,15}$/;
 
 const emailSchema = z.object({
   email: z
@@ -20,21 +19,4 @@ const emailSchema = z.object({
     }),
 });
 
-const phoneSchema = z.object({
-  phone: z
-    .string()
-    .optional()
-    .refine(
-      (value) => {
-        return value !== undefined && value.trim() !== '';
-      },
-      {
-        message: 'register.phone.required',
-      },
-    )
-    .refine((value) => phoneRegex.test(value), {
-      message: 'register.phone.invalid',
-    }),
-});
-
-export { emailSchema, phoneSchema };
+export { emailSchema };

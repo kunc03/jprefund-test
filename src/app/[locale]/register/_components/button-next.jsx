@@ -13,7 +13,10 @@ const ButtonNext = () => {
   };
 
   return (
-    <Button className="mb-9 w-64" onClick={handleClick}>
+    <Button
+      className="mb-9 w-249 items-center justify-center"
+      onClick={handleClick}
+    >
       {t('next')}
     </Button>
   );

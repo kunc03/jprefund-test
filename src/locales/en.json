@@ -28,14 +28,21 @@
     "form": {
       "label": {
         "email": "Email address",
-        "phone": "Telephone number"
+        "phone": "Telephone number",
+        "otp": "6-digit authentication code"
       },
       "placeholder": {
         "email": "Email address",
         "phone": "000-0000-0000",
         "phoneArea": "Code"
       }
-    }
+    },
+    "verifyCodeSend": "Verification code sent",
+    "enterAuthCodeEmail": "Please enter the {authCode} provided in the email to verify your email address.",
+    "enterAuthCodePhone": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
+    "authCode": "authentication code",
+    "dateOfExpiry": "Date of expiry",
+    "reissueAuthCode": "Reissue authentication code"
   },
   "login": {
     "metaTitle": "Login",
@@ -46,7 +53,8 @@
       "label": {
         "email": "Email address or phone number",
         "password": "Password",
-        "forgetPass": "for those who have forgotten their password"
+        "forgetPass": "for those who have forgotten their password",
+        "otp": "for those who have forgotten their password"
       },
       "placeholder": {
         "email": "Email address or phone number",
@@ -114,6 +122,10 @@
       "phone": {
         "required": "Phone is required",
         "invalid": "Format phone is wrong"
+      },
+      "otp": {
+        "required": "Otp is required",
+        "min": "Min Otp is 6"
       }
     }
   }

@@ -27,14 +27,21 @@
     "form": {
       "label": {
         "email": "メールアドレス",
-        "phone": "電話番号"
+        "phone": "電話番号",
+        "otp": "6桁の認証コード"
       },
       "placeholder": {
         "email": "メールアドレス",
         "phone": "000-0000-0000",
         "phoneArea": "コード"
       }
-    }
+    },
+    "verifyCodeSend": "認証コードを送信しました",
+    "enterAuthCodeEmail": "メールに記載されている{authCode}を入力して メールアドレスを認証してください。",
+    "enterAuthCodePhone": "SMSに記載されている{authCode}を入力して電話番号を認証してください。",
+    "authCode": "認証コード",
+    "dateOfExpiry": "有効期限",
+    "reissueAuthCode": "認証コードを再発行"
   },
   "login": {
     "metaTitle": "ログイン",
@@ -113,6 +120,10 @@
       "phone": {
         "required": "電話番号は必須です",
         "invalid": "電話機のフォーマットが間違っています"
+      },
+      "otp": {
+        "required": "OTPは必須です",
+        "min": "最小OTPは6です"
       }
     }
   }

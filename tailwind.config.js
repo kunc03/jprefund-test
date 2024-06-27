@@ -16,6 +16,7 @@ const remBorderRadius = {
 const remGap = {
   7: pxToEm(7),
   8: pxToEm(8),
+  10: pxToEm(10),
   38: pxToEm(38),
 };
 
@@ -48,7 +49,9 @@ const remSize = {
   40.8: pxToEm(40.8),
   42: pxToEm(42),
   38: pxToEm(38),
+  48: pxToEm(48),
   53: pxToEm(53),
+  64: pxToEm(64),
   68: pxToEm(68),
   73: pxToEm(73),
   90: pxToEm(90),
@@ -194,10 +197,15 @@ const tailwindConfig = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'caret-blink': {
+          '0%,70%,100%': { opacity: '1' },
+          '20%,50%': { opacity: '0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
       boxShadow: {
         floating: '0px 2.6px 5.03px 0px rgba(0, 0, 0, 0.2)',

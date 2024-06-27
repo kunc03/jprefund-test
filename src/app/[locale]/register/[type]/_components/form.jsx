@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { emailSchema, phoneSchema } from '../schemas/register-schema';
+import { emailSchema, phoneSchema } from '../../_schemas';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form as UIForm, FormField } from '@/components/ui/form';
@@ -15,6 +15,7 @@ import {
   SelectItem,
   SelectValue,
 } from '@/components';
+import { useRouter } from 'next/navigation';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -23,12 +24,12 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="w-100 focus:!outline-none focus:!ring-transparent"
+      className="w-100 font-bold focus:!outline-none focus:!ring-transparent"
       value={selectedPhoneArea}
     >
       <SelectValue placeholder={t('form.placeholder.phoneArea')} />
     </SelectTrigger>
-    <SelectContent className="bg-white ">
+    <SelectContent className="bg-white">
       <SelectItem value="+81">JP (+81)</SelectItem>
       <SelectItem value="+62">ID (+62)</SelectItem>
     </SelectContent>
@@ -39,6 +40,7 @@ const Form = ({ type }) => {
   const t = useTranslations('register');
   const formRef = useRef();
   const { setFormRef } = useFormRef();
+  const router = useRouter();
   const [selectedPhoneArea, setSelectedPhoneArea] = useState();
 
   const registerSchema = type === 'email' ? emailSchema : phoneSchema;
@@ -60,8 +62,14 @@ const Form = ({ type }) => {
   }, [setFormRef]);
 
   const handleSubmit = (data) => {
-    console.log(selectedPhoneArea);
-    console.log(data);
+    if (type === 'email' && data) {
+      router.push('/register/email/otp');
+      return;
+    }
+
+    if (selectedPhoneArea && data) {
+      router.push('/register/phone/otp');
+    }
   };
 
   return (
