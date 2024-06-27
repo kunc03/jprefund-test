@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ButtonCamera } from './_components/button-camera';
 import { QrScan } from './_components/qr-scan';
+import SendButton from './_components/SendButton';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -24,9 +25,10 @@ const Scan = async ({ params }) => {
         </Heading>
 
         <div className="flex flex-col justify-center items-center w-full">
-          <div className="w-full max-w-xs flex flex-row items-center justify-center gap-2">
+          <div className="w-full max-w-xs flex items-center justify-center gap-2">
             <Input type="text" placeholder={t('enterTransactionNumber')} />
-            <Button>{t('send')}</Button>
+            {/* <Button>{t('send')}</Button> */}
+            <SendButton />
           </div>
           <Heading className="font-medium text-2md text-center text-white w-full max-w-56.5 mt-4">
             {t('qrAlert')}

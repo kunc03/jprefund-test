@@ -38,7 +38,7 @@ const IndexPage = () => {
     },
   ];
   const storeDetail = {
-    image: '/images/Lalaport.png',
+    image: '/la-laport.svg',
     name: 'LaLaport TOKYO-BAY',
     address: '2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530',
   };

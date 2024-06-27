@@ -7,25 +7,28 @@ import MenuBar from '@/components/dashboard/_components/Menu';
 import Logo from '@/components/dashboard/_components/Logo';
 import Notification from '@/components/dashboard/_components/Notification';
 import Search from '@/components/dashboard/_components/Search';
-import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
-import InProgress from '@/components/dashboard/inProgress';
-import Completed from '@/components/dashboard/completed';
-import Failed from '@/components/dashboard/failed';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonCamera } from '../home/_components/button-camera';
 import {
   advanceSlide,
-  slide,
-  slideBtn,
   slidePrepare,
   slideScanner,
 } from '@/components/dashboard/ui/slide';
 import AdvancePreparation from '@/components/dashboard/advance-preparation';
+import AfterScan from '../scan/_components/after-scan';
+import { useRouter } from 'next/navigation';
+import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
+import InProgress from './status/process/page';
+import Completed from './status/complete/page';
+import Failed from './status/fail/page';
 
 const DashboardPage = () => {
   const [getItem, setGetItem] = useState('in-progress');
   const [isSearch, setIsSearch] = useState(null);
   const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
+  const [checkReceipt, setCheckReceipt] = useState(true);
+
+  const router = useRouter();
 
   const handleIsSearch = (search) => {
     setIsSearch(search);
@@ -54,14 +57,17 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          {/* button catatan pembelian */}
+          {/* button progress refund header */}
           <div className="flex pb-2 gap-2 flex-col text-center">
             <h2 className="font-semibold text-black/70">
               Duty-free purchase records
             </h2>
             <div className="flex justify-between py-1 px-2 w-full ">
               <ButtonProgress
-                onClick={() => setGetItem('in-progress')}
+                onClick={() =>
+                  setGetItem('in-progress') ||
+                  router.push('/dashboard/status/process')
+                }
                 label="Duty-free purchase records"
                 amount="JPY 20,840"
                 className={`${
@@ -91,57 +97,80 @@ const DashboardPage = () => {
                 } `}
               />
             </div>
+
+            {/* Button Advance Preparation */}
+            <div className="fixed top-[183px]">
+              <button
+                onClick={() =>
+                  setOpenAdvancePreparation(!openAdvancePreparation)
+                }
+                className={`bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] py-2 text-white border-2 text-center`}
+              >
+                <div className="w-[410px] flex gap-1 justify-between items-center px-10">
+                  <Image
+                    src="/icons/i.png"
+                    width={150}
+                    height={150}
+                    alt="require"
+                    className="w-[18px] h-[19px]"
+                  />
+                  Advance preparation is not complete
+                  <Image
+                    src="/icons/arrow-right.png"
+                    width={150}
+                    height={150}
+                    alt="require"
+                    className="w-[9px] h-[16px]"
+                  />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div
-        className={`${openAdvancePreparation ? 'max-h-[87vh] w-[446px]' : 'mt-[203px]'} flex flex-col w-full mt-[162px] duration-200`}
+        // ${!openAdvancePreparation && 'mt-[162px]'}
+        className={`flex flex-col w-full mt-[203px] ${openAdvancePreparation && 'h-[81.5vh]'}`}
       >
-        {/* button advance preparation */}
-        {!openAdvancePreparation && !isSearch && (
-          <motion.div
-            variants={slidePrepare}
-            animate="enter"
-            exit="exit"
-            initial="initial"
-            className="relative top-[-37px] delay-200 duration-200"
-          >
-            <button
-              onClick={() => setOpenAdvancePreparation(!openAdvancePreparation)}
-              className={`fixed bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] m-[0_2px_0_0] py-2 text-white border-2 text-center`}
-            >
-              <div className="w-[410px] flex gap-1 justify-between items-center px-10">
-                <Image
-                  src="/icons/i.png"
-                  width={150}
-                  height={150}
-                  alt="require"
-                  className="w-[20px] h-[20px]"
-                />
-                Advance preparation is not complete
-                <Image
-                  src="/icons/arrow-right.png"
-                  width={150}
-                  height={150}
-                  alt="require"
-                  className="w-[9px] h-[16px]"
-                />
-              </div>
-            </button>
-          </motion.div>
-        )}
-
         {/* show items progress */}
         {getItem === 'in-progress' && <InProgress />}
 
         {getItem === 'completed' && <Completed />}
 
         {getItem === 'failed' && <Failed />}
+
+        {/* Popup After Scan */}
+        {/* {checkReceipt && (
+          <AnimatePresence mode="wait">
+            <>
+              <motion.div
+                variants={advanceSlide}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                className="absolute top-[8%] w-full"
+              >
+                <AfterScan />
+                <button
+                  className="absolute top-4 right-6 z-20"
+                  onClick={() => setCheckReceipt(!checkReceipt)}
+                >
+                  <Image
+                    src="/icons/close.svg"
+                    width={16}
+                    height={16}
+                    alt="close icon"
+                    className="hover:rotate-90 duration-300"
+                  />
+                </button>
+              </motion.div>
+            </>
+          </AnimatePresence>
+        )} */}
       </div>
 
-      {/* popup advance preparation */}
-
+      {/* Popup Advance Preparation */}
       <AnimatePresence mode="wait">
         {openAdvancePreparation && (
           <>
@@ -164,13 +193,12 @@ const DashboardPage = () => {
                 }
                 className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/40 z-[-1]"
               />
-
               <motion.button
-                variants={slideBtn}
+                variants={slidePrepare}
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className="absolute top-14 right-10"
+                className="absolute top-14 right-10 z-10"
                 onClick={() =>
                   setOpenAdvancePreparation(!openAdvancePreparation)
                 }
@@ -189,8 +217,7 @@ const DashboardPage = () => {
       </AnimatePresence>
 
       {/* Scanner */}
-
-      {!isSearch && !openAdvancePreparation && (
+      {!isSearch && !openAdvancePreparation && !checkReceipt && (
         <motion.div
           variants={slideScanner}
           animate="enter"
