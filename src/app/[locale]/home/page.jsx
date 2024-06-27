@@ -21,10 +21,10 @@ const Home = async ({ params }) => {
   return (
     <>
       <Header />
-      <Heading className="font-medium text-lg text-center">
+      <Heading className="font-medium text-lg text-center bg-white">
         {t('recordOfTaxFreePurchases')}
       </Heading>
-      <div className="px-2.5 pt-3.5 flex flex-row gap-2 justify-evenly items-center overflow-x-auto">
+      <div className="px-2.5 pt-3.5 flex flex-row gap-2 justify-evenly items-center overflow-x-auto bg-white">
         <SummaryCard title={t('refundApplication')} number={46520} />
         <SummaryCard title={t('remittanceProcedureCompleted')} />
         <SummaryCard title={t('nonRefundable')} />
