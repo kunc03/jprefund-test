@@ -6,7 +6,7 @@ import { getMessages } from 'next-intl/server';
 
 import { cn } from '@/utils';
 
-const inter = notoSansJp({ subsets: ['latin'] });
+const inter = notoSansJp({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata = {
   title: 'Create Next App',
@@ -25,11 +25,11 @@ const RootLayout = async ({ children, params }) => {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           'min-h-dvh bg-white/30 antialiased flex flex-col items-center',
-          inter.className,
+          inter.variable,
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>

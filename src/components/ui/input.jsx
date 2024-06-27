@@ -16,6 +16,7 @@ const Input = React.forwardRef(
       required = false,
       label = null,
       pre = null,
+      suf = null,
       description = null,
       labelClassName,
       className,
@@ -25,6 +26,7 @@ const Input = React.forwardRef(
     ref,
   ) => {
     const PreInputComp = <div className="px-3">{pre}</div>;
+    const SufInputComp = <div className="px-3">{suf}</div>;
 
     const InputComp = (
       <input
@@ -62,6 +64,7 @@ const Input = React.forwardRef(
           >
             {pre && PreInputComp}
             <FormControl>{InputComp}</FormControl>
+            {suf && SufInputComp}
           </div>
           {description && (
             <FormDescription className="text-sm font-normal text-black">

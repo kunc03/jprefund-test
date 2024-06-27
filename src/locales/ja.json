@@ -98,6 +98,23 @@
     "send": "送信",
     "enterTransactionNumber": "取引番号を入力"
   },
+  "passwordSetting": {
+    "metaTitle": "パスワード設定",
+    "metaDescription": "パスワード設定ページ",
+    "title": "パスワード設定",
+    "passwordSetting": "パスワード設定",
+    "signIn": "サインイン",
+    "form": {
+      "label": {
+        "password": "パスワード",
+        "confirmPassword": "パスワード確認"
+      },
+      "placeholder": {
+        "password": "パスワード",
+        "confirmPassword": "確認のためもう一度入力"
+      }
+    }
+  },
   "zodError": {
     "login": {
       "email": {
@@ -124,6 +141,16 @@
       "otp": {
         "required": "OTPは必須です",
         "min": "最小OTPは6です"
+      }
+    },
+    "settingPassword": {
+      "password": {
+        "required": "パスワードが必要",
+        "min": "最小パスワードは 8 です",
+        "mismatch": "パスワードと確認用パスワードは一致する必要があります"
+      },
+      "confPassword": {
+        "required": "パスワードの確認が必要です"
       }
     }
   }

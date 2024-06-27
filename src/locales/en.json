@@ -100,6 +100,23 @@
     "send": "Send",
     "enterTransactionNumber": "Enter transaction number"
   },
+  "passwordSetting": {
+    "metaTitle": "Password Setting",
+    "metaDescription": "Password Setting page",
+    "title": "Password Setting",
+    "passwordSetting": "Password Setting",
+    "signIn": "Sign in",
+    "form": {
+      "label": {
+        "password": "Password",
+        "confirmPassword": "Password confirmation"
+      },
+      "placeholder": {
+        "password": "password",
+        "confirmPassword": "Enter again to confirm"
+      }
+    }
+  },
   "zodError": {
     "login": {
       "email": {
@@ -126,6 +143,16 @@
       "otp": {
         "required": "Otp is required",
         "min": "Min Otp is 6"
+      }
+    },
+    "settingPassword": {
+      "password": {
+        "required": "Password is required",
+        "min": "Min password is 8",
+        "mismatch": "Password and confirm password must match"
+      },
+      "confPassword": {
+        "required": "Password confirmation is required"
       }
     }
   }

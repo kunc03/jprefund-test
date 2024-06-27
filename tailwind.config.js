@@ -17,6 +17,8 @@ const remGap = {
   7: pxToEm(7),
   8: pxToEm(8),
   10: pxToEm(10),
+  18: pxToEm(18),
+  28: pxToEm(28),
   38: pxToEm(38),
 };
 
