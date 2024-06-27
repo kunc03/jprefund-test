@@ -15,6 +15,7 @@ const ButtonCamera = () => {
       onClick={() => {
         if (!value) {
           console.warn('not value selected');
+          router.push('/dashboard');
           return;
         }
 

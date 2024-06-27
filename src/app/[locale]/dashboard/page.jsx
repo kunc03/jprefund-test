@@ -64,10 +64,7 @@ const DashboardPage = () => {
             </h2>
             <div className="flex justify-between py-1 px-2 w-full ">
               <ButtonProgress
-                onClick={() =>
-                  setGetItem('in-progress') ||
-                  router.push('/dashboard/status/process')
-                }
+                onClick={() => setGetItem('in-progress')}
                 label="Duty-free purchase records"
                 amount="JPY 20,840"
                 className={`${
@@ -217,7 +214,7 @@ const DashboardPage = () => {
       </AnimatePresence>
 
       {/* Scanner */}
-      {!isSearch && !openAdvancePreparation && !checkReceipt && (
+      {!isSearch && !openAdvancePreparation && (
         <motion.div
           variants={slideScanner}
           animate="enter"
