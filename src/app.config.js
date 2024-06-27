@@ -1,4 +1,4 @@
-const locales = ['jp', 'en'];
+const locales = ['en', 'ja'];
 const defaultLocale = locales[0];
 const localeDetection = false;
 
