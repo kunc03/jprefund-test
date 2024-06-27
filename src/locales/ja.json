@@ -87,7 +87,19 @@
     "goToRefund": "返金方法登録へ",
     "goToRefundComplete": "返金方法登録 完了",
     "refundDeclaimer": "還付金を受け取る方法を、クレジットカード/ 銀行口座/キャッシュレスサービス から1つ以上登録してください。",
-    "enjoyJapanRefundService": "もっと日本を楽しもう JPrefoundは 手間なしの 税還付サービスです"
+    "enjoyJapanRefundService": "もっと日本を楽しもう JPrefoundは 手間なしの 税還付サービスです",
+    "searchFilter": "フィルター",
+    "resetFilter": "フィルターをリセット",
+    "applyFilter": "フィルターを適用",
+    "sort": "ソート",
+    "status": "ステータス",
+    "lowestFirst": "返金金額 : 低い順",
+    "highestToLowest": "返金金額 : 高い順",
+    "startDate": "開始日",
+    "endDate": "終了日",
+    "submitted": "提出済み",
+    "jcApproval": "JC承認",
+    "storeApproval": "ストアの承認"
   },
   "scan": {
     "metaTitle": "スキャン",

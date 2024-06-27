@@ -89,7 +89,19 @@
     "goToRefund": "Register for refund method",
     "goToRefundComplete": "Refund method registration completed",
     "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service.",
-    "enjoyJapanRefundService": "Enjoy Japan even more JPrefound is a hassle-free tax refund service"
+    "enjoyJapanRefundService": "Enjoy Japan even more JPrefound is a hassle-free tax refund service",
+    "searchFilter": "Search filters",
+    "resetFilter": "Reset filters",
+    "applyFilter": "Apply Filter",
+    "sort": "Sort",
+    "status": "Status",
+    "lowestFirst": "Refund amount: Lowest first",
+    "highestToLowest": "Refund amount: Highest to lowest",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "submitted": "Submitted",
+    "jcApproval": "JC Approval",
+    "storeApproval": "Store Approval"
   },
   "scan": {
     "metaTitle": "Scan",

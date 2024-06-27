@@ -8,6 +8,7 @@ import {
   SummaryCard,
   AdvancePreparation,
   Content,
+  FilterBottomDrawer,
 } from './_components';
 
 export const generateMetadata = async ({ params }) => {
@@ -46,6 +47,8 @@ const Home = async ({ params }) => {
       <ButtonCamera />
 
       <DetailBottomDrawer />
+
+      <FilterBottomDrawer />
     </>
   );
 };

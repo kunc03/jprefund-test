@@ -1,6 +1,10 @@
+'use client';
+
+import { useDrawer } from '@/hooks';
 import Image from 'next/image';
 
 const Header = () => {
+  const { setIsOpen } = useDrawer();
   return (
     <div className="flex flex-row items-center justify-between border-b border-b-gray-500 bg-white px-3 py-5">
       <div className="relative">
@@ -32,6 +36,7 @@ const Header = () => {
           height={24}
           src="/images/search.svg"
           width={24}
+          onClick={() => setIsOpen(true)}
         />
       </div>
     </div>
