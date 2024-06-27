@@ -1,6 +1,5 @@
-import { Heading } from '@/components';
+import { Heading, Logo } from '@/components';
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 import { ButtonNext } from '../_components';
 import Link from 'next/link';
 import { Form } from './_components';
@@ -20,7 +19,7 @@ const RegisterEmailPhonePage = async ({ params }) => {
     <div className="flex min-h-dvh flex-col justify-between">
       <div className="flex flex-1 flex-col items-center  justify-center ">
         <div className="mt-6 flex w-full flex-1 flex-col items-center px-28">
-          <Image src="/images/logo.svg" alt="logo" width={164} height={20} />
+          <Logo />
           <Heading
             className="mt-28.5 text-center text-2122 font-medium"
             key="createAccount"

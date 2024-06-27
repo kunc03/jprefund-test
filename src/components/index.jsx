@@ -4,6 +4,8 @@ export { ItemDetail } from './item-detail';
 export { StoreInformation } from './store-information';
 export { WarningMessage } from './warning-message';
 export { StatusContainer } from './status-container';
+export { SplashLogo } from './splash-logo';
+export { Logo } from './logo';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';

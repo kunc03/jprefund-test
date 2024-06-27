@@ -79,7 +79,8 @@
     "registrationCompleteWord": "パスポート登録が完了するとパスポート写真 の下に顔認証ボタンが表示されます。ご自身のお顔を撮影して登録してください。",
     "goToRefund": "返金方法登録へ",
     "goToRefundComplete": "返金方法登録 完了",
-    "refundDeclaimer": "還付金を受け取る方法を、クレジットカード/ 銀行口座/キャッシュレスサービス から1つ以上登録してください。"
+    "refundDeclaimer": "還付金を受け取る方法を、クレジットカード/ 銀行口座/キャッシュレスサービス から1つ以上登録してください。",
+    "enjoyJapanRefundService": "もっと日本を楽しもう JPrefoundは 手間なしの 税還付サービスです"
   },
   "scan": {
     "metaTitle": "スキャン",

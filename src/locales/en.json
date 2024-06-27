@@ -80,7 +80,8 @@
     "registrationCompleteWord": "Once your passport registration is complete, the face recognition button will appear under your passport photo. Take a photo of your face and register it.",
     "goToRefund": "Register for refund method",
     "goToRefundComplete": "Refund method registration completed",
-    "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service."
+    "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service.",
+    "enjoyJapanRefundService": "Enjoy Japan even more JPrefound is a hassle-free tax refund service"
   },
   "scan": {
     "metaTitle": "Scan",
