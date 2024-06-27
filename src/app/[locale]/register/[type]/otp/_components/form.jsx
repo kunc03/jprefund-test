@@ -9,11 +9,13 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components';
 import { useFormRef } from '@/hooks';
 import { useEffect, useRef, useMemo } from 'react';
 import { otpSchema } from '../../../_schemas';
+import { useRouter } from 'next/navigation';
 
 const Form = () => {
   const t = useTranslations('register');
   const formRef = useRef();
   const { setFormRef } = useFormRef();
+  const router = useRouter();
   const otpLength = 6;
   const slots = Array.from({ length: otpLength }, (_, index) => index);
 
@@ -30,7 +32,11 @@ const Form = () => {
     setFormRef(formRef.current);
   }, [setFormRef]);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (data) => {
+    if (data) {
+      router.push('/password-setting');
+    }
+  };
 
   return (
     <UIForm {...form}>
