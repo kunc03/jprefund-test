@@ -26,12 +26,12 @@ const RootLayout = async ({ children, params }) => {
     <html lang={locale}>
       <body
         className={cn(
-          'min-h-dvh bg-white/30 antialiased flex flex-col items-center',
+          'min-h-dvh bg-gray-400 antialiased flex flex-col items-center',
           inter.className,
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="grow w-full relative max-w-md overflow-hidden bg-gray-600 border border-gray-50 ">
+          <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white">
             {children}
           </main>
         </NextIntlClientProvider>

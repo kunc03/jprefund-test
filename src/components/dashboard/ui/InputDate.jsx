@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const InputDate = ({ label, placeholder, value, onChange }) => {
   return (
@@ -12,10 +12,10 @@ const InputDate = ({ label, placeholder, value, onChange }) => {
         value={value}
         onChange={onChange}
         icon-co
-        className={`rounded-[4px] mt-1 px-2 py-3 border-[2px] text-[13px]  w-full ${
+        className={`rounded-[4px] mt-1 px-2 py-3 border-[2px] text-[13px] outline-none w-full ${
           value
-            ? "border-[#DD5C45] text-[#dd5c45]"
-            : "border-gray-600 text-[#3F3F3F]"
+            ? 'border-[#DD5C45] text-[#dd5c45]'
+            : 'border-[#cfcece] text-[#3F3F3F]'
         }`}
       />
       {/* <SlCalender size={25} className="absolute right-2 top-2" /> */}

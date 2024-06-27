@@ -1,8 +1,5 @@
-import Modal from '@/components/Modal';
 import Image from 'next/image';
-// import { useRouter } from 'next/router';
 import React from 'react';
-import ButtonAdvance from '../_components/ButtonAdvancePrepare';
 
 const AdvancePreparation = () => {
   const [passportRegis, setPassportRegis] = React.useState(false);
@@ -105,13 +102,6 @@ const AdvancePreparation = () => {
                 ? 'Refund method registration completed'
                 : 'Register for refund method'}
             </button>
-
-            {/* <ButtonAdvance
-              onClick={handleRefundRegis}
-              className={refundRegist && 'bg-[#dd5c45]'}
-            >
-              Register for refund method
-            </ButtonAdvance> */}
 
             <p className="text-[13px]">
               Please register at least one method for receiving your refund:
