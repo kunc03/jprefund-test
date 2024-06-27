@@ -33,7 +33,19 @@
     "noTaxExemptionRecordsSaved": "免税記録が保存されていません",
     "voucherQrCodePleaseScan": "バウチャーのQRコードを スキャンしてください",
     "checkReceipt": "レシートの確認",
-    "purchaseHistoryHasBeenRegistered": "購買履歴が登録できました"
+    "purchaseHistoryHasBeenRegistered": "購買履歴が登録できました",
+    "passportRegistrationCompleted": "パスポート登録 完了",
+    "goToPassportRegistration": "パスポート登録 へ",
+    "necessaryAdvancePreparations": "必要な事前準備",
+    "information": "下記の{redText}が完了すると税還付申請が自動的に開始されます。",
+    "twoSteps": "2つ",
+    "declaimer": "事前準備完了後もシステム反映までホーム画面の {image}アラートが表示されますのでご了承ください。※審査は平均24時間ほどで完了します。",
+    "pleaseTakeAPhoto": "パスポートを撮影して登録してください。各情報は自動的に入力されます。",
+    "ifTakePhotoError": "※自動入力の情報が間違っている場合は 手入力で修正してください。",
+    "registrationCompleteWord": "パスポート登録が完了するとパスポート写真 の下に顔認証ボタンが表示されます。ご自身のお顔を撮影して登録してください。",
+    "goToRefund": "返金方法登録へ",
+    "goToRefundComplete": "返金方法登録 完了",
+    "refundDeclaimer": "還付金を受け取る方法を、クレジットカード/ 銀行口座/キャッシュレスサービス から1つ以上登録してください。"
   },
   "scan": {
     "metaTitle": "スキャン",

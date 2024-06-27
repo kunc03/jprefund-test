@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Controller, FormProvider, useFormContext } from 'react-hook-form';

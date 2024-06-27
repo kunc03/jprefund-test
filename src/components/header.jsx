@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <div className="flex flex-row items-center justify-between border-b border-b-gray-500 px-3 py-5">
+    <div className="flex flex-row items-center justify-between border-b border-b-gray-500 bg-white px-3 py-5">
       <div className="relative">
         <Image
           alt="menu"

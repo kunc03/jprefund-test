@@ -33,7 +33,19 @@
     "noTaxExemptionRecordsSaved": "No tax exemption records saved",
     "voucherQrCodePleaseScan": "Voucher QR code Please scan",
     "checkReceipt": "Check Receipt",
-    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered"
+    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered",
+    "goToPassportRegistration": "Go to Passport Registration",
+    "passportRegistrationCompleted": "Passport registration complete",
+    "necessaryAdvancePreparations": "Necessary advance preparations",
+    "information": " Once you complete the following {redText}, your tax refund application will begin automatically.",
+    "twoSteps": "two steps",
+    "declaimer": "Please note that even after you have completed the preparations, an {image}alert will be displayed on the home screen until the system is updated. The review process takes about 24 hours on average.",
+    "pleaseTakeAPhoto": "Please take a photo of your passport and register it. All information will be filled in automatically.",
+    "ifTakePhotoError": "If the automatically entered information is incorrect, please correct it manually.",
+    "registrationCompleteWord": "Once your passport registration is complete, the face recognition button will appear under your passport photo. Take a photo of your face and register it.",
+    "goToRefund": "Register for refund method",
+    "goToRefundComplete": "Refund method registration completed",
+    "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service."
   },
   "scan": {
     "metaTitle": "Scan",
