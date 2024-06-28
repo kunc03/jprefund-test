@@ -38,7 +38,7 @@ const IndexPage = () => {
     },
   ];
   const storeDetail = {
-    image: '/images/uniqlo.png',
+    image: '/uniqlo.svg',
     name: 'UNIQLO Ginza',
     address: 'Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo',
   };

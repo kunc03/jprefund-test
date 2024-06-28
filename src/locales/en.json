@@ -1,61 +1,61 @@
 {
   "global": {
-   "hello" : "hello word"
+    "hello": "hello word"
   },
-  "login":{
-    "metaTitle" : "Login",
-    "metaDescription" : "Login page",
-    "title":"Login",
-    "login":"Login",
-    "form":{
-      "label":{
-        "email":"Email address or phone number",
-        "password":"Password",
-        "forgetPass":"for those who have forgotten their password"
+  "login": {
+    "metaTitle": "Login",
+    "metaDescription": "Login page",
+    "title": "Login",
+    "login": "Login",
+    "form": {
+      "label": {
+        "email": "Email address or phone number",
+        "password": "Password",
+        "forgetPass": "for those who have forgotten their password"
       },
-      "placeholder":{
-        "email":"Email address or phone number",
-        "password":"At least 8 alphanumeric characters"
+      "placeholder": {
+        "email": "Email address or phone number",
+        "password": "At least 8 alphanumeric characters"
       }
     },
-    "registered":"Not registered yet?",
-    "createAccount":"Create an account"
+    "registered": "Not registered yet?",
+    "createAccount": "Create an account"
   },
   "home": {
-   "metaTitle" : "Home",
-   "metaDescription" : "Home page",
-   "title":"Home",
-   "recordOfTaxFreePurchases":"Record of Tax Free Purchases",
-   "refundApplication":"Refund application",
-   "remittanceProcedureCompleted":"Remittance procedure completed",
-   "nonRefundable":"Non-refundable",
-   "preparationHasNotBeenCompleted":"Preparation has not been completed",
-   "noTaxExemptionRecordsSaved":"No tax exemption records saved",
-   "voucherQrCodePleaseScan":"Voucher QR code Please scan",
-   "checkReceipt":"Check Receipt",
-   "purchaseHistoryHasBeenRegistered":"Purchase history has been registered"
+    "metaTitle": "Home",
+    "metaDescription": "Home page",
+    "title": "Home",
+    "recordOfTaxFreePurchases": "Record of Tax Free Purchases",
+    "refundApplication": "Refund application",
+    "remittanceProcedureCompleted": "Remittance procedure completed",
+    "nonRefundable": "Non-refundable",
+    "preparationHasNotBeenCompleted": "Preparation has not been completed",
+    "noTaxExemptionRecordsSaved": "No tax exemption records saved",
+    "voucherQrCodePleaseScan": "Voucher QR code Please scan",
+    "checkReceipt": "Check Receipt",
+    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered"
   },
-  "scan":{
-    "metaTitle" : "Scan",
-    "metaDescription" : "Scan page",
-    "title":"Scan",
-    "receiptScan":"Receipt Scan",
-     "qrAlert":"If you cannot read the QR code Please enter the transaction number manually",
-     "send":"Send",
-     "enterTransactionNumber":"Enter transaction number"
+  "scan": {
+    "metaTitle": "Scan",
+    "metaDescription": "Scan page",
+    "title": "Scan",
+    "receiptScan": "Receipt Scan",
+    "qrAlert": "If you cannot read the QR code Please enter the transaction number manually",
+    "send": "Send",
+    "enterTransactionNumber": "Enter transaction number"
   },
-  "zodError":{
-    "login":{
-      "email":{
-        "required":"Email is required",
-        "invalid":"Format email is wrong"
+  "zodError": {
+    "login": {
+      "email": {
+        "required": "Email is required",
+        "invalid": "Format email is wrong"
       },
-      "phone":{
-        "invalid":"Format phone is wrong"
+      "phone": {
+        "invalid": "Format phone is wrong"
       },
-      "password":{
-        "required":"Password is required",
-        "min":"Min password is 8"
+      "password": {
+        "required": "Password is required",
+        "min": "Min password is 8"
       }
     }
   }

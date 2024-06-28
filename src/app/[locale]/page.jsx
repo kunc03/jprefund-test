@@ -60,6 +60,8 @@ const Home = async ({ params }) => {
       </div>
 
       <DetailBottomDrawer />
+
+      {/* {t('')} */}
     </>
   );
 };

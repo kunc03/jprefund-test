@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ChevronLeft } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { BackFromDetail } from '@/context/BackFromDetail';
 
 const Header = ({ title, backLink }) => {
+  const { backFromDetail, setBackFromDetail } = useContext(BackFromDetail);
+  const pathname = usePathname();
   const router = useRouter();
+
+  const handleBack = () => {
+    if (pathname === '/detail/status/process') {
+      setBackFromDetail('process');
+    } else if (pathname === '/detail/status/complete') {
+      setBackFromDetail('complete');
+    } else if (pathname === '/detail/status/fail') {
+      setBackFromDetail('fail');
+    }
+
+    router.push('/dashboard');
+  };
+
   return (
     <header className=" noto-sans-jp-400 w-full flex items-center px-6 py-[21px] bg-white justify-between relative">
-      <button onClick={() => router.push('/dashboard')}>
+      <button onClick={handleBack}>
         <ChevronLeft className="text-sm cursor-pointer text-gray-200" />
       </button>
       <h1 className="noto-sans-jp-500 font-[18px] text-gray-100">{title}</h1>
