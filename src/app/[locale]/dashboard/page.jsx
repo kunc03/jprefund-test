@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import MenuBar from '@/components/dashboard/_components/Menu';
@@ -11,24 +11,29 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonCamera } from '../home/_components/button-camera';
 import {
   advanceSlide,
+  menuSlide,
+  slideBg,
   slidePrepare,
   slideScanner,
 } from '@/components/dashboard/ui/slide';
 import AdvancePreparation from '@/components/dashboard/advance-preparation';
 import AfterScan from '../scan/_components/after-scan';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
 import InProgress from './status/process/page';
 import Completed from './status/complete/page';
 import Failed from './status/fail/page';
 import { CatchData } from '@/context/CatchData';
+import { set } from 'zod';
 
 const DashboardPage = () => {
-  const [getItem, setGetItem] = useState('in-progress');
+  const [getItem, setGetItem] = useState('');
   const [isSearch, setIsSearch] = useState(null);
   const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
-  const [checkReceipt, setCheckReceipt] = useState(true);
+  // const [checkReceipt, setCheckReceipt] = useState(true);
   const { catchData, setCatchData } = useContext(CatchData);
+
+  const pathname = usePathname();
 
   const router = useRouter();
 
@@ -37,14 +42,16 @@ const DashboardPage = () => {
   };
 
   useEffect(() => {
-    if (catchData === 'process') {
+    if (pathname === '/dashboard' && catchData === 'send' && catchData === '') {
       setGetItem('in-progress');
-    } else if (catchData === 'complete') {
+    } else if (catchData === 'complete' && pathname === '/dashboard') {
       setGetItem('completed');
-    } else if (catchData === 'fail') {
+    } else if (catchData === 'fail' && pathname === '/dashboard') {
       setGetItem('failed');
+    } else {
+      setGetItem('in-progress');
     }
-  }, [catchData]);
+  }, [catchData, pathname]);
 
   return (
     <>
@@ -75,7 +82,7 @@ const DashboardPage = () => {
               <h2 className="font-semibold text-black/70">
                 Duty-free purchase records
               </h2>
-              <div className="flex justify-between py-1 px-2 w-full ">
+              <div className="flex justify-between py-1 px-2 w-full">
                 <ButtonProgress
                   onClick={() => setGetItem('in-progress')}
                   label="Duty-free purchase records"
@@ -154,18 +161,18 @@ const DashboardPage = () => {
               <>
                 <motion.div
                   variants={advanceSlide}
+                  initial="initial"
                   animate="enter"
                   exit="exit"
-                  initial="initial"
                   className="absolute bottom-0 w-full"
                 >
                   <motion.div
-                    variants={advanceSlide}
+                    variants={menuSlide}
                     animate="enter"
                     exit="exit"
                     initial="initial"
                     onClick={() => setCatchData('')}
-                    className="absolute h-[100vh] bottom-10 w-full flex flex-col left-0 right-0 bg-black/60"
+                    className="absolute h-[100vh] bottom-0 w-full flex flex-col left-0 right-0 bg-black/60"
                   />
                   <AfterScan />
 
@@ -235,15 +242,17 @@ const DashboardPage = () => {
 
         {/* Scanner */}
         {!isSearch && !openAdvancePreparation && catchData !== 'send' && (
-          <motion.div
-            variants={slideScanner}
-            animate="enter"
-            exit="exit"
-            initial="initial"
-            className="fixed bottom-10 w-full md:max-w-md flex justify-center"
-          >
-            <ButtonCamera />
-          </motion.div>
+          <div className="w-full bg-gray-200 md:max-w-md flex justify-center items-center">
+            <motion.div
+              variants={slideScanner}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+              className="z-100 fixed bottom-10"
+            >
+              <ButtonCamera />
+            </motion.div>
+          </div>
         )}
       </div>
     </>

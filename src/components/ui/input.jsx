@@ -30,7 +30,7 @@ const Input = React.forwardRef(
         autoComplete="off"
         autoCorrect="off"
         className={cn(
-          'flex w-full bg-white px-2.5 rounded-sm py-[18px] text-.4md border  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-.4md placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
+          'flex w-full bg-white px-3 rounded-full py-[10px] text-.4md border  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-.4md placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
         )}
         disabled={disabled}

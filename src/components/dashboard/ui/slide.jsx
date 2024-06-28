@@ -1,6 +1,6 @@
 export const menuSlide = {
   initial: {
-    y: '200%',
+    y: '100%',
   },
   enter: {
     y: 0,
@@ -28,14 +28,14 @@ export const slide = {
 
 export const slideBg = {
   initial: {
-    y: '200%',
+    y: '100%',
   },
   enter: {
     y: 0,
     transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
   },
   exit: {
-    y: '300%',
+    y: '100%',
     transition: { duration: 0.3, ease: [0.76, 0, 0.24, 1] },
   },
 };
