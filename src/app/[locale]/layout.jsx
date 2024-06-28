@@ -3,9 +3,9 @@
 import { Noto_Sans_JP } from 'next/font/google';
 import '@/styles/global.css';
 import { cn } from '@/utils/cn';
-import BackFromDetailContextProvider from '@/context/BackFromDetail';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import CatchDataContextProvider from '@/context/CatchData';
 
 const inter = Noto_Sans_JP({ subsets: ['latin'] });
 
@@ -35,13 +35,13 @@ export default function RootLayout({ children, params }) {
         )}
       >
         {/* Layout UI */}
-        <BackFromDetailContextProvider>
+        <CatchDataContextProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white">
               {children}
             </main>
           </NextIntlClientProvider>
-        </BackFromDetailContextProvider>
+        </CatchDataContextProvider>
       </body>
     </html>
   );

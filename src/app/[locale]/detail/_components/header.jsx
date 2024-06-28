@@ -2,19 +2,20 @@ import React, { useContext } from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { BackFromDetail } from '@/context/BackFromDetail';
+import { CatchData } from '@/context/CatchData';
 
 const Header = ({ title, backLink }) => {
-  const { backFromDetail, setBackFromDetail } = useContext(BackFromDetail);
+  const { catchData, setCatchData } = useContext(CatchData);
   const pathname = usePathname();
   const router = useRouter();
 
   const handleBack = () => {
     if (pathname === '/detail/status/process') {
-      setBackFromDetail('process');
+      setCatchData('process');
     } else if (pathname === '/detail/status/complete') {
-      setBackFromDetail('complete');
+      setCatchData('complete');
     } else if (pathname === '/detail/status/fail') {
-      setBackFromDetail('fail');
+      setCatchData('fail');
     }
 
     router.push('/dashboard');

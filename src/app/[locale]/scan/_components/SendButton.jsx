@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { CatchData } from '@/context/BackFromDetail';
 
 const SendButton = () => {
   const [sendBarcode, setSendBarcode] = useState('send');
+  const { catchData, setCatchData } = useContext(CatchData);
   const router = useRouter();
 
   const handleSendScan = () => {
