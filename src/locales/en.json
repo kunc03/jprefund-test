@@ -129,6 +129,14 @@
       }
     }
   },
+  "detail": {
+    "metaTitle": "Purchase details",
+    "metaDescription": "Purchase details page",
+    "title": "Purchase details",
+    "purchaseDetails": "Purchase details",
+    "receiptDetails": "Receipt details",
+    "detailsClose": "Details close"
+  },
   "zodError": {
     "login": {
       "email": {

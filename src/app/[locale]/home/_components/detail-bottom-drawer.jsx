@@ -15,7 +15,7 @@ import {
   Button,
 } from '@/components';
 import { useQrScan } from '@/hooks';
-import { formatNumber } from '@/utils/number';
+import { formatNumber } from '@/utils';
 
 const DetailBottomDrawer = () => {
   const [open, setIsOpen] = useState(false);

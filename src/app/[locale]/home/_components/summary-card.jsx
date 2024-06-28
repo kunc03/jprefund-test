@@ -4,7 +4,7 @@ import { Heading } from '@/components/heading';
 import { useActiveSummary } from '../_hooks/use-active-summary';
 import { cn, formatNumber, getDateOnly } from '@/utils';
 import { useEffect } from 'react';
-import dataDummy from '../_dummy-data/data.json';
+import dataDummy from '@/dummy-data.json';
 
 const SummaryCard = ({ title, number = 0, className, status }) => {
   const { selectedValue, onSelected, onFetching } = useActiveSummary();

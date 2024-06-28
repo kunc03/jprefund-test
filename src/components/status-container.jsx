@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/utils';
 
-const StatusContainer = ({ label, color }) => {
+const StatusContainer = ({ label, color, className }) => {
   return (
     <div
       className={cn(
@@ -9,6 +9,7 @@ const StatusContainer = ({ label, color }) => {
         color === 'orange' && 'border-orange text-orange',
         color === 'blue' && 'border-blue text-blue',
         color === 'red' && 'border-red-dark text-red-dark',
+        className,
       )}
     >
       {label}

@@ -1,11 +1,16 @@
+/* eslint-disable default-case */
+
+'use client';
+
 import { StatusContainer, StoreInformation } from '@/components';
 import React from 'react';
 import { formatDateTime, formatNumber } from '@/utils';
+import { useRouter } from 'next/navigation';
 
 const ItemCard = ({ item }) => {
-  let colorLabelContainer = 'orange';
+  const router = useRouter();
+  let colorLabelContainer = '';
 
-  // eslint-disable-next-line default-case
   switch (item.status) {
     case 'remittanceProcedureCompleted':
       colorLabelContainer = 'blue';
@@ -13,12 +18,19 @@ const ItemCard = ({ item }) => {
     case 'nonRefundable':
       colorLabelContainer = 'red';
       break;
+    default:
+      colorLabelContainer = 'orange';
+      break;
   }
 
   return (
     <div
       key={item.id}
       className="flex w-full cursor-pointer flex-col gap-2 rounded-8 border border-gray-500 bg-white px-14 py-13"
+      onClick={() => router.push(`/purchase-detail/${item.id}`)}
+      role="button"
+      tabIndex="0"
+      aria-hidden="true"
     >
       <div className="flex w-full flex-row justify-between">
         <StatusContainer label={item.label} color={colorLabelContainer} />

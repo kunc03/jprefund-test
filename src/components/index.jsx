@@ -17,3 +17,4 @@ export * from './ui/input-otp';
 export * from './ui/form';
 export * from './ui/calendar';
 export * from './ui/popover';
+export * from './ui/accordion';

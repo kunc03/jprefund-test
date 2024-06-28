@@ -127,6 +127,14 @@
       }
     }
   },
+  "detail": {
+    "metaTitle": "購入品の詳細",
+    "metaDescription": "購入品の詳細ページ",
+    "title": "購入品の詳細",
+    "purchaseDetails": "購入品の詳細",
+    "receiptDetails": "レシート詳細",
+    "detailsClose": "詳細を閉じる"
+  },
   "zodError": {
     "login": {
       "email": {
