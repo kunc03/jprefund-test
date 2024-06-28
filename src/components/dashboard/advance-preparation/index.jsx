@@ -15,12 +15,12 @@ const AdvancePreparation = () => {
 
   return (
     <>
-      <div className="bg-white flex flex-col items-center justify-center py-5 px-3 text-center rounded-[12px] gap-4">
-        <div className="flex flex-col justify-center items-center gap-3">
-          <h1 className="text-xl text-center font-bold text-[#DD5C45] w-60">
+      <div className="bg-white flex flex-col items-center justify-center lg:py-5 md:py-5 py-8 lg:px-3 md:px-3 px-1 text-center rounded-[12px] gap-4">
+        <div className="flex flex-col justify-center items-center lg:gap-3 md:gap-3 gap-2">
+          <h1 className="lg:text-xl md:text-xl text-md text-center font-bold text-[#DD5C45] w-60">
             Necessary advance preparations
           </h1>
-          <p className="text-base px-1 w-[340px]">
+          <p className="lg:text-base md:text-base text-sm px-1 w-[340px]">
             Once you complete the following{' '}
             <span className="text-[#dd5c45]">two steps</span>, your tax refund
             application will begin automatically.
@@ -50,7 +50,7 @@ const AdvancePreparation = () => {
 
             <button
               onClick={handlePassportRegis}
-              className={`${passportRegis ? 'bg-[#dd5c45] text-white text-[13px] w-[300px]' : 'text-[15px] w-[285px]'} flex items-center justify-center gap-3 border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] h-[42px] rounded-full  font-semibold`}
+              className={`${passportRegis ? 'bg-[#dd5c45] text-white text-[13px] w-[300px]' : 'text-[15px] w-[285px]'} flex items-center justify-center gap-3 border-[2px] border-[#DD5C45] p-2 text-[#DD5C45] h-[42px] rounded-full font-semibold`}
             >
               {passportRegis && (
                 <Image
@@ -65,15 +65,15 @@ const AdvancePreparation = () => {
                 : 'Go to Passport Registration'}
             </button>
 
-            <p className="text-[13px] flex flex-col gap-1">
+            <p className="lg:text-[13px] md:text-[13px] text-[11px] flex flex-col gap-1">
               Please take a photo of your passport and register it. All
               information will be filled in automatically.
-              <span className="text-[11px] px-10">
+              <span className="lg:text-[11px] md:text-[11px] text-[10px] px-10">
                 If the automatically entered information is incorrect, please
                 correct it manually.
               </span>
             </p>
-            <p className="text-[13px] flex flex-col gap-1 px-3">
+            <p className="lg:text-[13px] md:text-[13px] text-[11px] flex flex-col gap-1 px-3">
               Once your passport registration is complete, the face recognition
               button will appear under your passport photo. Take a photo of your
               face and register it.
@@ -103,7 +103,7 @@ const AdvancePreparation = () => {
                 : 'Register for refund method'}
             </button>
 
-            <p className="text-[13px]">
+            <p className="lg:text-[13px] md:text-[13px] text-[11px]">
               Please register at least one method for receiving your refund:
               credit card, bank account, or cashless service.
             </p>

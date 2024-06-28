@@ -33,9 +33,6 @@ const Scan = async ({ params }) => {
           <Heading className="font-medium text-2md text-center text-white w-full max-w-56.5 mt-4">
             {t('qrAlert')}
           </Heading>
-          {/* <div className="fixed bottom-10 w-full md:max-w-md flex justify-center">
-            <ButtonCamera />
-          </div> */}
         </div>
       </div>
       <QrScan />

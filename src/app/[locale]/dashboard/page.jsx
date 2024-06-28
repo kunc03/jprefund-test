@@ -24,18 +24,13 @@ import InProgress from './status/process/page';
 import Completed from './status/complete/page';
 import Failed from './status/fail/page';
 import { CatchData } from '@/context/CatchData';
-import { set } from 'zod';
 
 const DashboardPage = () => {
   const [getItem, setGetItem] = useState('');
   const [isSearch, setIsSearch] = useState(null);
   const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
-  // const [checkReceipt, setCheckReceipt] = useState(true);
   const { catchData, setCatchData } = useContext(CatchData);
-
   const pathname = usePathname();
-
-  const router = useRouter();
 
   const handleIsSearch = (search) => {
     setIsSearch(search);
@@ -57,7 +52,7 @@ const DashboardPage = () => {
     <>
       <div className="relative flex flex-col gap-4">
         <div className="w-full relative">
-          <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[448.5px]">
+          <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed lg:w-[448.5px] md:w-[448.5px] w-full">
             {/* Header */}
             <div className="w-full flex items-center justify-between py-2 px-3 h-[54px] border-b-[1px]">
               <div className="flex justify-center">
@@ -82,7 +77,7 @@ const DashboardPage = () => {
               <h2 className="font-semibold text-black/70">
                 Duty-free purchase records
               </h2>
-              <div className="flex justify-between py-1 px-2 w-full">
+              <div className="flex justify-between py-1 lg:px-2 md:px-2 px-2.5 w-full">
                 <ButtonProgress
                   onClick={() => setGetItem('in-progress')}
                   label="Duty-free purchase records"
@@ -121,15 +116,15 @@ const DashboardPage = () => {
                   onClick={() =>
                     setOpenAdvancePreparation(!openAdvancePreparation)
                   }
-                  className={`bg-[#7A7A7A] w-[448px] text-[14px] h-[37px] border-[#7A7A7A] px-[20px] py-2 text-white border-2 text-center`}
+                  className={`bg-[#7A7A7A] lg:w-[448px] md:w-[448px] w-[374px] lg:text-[14px] md:text-[14px] text-[12px] h-[37px] border-[#7A7A7A] lg:px-[20px] md:px-[20px] px-[10px] py-2 text-white border-2 text-center`}
                 >
-                  <div className="w-[410px] flex gap-1 justify-between items-center px-10">
+                  <div className=" flex gap-1 justify-between items-center px-5">
                     <Image
                       src="/icons/i.png"
                       width={150}
                       height={150}
                       alt="require"
-                      className="w-[18px] h-[19px]"
+                      className="lg:w-[18px] md:w-[18px] w-[15px] lg:h-[19px] md:h-[19px] h-[16px]"
                     />
                     Advance preparation is not complete
                     <Image
@@ -137,7 +132,7 @@ const DashboardPage = () => {
                       width={150}
                       height={150}
                       alt="require"
-                      className="w-[9px] h-[16px]"
+                      className="lg:w-[9px] md:w-[9px] w-[5px] lg:h-[16px] md:h-[16px] h-[12px]"
                     />
                   </div>
                 </button>
@@ -148,7 +143,7 @@ const DashboardPage = () => {
 
         <div
           // ${!openAdvancePreparation && 'mt-[162px]'}
-          className={`flex flex-col w-full mt-[203px] ${openAdvancePreparation && 'h-[81.5vh]'} ${catchData === 'send' && 'h-[70vh]'}`}
+          className={`flex flex-col w-full mt-[203px] ${openAdvancePreparation && 'lg:h-[81.5vh] md:h-[81.5vh] h-[75.5vh]'} ${catchData === 'send' && 'h-[70vh]'}`}
         >
           {/* show items progress */}
           {getItem === 'in-progress' && <InProgress />}
@@ -172,12 +167,12 @@ const DashboardPage = () => {
                     exit="exit"
                     initial="initial"
                     onClick={() => setCatchData('')}
-                    className="absolute h-[100vh] bottom-0 w-full flex flex-col left-0 right-0 bg-black/60"
+                    className="absolute h-[100vh] lg:bottom-0 md:bottom-0 bottom-10 w-full flex flex-col left-0 right-0 bg-black/60"
                   />
                   <AfterScan />
 
                   <button
-                    className="absolute top-4 right-6 z-20"
+                    className="absolute top-4 lg:right-6 md:right-6 right-4 z-20"
                     onClick={() => setCatchData('')}
                   >
                     <Image
@@ -203,7 +198,7 @@ const DashboardPage = () => {
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className="absolute top-0 py-10 px-5"
+                className="absolute top-0 lg:py-10 md:py-10 py-8 lg:px-5 md:px-5 px-3"
               >
                 <AdvancePreparation />
 
@@ -215,14 +210,14 @@ const DashboardPage = () => {
                   onClick={() =>
                     setOpenAdvancePreparation(!openAdvancePreparation)
                   }
-                  className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/60 z-[-1]"
+                  className="absolute lg:h-[120vh] md:h-[120vh] h-[110vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/60 z-[-1]"
                 />
                 <motion.button
                   variants={slidePrepare}
                   animate="enter"
                   exit="exit"
                   initial="initial"
-                  className="absolute top-14 right-10 z-10"
+                  className="absolute lg:top-14 md:top-14 top-12 lg:right-10 md:right-10 right-7 z-10"
                   onClick={() =>
                     setOpenAdvancePreparation(!openAdvancePreparation)
                   }

@@ -37,7 +37,7 @@ const FilterComponent = () => {
         animate="enter"
         exit="exit"
         initial="initial"
-        className="flex flex-col p-5 absolute bottom-[-36rem] h-[85vh] left-0 right-0 bg-white text-[#3F3F3F] rounded-t-lg text-[13px] z-[11]"
+        className="flex flex-col p-5 absolute bottom-[-36rem] lg:h-[85vh] md:h-[85vh] h-[100vh] left-0 right-0 bg-white text-[#3F3F3F] rounded-t-lg text-[13px] z-[11]"
       >
         <motion.h1
           variants={slide}
