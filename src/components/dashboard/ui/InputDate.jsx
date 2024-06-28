@@ -13,9 +13,7 @@ const InputDate = ({ label, placeholder, value, onChange }) => {
         onChange={onChange}
         icon-co
         className={`rounded-[4px] mt-1 px-2 py-3 border-[2px] text-[13px] outline-none w-full ${
-          value
-            ? 'border-[#DD5C45] text-[#dd5c45]'
-            : 'border-[#cfcece] text-[#3F3F3F]'
+          value ? 'border-[#DD5C45] ' : 'border-[#cfcece] text-[#3F3F3F]'
         }`}
       />
       {/* <SlCalender size={25} className="absolute right-2 top-2" /> */}

@@ -53,7 +53,7 @@ const Search = (props) => {
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className="absolute left-0 right-0 h-[40vh] bg-gray-200/50 z-10 "
+                className="absolute top-0 left-0 right-0 h-[100vh] bg-black/60 z-10 "
               />
               <FilterComponent />
             </>

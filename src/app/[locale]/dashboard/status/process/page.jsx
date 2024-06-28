@@ -6,7 +6,7 @@ const InProgress = () => {
   return (
     <div className="pb-2 pt-[2px] bg-[#F9F9F9] scroll-smooth">
       <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
-        <p className="text-center text-[#3F3F3F]">2024 May 17</p>
+        <p className="text-center  font-medium">2024 May 17</p>
         {/* items */}
         <Link
           href="/detail/status/process"
@@ -127,7 +127,7 @@ const InProgress = () => {
       </div>
 
       <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
-        <p className="text-center text-[#3F3F3F]">2024 May 17</p>
+        <p className="text-center  font-medium">2024 May 17</p>
         {/* items */}
         <Link
           href="/detail/status/process"
@@ -248,7 +248,7 @@ const InProgress = () => {
       </div>
 
       <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
-        <p className="text-center text-[#3F3F3F]">2024 May 17</p>
+        <p className="text-center  font-medium">2024 May 17</p>
         {/* items */}
         <Link
           href="/detail/status/process"
@@ -369,7 +369,7 @@ const InProgress = () => {
       </div>
 
       <div className="px-2 flex flex-col gap-2 text-[#3F3F3F] pt-2">
-        <p className="text-center text-[#3F3F3F]">2024 May 17</p>
+        <p className="text-center  font-medium">2024 May 17</p>
         {/* items */}
         <Link
           href="/detail/status/process"

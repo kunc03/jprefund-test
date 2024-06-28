@@ -14,21 +14,21 @@ export const menuSlide = {
 
 export const slide = {
   initial: {
-    y: '200%',
+    y: '100%',
   },
   enter: (i) => ({
     y: 0,
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 2] },
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
   }),
   exit: (i) => ({
     y: '100%',
-    transition: { duration: 0.9, ease: [0.76, 0, 0.24, 2] },
+    transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] },
   }),
 };
 
 export const slideBg = {
   initial: {
-    y: '300%',
+    y: '200%',
   },
   enter: {
     y: 0,

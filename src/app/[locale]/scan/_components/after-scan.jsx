@@ -27,7 +27,7 @@ const AfterScan = () => {
         animate="enter"
         exit="exit"
         initial="initial"
-        className="flex flex-col p-5 absolute bottom-[-36rem] h-[80vh] left-0 right-0 text-[#3F3F3F] rounded-t-lg text-[13px] z-[11] bg-white gap-8"
+        className="flex flex-col p-5 h-[80vh] text-[#3F3F3F] rounded-t-lg text-[13px] z-[11] bg-white gap-8"
       >
         <h1 className="text-[18px] text-black text-center">
           Check your receipt

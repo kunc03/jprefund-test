@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { CatchData } from '@/context/BackFromDetail';
+import { CatchData } from '@/context/CatchData';
 
 const SendButton = () => {
-  const [sendBarcode, setSendBarcode] = useState('send');
   const { catchData, setCatchData } = useContext(CatchData);
   const router = useRouter();
 
   const handleSendScan = () => {
+    setCatchData('send');
     router.push('/dashboard');
   };
 

@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { Heading } from '@/components/heading';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ButtonCamera } from './_components/button-camera';
+// import { ButtonCamera } from './_components/button-camera';
 import { QrScan } from './_components/qr-scan';
 import SendButton from './_components/SendButton';
 
@@ -33,9 +33,9 @@ const Scan = async ({ params }) => {
           <Heading className="font-medium text-2md text-center text-white w-full max-w-56.5 mt-4">
             {t('qrAlert')}
           </Heading>
-          <div className="fixed bottom-10 w-full md:max-w-md flex justify-center">
+          {/* <div className="fixed bottom-10 w-full md:max-w-md flex justify-center">
             <ButtonCamera />
-          </div>
+          </div> */}
         </div>
       </div>
       <QrScan />

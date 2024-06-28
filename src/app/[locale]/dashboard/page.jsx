@@ -21,15 +21,14 @@ import ButtonProgress from '@/components/dashboard/_components/ButtonProgress';
 import InProgress from './status/process/page';
 import Completed from './status/complete/page';
 import Failed from './status/fail/page';
-import { BackFromDetail } from '@/context/BackFromDetail';
-import { set } from 'zod';
+import { CatchData } from '@/context/CatchData';
 
 const DashboardPage = () => {
   const [getItem, setGetItem] = useState('in-progress');
   const [isSearch, setIsSearch] = useState(null);
   const [openAdvancePreparation, setOpenAdvancePreparation] = useState(false);
   const [checkReceipt, setCheckReceipt] = useState(true);
-  const { backFromDetail, setBackFromDetail } = useContext(BackFromDetail);
+  const { catchData, setCatchData } = useContext(CatchData);
 
   const router = useRouter();
 
@@ -37,31 +36,21 @@ const DashboardPage = () => {
     setIsSearch(search);
   };
 
-  const handleItems = () => {
-    if (backFromDetail === 'process') {
-      setGetItem('in-progress');
-    } else if (backFromDetail === 'complete') {
-      setGetItem('completed');
-    } else if (backFromDetail === 'fail') {
-      setGetItem('failed');
-    }
-  };
-
   useEffect(() => {
-    if (backFromDetail === 'process') {
+    if (catchData === 'process') {
       setGetItem('in-progress');
-    } else if (backFromDetail === 'complete') {
+    } else if (catchData === 'complete') {
       setGetItem('completed');
-    } else if (backFromDetail === 'fail') {
+    } else if (catchData === 'fail') {
       setGetItem('failed');
     }
-  }, [backFromDetail]);
+  }, [catchData]);
 
   return (
     <>
       <div className="relative flex flex-col gap-4">
         <div className="w-full relative">
-          <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[448px]">
+          <div className=" text-gray-500 bg-white flex flex-col gap-2 border-b-[1px] border-[#DCDCDC] fixed w-[448.5px]">
             {/* Header */}
             <div className="w-full flex items-center justify-between py-2 px-3 h-[54px] border-b-[1px]">
               <div className="flex justify-center">
@@ -152,7 +141,7 @@ const DashboardPage = () => {
 
         <div
           // ${!openAdvancePreparation && 'mt-[162px]'}
-          className={`flex flex-col w-full mt-[203px] ${openAdvancePreparation && 'h-[81.5vh]'}`}
+          className={`flex flex-col w-full mt-[203px] ${openAdvancePreparation && 'h-[81.5vh]'} ${catchData === 'send' && 'h-[70vh]'}`}
         >
           {/* show items progress */}
           {getItem === 'in-progress' && <InProgress />}
@@ -160,33 +149,42 @@ const DashboardPage = () => {
           {getItem === 'failed' && <Failed />}
 
           {/* Popup After Scan */}
-          {/* {checkReceipt && (
           <AnimatePresence mode="wait">
-            <>
-              <motion.div
-                variants={advanceSlide}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-                className="absolute top-[8%] w-full"
-              >
-                <AfterScan />
-                <button
-                  className="absolute top-4 right-6 z-20"
-                  onClick={() => setCheckReceipt(!checkReceipt)}
+            {catchData === 'send' && (
+              <>
+                <motion.div
+                  variants={advanceSlide}
+                  animate="enter"
+                  exit="exit"
+                  initial="initial"
+                  className="absolute bottom-0 w-full"
                 >
-                  <Image
-                    src="/icons/close.svg"
-                    width={16}
-                    height={16}
-                    alt="close icon"
-                    className="hover:rotate-90 duration-300"
+                  <motion.div
+                    variants={advanceSlide}
+                    animate="enter"
+                    exit="exit"
+                    initial="initial"
+                    onClick={() => setCatchData('')}
+                    className="absolute h-[100vh] bottom-10 w-full flex flex-col left-0 right-0 bg-black/60"
                   />
-                </button>
-              </motion.div>
-            </>
+                  <AfterScan />
+
+                  <button
+                    className="absolute top-4 right-6 z-20"
+                    onClick={() => setCatchData('')}
+                  >
+                    <Image
+                      src="/icons/close.svg"
+                      width={16}
+                      height={16}
+                      alt="close icon"
+                      className="hover:rotate-90 duration-300"
+                    />
+                  </button>
+                </motion.div>
+              </>
+            )}
           </AnimatePresence>
-        )} */}
         </div>
 
         {/* Popup Advance Preparation */}
@@ -210,7 +208,7 @@ const DashboardPage = () => {
                   onClick={() =>
                     setOpenAdvancePreparation(!openAdvancePreparation)
                   }
-                  className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/40 z-[-1]"
+                  className="absolute h-[120vh] top-0 flex flex-col left-0 right-0 py-10 px-5 bg-black/60 z-[-1]"
                 />
                 <motion.button
                   variants={slidePrepare}
@@ -236,7 +234,7 @@ const DashboardPage = () => {
         </AnimatePresence>
 
         {/* Scanner */}
-        {!isSearch && !openAdvancePreparation && (
+        {!isSearch && !openAdvancePreparation && catchData !== 'send' && (
           <motion.div
             variants={slideScanner}
             animate="enter"

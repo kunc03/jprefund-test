@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
-import { BackFromDetail } from '@/context/BackFromDetail';
 import { CatchData } from '@/context/CatchData';
 
 const Header = ({ title, backLink }) => {

@@ -37,7 +37,7 @@ const FilterComponent = () => {
         animate="enter"
         exit="exit"
         initial="initial"
-        className="flex flex-col p-5 absolute bottom-[-36rem] h-[91vh] left-0 right-0 bg-white text-[#3F3F3F] rounded-t-lg text-[13px] z-[11]"
+        className="flex flex-col p-5 absolute bottom-[-36rem] h-[85vh] left-0 right-0 bg-white text-[#3F3F3F] rounded-t-lg text-[13px] z-[11]"
       >
         <motion.h1
           variants={slide}
@@ -163,7 +163,7 @@ const FilterComponent = () => {
                 onClick={() => setStatus('jc_approved')}
                 className={`flex p-3 justify-center border-[2px] rounded-[4px] ${
                   status === 'jc_approved'
-                    ? 'border-[#DD5C45] text-[#dd5c45]'
+                    ? 'border-[#DD5C45] '
                     : 'border-[#cfcece] text-[#3F3F3F]'
                 } w-full `}
               >
@@ -175,7 +175,7 @@ const FilterComponent = () => {
                 onClick={() => setStatus('store_approved')}
                 className={`flex justify-center items-center p-3 border-[2px] rounded-[4px] ${
                   status === 'store_approved'
-                    ? 'border-[#DD5C45] text-[#dd5c45]'
+                    ? 'border-[#DD5C45] '
                     : 'border-[#cfcece] text-[#3F3F3F]'
                 } w-full mb-2`}
               >
@@ -185,7 +185,7 @@ const FilterComponent = () => {
                 onClick={() => setStatus('end_date')}
                 className={`item flex justify-center items-center p-3 border-[2px] rounded-[4px] ${
                   status === 'end_date'
-                    ? 'border-[#DD5C45] text-[#dd5c45]'
+                    ? 'border-[#DD5C45] '
                     : 'border-[#cfcece] text-[#3F3F3F]'
                 } w-full mb-2`}
               >
