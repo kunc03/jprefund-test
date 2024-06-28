@@ -28,7 +28,7 @@ const RootLayout = async ({ children, params }) => {
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-dvh bg-gray-500/30 antialiased flex flex-col items-center',
+          'min-h-dvh bg-gray-400 antialiased flex flex-col items-center',
           inter.variable,
         )}
       >

@@ -18,7 +18,7 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const Home = async ({ params }) => {
+const HomePage = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
 
@@ -53,4 +53,4 @@ const Home = async ({ params }) => {
   );
 };
 
-export default Home;
+export default HomePage;
