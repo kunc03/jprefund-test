@@ -19,7 +19,7 @@ const Calendar = ({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn('p-3 h-fit bg-white overflow-scroll', className)}
+      className={cn('p-3 bg-white', className)}
       classNames={{
         months: 'flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0',
         month: 'space-y-4',
@@ -55,8 +55,8 @@ const Calendar = ({
         ...classNames,
       }}
       components={{
-        IconLeft: () => <ChevronLeft className="size-4" />,
-        IconRight: () => <ChevronRight className="size-4" />,
+        IconLeft: () => <ChevronLeft size={16} />,
+        IconRight: () => <ChevronRight size={16} />,
       }}
       {...props}
     />

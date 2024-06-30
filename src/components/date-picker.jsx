@@ -39,10 +39,8 @@ const DatePicker = ({
             <span className=" font-medium text-gray-300">{label}</span>
           )}
           <CalendarIcon
-            className={cn(
-              'size-4',
-              isSelected ? 'text-white' : 'text-gray-105',
-            )}
+            size={24}
+            className={cn(isSelected ? 'text-white' : 'text-gray-105')}
           />
         </Button>
       </PopoverTrigger>

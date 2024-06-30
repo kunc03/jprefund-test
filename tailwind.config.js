@@ -58,6 +58,7 @@ const remSize = {
   4: pxToEm(4),
   5: pxToEm(5),
   15: pxToEm(15),
+  16: pxToEm(16),
   18: pxToEm(18),
   20: pxToEm(20),
   23: pxToEm(23),
