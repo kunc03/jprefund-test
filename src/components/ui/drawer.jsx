@@ -2,15 +2,29 @@
 
 import * as React from 'react';
 import { Drawer as DrawerPrimitive } from 'vaul';
-
 import { cn } from '@/utils';
 
-const Drawer = ({ shouldScaleBackground = true, ...props }) => (
-  <DrawerPrimitive.Root
-    shouldScaleBackground={shouldScaleBackground}
-    {...props}
-  />
-);
+const DrawerContext = React.createContext({
+  direction: 'bottom',
+});
+
+const Drawer = ({
+  shouldScaleBackground = true,
+  direction = 'bottom',
+  ...props
+}) => {
+  const memoizedDirection = React.useMemo(() => ({ direction }), [direction]);
+
+  return (
+    <DrawerContext.Provider value={memoizedDirection}>
+      <DrawerPrimitive.Root
+        shouldScaleBackground={shouldScaleBackground}
+        direction={memoizedDirection.direction}
+        {...props}
+      />
+    </DrawerContext.Provider>
+  );
+};
 Drawer.displayName = 'Drawer';
 
 const DrawerTrigger = DrawerPrimitive.Trigger;
@@ -32,21 +46,32 @@ const DrawerOverlay = React.forwardRef(({ className, ...props }, ref) => (
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 const DrawerContent = React.forwardRef(
-  ({ className, children, ...props }, ref) => (
-    <DrawerPortal>
-      <DrawerOverlay />
-      <DrawerPrimitive.Content
-        ref={ref}
-        className={cn(
-          'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] shadow-drawer outline-none bg-white',
-          className,
-        )}
-        {...props}
-      >
-        {children}
-      </DrawerPrimitive.Content>
-    </DrawerPortal>
-  ),
+  ({ className, children, ...props }, ref) => {
+    const { direction } = React.useContext(DrawerContext);
+
+    return (
+      <DrawerPortal>
+        <DrawerOverlay />
+        <DrawerPrimitive.Content
+          ref={ref}
+          className={cn(
+            'fixed z-50 flex h-auto flex-col bg-background outline-none',
+            direction === 'bottom' &&
+              'inset-x-0 bottom-0 mt-24 rounded-t-[10px] border',
+            direction === 'left' && 'inset-x-0 bottom-0 h-full',
+
+            className,
+          )}
+          {...props}
+        >
+          {direction === 'bottom' && (
+            <div className="mx-auto mt-4 h-2 w-100 rounded-full bg-white" />
+          )}
+          {children}
+        </DrawerPrimitive.Content>
+      </DrawerPortal>
+    );
+  },
 );
 DrawerContent.displayName = 'DrawerContent';
 
