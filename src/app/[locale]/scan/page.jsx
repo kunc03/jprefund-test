@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
-import { Heading, Button, Input } from '@/components';
+import { Heading, Input } from '@/components';
 
-import { QrScan } from './_components';
+import { ButtonSend, QrScan } from './_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -29,9 +29,10 @@ const Scan = async ({ params }) => {
               type="text"
               className="!h-42 !rounded-21 p-0 !px-14 !py-13 !text-1616"
             />
-            <Button className="!h-42 !shrink-0 !px-14 !py-13">
+            {/* <Button className="!h-42 !shrink-0 !px-14 !py-13">
               {t('send')}
-            </Button>
+            </Button> */}
+            <ButtonSend />
           </div>
           <Heading className="mt-4 w-full max-w-231 text-center text-1626 font-medium text-white">
             {t('qrAlert')}
