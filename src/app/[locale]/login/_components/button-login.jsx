@@ -2,11 +2,11 @@
 
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
-import { useFormLogin } from '../_hooks/use-form-login';
+import { useFormRef } from '@/hooks';
 
 const ButtonLogin = () => {
   const t = useTranslations('login');
-  const submitForm = useFormLogin((state) => state.submitForm);
+  const submitForm = useFormRef((state) => state.submitForm);
 
   const handleLoginClick = () => {
     submitForm();

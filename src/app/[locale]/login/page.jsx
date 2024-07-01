@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
-import { Form, ButtonLogin, Wrapper } from './_components';
+import { Form, ButtonLogin } from './_components';
+import { Logo } from '@/components';
+import Link from 'next/link';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -14,21 +15,19 @@ const Login = async ({ params }) => {
   const t = await getTranslations({ locale, namespace: 'login' });
 
   return (
-    <div className="flex flex-col justify-between min-h-dvh">
-      <div className="flex flex-col justify-center items-center  flex-1">
-        <Image
-          src="/images/logo.svg"
-          alt="logo"
-          width={164}
-          height={20}
-          className="h-auto w-auto"
-        />
+    <div className="flex min-h-dvh flex-col justify-between">
+      <div className="flex flex-1 flex-col items-center  justify-center">
+        <Logo />
         <Form />
       </div>
-      <div className="shrink-0 flex flex-col gap-9 w-full  items-center">
-        <div className="text-center text-gray text-.3.5md">
+      <div className="flex w-full shrink-0 flex-col items-center gap-9">
+        <div className="text-center text-1527 text-gray">
           <p className="font-normal">{t('registered')}</p>
-          <p className="font-bold underline">{t('createAccount')}</p>
+          <Link href="/register">
+            <p className="cursor-pointer font-bold underline">
+              {t('createAccount')}
+            </p>
+          </Link>
         </div>
 
         <ButtonLogin />

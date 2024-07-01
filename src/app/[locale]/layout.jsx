@@ -1,10 +1,12 @@
-import { Noto_Sans_JP } from 'next/font/google';
 import '@/styles/global.css';
-import { cn } from '@/utils/cn';
+
+import { Noto_Sans_JP as notoSansJp } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-const inter = Noto_Sans_JP({ subsets: ['latin'] });
+import { cn } from '@/utils';
+
+const inter = notoSansJp({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,19 +21,19 @@ export const viewport = {
 };
 
 const RootLayout = async ({ children, params }) => {
-  const locale = params.locale;
+  const { locale } = params;
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           'min-h-dvh bg-gray-400 antialiased flex flex-col items-center',
-          inter.className,
+          inter.variable,
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="min-h-dvh w-full relative max-w-md overflow-hidden bg-white">
+          <main className="relative min-h-dvh w-full max-w-md overflow-hidden border border-gray-50 bg-white-dark">
             {children}
           </main>
         </NextIntlClientProvider>
