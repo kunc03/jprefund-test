@@ -1,0 +1,177 @@
+{
+  "global": {
+    "hello": "ハローワード"
+  },
+  "register": {
+    "metaTitle": "登録する",
+    "metaDescription": "登録ページ",
+    "title": "登録する",
+    "register": "登録する",
+    "createAccount": "アカウントを作成",
+    "continueWithApple": "Appleアカウントで続ける",
+    "continueWithGoogle": "Googleアカウントで続ける",
+    "continueWithFacebook": "Facebookアカウントで続ける",
+    "continueWithTwitter": "Xアカウントで続ける",
+    "continueWithEmail": "メールでアカウント作成",
+    "continueWithPhone": "電話番号でアカウント作成",
+    "or": "または",
+    "acceptTermCondition": "登録すると{term}, {privacyPolicy}, {cookies} に同意したものとみなされます",
+    "term": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "cookies": "Cookie の使用",
+    "haveAccount": "すでにアカウントをお持ちですか? {login}",
+    "useNowWithoutRegistering": "登録せずに {useNow}",
+    "login": "ログイン",
+    "useNow": "今すぐ使う",
+    "next": "次へ",
+    "form": {
+      "label": {
+        "email": "メールアドレス",
+        "phone": "電話番号",
+        "otp": "6桁の認証コード"
+      },
+      "placeholder": {
+        "email": "メールアドレス",
+        "phone": "000-0000-0000",
+        "phoneArea": "コード"
+      }
+    },
+    "verifyCodeSend": "認証コードを送信しました",
+    "enterAuthCodeEmail": "メールに記載されている{authCode}を入力して メールアドレスを認証してください。",
+    "enterAuthCodePhone": "SMSに記載されている{authCode}を入力して電話番号を認証してください。",
+    "authCode": "認証コード",
+    "dateOfExpiry": "有効期限",
+    "reissueAuthCode": "認証コードを再発行"
+  },
+  "login": {
+    "metaTitle": "ログイン",
+    "metaDescription": "ログインページ",
+    "title": "ログイン",
+    "login": "ログイン",
+    "form": {
+      "label": {
+        "email": "メールアドレス、または電話番号",
+        "password": "パスワード",
+        "forgetPass": "パスワードを忘れた方"
+      },
+      "placeholder": {
+        "email": "メールアドレス、または電話番号",
+        "password": "半角英数8文字以上"
+      }
+    },
+    "registered": "まだ登録されていませんか",
+    "createAccount": "アカウントを作成する"
+  },
+  "home": {
+    "metaTitle": "家",
+    "metaDescription": "ホームページ",
+    "title": "家",
+    "recordOfTaxFreePurchases": "免税購入の記録",
+    "refundApplication": "還付申請",
+    "remittanceProcedureCompleted": "送金手続完了",
+    "nonRefundable": "還付不可",
+    "preparationHasNotBeenCompleted": "事前準備が完了していません",
+    "noTaxExemptionRecordsSaved": "免税記録が保存されていません",
+    "voucherQrCodePleaseScan": "バウチャーのQRコードを スキャンしてください",
+    "checkReceipt": "レシートの確認",
+    "purchaseHistoryHasBeenRegistered": "購買履歴が登録できました",
+    "passportRegistrationCompleted": "パスポート登録 完了",
+    "goToPassportRegistration": "パスポート登録 へ",
+    "necessaryAdvancePreparations": "必要な事前準備",
+    "information": "下記の{redText}が完了すると税還付申請が自動的に開始されます。",
+    "twoSteps": "2つ",
+    "declaimer": "事前準備完了後もシステム反映までホーム画面の {image}アラートが表示されますのでご了承ください。※審査は平均24時間ほどで完了します。",
+    "pleaseTakeAPhoto": "パスポートを撮影して登録してください。各情報は自動的に入力されます。",
+    "ifTakePhotoError": "※自動入力の情報が間違っている場合は 手入力で修正してください。",
+    "registrationCompleteWord": "パスポート登録が完了するとパスポート写真 の下に顔認証ボタンが表示されます。ご自身のお顔を撮影して登録してください。",
+    "goToRefund": "返金方法登録へ",
+    "goToRefundComplete": "返金方法登録 完了",
+    "refundDeclaimer": "還付金を受け取る方法を、クレジットカード/ 銀行口座/キャッシュレスサービス から1つ以上登録してください。",
+    "enjoyJapanRefundService": "もっと日本を楽しもう JPrefoundは 手間なしの 税還付サービスです",
+    "searchFilter": "フィルター",
+    "resetFilter": "フィルターをリセット",
+    "applyFilter": "フィルターを適用",
+    "sort": "ソート",
+    "status": "ステータス",
+    "lowestFirst": "返金金額 : 低い順",
+    "highestToLowest": "返金金額 : 高い順",
+    "startDate": "開始日",
+    "endDate": "終了日",
+    "submitted": "提出済み",
+    "jcApproval": "JC承認",
+    "storeApproval": "ストアの承認"
+  },
+  "scan": {
+    "metaTitle": "スキャン",
+    "metaDescription": "ページをスキャン",
+    "title": "スキャン",
+    "receiptScan": "レシートスキャン",
+    "qrAlert": "QRコードが読み取れない場合は 取引番号を手入力ください",
+    "send": "送信",
+    "enterTransactionNumber": "取引番号を入力"
+  },
+  "passwordSetting": {
+    "metaTitle": "パスワード設定",
+    "metaDescription": "パスワード設定ページ",
+    "title": "パスワード設定",
+    "passwordSetting": "パスワード設定",
+    "signIn": "サインイン",
+    "form": {
+      "label": {
+        "password": "パスワード",
+        "confirmPassword": "パスワード確認"
+      },
+      "placeholder": {
+        "password": "パスワード",
+        "confirmPassword": "確認のためもう一度入力"
+      }
+    }
+  },
+  "detail": {
+    "metaTitle": "購入品の詳細",
+    "metaDescription": "購入品の詳細ページ",
+    "title": "購入品の詳細",
+    "purchaseDetails": "購入品の詳細",
+    "receiptDetails": "レシート詳細",
+    "detailsClose": "詳細を閉じる"
+  },
+  "zodError": {
+    "login": {
+      "email": {
+        "required": "メールアドレスは必須です",
+        "invalid": "メールの形式が間違っています"
+      },
+      "phone": {
+        "invalid": "電話機のフォーマットが間違っています"
+      },
+      "password": {
+        "required": "パスワードが必要",
+        "min": "最小パスワードは 8 です"
+      }
+    },
+    "register": {
+      "email": {
+        "required": "メールアドレスは必須です",
+        "invalid": "メールの形式が間違っています"
+      },
+      "phone": {
+        "required": "電話番号は必須です",
+        "invalid": "電話機のフォーマットが間違っています"
+      },
+      "otp": {
+        "required": "OTPは必須です",
+        "min": "最小OTPは6です"
+      }
+    },
+    "settingPassword": {
+      "password": {
+        "required": "パスワードが必要",
+        "min": "最小パスワードは 8 です",
+        "mismatch": "パスワードと確認用パスワードは一致する必要があります"
+      },
+      "confPassword": {
+        "required": "パスワードの確認が必要です"
+      }
+    }
+  }
+}

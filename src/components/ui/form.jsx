@@ -1,19 +1,23 @@
 'use client';
 
-import * as React from 'react';
+import React, { useMemo } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Controller, FormProvider, useFormContext } from 'react-hook-form';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import { Label } from '@/components/ui/label';
+
 import { useTranslations } from 'next-intl';
+
 const Form = FormProvider;
 
 const FormFieldContext = React.createContext({});
+const FormItemContext = React.createContext({});
 
 const FormField = ({ ...props }) => {
+  const contextValue = useMemo(() => ({ name: props.name }), [props.name]);
   return (
-    <FormFieldContext.Provider value={{ name: props.name }}>
+    <FormFieldContext.Provider value={contextValue}>
       <Controller {...props} />
     </FormFieldContext.Provider>
   );
@@ -42,13 +46,12 @@ const useFormField = () => {
   };
 };
 
-const FormItemContext = React.createContext({});
-
 const FormItem = React.forwardRef(({ className, ...props }, ref) => {
   const id = React.useId();
+  const contextValue = useMemo(() => ({ id }), [id]);
 
   return (
-    <FormItemContext.Provider value={{ id }}>
+    <FormItemContext.Provider value={contextValue}>
       <div ref={ref} className={cn('space-y-2', className)} {...props} />
     </FormItemContext.Provider>
   );

@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 const ItemDetail = ({ rows }) => {
   return (
@@ -6,9 +6,9 @@ const ItemDetail = ({ rows }) => {
       {rows.map((row) => (
         <div
           key={row.key}
-          className="flex pb-2 border-b border-b-gray-400 flex-row justify-between"
+          className="flex flex-row justify-between border-b border-b-gray-400 pb-2"
         >
-          <div className="font-medium text-.7sm text-gray-300 w-full md:w-1/2">
+          <div className="w-full text-1322 font-medium text-gray-300 md:w-1/2">
             {row.key}
           </div>
           <div

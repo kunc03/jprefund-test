@@ -1,3 +1,61 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb-base",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "func-style": ["error", "expression"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx"],
+      "plugins": ["tailwindcss", "simple-import-sort"],
+      "extends": [
+        "plugin:tailwindcss/recommended",
+        "airbnb",
+        "next/core-web-vitals",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "import/extensions": "off",
+        "react/function-component-definition": "off",
+        "react/destructuring-assignment": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-restricted-syntax": [
+          "error",
+          "ForInStatement",
+          "LabeledStatement",
+          "WithStatement"
+        ],
+        "import/prefer-default-export": "off",
+        "simple-import-sort/imports": "off",
+        "simple-import-sort/exports": "off",
+        "import/order": "off",
+        "unused-imports/no-unused-imports": "off",
+        "unused-imports/no-unused-vars": "off",
+        "react/jsx-sort-props": "off",
+        "func-style": ["error", "expression"]
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "moduleDirectory": ["node_modules", "."]
+          },
+          "alias": {
+            "map": [["@", "./src"]],
+            "extensions": [".js", ".jsx"]
+          }
+        }
+      }
+    }
+  ]
 }

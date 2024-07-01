@@ -2,6 +2,48 @@
   "global": {
     "hello": "hello word"
   },
+  "register": {
+    "metaTitle": "Register",
+    "metaDescription": "Register page",
+    "title": "Register",
+    "register": "Register",
+    "registered": "Not registered yet?",
+    "createAccount": "Create an account",
+    "continueWithApple": "Continue with your Apple account",
+    "continueWithGoogle": "Continue with your Google account",
+    "continueWithFacebook": "Continue with Facebook",
+    "continueWithTwitter": "Continue with X account",
+    "continueWithEmail": "Create an account by email",
+    "continueWithPhone": "Create an account with your phone number",
+    "or": "Or",
+    "acceptTermCondition": "By registering, you agree to our {term}, {privacyPolicy} {cookies}.",
+    "term": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "cookies": "and Cookies",
+    "haveAccount": "Already have an account? {login}",
+    "useNowWithoutRegistering": "{useNow} without registering",
+    "login": "Log in",
+    "useNow": "Use now",
+    "next": "Next",
+    "form": {
+      "label": {
+        "email": "Email address",
+        "phone": "Telephone number",
+        "otp": "6-digit authentication code"
+      },
+      "placeholder": {
+        "email": "Email address",
+        "phone": "000-0000-0000",
+        "phoneArea": "Code"
+      }
+    },
+    "verifyCodeSend": "Verification code sent",
+    "enterAuthCodeEmail": "Please enter the {authCode} provided in the email to verify your email address.",
+    "enterAuthCodePhone": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
+    "authCode": "authentication code",
+    "dateOfExpiry": "Date of expiry",
+    "reissueAuthCode": "Reissue authentication code"
+  },
   "login": {
     "metaTitle": "Login",
     "metaDescription": "Login page",
@@ -11,7 +53,8 @@
       "label": {
         "email": "Email address or phone number",
         "password": "Password",
-        "forgetPass": "for those who have forgotten their password"
+        "forgetPass": "for those who have forgotten their password",
+        "otp": "for those who have forgotten their password"
       },
       "placeholder": {
         "email": "Email address or phone number",
@@ -26,14 +69,39 @@
     "metaDescription": "Home page",
     "title": "Home",
     "recordOfTaxFreePurchases": "Record of Tax Free Purchases",
-    "refundApplication": "Refund application",
+    "refundApplication": "Duty-free purchase records",
     "remittanceProcedureCompleted": "Remittance procedure completed",
     "nonRefundable": "Non-refundable",
-    "preparationHasNotBeenCompleted": "Preparation has not been completed",
+    "preparationHasNotBeenCompleted": "Advance preparation is not complete",
     "noTaxExemptionRecordsSaved": "No tax exemption records saved",
     "voucherQrCodePleaseScan": "Voucher QR code Please scan",
     "checkReceipt": "Check Receipt",
-    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered"
+    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered",
+    "goToPassportRegistration": "Go to Passport Registration",
+    "passportRegistrationCompleted": "Passport registration complete",
+    "necessaryAdvancePreparations": "Necessary advance preparations",
+    "information": " Once you complete the following {redText}, your tax refund application will begin automatically.",
+    "twoSteps": "two steps",
+    "declaimer": "Please note that even after you have completed the preparations, an {image}alert will be displayed on the home screen until the system is updated. The review process takes about 24 hours on average.",
+    "pleaseTakeAPhoto": "Please take a photo of your passport and register it. All information will be filled in automatically.",
+    "ifTakePhotoError": "If the automatically entered information is incorrect, please correct it manually.",
+    "registrationCompleteWord": "Once your passport registration is complete, the face recognition button will appear under your passport photo. Take a photo of your face and register it.",
+    "goToRefund": "Register for refund method",
+    "goToRefundComplete": "Refund method registration completed",
+    "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service.",
+    "enjoyJapanRefundService": "Enjoy Japan even more JPrefound is a hassle-free tax refund service",
+    "searchFilter": "Search filters",
+    "resetFilter": "Reset filters",
+    "applyFilter": "Apply Filter",
+    "sort": "Sort",
+    "status": "Status",
+    "lowestFirst": "Refund amount: Lowest first",
+    "highestToLowest": "Refund amount: Highest to lowest",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "submitted": "Submitted",
+    "jcApproval": "JC Approval",
+    "storeApproval": "Store Approval"
   },
   "scan": {
     "metaTitle": "Scan",
@@ -43,6 +111,31 @@
     "qrAlert": "If you cannot read the QR code Please enter the transaction number manually",
     "send": "Send",
     "enterTransactionNumber": "Enter transaction number"
+  },
+  "passwordSetting": {
+    "metaTitle": "Password Setting",
+    "metaDescription": "Password Setting page",
+    "title": "Password Setting",
+    "passwordSetting": "Password Setting",
+    "signIn": "Sign in",
+    "form": {
+      "label": {
+        "password": "Password",
+        "confirmPassword": "Password confirmation"
+      },
+      "placeholder": {
+        "password": "password",
+        "confirmPassword": "Enter again to confirm"
+      }
+    }
+  },
+  "detail": {
+    "metaTitle": "Purchase details",
+    "metaDescription": "Purchase details page",
+    "title": "Purchase details",
+    "purchaseDetails": "Purchase details",
+    "receiptDetails": "Receipt details",
+    "detailsClose": "Details close"
   },
   "zodError": {
     "login": {
@@ -56,6 +149,30 @@
       "password": {
         "required": "Password is required",
         "min": "Min password is 8"
+      }
+    },
+    "register": {
+      "email": {
+        "required": "Email is required",
+        "invalid": "Format email is wrong"
+      },
+      "phone": {
+        "required": "Phone is required",
+        "invalid": "Format phone is wrong"
+      },
+      "otp": {
+        "required": "Otp is required",
+        "min": "Min Otp is 6"
+      }
+    },
+    "settingPassword": {
+      "password": {
+        "required": "Password is required",
+        "min": "Min password is 8",
+        "mismatch": "Password and confirm password must match"
+      },
+      "confPassword": {
+        "required": "Password confirmation is required"
       }
     }
   }

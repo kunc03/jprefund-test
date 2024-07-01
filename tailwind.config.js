@@ -1,6 +1,133 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssAnimate from 'tailwindcss-animate';
 
-module.exports = {
+const pxToEm = ($px) => {
+  return `${$px / 16}rem`;
+};
+
+const remBorderRadius = {
+  1.5: pxToEm(1.5),
+  4: pxToEm(4),
+  8: pxToEm(8),
+  12: pxToEm(12),
+  21: pxToEm(21),
+};
+
+const remGap = {
+  7: pxToEm(7),
+  8: pxToEm(8),
+  10: pxToEm(10),
+  11: pxToEm(11),
+  12: pxToEm(12),
+  17: pxToEm(17),
+  18: pxToEm(18),
+  20: pxToEm(20),
+  28: pxToEm(28),
+  38: pxToEm(38),
+  58: pxToEm(58),
+};
+
+const remPadding = {
+  4.5: pxToEm(4.5),
+  8: pxToEm(8),
+  9.5: pxToEm(9.5),
+  10: pxToEm(10),
+  10.5: pxToEm(10.5),
+  11: pxToEm(11),
+  13: pxToEm(13),
+  14: pxToEm(14),
+  18: pxToEm(18),
+  53: pxToEm(53),
+  20: pxToEm(20),
+  27.5: pxToEm(27.5),
+  21: pxToEm(21),
+  28: pxToEm(28),
+  29: pxToEm(29),
+  33.5: pxToEm(33.5),
+  43: pxToEm(43),
+  65: pxToEm(65),
+  77: pxToEm(77),
+};
+
+const remMargin = {
+  28.5: pxToEm(28.5),
+};
+
+const remSize = {
+  2: pxToEm(2),
+  4: pxToEm(4),
+  5: pxToEm(5),
+  15: pxToEm(15),
+  16: pxToEm(16),
+  18: pxToEm(18),
+  20: pxToEm(20),
+  23: pxToEm(23),
+  24: pxToEm(24),
+  26: pxToEm(26),
+  40.8: pxToEm(40.8),
+  42: pxToEm(42),
+  38: pxToEm(38),
+  48: pxToEm(48),
+  53: pxToEm(53),
+  56: pxToEm(56),
+  64: pxToEm(64),
+  68: pxToEm(68),
+  73: pxToEm(73),
+  74: pxToEm(74),
+  90: pxToEm(90),
+  100: pxToEm(100),
+  120: pxToEm(120),
+  128: pxToEm(128),
+  138: pxToEm(138),
+  164: pxToEm(164),
+  187: pxToEm(187),
+  192: pxToEm(192),
+  210: pxToEm(210),
+  231: pxToEm(231),
+  249: pxToEm(249),
+  254: pxToEm(254),
+  285: pxToEm(285),
+  300: pxToEm(300),
+  309.65: pxToEm(309.65),
+  318: pxToEm(318),
+  324: pxToEm(324),
+  334: pxToEm(334),
+  340: pxToEm(340),
+};
+
+const remFontSize = {
+  1010: [pxToEm(10), { lineHeight: pxToEm(10) }],
+  1012: [pxToEm(10), { lineHeight: pxToEm(12) }],
+  1022: [pxToEm(10), { lineHeight: pxToEm(22) }],
+  1118: [pxToEm(11), { lineHeight: pxToEm(18) }],
+  1217: [pxToEm(12), { lineHeight: pxToEm(17) }],
+  1222: [pxToEm(12), { lineHeight: pxToEm(22) }],
+  1215.6: [pxToEm(12), { lineHeight: pxToEm(15.6) }],
+  1315: [pxToEm(13), { lineHeight: pxToEm(15) }],
+  1313: [pxToEm(13), { lineHeight: pxToEm(13) }],
+  1320: [pxToEm(13), { lineHeight: pxToEm(20) }],
+  1322: [pxToEm(13), { lineHeight: pxToEm(22) }],
+  1414: [pxToEm(14), { lineHeight: pxToEm(14) }],
+  1422: [pxToEm(14), { lineHeight: pxToEm(22) }],
+  1515: [pxToEm(15), { lineHeight: pxToEm(15) }],
+  1521: [pxToEm(15), { lineHeight: pxToEm(21) }],
+  1522: [pxToEm(15), { lineHeight: pxToEm(22) }],
+  1527: [pxToEm(15), { lineHeight: pxToEm(27) }],
+  1613: [pxToEm(16), { lineHeight: pxToEm(13) }],
+  1620.8: [pxToEm(16), { lineHeight: pxToEm(20.8) }],
+  1622: [pxToEm(16), { lineHeight: pxToEm(22) }],
+  1616: [pxToEm(16), { lineHeight: pxToEm(16) }],
+  1626: [pxToEm(16), { lineHeight: pxToEm(26) }],
+  1722: [pxToEm(17), { lineHeight: pxToEm(22) }],
+  1818: [pxToEm(18), { lineHeight: pxToEm(18) }],
+  1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
+  2021: [pxToEm(20), { lineHeight: pxToEm(21) }],
+  2022: [pxToEm(20), { lineHeight: pxToEm(22) }],
+  2122: [pxToEm(21), { lineHeight: pxToEm(22) }],
+  2437: [pxToEm(24), { lineHeight: pxToEm(37) }],
+};
+
+const tailwindConfig = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{js,jsx}',
@@ -14,13 +141,16 @@ module.exports = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': pxToEm(1400),
       },
     },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
+      white: {
+        DEFAULT: '#ffffff',
+        dark: '#F9F9F9',
+      },
       black: '#000000',
       green: '#29ad19',
       blue: {
@@ -29,15 +159,15 @@ module.exports = {
       },
       orange: {
         DEFAULT: '#ff9a00',
-        dark: '#dd5c45',
       },
       gray: {
         50: '#fafaf9',
+        100: '#D9D9D9',
         200: '#909090',
         300: '#bfbfbf',
         400: '#cfcece',
-        500: '#ededed',
-        600: '#F9F9F9',
+        500: '#DCDCDC',
+        105: '#8F8F8F',
         110: '#7a7a7a',
         DEFAULT: '#3f3f3f',
       },
@@ -46,13 +176,13 @@ module.exports = {
         light: '#ff0000',
         dark: '#b91300',
       },
-
       shadow: '#000 / 0.15',
     },
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)'],
       },
+
       colors: {
         border: 'hsl(var(--border))',
         background: 'hsl(var(--background))',
@@ -61,50 +191,29 @@ module.exports = {
         ring: 'hsl(var(--ring))',
       },
       borderRadius: {
-        '2.5xl': '1.3125rem',
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        ...remBorderRadius,
       },
-      fontSize: {
-        sm: ['12px', { lineHeight: '22px' }],
-        '.5sm': ['12px', { lineHeight: '15.6px' }],
-        '.7sm': ['13px', { lineHeight: '22px' }],
-        '2sm': ['14px', { lineHeight: '14px' }],
-        '3sm': ['14px', { lineHeight: '22px' }],
-        md: ['15px', { lineHeight: '15px' }],
-        '.3md': ['15px', { lineHeight: '22px' }],
-        '.3.5md': ['15px', { lineHeight: '27px' }],
-        '.4md': ['16px', { lineHeight: '13px' }],
-        '.5md': ['16px', { lineHeight: '20.8px' }],
-        '6md': ['16px', { lineHeight: '22px' }],
-        '2md': ['16px', { lineHeight: '26px' }],
-        lg: ['18px', { lineHeight: '22px' }],
-        '.2xl': ['20px', { lineHeight: '22px' }],
-        '.3xl': ['21px', { lineHeight: '22px' }],
-      },
+      fontSize: { ...remFontSize },
       padding: {
-        2.5: '0.59375rem',
-        3.5: '0.875rem',
-        4.5: '1.125rem',
+        ...remPadding,
+      },
+      size: {
+        ...remSize,
       },
       height: {
-        4.5: '1.125rem',
-        10.5: '2.625rem',
-        15: '3.75rem',
-        16.5: '4.25rem',
-        28.5: '7.5rem',
-        56.5: '14.4375rem',
+        ...remSize,
+      },
+      gap: {
+        ...remGap,
       },
       width: {
-        4.5: '1.125rem',
-        10.5: '2.625rem',
-        16.5: '4.25rem',
-        28.5: '7.5rem',
-        52.5: '13.125rem',
-        56.5: '14.4375rem',
+        ...remSize,
       },
-      maxWidth: { 56.5: '14.4375rem' },
+      margin: { ...remMargin },
+      minHeight: { ...remSize },
+      minWidth: { ...remSize },
+      maxWidth: { ...remSize },
+      maxHeight: { ...remSize },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -114,10 +223,15 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'caret-blink': {
+          '0%,70%,100%': { opacity: '1' },
+          '20%,50%': { opacity: '0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
       boxShadow: {
         floating: '0px 2.6px 5.03px 0px rgba(0, 0, 0, 0.2)',
@@ -125,5 +239,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 };
+
+export default tailwindConfig;
