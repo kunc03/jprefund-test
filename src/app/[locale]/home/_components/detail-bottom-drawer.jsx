@@ -16,18 +16,20 @@ import {
 } from '@/components';
 import { useQrScan } from '@/hooks';
 import { formatNumber } from '@/utils';
+import { useRouter } from 'next/navigation';
 
-const DetailBottomDrawer = () => {
+const DetailBottomDrawer = (props) => {
   const [open, setIsOpen] = useState();
-  const onCloseDrawer = () => setIsOpen(false);
-  const t = useTranslations('home');
-  const { selectedValue, value } = useQrScan();
+  const router = useRouter();
 
-  useEffect(() => {
-    if (selectedValue || value) {
-      setIsOpen(true);
-    }
-  }, [selectedValue, value]);
+  const onCloseDrawer = () => {
+    setIsOpen(false);
+
+    router.push('/home');
+  };
+
+  const t = useTranslations('home');
+  const { selectedValue } = useQrScan();
 
   const rows = [
     {
@@ -51,6 +53,11 @@ const DetailBottomDrawer = () => {
       value: 222221111111,
     },
   ];
+  useEffect(() => {
+    if (selectedValue || props.isOpen) {
+      setIsOpen(true);
+    }
+  }, [selectedValue, props.isOpen]);
 
   return (
     <Drawer onClose={onCloseDrawer} open={open}>

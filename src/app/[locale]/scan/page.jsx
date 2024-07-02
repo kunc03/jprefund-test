@@ -28,8 +28,8 @@ const Scan = async ({ params }) => {
               placeholder={t('enterTransactionNumber')}
               type="text"
               className="!h-42 !rounded-21 p-0 !px-14 !py-13 !text-1616"
-            /> */}
-            {/* <Button className="!h-42 !shrink-0 !px-14 !py-13">
+            />
+            <Button className="!h-42 !shrink-0 !px-14 !py-13">
               {t('send')}
             </Button> */}
             <ButtonSend />

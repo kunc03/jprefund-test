@@ -18,11 +18,9 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const HomePage = async ({ params }) => {
+const HomePage = async ({ params, searchParams }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
-
-  console.log(locale);
 
   return (
     <>
@@ -48,7 +46,7 @@ const HomePage = async ({ params }) => {
 
       <ButtonCamera />
 
-      <DetailBottomDrawer />
+      <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
 
       <FilterBottomDrawer />
     </>
