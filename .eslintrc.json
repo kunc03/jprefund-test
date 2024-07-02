@@ -4,6 +4,7 @@
     "next/core-web-vitals",
     "plugin:prettier/recommended"
   ],
+  "plugins": ["filenames"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -12,12 +13,13 @@
         "endOfLine": "auto"
       }
     ],
-    "func-style": ["error", "expression"]
+    "func-style": ["error", "expression"],
+    "filenames/match-regex": ["error", "^[a-z-]+$", true]
   },
   "overrides": [
     {
       "files": ["**/*.js", "**/*.jsx"],
-      "plugins": ["tailwindcss", "simple-import-sort"],
+      "plugins": ["tailwindcss", "simple-import-sort", "filenames"],
       "extends": [
         "plugin:tailwindcss/recommended",
         "airbnb",
@@ -43,7 +45,8 @@
         "unused-imports/no-unused-imports": "off",
         "unused-imports/no-unused-vars": "off",
         "react/jsx-sort-props": "off",
-        "func-style": ["error", "expression"]
+        "func-style": ["error", "expression"],
+        "filenames/match-regex": ["error", "^[a-z0-9-]+$", true]
       },
       "settings": {
         "import/resolver": {
