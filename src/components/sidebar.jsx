@@ -89,9 +89,9 @@ const Sidebar = () => {
         label: t('routes.identityAuthentication'),
         subMenu: [
           {
-            href: `/${locale}/passport-informations`,
+            href: `/${locale}/passport-information`,
             label: t('routes.passportInformation'),
-            active: pathname === `/passport-informations`,
+            active: pathname === `/passport-information`,
             icon: <IconImage image="passport-information.svg" />,
             isRequired: true,
             isUnregister: true,

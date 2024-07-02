@@ -7,6 +7,7 @@ export { StatusContainer } from './status-container';
 export { SplashLogo } from './splash-logo';
 export { Logo } from './logo';
 export { DatePicker } from './date-picker';
+export { PassportRegistrationIcon } from './passport-registration';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';
