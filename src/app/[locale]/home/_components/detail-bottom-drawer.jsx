@@ -18,16 +18,16 @@ import { useQrScan } from '@/hooks';
 import { formatNumber } from '@/utils';
 
 const DetailBottomDrawer = () => {
-  const [open, setIsOpen] = useState(false);
+  const [open, setIsOpen] = useState();
   const onCloseDrawer = () => setIsOpen(false);
   const t = useTranslations('home');
-  const { selectedValue } = useQrScan();
+  const { selectedValue, value } = useQrScan();
 
   useEffect(() => {
-    if (selectedValue) {
+    if (selectedValue || value) {
       setIsOpen(true);
     }
-  }, [selectedValue]);
+  }, [selectedValue, value]);
 
   const rows = [
     {

@@ -22,6 +22,8 @@ const HomePage = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
 
+  console.log(locale);
+
   return (
     <>
       <Header />
