@@ -163,7 +163,8 @@
     "title": "お知らせ",
     "selfieRejected": "自撮り写真が拒否されました",
     "qrScanSuccessful": "QRのスキャンが成功しました",
-    "statusChangedToCompleted": "ステータスが完了に変更されました"
+    "statusChangedToCompleted": "ステータスが完了に変更されました",
+    "announcementDetails": "お知らせ詳細"
   },
   "zodError": {
     "login": {

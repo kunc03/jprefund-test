@@ -165,7 +165,8 @@
     "title": "Notice",
     "selfieRejected": "Selfie rejected",
     "qrScanSuccessful": "QR scan successful",
-    "statusChangedToCompleted": "Status changed to Completed"
+    "statusChangedToCompleted": "Status changed to Completed",
+    "announcementDetails": "Announcement details"
   },
   "zodError": {
     "login": {
