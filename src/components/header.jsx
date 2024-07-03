@@ -1,15 +1,23 @@
 'use client';
 
 // import { useDrawer } from '@/hooks';
+import { useState } from 'react';
+import { useDrawer } from '@/hooks';
 import Image from 'next/image';
 import { cn } from '@/utils';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, X } from 'lucide-react';
 import { Heading } from './heading';
 import { useRouter } from 'next/navigation';
+import { Sidebar } from './sidebar';
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
 const Header = ({ hasBack = false, title = null }) => {
-  // const { setIsOpen } = useDrawer();
+  const { setIsOpen } = useDrawer();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
+  const handleSidebar = () => {
+    setIsSidebarOpen((oldVal) => !oldVal);
+  };
 
   return (
     <div
@@ -27,6 +35,7 @@ const Header = ({ hasBack = false, title = null }) => {
               height={24}
               src="/images/menu.svg"
               width={24}
+              onClick={handleSidebar}
             />
             <span className="absolute -right-1 top-[-3px] size-[10px] rounded-full bg-red-light" />
           </div>
@@ -52,6 +61,22 @@ const Header = ({ hasBack = false, title = null }) => {
               onClick={() => setIsOpen(true)}
             /> */}
           </div>
+          {isSidebarOpen && (
+            <Drawer direction="left" open={isSidebarOpen}>
+              <DrawerContent className="mx-auto w-full max-w-md bg-transparent">
+                <DrawerHeader>
+                  <DrawerTitle className="flex flex-row">
+                    <X
+                      className="ml-auto font-bold text-white"
+                      onClick={handleSidebar}
+                      size={24}
+                    />
+                  </DrawerTitle>
+                </DrawerHeader>
+                <Sidebar onHandleClose={handleSidebar} />
+              </DrawerContent>
+            </Drawer>
+          )}
         </>
       )}
 

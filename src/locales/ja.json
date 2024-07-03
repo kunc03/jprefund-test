@@ -1,6 +1,28 @@
 {
   "global": {
-    "hello": "ハローワード"
+    "hello": "ハローワード",
+    "logout": "ログアウト",
+    "required": "必須",
+    "unregistered": "未登録",
+    "routes": {
+      "identityAuthentication": "本人認証",
+      "passportInformation": "パスポート情報",
+      "contactDetails": "連絡先の詳細",
+      "residenceInformation": "居住地情報",
+      "refundInformation": "返金情報",
+      "refundMethod": "返金方法",
+      "recordingOfTransfer": "振込の記録",
+      "setting": "設定",
+      "changePassword": "パスワード変更",
+      "languageSettings": "言語設定",
+      "accountDeletion": "アカウント削除",
+      "helpSupport": "ヘルプサポート",
+      "ifYouLoseYourReceipt": "レシートを無くした場合",
+      "faq": "よくある質問",
+      "refundStatus": "返金ステータス",
+      "privacyPolicy": "プライバシーポリシー",
+      "userTerms": "ユーザー規約"
+    }
   },
   "register": {
     "metaTitle": "登録する",

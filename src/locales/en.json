@@ -1,6 +1,28 @@
 {
   "global": {
-    "hello": "hello word"
+    "hello": "hello word",
+    "logout": "Logout",
+    "required": "Required",
+    "unregistered": "Unregistered",
+    "routes": {
+      "identityAuthentication": "Identity authentication",
+      "passportInformation": "Passport Information",
+      "contactDetails": "Contact Details",
+      "residenceInformation": "Residence information",
+      "refundInformation": "Refund Information",
+      "refundMethod": "Refund Method",
+      "recordingOfTransfer": "Recording of transfer",
+      "setting": "Setting",
+      "changePassword": "Change Password",
+      "languageSettings": "Language settings",
+      "accountDeletion": "Account deletion",
+      "helpSupport": "Help Support",
+      "ifYouLoseYourReceipt": "If you lose your receipt",
+      "faq": "FAQ",
+      "refundStatus": "Refund Status",
+      "privacyPolicy": "Privacy policy",
+      "userTerms": "User Terms"
+    }
   },
   "register": {
     "metaTitle": "Register",
