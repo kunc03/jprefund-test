@@ -14,7 +14,7 @@ const StoreInformation = ({ imageSrc, storeName, storeAdd }) => {
         <Heading className="text-1620.8 font-bold text-gray" level={2}>
           {storeName}
         </Heading>
-        <p className="text-1620.8 font-normal text-gray">{storeAdd}</p>
+        <p className="text-1215.6 font-normal text-gray">{storeAdd}</p>
       </div>
     </div>
   );

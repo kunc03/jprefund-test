@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
@@ -13,6 +13,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   Button,
+  DialogTitle,
 } from '@/components';
 import { useQrScan } from '@/hooks';
 import { formatNumber } from '@/utils';
@@ -24,6 +25,8 @@ const DetailBottomDrawer = (props) => {
 
   const onCloseDrawer = () => {
     setIsOpen(false);
+
+    // console.log(props.isOpen);
 
     router.push('/home');
   };
@@ -61,23 +64,21 @@ const DetailBottomDrawer = (props) => {
 
   return (
     <Drawer onClose={onCloseDrawer} open={open}>
-      <DrawerContent className="mx-auto w-full max-w-md px-2">
+      <DrawerContent className="mx-auto w-full max-w-md px-5">
         <DrawerHeader>
           <div className="flex justify-between bg-white text-base font-bold">
-            <Heading
+            <DialogTitle
               className="flex-1 text-center text-lg font-medium"
               level={3}
             >
               {t('checkReceipt')}
-            </Heading>
-            <Image
-              alt="close"
-              className="cursor-pointer"
-              height={16}
-              onClick={onCloseDrawer}
-              src="/images/close.svg"
-              width={16}
-            />
+            </DialogTitle>
+            {/* <Heading
+              className="flex-1 text-center text-lg font-medium"
+              level={3}
+            >
+              {t('checkReceipt')}
+            </Heading> */}
           </div>
         </DrawerHeader>
         <div className="mx-2 flex flex-col gap-6">
@@ -100,8 +101,10 @@ const DetailBottomDrawer = (props) => {
             <ItemDetail rows={rows} />
           </div>
         </div>
-        <DrawerFooter className="mt-5 flex items-center justify-center">
-          <Button className="w-fit px-65">{t('refundApplication')}</Button>
+        <DrawerFooter className="my-5 flex items-center justify-center">
+          <Button className="w-fit px-65" onClick={onCloseDrawer}>
+            OK
+          </Button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

@@ -93,13 +93,17 @@
     "applyFilter": "フィルターを適用",
     "sort": "ソート",
     "status": "ステータス",
+    "period": "期間",
     "lowestFirst": "返金金額 : 低い順",
     "highestToLowest": "返金金額 : 高い順",
     "startDate": "開始日",
     "endDate": "終了日",
     "submitted": "提出済み",
     "jcApproval": "JC承認",
-    "storeApproval": "ストアの承認"
+    "storeApproval": "ストアの承認",
+    "placeholder": {
+      "status": "---"
+    }
   },
   "scan": {
     "metaTitle": "スキャン",

@@ -75,7 +75,7 @@
     "preparationHasNotBeenCompleted": "Advance preparation is not complete",
     "noTaxExemptionRecordsSaved": "No tax exemption records saved",
     "voucherQrCodePleaseScan": "Voucher QR code Please scan",
-    "checkReceipt": "Check Receipt",
+    "checkReceipt": "Check your receipt",
     "purchaseHistoryHasBeenRegistered": "Purchase history has been registered",
     "goToPassportRegistration": "Go to Passport Registration",
     "passportRegistrationCompleted": "Passport registration complete",
@@ -95,13 +95,17 @@
     "applyFilter": "Apply Filter",
     "sort": "Sort",
     "status": "Status",
+    "period": "Period",
     "lowestFirst": "Refund amount: Lowest first",
     "highestToLowest": "Refund amount: Highest to lowest",
     "startDate": "Start date",
-    "endDate": "End date",
+    "endDate": "End Date",
     "submitted": "Submitted",
     "jcApproval": "JC Approval",
-    "storeApproval": "Store Approval"
+    "storeApproval": "Store Approval",
+    "placeholder": {
+      "status": "---"
+    }
   },
   "scan": {
     "metaTitle": "Scan",
