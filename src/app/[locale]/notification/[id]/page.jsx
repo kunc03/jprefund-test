@@ -19,7 +19,7 @@ const NotificationDetailPage = async ({ params }) => {
 
   if (!item) redirect('/notification');
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex min-h-dvh flex-col bg-white">
       <Header hasBack title={t('announcementDetails')} />
       <div className="max-h-[calc(100dvh-100px)] grow overflow-y-auto px-29">
         <div className="mt-23">

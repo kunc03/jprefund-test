@@ -16,7 +16,7 @@ const NotificationPage = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'notification' });
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex min-h-dvh flex-col bg-white">
       <Header hasBack title={t('title')} />
       <div className="max-h-[calc(100dvh-100px)]  grow overflow-y-auto pl-4 pt-2">
         <ul className="list-none">
