@@ -157,6 +157,14 @@
     "receiptDetails": "レシート詳細",
     "detailsClose": "詳細を閉じる"
   },
+  "notification": {
+    "metaTitle": "通知",
+    "metaDescription": "お知らせページ",
+    "title": "お知らせ",
+    "selfieRejected": "自撮り写真が拒否されました",
+    "qrScanSuccessful": "QRのスキャンが成功しました",
+    "statusChangedToCompleted": "ステータスが完了に変更されました"
+  },
   "zodError": {
     "login": {
       "email": {

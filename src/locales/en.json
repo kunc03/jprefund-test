@@ -159,6 +159,14 @@
     "receiptDetails": "Receipt details",
     "detailsClose": "Details close"
   },
+  "notification": {
+    "metaTitle": "Notification",
+    "metaDescription": "Notification page",
+    "title": "Notice",
+    "selfieRejected": "Selfie rejected",
+    "qrScanSuccessful": "QR scan successful",
+    "statusChangedToCompleted": "Status changed to Completed"
+  },
   "zodError": {
     "login": {
       "email": {
