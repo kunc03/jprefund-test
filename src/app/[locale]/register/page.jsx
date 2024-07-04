@@ -1,7 +1,6 @@
 import { Heading, Logo } from '@/components';
 import { getTranslations } from 'next-intl/server';
-import { ButtonRegistration } from './_components';
-import Link from 'next/link';
+import { ButtonRegistration, ButtonUseNow } from './_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -83,17 +82,7 @@ const Register = async ({ params }) => {
         })}
       </Heading>
 
-      <Heading className="mt-41 text-1722 font-normal">
-        {t.rich('useNowWithoutRegistering', {
-          useNow: (
-            <Link href="/home" key="useNow">
-              <span className="cursor-pointer font-bold underline">
-                {t('useNow')}
-              </span>
-            </Link>
-          ),
-        })}
-      </Heading>
+      <ButtonUseNow />
     </div>
   );
 };
