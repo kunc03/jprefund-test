@@ -1,14 +1,21 @@
 'use client';
 
 import { Heading } from '@/components';
+import { useAuth } from '@/hooks';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 const ButtonUseNow = () => {
   const t = useTranslations('register');
   const router = useRouter();
+  const { onAuth } = useAuth();
 
   const handleUseNow = () => {
+    const auth = {
+      status: 'guest',
+      user: {},
+    };
+    onAuth(auth);
     router.replace('/home');
   };
 

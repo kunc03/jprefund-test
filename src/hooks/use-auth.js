@@ -2,10 +2,10 @@ import { create } from 'zustand';
 
 const useAuth = create((set) => ({
   auth: {
-    status: 'guest',
+    status: '',
     user: {},
   }, // klo sudah login ganti jadi authenticated
-  onAuth: (newValue) => set({ value: newValue }),
+  onAuth: (newAuth) => set({ auth: newAuth }),
 }));
 
 export { useAuth };
