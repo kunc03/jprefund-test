@@ -155,6 +155,16 @@
       }
     }
   },
+  "passportInformation": {
+    "metaTitle": "Passport Information",
+    "metaDescription": "Passport Information page",
+    "title": "Passport Information",
+    "scanYourPassport": "Scan your passport",
+    "pleaseTakePhoto": "Please take a photo of your passport and register it. All information will be filled in automatically.",
+    "ifTheAutomaticallyIsIncorrect": "If the automatically entered information is incorrect, please correct it manually.",
+    "oneYourPassportIsComplete": "Once your passport registration is complete, the face recognition button will appear under your passport photo.",
+    "takePhotoAndRegisterIt": "Take a photo of your face and register it."
+  },
   "detail": {
     "metaTitle": "Purchase details",
     "metaDescription": "Purchase details page",

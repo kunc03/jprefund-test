@@ -161,6 +161,16 @@
     "receiptDetails": "レシート詳細",
     "detailsClose": "詳細を閉じる"
   },
+  "passportInformation": {
+    "metaTitle": "パスポート情報",
+    "metaDescription": "パスポート情報ページ",
+    "title": "パスポート情報",
+    "scanYourPassport": "パスポートをスキャン",
+    "pleaseTakePhoto": "パスポートを撮影して登録してください。各情報は自動的に入力されます。",
+    "ifTheAutomaticallyIsIncorrect": "※自動入力の情報が間違っている場合は手入力で修正してください。",
+    "oneYourPassportIsComplete": "パスポート登録が完了するとパスポート写真 の下に顔認証ボタンが表示されます。",
+    "takePhotoAndRegisterIt": " ご自身のお顔を撮影して登録してください。"
+  },
   "zodError": {
     "login": {
       "email": {

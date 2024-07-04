@@ -11,15 +11,25 @@ import {
   DialogHeader,
   DialogTitle,
   Button,
+  PassportRegistrationIcon,
 } from '@/components';
-
+import { useRouter } from 'next/navigation';
 import { cn } from '@/utils';
 
 const AdvancePreparation = () => {
   const t = useTranslations('home');
+  const router = useRouter();
   const [passportRegis, setPassportRegis] = useState(false);
   const [refundRegis, setRefundRegis] = useState(false);
 
+  const handlePassportRegistration = () => {
+    if (!passportRegis) {
+      router.push('/passport-information');
+      return;
+    }
+
+    setPassportRegis((old) => !old);
+  };
   return (
     <Dialog>
       <DialogTrigger className="w-full">
@@ -81,16 +91,11 @@ const AdvancePreparation = () => {
           </p>
 
           <div className="mt-5 flex flex-col items-center justify-center gap-3">
-            <Image
-              alt="passport regist icon"
-              height={55}
-              src="/icons/passport1.svg"
-              width={115}
-            />
+            <PassportRegistrationIcon />
 
             <Button
               variant={passportRegis ? 'default' : 'outline'}
-              onClick={() => setPassportRegis((old) => !old)}
+              onClick={handlePassportRegistration}
               className={cn(
                 'sm:w-full md:w-318 gap-4',
                 passportRegis && '!flex-row !justify-start !pl-10',
