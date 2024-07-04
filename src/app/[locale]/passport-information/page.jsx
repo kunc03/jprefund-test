@@ -5,6 +5,8 @@ import {
   PassportRegistrationIcon,
 } from '@/components';
 import { getTranslations } from 'next-intl/server';
+import { QrScan } from '../scan/_components';
+import { ButtonScanPassport } from './_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -38,7 +40,8 @@ const PassportInformationPage = async ({ params }) => {
         </div>
       </div>
       <div className="flex w-full items-center justify-center pb-54">
-        <Button className="w-249">{t('scanYourPassport')}</Button>
+        {/* <Button className="w-249">{t('scanYourPassport')}</Button> */}
+        <ButtonScanPassport />
       </div>
     </div>
   );

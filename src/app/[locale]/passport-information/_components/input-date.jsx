@@ -13,7 +13,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-const DatePicker = ({
+const InputDate = ({
   label,
   onHandleSelected,
   selectedDate,
@@ -26,11 +26,8 @@ const DatePicker = ({
       <PopoverTrigger asChild>
         <Button
           className={cn(
-            'w-full rounded-4 justify-between text-1313 !p-14',
-            !selectedDate && 'text-gray-50',
-            isSelected
-              ? 'bg-red text-white'
-              : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
+            'w-full rounded-4 justify-between text-1313 !py-6 px-3',
+            '!bg-white text-gray hover:!border-red border-gray-300 border focus:!border-red overlay-none',
           )}
         >
           {selectedDate ? (
@@ -38,10 +35,7 @@ const DatePicker = ({
           ) : (
             <span className=" font-medium text-gray-300">{label}</span>
           )}
-          <CalendarIcon
-            size={24}
-            className={cn(isSelected ? 'text-white' : 'text-gray-105')}
-          />
+          <CalendarIcon size={24} className={cn('text-gray-105')} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
@@ -60,4 +54,4 @@ const DatePicker = ({
   );
 };
 
-export { DatePicker };
+export { InputDate };

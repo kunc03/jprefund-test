@@ -166,10 +166,27 @@
     "metaDescription": "パスポート情報ページ",
     "title": "パスポート情報",
     "scanYourPassport": "パスポートをスキャン",
+    "takePortrait": "ポートレートを撮影",
+    "takePortraitInstruction": "シンプルな背景や明るい場所で撮影すると、顔がより鮮明に映り、認証されやすい写真が撮れます。",
     "pleaseTakePhoto": "パスポートを撮影して登録してください。各情報は自動的に入力されます。",
     "ifTheAutomaticallyIsIncorrect": "※自動入力の情報が間違っている場合は手入力で修正してください。",
     "oneYourPassportIsComplete": "パスポート登録が完了するとパスポート写真 の下に顔認証ボタンが表示されます。",
-    "takePhotoAndRegisterIt": " ご自身のお顔を撮影して登録してください。"
+    "takePhotoAndRegisterIt": " ご自身のお顔を撮影して登録してください。",
+    "passportPhoto": "パスポート写真",
+    "useFaceRecognition": "顔認証をする",
+    "faceAuthenticationCompleted": "顔認証済",
+    "checkingFaceRecognition": "顔認証確認中",
+    "afterRegisteringYourPassport": "パスポート登録後かならず セルフィー写真で顔認証してください",
+    "firstName": "ファーストネーム",
+    "lastName": "ラストネーム",
+    "dateOfBirth": "生年月日",
+    "passportNumber": "パスポート番号",
+    "dateOfExpiry": "有効期限",
+    "passportIssuingCountry": "パスポート発行国",
+    "countryOfIssueCode": "発行国コード",
+    "gender": "性別",
+    "rescanYourPassport": "パスポートを再スキャン",
+    "save": "保存"
   },
   "zodError": {
     "login": {
