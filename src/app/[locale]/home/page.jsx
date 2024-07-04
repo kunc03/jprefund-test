@@ -9,6 +9,7 @@ import {
   AdvancePreparation,
   Content,
   FilterBottomDrawer,
+  ButtonFilter,
 } from './_components';
 
 export const generateMetadata = async ({ params }) => {
@@ -18,15 +19,18 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const HomePage = async ({ params }) => {
+const HomePage = async ({ params, searchParams }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
 
   return (
     <>
       <Header />
-      <Heading className="bg-white text-center text-lg font-medium">
-        {t('recordOfTaxFreePurchases')}
+      <Heading className="bg-white text-center text-lg font-medium ">
+        <div className="flex items-center justify-center px-2.5">
+          {t('recordOfTaxFreePurchases')}
+          <ButtonFilter />
+        </div>
       </Heading>
       <div className="flex flex-row items-center justify-center gap-7 bg-white px-2.5 pt-3.5">
         <SummaryCard
@@ -46,7 +50,7 @@ const HomePage = async ({ params }) => {
 
       <ButtonCamera />
 
-      <DetailBottomDrawer />
+      <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
 
       <FilterBottomDrawer />
     </>

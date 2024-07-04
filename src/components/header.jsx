@@ -1,5 +1,6 @@
 'use client';
 
+// import { useDrawer } from '@/hooks';
 import { useState } from 'react';
 import { useDrawer } from '@/hooks';
 import Image from 'next/image';
@@ -54,14 +55,14 @@ const Header = ({ hasBack = false, title = null }) => {
               />
               <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
             </div>
-            <Image
-              alt="search"
+            {/* <Image
+              alt="filter"
               className="cursor-pointer"
               height={24}
-              src="/images/search.svg"
+              src="/icons/triple-dot.svg"
               width={24}
               onClick={() => setIsOpen(true)}
-            />
+            /> */}
           </div>
           {isSidebarOpen && (
             <Drawer direction="left" open={isSidebarOpen}>

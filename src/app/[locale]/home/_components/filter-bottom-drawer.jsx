@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { X, ArrowUp, ArrowDown } from 'lucide-react';
+import { X } from 'lucide-react';
 import {
   Heading,
   Drawer,
@@ -14,11 +14,11 @@ import {
   DatePicker,
 } from '@/components';
 import { useDrawer } from '@/hooks';
-import { ItemFilter } from './item-filter';
-import { cn } from '@/utils';
+import { StatusOption } from './status-option';
 
 const FilterBottomDrawer = () => {
   const { isOpen, setIsOpen } = useDrawer();
+  // const [isSelected] = useState();
   const onCloseDrawer = () => setIsOpen(false);
   const t = useTranslations('home');
   const [filter, setFiler] = useState({
@@ -28,17 +28,11 @@ const FilterBottomDrawer = () => {
     endDate: null,
   });
 
-  const handleSelectedSort = (value) => {
-    setFiler((old) => {
-      return { ...old, sort: value };
-    });
-  };
-
-  const handleSelectedStatus = (value) => {
-    setFiler((old) => {
-      return { ...old, status: value };
-    });
-  };
+  // const handleSelectedStatus = (value) => {
+  //   setFiler((old) => {
+  //     return { ...old, status: value };
+  //   });
+  // };
 
   const handleSelectedEndDate = (date) => {
     setFiler((old) => {
@@ -51,6 +45,12 @@ const FilterBottomDrawer = () => {
     });
   };
 
+  const handleSelectedStatus = (value) => {
+    setFiler((old) => {
+      return { ...old, status: value };
+    });
+  };
+
   const handleResetFilter = () => {
     setFiler({
       status: null,
@@ -60,12 +60,11 @@ const FilterBottomDrawer = () => {
     });
   };
 
-  const hasHighestToLowest = filter?.sort === 'highestToLowest' ?? false;
-  const hasLowestFirst = filter?.sort === 'lowestFirst' ?? false;
-  const hasSubmitted = filter?.status === 'submitted' ?? false;
-  const hasJacApproval = filter?.status === 'jcApproval' ?? false;
-  const hasStoreApproval = filter?.status === 'storeApproval' ?? false;
-  const hasStatusEndDate = filter?.status === 'endDate' ?? false;
+  // const hasSubmitted = filter?.status === 'submitted' ?? false;
+  // const hasJacApproval = filter?.status === 'jcApproval' ?? false;
+  // const hasStoreApproval = filter?.status === 'storeApproval' ?? false;
+  // const hasStatusEndDate = filter?.status === 'endDate' ?? false;
+
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
 
@@ -88,67 +87,19 @@ const FilterBottomDrawer = () => {
         </DrawerHeader>
 
         <div className="flex flex-col gap-3 px-27.5">
-          <Heading level={5} className="text-1422 font-medium">
-            {t('sort')}
-          </Heading>
-          <ItemFilter
-            label={t('lowestFirst')}
-            icon={
-              <ArrowUp
-                size={24}
-                className={cn(
-                  'transition-colors',
-                  hasLowestFirst ? 'text-white' : 'text-gray-105',
-                )}
-              />
-            }
-            onHandleClick={() =>
-              handleSelectedSort(
-                filter?.sort === 'lowestFirst' ? null : 'lowestFirst',
-              )
-            }
-            isSelected={hasLowestFirst}
-          />
-
-          <ItemFilter
-            label={t('highestToLowest')}
-            icon={
-              <ArrowDown
-                size={24}
-                className={cn(
-                  'transition-colors',
-                  hasHighestToLowest ? 'text-white' : 'text-gray-105',
-                )}
-              />
-            }
-            onHandleClick={() =>
-              handleSelectedSort(
-                filter?.sort === 'highestToLowest' ? null : 'highestToLowest',
-              )
-            }
-            isSelected={hasHighestToLowest}
-          />
-
-          <div className="flex w-full flex-row justify-between gap-3">
-            <DatePicker
-              label={t('startDate')}
-              onHandleSelected={handleSelectedStartDate}
-              selectedDate={filter?.startDate}
-              isSelected={hasStartDate}
-            />
-            <DatePicker
-              label={t('endDate')}
-              onHandleSelected={handleSelectedEndDate}
-              selectedDate={filter?.endDate}
-              isSelected={hasEndDate}
-            />
-          </div>
-
+          {/* Status start */}
           <Heading level={5} className="text-1422 font-medium">
             {t('status')}
           </Heading>
 
-          <div className="flex w-full flex-row justify-between gap-3">
+          <StatusOption
+            t={t}
+            selectedDate={filter?.status}
+            handleSelectedStatus={handleSelectedStatus}
+            filter={filter}
+          />
+
+          {/* <div className="flex w-full flex-row justify-between gap-3">
             <ItemFilter
               label={t('submitted')}
               className="w-full !items-center !justify-center"
@@ -170,9 +121,9 @@ const FilterBottomDrawer = () => {
               }
               isSelected={hasJacApproval}
             />
-          </div>
+          </div> */}
 
-          <div className="flex w-full flex-row justify-between gap-3">
+          {/*   <div className="flex w-full flex-row justify-between gap-3">
             <ItemFilter
               label={t('storeApproval')}
               className="w-full !items-center !justify-center"
@@ -193,7 +144,28 @@ const FilterBottomDrawer = () => {
               }
               isSelected={hasStatusEndDate}
             />
+          </div> */}
+          {/* Status end */}
+
+          {/* Date */}
+          <Heading level={5} className="text-1422 font-medium">
+            {t('period')}
+          </Heading>
+          <div className="flex w-full flex-row justify-between gap-3">
+            <DatePicker
+              label={t('startDate')}
+              onHandleSelected={handleSelectedStartDate}
+              selectedDate={filter?.startDate}
+              isSelected={hasStartDate}
+            />
+            <DatePicker
+              label={t('endDate')}
+              onHandleSelected={handleSelectedEndDate}
+              selectedDate={filter?.endDate}
+              isSelected={hasEndDate}
+            />
           </div>
+          {/* Date end */}
         </div>
 
         <DrawerFooter className="mt-5 flex flex-col items-center justify-center gap-17">
