@@ -53,6 +53,7 @@ const remPadding = {
 
 const remMargin = {
   17: pxToEm(17),
+  23: pxToEm(23),
   28.5: pxToEm(28.5),
 };
 
