@@ -16,7 +16,7 @@ const Register = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh flex-col items-center">
-      <Logo className="mt-23 h-40.8 w-192" />
+      <Logo className="mt-41 h-40.8 w-192" />
       <Heading className="mt-28.5 text-center text-2122 font-medium">
         {t('createAccount')}
       </Heading>
