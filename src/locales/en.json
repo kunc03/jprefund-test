@@ -125,6 +125,9 @@
     "submitted": "Submitted",
     "jcApproval": "JC Approval",
     "storeApproval": "Store Approval",
+    "youMustLoggedIn": "You must be logged in to request a refund",
+    "WhatIsJPrefund": "What is JPrefund?",
+    "signUp": "Sign up",
     "placeholder": {
       "status": "---"
     }

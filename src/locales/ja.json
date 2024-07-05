@@ -123,6 +123,9 @@
     "submitted": "提出済み",
     "jcApproval": "JC承認",
     "storeApproval": "ストアの承認",
+    "youMustLoggedIn": "リファンド申請するにはサインインが必要です",
+    "WhatIsJPrefund": "JPrefundとは？",
+    "signUp": "新規登録",
     "placeholder": {
       "status": "---"
     }
