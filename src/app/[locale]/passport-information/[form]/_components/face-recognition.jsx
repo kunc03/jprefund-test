@@ -4,8 +4,6 @@ import React from 'react';
 import ButtonRecognition from './button-face-recog';
 
 const FaceRecognition = ({ t, form }) => {
-  console.log(form);
-
   return (
     <div className="flex flex-col gap-3 w-full">
       <Heading level={5} className="text-1422 font-medium ">

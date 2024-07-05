@@ -1,13 +1,13 @@
 'use client';
 
-import React, { use, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Heading } from '@/components';
 import { useTranslations } from 'next-intl';
 import { TakePortrait } from '../_components/take-portrait-scan';
 import { ButtonCamera } from '../_components/button-camera';
 
-const TakePortraitView = async () => {
+const TakePortraitView = () => {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations('passportInformation');
