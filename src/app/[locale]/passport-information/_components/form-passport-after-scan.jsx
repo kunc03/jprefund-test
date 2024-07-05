@@ -5,7 +5,7 @@ import { cn } from '@/utils';
 
 const PassportForm = ({
   t,
-  filter,
+  formId,
   handleSelectedDateOfBirth,
   handleSelectedDateOfExpiry,
   hasDateOfBirth,
@@ -43,10 +43,10 @@ const PassportForm = ({
       </Heading>
 
       <InputDate
-        selectedDate={filter.dateOfBirth}
+        selectedDate={formId.dateOfBirth}
         label={'DD/MM/YY'}
         onHandleSelected={handleSelectedDateOfBirth}
-        filter={filter}
+        filter={formId}
         isSelected={hasDateOfBirth}
       />
 
@@ -69,10 +69,10 @@ const PassportForm = ({
       </Heading>
 
       <InputDate
-        selectedDate={filter.dateOfExpiry}
+        selectedDate={formId.dateOfExpiry}
         label={'DD/MM/YY'}
         onHandleSelected={handleSelectedDateOfExpiry}
-        filter={filter}
+        filter={formId}
         isSelected={hasDateOfExpiry}
       />
 

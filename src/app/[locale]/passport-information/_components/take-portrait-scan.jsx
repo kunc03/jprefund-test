@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 
-const QrScan = () => {
+const TakePortrait = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
@@ -74,4 +74,4 @@ const QrScan = () => {
   );
 };
 
-export { QrScan };
+export { TakePortrait };

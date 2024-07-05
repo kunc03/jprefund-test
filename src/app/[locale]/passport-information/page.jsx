@@ -5,7 +5,6 @@ import {
   PassportRegistrationIcon,
 } from '@/components';
 import { getTranslations } from 'next-intl/server';
-import { QrScan } from '../scan/_components';
 import { ButtonScanPassport } from './_components';
 
 export const generateMetadata = async ({ params }) => {

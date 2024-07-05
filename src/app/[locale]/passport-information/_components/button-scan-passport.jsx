@@ -3,7 +3,7 @@
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import React, { use } from 'react';
+import React from 'react';
 
 const ButtonScanPassport = () => {
   const t = useTranslations('passportInformation');
