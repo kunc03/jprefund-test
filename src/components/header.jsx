@@ -49,6 +49,9 @@ const Header = ({ hasBack = false, title = null }) => {
                 height={24}
                 src="/images/notif.svg"
                 width={24}
+                onClick={() => {
+                  router.push('/notification');
+                }}
               />
               <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
             </div>

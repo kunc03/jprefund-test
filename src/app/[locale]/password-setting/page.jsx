@@ -1,4 +1,3 @@
-import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Heading, Logo } from '@/components';
 import { ButtonSignIn, Form } from './_components';

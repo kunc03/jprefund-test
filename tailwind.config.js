@@ -42,6 +42,7 @@ const remPadding = {
   18: pxToEm(18),
   53: pxToEm(53),
   54: pxToEm(54),
+  17.5: pxToEm(17.5),
   20: pxToEm(20),
   27.5: pxToEm(27.5),
   21: pxToEm(21),
@@ -55,7 +56,9 @@ const remPadding = {
 
 const remMargin = {
   17: pxToEm(17),
+  23: pxToEm(23),
   28.5: pxToEm(28.5),
+  41: pxToEm(41),
 };
 
 const remSize = {
@@ -85,6 +88,7 @@ const remSize = {
   120: pxToEm(120),
   128: pxToEm(128),
   138: pxToEm(138),
+  154: pxToEm(154),
   164: pxToEm(164),
   187: pxToEm(187),
   192: pxToEm(192),

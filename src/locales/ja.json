@@ -123,6 +123,9 @@
     "submitted": "提出済み",
     "jcApproval": "JC承認",
     "storeApproval": "ストアの承認",
+    "youMustLoggedIn": "リファンド申請するにはサインインが必要です",
+    "WhatIsJPrefund": "JPrefundとは？",
+    "signUp": "新規登録",
     "placeholder": {
       "status": "---"
     }
@@ -200,6 +203,15 @@
     "uploadDocumentInstruction": "永住権を証明する書類をアップロードしてください。 許可証、ビザ本籍地がパスポートの国とは別の課税地域にある場合は、居住証明書を提示してください。 例: EU パスポートを持っていますが、EU 外に住んでいます。",
     "documentType": "書類の種類",
     "photograph": "証明書を撮影する"
+  },
+  "notification": {
+    "metaTitle": "通知",
+    "metaDescription": "お知らせページ",
+    "title": "お知らせ",
+    "selfieRejected": "自撮り写真が拒否されました",
+    "qrScanSuccessful": "QRのスキャンが成功しました",
+    "statusChangedToCompleted": "ステータスが完了に変更されました",
+    "announcementDetails": "お知らせ詳細"
   },
   "zodError": {
     "login": {

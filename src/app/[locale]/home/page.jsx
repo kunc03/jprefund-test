@@ -10,6 +10,7 @@ import {
   Content,
   FilterBottomDrawer,
   ButtonFilter,
+  AuthBottomDrawer,
 } from './_components';
 
 export const generateMetadata = async ({ params }) => {
@@ -53,6 +54,7 @@ const HomePage = async ({ params, searchParams }) => {
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
 
       <FilterBottomDrawer />
+      <AuthBottomDrawer />
     </>
   );
 };
