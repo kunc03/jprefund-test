@@ -18,9 +18,10 @@ const PassportForm = ({
       </Heading>
 
       <Input
-        placeholder={'Joni'}
+        placeholder={t('firstName')}
+        defaultValue={'Joni'}
         className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[4px] focus:!border-red hover:!border-red',
+          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
         )}
       />
 
@@ -30,9 +31,10 @@ const PassportForm = ({
       </Heading>
 
       <Input
-        placeholder={'Mitchell'}
+        placeholder={t('lastName')}
+        defaultValue={'Mitchell'}
         className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[4px] focus:!border-red hover:!border-red',
+          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
         )}
       />
 
@@ -43,7 +45,8 @@ const PassportForm = ({
 
       <InputDate
         selectedDate={formId.dateOfBirth}
-        label={'DD/MM/YY'}
+        label={t('dateOfBirth')}
+        defaultValue={'1997.9.25'}
         onHandleSelected={handleSelectedDateOfBirth}
         filter={formId}
         isSelected={hasDateOfBirth}
@@ -55,10 +58,11 @@ const PassportForm = ({
       </Heading>
 
       <Input
-        placeholder={'00000000'}
+        placeholder={t('passportNumber')}
+        defaultValue={'00000000'}
         type="number"
         className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[4px] focus:!border-red hover:!border-red',
+          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
         )}
       />
 
@@ -69,10 +73,10 @@ const PassportForm = ({
 
       <InputDate
         selectedDate={formId.dateOfExpiry}
-        label={'DD/MM/YY'}
+        label={t('dateOfExpiry')}
         onHandleSelected={handleSelectedDateOfExpiry}
         filter={formId}
-        isSelected={hasDateOfExpiry}
+        isSelected={'hasDateOfExpiry'}
       />
 
       {/* Passport issuing country */}

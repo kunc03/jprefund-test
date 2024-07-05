@@ -34,6 +34,11 @@ const FaceRecognition = ({ t, form }) => {
           <ButtonRecognition t={t} />
         )}
       </div>
+      <div className="flex justify-center text-center mb-5">
+        <p className="text-1527 w-[315px]">
+          {t('afterRegisteringYourPassport')}
+        </p>
+      </div>
     </div>
   );
 };

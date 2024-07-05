@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { format } from 'date-fns';
+import { format, parse } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 
 import { cn } from '@/utils';
@@ -12,26 +12,37 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { useActiveModifiers } from 'react-day-picker';
 
 const InputDate = ({
   label,
   onHandleSelected,
-  selectedDate,
+  selectedDate: propSelectedDate,
   isSelected = null,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const defaultDate = parse('1997.9.25', 'yyyy.M.d', new Date());
+  const [selectedDate, setSelectedDate] = useState(
+    propSelectedDate || defaultDate,
+  );
+
+  const handleSelected = (day, selectedDay, useActiveModifiers, e) => {
+    setSelectedDate(selectedDay);
+    onHandleSelected(day, selectedDay, useActiveModifiers, e);
+    setIsOpen(false);
+  };
 
   return (
     <Popover onOpenChange={setIsOpen} open={isOpen}>
       <PopoverTrigger asChild>
         <Button
           className={cn(
-            'w-full rounded-4 justify-between text-1313 !py-6 px-3',
-            '!bg-white text-gray hover:!border-red border-gray-300 border focus:!border-red overlay-none',
+            'w-full rounded-[6px] justify-between text-1313 !py-6 px-3',
+            '!bg-white text-gray hover:!border-red border-gray-300 border  focus:!border-red overlay-none',
           )}
         >
           {selectedDate ? (
-            format(selectedDate, 'dd/MM/yy')
+            format(selectedDate, 'yyyy.m.dd')
           ) : (
             <span className=" font-medium text-gray-300">{label}</span>
           )}
@@ -42,10 +53,7 @@ const InputDate = ({
         <Calendar
           mode="single"
           selected={selectedDate}
-          onSelect={(day, selectedDay, activeModifiers, e) => {
-            onHandleSelected(day, selectedDay, activeModifiers, e);
-            setIsOpen(false);
-          }}
+          onSelect={handleSelected}
           initialFocus
           className="bg-white"
         />

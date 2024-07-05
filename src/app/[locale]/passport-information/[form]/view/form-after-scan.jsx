@@ -26,13 +26,13 @@ const FormAfterScan = ({ form }) => {
   });
 
   const handleSelectedDateOfBirth = (date) => {
-    setFiler((old) => {
+    setIsForm((old) => {
       return { ...old, dateOfBirth: date };
     });
   };
 
   const handleSelectedDateOfExpiry = (date) => {
-    setFiler((old) => {
+    setIsForm((old) => {
       return { ...old, dateOfExpiry: date };
     });
   };

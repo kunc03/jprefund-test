@@ -14,7 +14,7 @@ const TakePortraitView = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
+      router.push('/passport-information/form-completed');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);
