@@ -1,6 +1,6 @@
 import { Button, Header } from '@/components';
-import { FormAfterScan } from './_components/form-after-scan';
 import { getTranslations } from 'next-intl/server';
+import { ContactInformation, FormAfterScan } from './view';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -19,7 +19,7 @@ const FormPassportInformation = async ({ params }) => {
         <Header hasBack title={t('title')} />
 
         <FormAfterScan form={form} />
-        {/* <Button onClick={() => router.push('/scan')} className="w-249">{t('scanYourPassport')}</Button> */}
+        {/* <ContactInformation /> */}
       </div>
     </div>
   );

@@ -186,7 +186,20 @@
     "countryOfIssueCode": "発行国コード",
     "gender": "性別",
     "rescanYourPassport": "パスポートを再スキャン",
-    "save": "保存"
+    "save": "保存",
+    "contactInformation": "連絡先情報",
+    "emailAddress": "連絡用メールアドレス",
+    "telephoneNumber": "連絡用電話番号",
+    "buildingNameRoomNumber": "建物名＋部屋番号",
+    "addressAndStreet": "番地・通り名",
+    "cityOrCountry": "市名や郡名",
+    "state": "州名",
+    "postCode": "郵便番号",
+    "country": "国名",
+    "proofOfResidence": "居住地の証明",
+    "uploadDocumentInstruction": "永住権を証明する書類をアップロードしてください。 許可証、ビザ本籍地がパスポートの国とは別の課税地域にある場合は、居住証明書を提示してください。 例: EU パスポートを持っていますが、EU 外に住んでいます。",
+    "documentType": "書類の種類",
+    "photograph": "証明書を撮影する"
   },
   "zodError": {
     "login": {

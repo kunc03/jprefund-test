@@ -180,7 +180,20 @@
     "countryOfIssueCode": "Country of issue code",
     "gender": "Gender",
     "rescanYourPassport": "Rescan your passport",
-    "save": "Save"
+    "save": "Save",
+    "contactInformation": "Contact information",
+    "emailAddress": "Email address",
+    "telephoneNumber": "Telephone number",
+    "buildingNameRoomNumber": "Building name + room number",
+    "addressAndStreet": "Address and street",
+    "cityOrCountry": "City or country",
+    "state": "State",
+    "postCode": "Post code",
+    "country": "Country",
+    "proofOfResidence": "Proof of residence",
+    "uploadDocumentInstruction": "Upload a document that proves your permanent residence: permit, visa If your permanent address is in a different tax jurisdiction than your passport country, please provide a residence certificate. Example: I have an EU passport but live outside the EU.",
+    "documentType": "Document type",
+    "photograph": "Photograph the certificate"
   },
   "detail": {
     "metaTitle": "Purchase details",

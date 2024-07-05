@@ -1,7 +1,6 @@
 import { Heading, Input } from '@/components';
-import { InputDate } from './input-date';
-import { SelectOptions } from './select';
 import { cn } from '@/utils';
+import { InputDate, SelectOptions } from '../../_components';
 
 const PassportForm = ({
   t,

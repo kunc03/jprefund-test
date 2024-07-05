@@ -1,14 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { Button, Header, Heading, Input } from '@/components';
+import { useState } from 'react';
+import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { PassportForm } from '../../_components';
-import { FaceRecognition } from './face-recognition';
+import { ContactInform, FaceRecognition, PassportForm } from '../_components';
+import { Contact } from 'lucide-react';
+// import { FaceRecognition } from './face-recognition';
+// import { PassportForm } from './form-passport-after-scan';
 
-const FormAfterScan = ({ form }) => {
+const ContactInformation = () => {
   const t = useTranslations('passportInformation');
   const router = useRouter();
 
@@ -53,16 +54,7 @@ const FormAfterScan = ({ form }) => {
   return (
     <>
       <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
-        <FaceRecognition t={t} isOpen={isOpen} form={form} />
-
-        <PassportForm
-          t={t}
-          formId={isForm}
-          handleSelectedDateOfBirth={handleSelectedDateOfBirth}
-          handleSelectedDateOfExpiry={handleSelectedDateOfExpiry}
-          hasDateOfBirth={hasDateOfBirth}
-          hasDateOfExpiry={hasDateOfExpiry}
-        />
+        <ContactInform />
       </div>
 
       <div className="flex flex-col w-full items-center justify-center pb-54 gap-[54px]">
@@ -73,10 +65,17 @@ const FormAfterScan = ({ form }) => {
           {t('rescanYourPassport')}
         </button>
 
-        <Button className="w-249">{t('save')}</Button>
+        <Button
+          onClick={() =>
+            router.push('/passport-information/form/contact-information')
+          }
+          className="w-249"
+        >
+          {t('save')}
+        </Button>
       </div>
     </>
   );
 };
 
-export { FormAfterScan };
+export { ContactInformation };
