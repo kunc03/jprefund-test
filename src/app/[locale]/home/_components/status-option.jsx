@@ -9,21 +9,23 @@ import {
 } from '@/components';
 import { cn } from '@/utils';
 import { ChevronDown } from 'lucide-react';
-// import { useState } from 'react';
+import React from 'react';
 
-const StatusOption = ({ t, selectedDate, handleSelectedStatus, filter }) => {
-  // const [isValue, setIsValue] = useState('');
-  // console.log(handleSelectedStatus);
+const StatusOption = ({ t }) => {
+  const [isValue, setIsValue] = React.useState('');
 
+  const handleChange = (value) => {
+    setIsValue(value);
+  };
+
+  console.log(isValue);
   return (
     <Select className="w-full ">
       <SelectTrigger
         className={cn(
           'text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-12 relative',
 
-          selectedDate
-            ? 'bg-red text-white'
-            : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
+          '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
         )}
       >
         <SelectValue placeholder={t('placeholder.status')} />
@@ -42,11 +44,6 @@ const StatusOption = ({ t, selectedDate, handleSelectedStatus, filter }) => {
             'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-4 p-14 transition-colors mb-1',
             'hover:border-red bg-white-dark text-gray border',
           )}
-          onClick={() =>
-            handleSelectedStatus(
-              filter?.status === 'jcApproval' ? null : 'jcApproval',
-            )
-          }
           value="submitted"
         >
           {t('submitted')}

@@ -28,12 +28,6 @@ const FilterBottomDrawer = () => {
     endDate: null,
   });
 
-  // const handleSelectedStatus = (value) => {
-  //   setFiler((old) => {
-  //     return { ...old, status: value };
-  //   });
-  // };
-
   const handleSelectedEndDate = (date) => {
     setFiler((old) => {
       return { ...old, endDate: date };
@@ -67,6 +61,8 @@ const FilterBottomDrawer = () => {
 
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
+
+  console.log(filter);
 
   return (
     <Drawer onClose={onCloseDrawer} open={isOpen}>

@@ -28,7 +28,7 @@ const ButtonSend = () => {
         role="button"
         tabIndex="0"
         key="send"
-        disabled={!inputValue}
+        // disabled={!inputValue}
         className="!h-42 !shrink-0 !px-14 !py-13"
       >
         <Link
