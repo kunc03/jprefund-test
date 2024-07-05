@@ -1,27 +1,27 @@
 import { Header } from '@/components';
+import { ContactDetails } from './view';
 import { getTranslations } from 'next-intl/server';
-import { FormAfterScan } from './view';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'passportInformation' });
+  const t = await getTranslations({ locale, namespace: 'contactDetails' });
 
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const FormPassportInformation = async ({ params }) => {
-  const { locale, form } = params;
-  const t = await getTranslations({ locale, namespace: 'passportInformation' });
+const Page = async ({ params }) => {
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: 'contactDetails' });
 
   return (
     <div className="flex min-h-dvh flex-col justify-between">
       <div className="flex grow flex-col">
         <Header hasBack title={t('title')} />
 
-        <FormAfterScan form={form} />
+        <ContactDetails />
       </div>
     </div>
   );
 };
 
-export default FormPassportInformation;
+export default Page;
