@@ -2,7 +2,7 @@
 
 import { Heading } from '@/components/heading';
 import { useActiveSummary } from '../_hooks/use-active-summary';
-import { cn, formatNumber, getDateOnly } from '@/utils';
+import { cn, formatNumber, formatDateSimple } from '@/utils';
 import { useEffect } from 'react';
 import dataDummy from '@/dummy-data.json';
 
@@ -18,7 +18,7 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
       const filteredData = dataDummy
         .filter((item) => item.status === status)
         .reduce((acc, item) => {
-          const dateOnly = getDateOnly(item.date);
+          const dateOnly = formatDateSimple(item.date);
           if (!acc[dateOnly]) {
             acc[dateOnly] = [];
           }

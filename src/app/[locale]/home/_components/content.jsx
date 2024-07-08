@@ -1,9 +1,8 @@
 'use client';
 
-import { Heading } from '@/components';
+import { Heading, PurchaseItemSection } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useActiveSummary } from '../_hooks/use-active-summary';
-import { ItemCard } from './item-card';
 
 const EmptyState = ({ t }) => (
   <div className="mx-auto size-full flex-1 flex-col gap-2 pb-6 md:max-w-xs ">
@@ -35,19 +34,7 @@ const Content = () => {
       {Object.keys(selectedData).length > 0 && (
         <div className="flex h-full flex-1 flex-col items-center overflow-y-auto">
           {Object.entries(selectedData).map(([date, items]) => (
-            <section key={date} className="w-full px-3">
-              <Heading
-                level={1}
-                className="mt-1 w-full text-center text-1522  font-medium"
-              >
-                {date}
-              </Heading>
-              <div className="mt-3 flex w-full flex-col gap-3">
-                {items.map((item) => (
-                  <ItemCard key={item.id} item={item} />
-                ))}
-              </div>
-            </section>
+            <PurchaseItemSection date={date} items={items} key={date} />
           ))}
         </div>
       )}

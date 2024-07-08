@@ -1,0 +1,2604 @@
+[
+  {
+    "id": "1",
+    "date": "2024-06-06T08:55:00",
+    "refundableAmount": 36740,
+    "refundFee": -4560,
+    "remittanceFee": -200,
+    "refundAmount": 29192,
+    "purchaseDetails": [
+      {
+        "id": "1",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "refundableAmount": 36740,
+    "refundFee": -4560,
+    "remittanceFee": -200,
+    "refundAmount": 29192,
+    "purchaseDetails": [
+      {
+        "id": "1",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "refundableAmount": 36740,
+    "refundFee": -4560,
+    "remittanceFee": -200,
+    "refundAmount": 29192,
+    "purchaseDetails": [
+      {
+        "id": "1",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "UNIQLO Ginza",
+        "storeAddress": "Ginza Komatsu East Building 1-12F, 6-9-5 Ginza, Chuo-ku, Tokyo",
+        "storeImage": "/uniqlo.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Receipt registration completed",
+        "status": "refundApplication",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 1830,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 7620,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 715,
+        "label": "Remittance is complete",
+        "status": "remittanceProcedureCompleted",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 18300,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 76200,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "AEON MALL Lake Town",
+        "storeAddress": "4-1-1 Lake Town, Koshigaya City, Saitama Prefecture",
+        "storeImage": "/aeon-mall.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "date": "2024-05-17T08:55:00",
+        "totalPurchasePrice": 7150,
+        "expectedRefundAmount": 0,
+        "label": "Customs rejected it",
+        "status": "nonRefundable",
+        "storeName": "LaLaport TOKYO-BAY",
+        "storeAddress": "2-1-1 Hamacho, Funabashi City, Chiba Prefecture 273-8530",
+        "storeImage": "/la-laport.svg",
+        "receiptData": [
+          {
+            "id": 1,
+            "status": "Approval",
+            "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
+            "qty": 1,
+            "price": 1990,
+            "subtotal": 1990,
+            "refund": 190
+          },
+          {
+            "id": 2,
+            "status": "Partial Approval",
+            "name": "Suprima cotton pique socks",
+            "qty": 3,
+            "price": 390,
+            "subtotal": 1170,
+            "refund": 0
+          },
+          {
+            "id": 3,
+            "status": "Denial",
+            "name": "NK Dry Shorts (Kei Nishikori French Open replica)",
+            "qty": 1,
+            "price": 3990,
+            "subtotal": 3990,
+            "refund": 390
+          }
+        ],
+        "transactions": [
+          {
+            "id": 1,
+            "date": "2024-05-17T08:55:00",
+            "message": "Transaction in store."
+          },
+          {
+            "id": 2,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Ready to submit"
+          },
+          {
+            "id": 3,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Submitted with AliPay refund method."
+          },
+          {
+            "id": 4,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to JC Approval"
+          },
+          {
+            "id": 5,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Store Approval."
+          },
+          {
+            "id": 6,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Transferring via AliPay."
+          },
+          {
+            "id": 7,
+            "date": "2024-05-17T08:55:00",
+            "message": "Status change to Completed",
+            "isActive": true
+          }
+        ]
+      }
+    ]
+  }
+]

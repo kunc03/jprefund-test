@@ -14,6 +14,7 @@ const remBorderRadius = {
 };
 
 const remGap = {
+  6: pxToEm(6),
   7: pxToEm(7),
   8: pxToEm(8),
   10: pxToEm(10),
@@ -39,6 +40,7 @@ const remPadding = {
   13: pxToEm(13),
   14: pxToEm(14),
   15: pxToEm(15),
+  15.5: pxToEm(15.5),
   18: pxToEm(18),
   53: pxToEm(53),
   54: pxToEm(54),
@@ -55,6 +57,9 @@ const remPadding = {
 };
 
 const remMargin = {
+  4: pxToEm(4),
+  6: pxToEm(6),
+  12: pxToEm(12),
   17: pxToEm(17),
   23: pxToEm(23),
   28.5: pxToEm(28.5),

@@ -1,8 +1,6 @@
 'use client';
 
-// import { useDrawer } from '@/hooks';
 import { useState } from 'react';
-import { useDrawer } from '@/hooks';
 import Image from 'next/image';
 import { cn } from '@/utils';
 import { ChevronLeft, X } from 'lucide-react';
@@ -11,8 +9,7 @@ import { useRouter } from 'next/navigation';
 import { Sidebar } from './sidebar';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
-const Header = ({ hasBack = false, title = null }) => {
-  const { setIsOpen } = useDrawer();
+const Header = ({ hasBack = false, hasBorderBottom = true, title = null }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const handleSidebar = () => {
@@ -22,8 +19,9 @@ const Header = ({ hasBack = false, title = null }) => {
   return (
     <div
       className={cn(
-        'flex flex-row  border-b border-b-gray-500 bg-white px-3 py-5',
+        'flex flex-row bg-white px-3 py-5',
         hasBack ? 'items-center justify-start' : 'items-center justify-between',
+        hasBorderBottom && 'border-b border-b-gray-500',
       )}
     >
       {!hasBack && (
@@ -55,14 +53,6 @@ const Header = ({ hasBack = false, title = null }) => {
               />
               <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
             </div>
-            {/* <Image
-              alt="filter"
-              className="cursor-pointer"
-              height={24}
-              src="/icons/triple-dot.svg"
-              width={24}
-              onClick={() => setIsOpen(true)}
-            /> */}
           </div>
           {isSidebarOpen && (
             <Drawer direction="left" open={isSidebarOpen}>
