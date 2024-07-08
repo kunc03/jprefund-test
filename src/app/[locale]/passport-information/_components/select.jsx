@@ -12,7 +12,7 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-const SelectOptions = ({ values, placeholder, t }) => {
+const SelectOptions = ({ values, placeholder, t, className }) => {
   const [isValue, setIsValue] = React.useState('');
 
   const handleChange = (value) => {
@@ -24,18 +24,18 @@ const SelectOptions = ({ values, placeholder, t }) => {
       <SelectTrigger
         className={cn(
           'text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-[50px] relative',
-
+          className,
           '!bg-white text-gray hover:!border-red border-gray-300 border',
         )}
       >
         <SelectValue placeholder={values[0]} />
-        <span
+
+        <ChevronDown
+          size={24}
           className={cn(
             'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-105',
           )}
-        >
-          <ChevronDown size={24} />
-        </span>
+        />
       </SelectTrigger>
 
       <SelectContent className="bg-white focus:!outline-none focus:!ring-transparent">

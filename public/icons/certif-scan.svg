@@ -1,0 +1,8 @@
+<svg width="336" height="446" viewBox="0 0 336 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75 3V3.27835e-06H3L0 0V3V75H3V3L75 3Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M333 75L336 75L336 3L336 0L333 -1.31134e-07L261 -3.27835e-06L261 3L333 3L333 75Z" fill="white"/>
+<rect y="446" width="3" height="75" transform="rotate(-90 0 446)" fill="white"/>
+<rect y="371" width="3" height="75" fill="white"/>
+<rect x="336" y="446" width="3" height="75" transform="rotate(-180 336 446)" fill="white"/>
+<rect x="261" y="446" width="3" height="75" transform="rotate(-90 261 446)" fill="white"/>
+</svg>

@@ -21,7 +21,7 @@ const FilterBottomDrawer = () => {
   // const [isSelected] = useState();
   const onCloseDrawer = () => setIsOpen(false);
   const t = useTranslations('home');
-  const [filter, setFiler] = useState({
+  const [filter, setFilter] = useState({
     status: null,
     sort: null,
     startDate: null,
@@ -29,24 +29,24 @@ const FilterBottomDrawer = () => {
   });
 
   const handleSelectedEndDate = (date) => {
-    setFiler((old) => {
+    setFilter((old) => {
       return { ...old, endDate: date };
     });
   };
   const handleSelectedStartDate = (date) => {
-    setFiler((old) => {
+    setFilter((old) => {
       return { ...old, startDate: date };
     });
   };
 
   const handleSelectedStatus = (value) => {
-    setFiler((old) => {
+    setFilter((old) => {
       return { ...old, status: value };
     });
   };
 
   const handleResetFilter = () => {
-    setFiler({
+    setFilter({
       status: null,
       sort: null,
       startDate: null,
@@ -92,7 +92,8 @@ const FilterBottomDrawer = () => {
             t={t}
             selectedDate={filter?.status}
             handleSelectedStatus={handleSelectedStatus}
-            filter={filter}
+            filter={filter?.status}
+            setFilter={setFilter}
           />
 
           {/* <div className="flex w-full flex-row justify-between gap-3">

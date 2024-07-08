@@ -21,7 +21,7 @@ const TakePortrait = () => {
   const onScanSuccess = (result) => {
     if (result) {
       onSelected(result.data);
-      router.push('/home');
+      router.push('/passport-information/form-completed');
     }
   };
 
@@ -56,6 +56,14 @@ const TakePortrait = () => {
         'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
       );
   }, [qrOn]);
+
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      router.push('/passport-information/form-completed');
+    }, 4000);
+
+    return () => clearTimeout(redirectTimeout);
+  }, []);
 
   return (
     <div className="qr-reader">

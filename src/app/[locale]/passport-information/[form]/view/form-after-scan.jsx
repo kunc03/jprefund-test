@@ -5,8 +5,6 @@ import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FaceRecognition, PassportForm } from '../_components';
-// import { FaceRecognition } from './face-recognition';
-// import { PassportForm } from './form-passport-after-scan';
 
 const FormAfterScan = ({ form }) => {
   const t = useTranslations('passportInformation');
