@@ -12,7 +12,13 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-const SelectOptions = ({ values, placeholder, t, className }) => {
+const SelectOptions = ({
+  values,
+  placeholder,
+  t,
+  className,
+  onHandleSelected,
+}) => {
   const [isValue, setIsValue] = React.useState('');
 
   const handleChange = (value) => {

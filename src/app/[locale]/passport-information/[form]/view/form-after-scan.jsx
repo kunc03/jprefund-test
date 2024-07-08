@@ -20,18 +20,68 @@ const FormAfterScan = ({ form }) => {
     lastName: 'Mitchell',
     dateOfBirth: '1997.9.25',
     passportNumber: '00000000',
+    dateOfExpiry: '1997.9.25',
   };
 
+  const [firstName, setFirstName] = useState(defaultValue.firstName);
+  const [lastName, setLastName] = useState(defaultValue.lastName);
+  const [dateOfBirth, setDateOfBirth] = useState(defaultValue.dateOfBirth);
+  const [passportNumber, setPassportNumber] = useState(
+    defaultValue.passportNumber,
+  );
+  const [dateOfExpiry, setDateOfExpiry] = useState(defaultValue.dateOfExpiry);
+  const [pasportIssuingCountry, setPassportIssuingCountry] = useState('');
+  const [countryOfIssueCode, setCountryOfIssueCode] = useState('');
+  const [gender, setGender] = useState('');
+
   const [isForm, setIsForm] = useState({
-    firstName: null,
-    lastName: null,
-    dateOfBirth: null,
-    passportNumber: null,
-    dateOfExpiry: null,
+    firstName: firstName,
+    lastName: lastName,
+    dateOfBirth: dateOfBirth,
+    passportNumber: passportNumber,
+    dateOfExpiry: dateOfExpiry,
     passportIssuingCountry: null,
     countryOfIssueCode: null,
     gender: null,
   });
+
+  const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
+  const hasDateOfExpiry = isForm?.dateOfExpiry !== defaultValue.dateOfExpiry;
+  const hasPassportIssuing =
+    isForm?.passportIssuingCountry !== defaultValue.passportIssuingCountry;
+  const hasCountryIssue =
+    isForm?.countryOfIssueCode !== defaultValue.countryOfIssueCode;
+  const hasGender = isForm?.gender !== defaultValue.gender;
+
+  useEffect(() => {
+    isForm;
+    setIsDisabled(false);
+  }, []);
+
+  useEffect(() => {
+    const isChanged =
+      firstName !== defaultValue.firstName ||
+      lastName !== defaultValue.lastName ||
+      hasDateOfBirth ||
+      passportNumber !== defaultValue.passportNumber ||
+      hasDateOfExpiry ||
+      pasportIssuingCountry !== '' ||
+      countryOfIssueCode !== '' ||
+      gender !== '' ||
+      form === 'form-completed';
+
+    setIsDisabled(!isChanged);
+  }, [
+    firstName,
+    lastName,
+    dateOfBirth,
+    passportNumber,
+    dateOfExpiry,
+    pasportIssuingCountry,
+    countryOfIssueCode,
+    gender,
+    defaultValue,
+  ]);
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
@@ -45,19 +95,16 @@ const FormAfterScan = ({ form }) => {
     });
   };
 
-  const hasDateOfBirth = isForm?.dateOfBirth !== null;
-  const hasDateOfExpiry = isForm?.dateOfExpiry !== null;
-
   const handleRescanPassport = () => {
     router.push('/passport-information/scan-your-passport');
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    if (form === 'form-completed') {
-      setIsDisabled(true);
-    }
-  });
+  // useEffect(() => {
+  //   if (form === 'form-completed') {
+  //     setIsDisabled(true);
+  //   }
+  // });
 
   console.log(isForm);
 
@@ -69,11 +116,16 @@ const FormAfterScan = ({ form }) => {
         <PassportForm
           t={t}
           formId={isForm}
+          setIsForm={setIsForm}
           handleSelectedDateOfBirth={handleSelectedDateOfBirth}
           handleSelectedDateOfExpiry={handleSelectedDateOfExpiry}
-          hasDateOfBirth={hasDateOfBirth}
-          hasDateOfExpiry={hasDateOfExpiry}
           defaultValue={defaultValue}
+          setFirstName={setFirstName}
+          setLastName={setLastName}
+          setPassportNumber={setPassportNumber}
+          setPassportIssuingCountry={setPassportIssuingCountry}
+          setCountryOfIssueCode={setCountryOfIssueCode}
+          setGender={setGender}
         />
       </div>
 
@@ -86,11 +138,11 @@ const FormAfterScan = ({ form }) => {
         </button>
 
         <Button
-          disabled={!isDisabled}
+          disabled={isDisabled}
           onClick={() =>
             router.push('/passport-information/form/contact-information')
           }
-          className={cn('w-[173px]', !isDisabled && 'bg-gray-300')}
+          className={cn('w-[173px]', isDisabled && 'bg-gray-300')}
         >
           {t('save')}
         </Button>

@@ -18,7 +18,6 @@ const InputDate = ({
   label,
   onHandleSelected,
   selectedDate: propSelectedDate,
-  isSelected = null,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const defaultDate = parse('1997.9.25', 'yyyy.M.d', new Date());

@@ -1,42 +1,59 @@
+'use client';
+
 import { Heading, Input } from '@/components';
 import { cn } from '@/utils';
 import { InputDate, SelectOptions } from '../../_components';
+import InputForm from './input-form';
+import { useState } from 'react';
 
 const PassportForm = ({
   t,
   formId,
+  setIsForm,
   handleSelectedDateOfBirth,
   handleSelectedDateOfExpiry,
-  hasDateOfBirth,
-  hasDateOfExpiry,
   defaultValue,
+  setFirstName,
+  setLastName,
+  setPassportNumber,
 }) => {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
+    setIsForm((prevForm) => ({ ...prevForm, firstName: e.target.value }));
+  };
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+    setIsForm((prevForm) => ({ ...prevForm, lastName: e.target.value }));
+  };
+
+  const handlePassportNumber = (e) => {
+    setPassportNumber(e.target.value);
+    setIsForm((prevForm) => ({ ...prevForm, passportNumber: e.target.value }));
+  };
+
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* Firstname */}
-      <Heading level={5} className="text-1422 font-medium">
-        {t('firstName')}
-      </Heading>
 
-      <Input
+      <InputForm
+        t={t}
+        label="firstName"
         placeholder={t('firstName')}
         defaultValue={defaultValue.firstName}
-        className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
-        )}
+        onChange={handleFirstName}
+        type="text"
       />
 
       {/* Lastname */}
-      <Heading level={5} className="text-1422 font-medium">
-        {t('lastName')}
-      </Heading>
-
-      <Input
+      <InputForm
+        t={t}
+        label="lastName"
         placeholder={t('lastName')}
         defaultValue={defaultValue.lastName}
-        className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
-        )}
+        onChange={handleLastName}
+        type="text"
       />
 
       {/* Date of birth */}
@@ -50,21 +67,16 @@ const PassportForm = ({
         defaultValue={defaultValue.dateOfBirth}
         onHandleSelected={handleSelectedDateOfBirth}
         filter={formId}
-        isSelected={hasDateOfBirth}
       />
 
       {/* Passport number */}
-      <Heading level={5} className="text-1422 font-medium">
-        {t('passportNumber')}
-      </Heading>
-
-      <Input
+      <InputForm
+        t={t}
+        label="passportNumber"
         placeholder={t('passportNumber')}
         defaultValue={defaultValue.passportNumber}
+        onChange={handlePassportNumber}
         type="number"
-        className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
-        )}
       />
 
       {/* Date of expiry */}
@@ -77,29 +89,37 @@ const PassportForm = ({
         label={t('dateOfExpiry')}
         onHandleSelected={handleSelectedDateOfExpiry}
         filter={formId}
-        isSelected={hasDateOfExpiry}
       />
 
       {/* Passport issuing country */}
       <Heading level={5} className="text-1422 font-medium">
         {t('passportIssuingCountry')}
       </Heading>
-
-      <SelectOptions values={['USA', 'IDN', 'JP']} t={t} />
+      <SelectOptions
+        // onHandleSelected={handleSelectedPassportIssuing}
+        values={['USA', 'IDN', 'JP']}
+        t={t}
+      />
 
       {/* Country of issue code */}
       <Heading level={5} className="text-1422 font-medium">
         {t('countryOfIssueCode')}
       </Heading>
-
-      <SelectOptions values={['USA', 'IDN', 'JP']} t={t} />
+      <SelectOptions
+        // onHandleSelected={handleSelectedCountryIssue}
+        values={['USA', 'IDN', 'JP']}
+        t={t}
+      />
 
       {/* Gender */}
       <Heading level={5} className="text-1422 font-medium">
         {t('gender')}
       </Heading>
-
-      <SelectOptions values={['Male', 'Female']} t={t} />
+      <SelectOptions
+        // onHandleSelected={handleSelectedGender}
+        values={['Male', 'Female']}
+        t={t}
+      />
     </div>
   );
 };
