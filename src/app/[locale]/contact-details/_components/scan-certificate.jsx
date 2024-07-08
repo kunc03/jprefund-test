@@ -74,7 +74,7 @@ const ScanCertificate = () => {
           className="qr-frame"
           height={256}
           src="/icons/certif-scan.svg"
-          width={256}
+          width={320}
           priority
         />
       </div>

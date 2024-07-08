@@ -18,7 +18,7 @@ const ButtonCamera = ({ form }) => {
   return (
     <button
       onClick={handleClick}
-      className="absolute bottom-[60px] w-[64px] h-[64px] bg-white rounded-full flex items-center justify-center"
+      className="absolute bottom-[40px] w-[64px] h-[64px] bg-white rounded-full flex items-center justify-center"
     >
       <Circle className="text-black" size={62} />
     </button>

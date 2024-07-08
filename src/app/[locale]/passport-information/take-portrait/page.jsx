@@ -22,7 +22,7 @@ const TakePortraitView = async ({ params }) => {
           {t('takePortrait')}
         </Heading>
 
-        <div className="flex w-full flex-col items-center justify-center bg-black px-7 py-[2rem] relative h-[236px]">
+        <div className="flex w-full flex-col items-center justify-center bg-black px-7 py-[2rem] relative h-[200px]">
           <Heading className="mb-[7rem] w-full max-w-301 text-center text-1422 font-medium text-white">
             {t('takePortraitInstruction')}
           </Heading>

@@ -9,6 +9,7 @@ const PassportForm = ({
   handleSelectedDateOfExpiry,
   hasDateOfBirth,
   hasDateOfExpiry,
+  defaultValue,
 }) => {
   return (
     <div className="flex flex-col gap-3 w-full">
@@ -19,7 +20,7 @@ const PassportForm = ({
 
       <Input
         placeholder={t('firstName')}
-        defaultValue={'Joni'}
+        defaultValue={defaultValue.firstName}
         className={cn(
           'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
         )}
@@ -32,7 +33,7 @@ const PassportForm = ({
 
       <Input
         placeholder={t('lastName')}
-        defaultValue={'Mitchell'}
+        defaultValue={defaultValue.lastName}
         className={cn(
           'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
         )}
@@ -46,7 +47,7 @@ const PassportForm = ({
       <InputDate
         selectedDate={formId.dateOfBirth}
         label={t('dateOfBirth')}
-        defaultValue={'1997.9.25'}
+        defaultValue={defaultValue.dateOfBirth}
         onHandleSelected={handleSelectedDateOfBirth}
         filter={formId}
         isSelected={hasDateOfBirth}
@@ -59,7 +60,7 @@ const PassportForm = ({
 
       <Input
         placeholder={t('passportNumber')}
-        defaultValue={'00000000'}
+        defaultValue={defaultValue.passportNumber}
         type="number"
         className={cn(
           'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
@@ -76,7 +77,7 @@ const PassportForm = ({
         label={t('dateOfExpiry')}
         onHandleSelected={handleSelectedDateOfExpiry}
         filter={formId}
-        isSelected={'hasDateOfExpiry'}
+        isSelected={hasDateOfExpiry}
       />
 
       {/* Passport issuing country */}

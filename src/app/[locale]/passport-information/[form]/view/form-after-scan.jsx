@@ -1,16 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FaceRecognition, PassportForm } from '../_components';
+import { cn } from '@/utils';
 
 const FormAfterScan = ({ form }) => {
   const t = useTranslations('passportInformation');
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const defaultValue = {
+    firstName: 'Joni',
+    lastName: 'Mitchell',
+    dateOfBirth: '1997.9.25',
+    passportNumber: '00000000',
+  };
 
   const [isForm, setIsForm] = useState({
     firstName: null,
@@ -38,15 +48,18 @@ const FormAfterScan = ({ form }) => {
   const hasDateOfBirth = isForm?.dateOfBirth !== null;
   const hasDateOfExpiry = isForm?.dateOfExpiry !== null;
 
-  // const handleFaceRecognition = () => {
-  //   router.push('/passport-information/take-portrait');
-  //   // setIsOpen(true);
-  // };
-
   const handleRescanPassport = () => {
     router.push('/passport-information/scan-your-passport');
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    if (form === 'form-completed') {
+      setIsDisabled(true);
+    }
+  });
+
+  console.log(isForm);
 
   return (
     <>
@@ -60,6 +73,7 @@ const FormAfterScan = ({ form }) => {
           handleSelectedDateOfExpiry={handleSelectedDateOfExpiry}
           hasDateOfBirth={hasDateOfBirth}
           hasDateOfExpiry={hasDateOfExpiry}
+          defaultValue={defaultValue}
         />
       </div>
 
@@ -72,10 +86,11 @@ const FormAfterScan = ({ form }) => {
         </button>
 
         <Button
+          disabled={!isDisabled}
           onClick={() =>
             router.push('/passport-information/form/contact-information')
           }
-          className="w-[173px]"
+          className={cn('w-[173px]', !isDisabled && 'bg-gray-300')}
         >
           {t('save')}
         </Button>
