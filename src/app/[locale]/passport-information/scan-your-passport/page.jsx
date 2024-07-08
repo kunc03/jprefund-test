@@ -1,22 +1,18 @@
-'use client';
-
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { Heading } from '@/components';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { PassportScan } from '../_components/passport-scan';
 
-const ScanYourPassport = () => {
-  const router = useRouter();
-  const t = useTranslations('passportInformation');
+export const generateMetadata = async ({ params }) => {
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: 'passportInformation' });
 
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
-    }, 4000);
+  return { title: t('metaTitle'), description: t('metaDescription') };
+};
 
-    return () => clearTimeout(redirectTimeout);
-  }, []);
+const ScanYourPassport = async ({ params }) => {
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: 'passportInformation' });
+
   return (
     <div className="relative min-h-dvh">
       <div className="absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">

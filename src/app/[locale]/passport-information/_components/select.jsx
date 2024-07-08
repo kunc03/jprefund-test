@@ -29,13 +29,13 @@ const SelectOptions = ({ values, placeholder, t, className }) => {
         )}
       >
         <SelectValue placeholder={values[0]} />
-        <span
+
+        <ChevronDown
+          size={24}
           className={cn(
             'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-105',
           )}
-        >
-          <ChevronDown size={24} />
-        </span>
+        />
       </SelectTrigger>
 
       <SelectContent className="bg-white focus:!outline-none focus:!ring-transparent">

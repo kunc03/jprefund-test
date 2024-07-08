@@ -203,7 +203,8 @@
     "documentType": "Document type",
     "photograph": "Photograph the certificate",
     "rescanYourPassport": "Rescan your passport",
-    "save": "Save"
+    "save": "Save",
+    "scanCertificateInstruction": "In good light, a plain background will make the text and photos stand out clearly, making your ID stand out."
   },
   "detail": {
     "metaTitle": "Purchase details",

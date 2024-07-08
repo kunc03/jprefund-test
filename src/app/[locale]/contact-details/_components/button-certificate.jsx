@@ -10,9 +10,7 @@ const ButtonCertificate = ({ className }) => {
   const router = useRouter();
   return (
     <button
-      onClick={() =>
-        router.push('/passport-information/photograph-certificate')
-      }
+      onClick={() => router.push('/contact-details/scan-certificate')}
       className={`${className} flex items-center justify-center border-2 border-red rounded-[7px] p-2 bg-white hover:bg-white-dark delay-1000 duration-1000`}
     >
       <span className="text-red flex gap-5 text-[16px] font-bold items-center">

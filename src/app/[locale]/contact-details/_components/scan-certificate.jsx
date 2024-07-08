@@ -4,12 +4,13 @@
 
 'use client';
 
+import Image from 'next/image';
 import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 
-const PassportScan = () => {
+const ScanCertificate = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
@@ -20,7 +21,7 @@ const PassportScan = () => {
   const onScanSuccess = (result) => {
     if (result) {
       onSelected(result.data);
-      router.push('/passport-information/form');
+      router.push('/home');
     }
   };
 
@@ -58,7 +59,7 @@ const PassportScan = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
+      router.push('/contact-details');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);
@@ -67,9 +68,18 @@ const PassportScan = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box" />
+      <div ref={qrBoxEl} className="qr-box !h-[450px]">
+        <Image
+          alt="Qr Frame"
+          className="qr-frame"
+          height={256}
+          src="/icons/certif-scan.svg"
+          width={256}
+          priority
+        />
+      </div>
     </div>
   );
 };
 
-export { PassportScan };
+export { ScanCertificate };

@@ -1,39 +1,92 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { ContactInform } from '../_components';
 import ButtonCertificate from '../_components/button-certificate';
 import { SelectOptions } from '../../passport-information/_components';
+import { cn } from '@/utils';
+import { FormContactDetails } from '../_components/form-contact-details';
 
-const ContactDetails = () => {
+const ContactDetails = ({}) => {
   const t = useTranslations('contactDetails');
   const router = useRouter();
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const [isForm, setIsForm] = useState({
-    firstName: null,
-    lastName: null,
-    dateOfBirth: null,
-    passportNumber: null,
-    dateOfExpiry: null,
-    passportIssuingCountry: null,
-    countryOfIssueCode: null,
-    gender: null,
-  });
 
   const defaultValue = {
     email: 'andreas.andi@talenavi.com',
     phone: '1234567890',
   };
 
+  const [email, setEmail] = useState(defaultValue.email);
+  const [phone, setPhone] = useState('');
+  const [building, setBuilding] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [postCode, setPostCode] = useState('');
+  const [country, setCountry] = useState('');
+
+  const [isForm, setIsForm] = useState({
+    emailAddress: email,
+    phoneNumber: null,
+    buildingNameRoomNumber: null,
+    addressStreet: null,
+    cityCountry: null,
+    state: null,
+    postCode: null,
+    country: null,
+  });
+
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    isForm;
+    setIsButtonDisabled(false);
+  }, []);
+
+  useEffect(() => {
+    const isChanged =
+      email !== defaultValue.email ||
+      phone !== '' ||
+      building !== '' ||
+      address !== '' ||
+      city !== '' ||
+      state !== '' ||
+      postCode !== '' ||
+      country !== '';
+
+    setIsButtonDisabled(!isChanged);
+  }, [
+    email,
+    phone,
+    building,
+    address,
+    city,
+    state,
+    postCode,
+    country,
+    defaultValue,
+  ]);
+
+  console.log(isForm);
+
   return (
     <>
       <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
-        <ContactInform defaultValue={defaultValue} />
+        <FormContactDetails
+          defaultValue={defaultValue}
+          setEmail={setEmail}
+          setPhone={setPhone}
+          setBuilding={setBuilding}
+          setAddress={setAddress}
+          setCity={setCity}
+          setState={setState}
+          setPostCode={setPostCode}
+          setCountry={setCountry}
+          setIsForm={setIsForm}
+        />
       </div>
 
       <div className="flex grow flex-col gap-22 w-full p-28 text-1422">
@@ -48,7 +101,11 @@ const ContactDetails = () => {
 
         <Button
           onClick={() => router.push('/home')}
-          className="w-[173px] my-[1rem]"
+          className={cn(
+            'w-[173px] my-[1rem]',
+            isButtonDisabled && '!bg-gray-300',
+          )}
+          disabled={isButtonDisabled}
         >
           {t('save')}
         </Button>
