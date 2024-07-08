@@ -1,7 +1,6 @@
 'use client';
 
 import { Heading, Input } from '@/components';
-import { cn } from '@/utils';
 import { InputDate, SelectOptions } from '../../_components';
 import InputForm from './input-form';
 import { useState } from 'react';
@@ -16,8 +15,11 @@ const PassportForm = ({
   setFirstName,
   setLastName,
   setPassportNumber,
+  setPassportIssuingCountry,
 }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedValue, setSelectedValue] = useState('');
+
+  console.log('selectedValue', selectedValue);
 
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
@@ -96,7 +98,7 @@ const PassportForm = ({
         {t('passportIssuingCountry')}
       </Heading>
       <SelectOptions
-        // onHandleSelected={handleSelectedPassportIssuing}
+        // onHandleSelected={handleSelectedValue}
         values={['USA', 'IDN', 'JP']}
         t={t}
       />
@@ -106,7 +108,7 @@ const PassportForm = ({
         {t('countryOfIssueCode')}
       </Heading>
       <SelectOptions
-        // onHandleSelected={handleSelectedCountryIssue}
+        // onHandleSelected={handleSelectedValue}
         values={['USA', 'IDN', 'JP']}
         t={t}
       />
@@ -116,7 +118,7 @@ const PassportForm = ({
         {t('gender')}
       </Heading>
       <SelectOptions
-        // onHandleSelected={handleSelectedGender}
+        // onHandleSelected={handleSelectedValue}
         values={['Male', 'Female']}
         t={t}
       />

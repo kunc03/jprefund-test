@@ -100,13 +100,8 @@ const FormAfterScan = ({ form }) => {
     setIsOpen(false);
   };
 
-  // useEffect(() => {
-  //   if (form === 'form-completed') {
-  //     setIsDisabled(true);
-  //   }
-  // });
-
   console.log(isForm);
+  console.log(pasportIssuingCountry);
 
   return (
     <>

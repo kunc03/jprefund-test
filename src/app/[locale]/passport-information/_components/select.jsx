@@ -23,7 +23,12 @@ const SelectOptions = ({
 
   const handleChange = (value) => {
     setIsValue(value);
+    if (onHandleSelected) {
+      onHandleSelected(value); // Meneruskan nilai yang dipilih ke komponen induk
+    }
   };
+
+  console.log('isValue', isValue);
 
   return (
     <Select className="w-full ">
@@ -53,6 +58,7 @@ const SelectOptions = ({
               'hover:border-red focus:border-red bg-white text-gray border',
             )}
             value={value}
+            onClick={() => handleChange(value)}
           >
             {value}
           </SelectItem>
