@@ -248,7 +248,8 @@
     "dateOfExpired": "有効期限",
     "securityCode": "セキュリティコード",
     "monthYear": "月/年",
-    "changeRefundMethod": "返金方法を変更"
+    "changeRefundMethod": "返金方法を変更",
+    "pleaseSelectYourFinancialInstitution": "金融機関を選択してください"
   },
   "zodError": {
     "login": {
@@ -301,6 +302,24 @@
       },
       "securityCode": {
         "required": "セキュリティコードが必要です"
+      },
+      "financialInstituteName": {
+        "required": "金融機関名は必須です"
+      },
+      "branchName": {
+        "required": "支店名 名前は必須です"
+      },
+      "accountNumber": {
+        "required": "口座番号名は必須です"
+      },
+      "accountType": {
+        "required": "アカウントタイプ名は必須です"
+      },
+      "firstName": {
+        "required": "名は必須です"
+      },
+      "lastName": {
+        "required": "姓は必須です"
       }
     }
   }

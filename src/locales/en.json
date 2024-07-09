@@ -250,7 +250,8 @@
     "dateOfExpired": "Date of expiry",
     "securityCode": "Security code",
     "monthYear": "Month/Year",
-    "changeRefundMethod": "Change refund method"
+    "changeRefundMethod": "Change refund method",
+    "pleaseSelectYourFinancialInstitution": "Please select your financial institution"
   },
   "zodError": {
     "login": {
@@ -303,6 +304,24 @@
       },
       "securityCode": {
         "required": "Security code is required"
+      },
+      "financialInstituteName": {
+        "required": "Financial institute name is required"
+      },
+      "branchName": {
+        "required": "Branch name name is required"
+      },
+      "accountNumber": {
+        "required": "Account number name is required"
+      },
+      "accountType": {
+        "required": "Account type name is required"
+      },
+      "firstName": {
+        "required": "First name is required"
+      },
+      "lastName": {
+        "required": "Last name is required"
       }
     }
   }
