@@ -21,6 +21,9 @@ const FormAfterScan = ({ form }) => {
     dateOfBirth: '1997.9.25',
     passportNumber: '00000000',
     dateOfExpiry: '1997.9.25',
+    passportIssuingCountry: 'USA',
+    countryOfIssueCode: 'USA',
+    gender: 'Male',
   };
 
   const [firstName, setFirstName] = useState(defaultValue.firstName);
@@ -35,9 +38,9 @@ const FormAfterScan = ({ form }) => {
     dateOfBirth: defaultValue.dateOfBirth,
     passportNumber: passportNumber,
     dateOfExpiry: defaultValue.dateOfExpiry,
-    passportIssuingCountry: '',
-    countryOfIssueCode: '',
-    gender: '',
+    passportIssuingCountry: defaultValue.passportIssuingCountry,
+    countryOfIssueCode: defaultValue.countryOfIssueCode,
+    gender: defaultValue.gender,
   });
 
   const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
@@ -80,8 +83,6 @@ const FormAfterScan = ({ form }) => {
     router.push('/passport-information/scan-your-passport');
     setIsOpen(false);
   };
-
-  console.log(isForm);
 
   return (
     <>
