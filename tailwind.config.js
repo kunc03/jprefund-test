@@ -71,6 +71,7 @@ const remMargin = {
   28.5: pxToEm(28.5),
   40: pxToEm(40),
   41: pxToEm(41),
+  43: pxToEm(43),
   46: pxToEm(46),
 };
 
