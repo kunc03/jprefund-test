@@ -71,7 +71,7 @@ const Input = React.forwardRef(
               {description}
             </FormDescription>
           )}
-          <FormMessage className={cn('text-sm font-normal', 'text-red')} />
+          <FormMessage className={cn('text-sm font-normal', 'text-red-dark')} />
         </div>
       </FormItem>
     );

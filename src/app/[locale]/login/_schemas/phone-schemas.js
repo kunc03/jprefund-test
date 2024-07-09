@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 const phoneRegex = /^\d{10,15}$/;
 
-const PhoneSchema = z.object({
+const phoneSchema = z.object({
   email: z
     .string({ message: 'login.email.required' })
     .optional()
@@ -18,7 +18,7 @@ const PhoneSchema = z.object({
       message: 'login.phone.invalid',
     })
     .refine((value) => {
-      if (registeredEmails.includes(value)) {
+      if (value === 'unregister@mail.com') {
         return true; // Validasi berhasil jika email terdaftar
       }
       throw new Error('Email not registered'); // Melempar error jika email tidak terdaftar

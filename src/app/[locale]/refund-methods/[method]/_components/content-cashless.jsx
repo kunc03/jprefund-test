@@ -13,10 +13,26 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRef } from 'react';
 import { cashLessSchema } from '../_schemas';
+import { useRegistrationOptions } from '../../_hooks/use-registration-options';
+import { useRouter } from 'next/navigation';
 
+const CONTACTLESS_METHODS = [
+  {
+    id: 1,
+    value: 'alipay',
+    name: 'Alipay',
+  },
+  {
+    id: 2,
+    value: 'weCattPay',
+    name: 'WeCattPay',
+  },
+];
 const ContentCashLess = () => {
   const t = useTranslations('refundMethod');
   const formRef = useRef();
+  const { setData } = useRegistrationOptions();
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(cashLessSchema),
@@ -25,15 +41,17 @@ const ContentCashLess = () => {
     },
   });
 
-  const handleLoginClick = () => {
-    formRef.dispatchEvent(
+  const handleSubmitClick = () => {
+    formRef.current.dispatchEvent(
       new Event('submit', { bubbles: true, cancelable: true }),
     );
   };
 
-  // const handleSubmit = (data) => {
-  //   console.log(data);
-  // };
+  const handleSubmit = (data) => {
+    // todo integratin witha api
+    setData('3', { registrationInformation: data });
+    router.push('/refund-methods');
+  };
 
   return (
     <div className="flex w-full grow flex-col items-center gap-145 px-29">
@@ -42,7 +60,11 @@ const ContentCashLess = () => {
           {t('chooseYourService')}
         </Heading>
         <UIForm {...form}>
-          <form ref={formRef} onSubmit={form.handleSubmit()} className="mt-46">
+          <form
+            ref={formRef}
+            onSubmit={form.handleSubmit(handleSubmit)}
+            className="mt-46"
+          >
             <FormField
               control={form.control}
               name="type"
@@ -55,12 +77,14 @@ const ContentCashLess = () => {
                     aria-label="Refund Type"
                     className="flex w-full flex-col gap-30"
                   >
-                    <RadioGroupItem value="fullRefund">
-                      Full Refund
-                    </RadioGroupItem>
-                    <RadioGroupItem value="partialRefund">
-                      Partial Refund
-                    </RadioGroupItem>
+                    {CONTACTLESS_METHODS.map((item) => (
+                      <RadioGroupItem
+                        key={item.id}
+                        value={item.value}
+                        selectedValue={field.value}
+                        label={item.name}
+                      />
+                    ))}
                   </RadioGroup>
                 );
               }}
@@ -68,7 +92,7 @@ const ContentCashLess = () => {
           </form>
         </UIForm>
       </div>
-      <Button className="w-145" onClick={handleLoginClick}>
+      <Button className="w-173" onClick={handleSubmitClick}>
         {t('registration')}
       </Button>
     </div>

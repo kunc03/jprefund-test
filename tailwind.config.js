@@ -34,6 +34,7 @@ const remGap = {
 };
 
 const remPadding = {
+  4: pxToEm(4),
   4.5: pxToEm(4.5),
   8: pxToEm(8),
   9.5: pxToEm(9.5),
@@ -68,6 +69,7 @@ const remMargin = {
   23: pxToEm(23),
   28: pxToEm(28),
   28.5: pxToEm(28.5),
+  40: pxToEm(40),
   41: pxToEm(41),
   46: pxToEm(46),
 };
@@ -77,10 +79,12 @@ const remSize = {
   4: pxToEm(4),
   5: pxToEm(5),
   10: pxToEm(10),
+  14: pxToEm(14),
   15: pxToEm(15),
   16: pxToEm(16),
   18: pxToEm(18),
   20: pxToEm(20),
+  22: pxToEm(22),
   23: pxToEm(23),
   24: pxToEm(24),
   26: pxToEm(26),
@@ -103,6 +107,7 @@ const remSize = {
   145: pxToEm(145),
   154: pxToEm(154),
   164: pxToEm(164),
+  173: pxToEm(173),
   187: pxToEm(187),
   192: pxToEm(192),
   210: pxToEm(210),
@@ -153,6 +158,7 @@ const remFontSize = {
   1722: [pxToEm(17), { lineHeight: pxToEm(22) }],
   1818: [pxToEm(18), { lineHeight: pxToEm(18) }],
   1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
+  2020: [pxToEm(20), { lineHeight: pxToEm(20) }],
   2021: [pxToEm(20), { lineHeight: pxToEm(21) }],
   2022: [pxToEm(20), { lineHeight: pxToEm(22) }],
   2122: [pxToEm(21), { lineHeight: pxToEm(22) }],
