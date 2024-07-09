@@ -2,12 +2,13 @@
 
 'use client';
 
-import { StatusContainer, StoreInformation } from '@/components';
+import { StatusContainer } from './status-container';
+import { StoreInformation } from './store-information';
 import React from 'react';
 import { formatDateTime, formatNumber } from '@/utils';
 import { useRouter } from 'next/navigation';
 
-const ItemCard = ({ item }) => {
+const PurchaseItemCard = ({ item }) => {
   const router = useRouter();
   let colorLabelContainer = '';
 
@@ -66,4 +67,4 @@ const ItemCard = ({ item }) => {
   );
 };
 
-export { ItemCard };
+export { PurchaseItemCard };

@@ -206,6 +206,11 @@
     "save": "Save",
     "scanCertificateInstruction": "In good light, a plain background will make the text and photos stand out clearly, making your ID stand out."
   },
+  "recordingOfTransfer": {
+    "metaTitle": "Recording Of Transfer",
+    "metaDescription": "Recording Of Transfer page",
+    "title": "Recording of transfer"
+  },
   "detail": {
     "metaTitle": "Purchase details",
     "metaDescription": "Purchase details page",

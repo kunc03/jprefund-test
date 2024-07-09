@@ -8,6 +8,7 @@ export { SplashLogo } from './splash-logo';
 export { Logo } from './logo';
 export { DatePicker } from './date-picker';
 export { PassportRegistrationIcon } from './passport-registration';
+export { PurchaseItemSection } from './purchase-item-section';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';
