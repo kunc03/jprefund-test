@@ -228,6 +228,20 @@
     "statusChangedToCompleted": "Status changed to Completed",
     "announcementDetails": "Announcement details"
   },
+  "refundMethod": {
+    "metaTitle": "Refund Methods",
+    "metaDescription": "Refund Methods page",
+    "title": "Refund Methods",
+    "registration": "Registration",
+    "delete": "Delete",
+    "choosing": "Choosing",
+    "creditCard": "Credit card",
+    "bankTransfer": "Bank accounts",
+    "cashLess": "Cashless service",
+    "noRegistration": "There is no registration information.",
+    "dateOfExpiry": "Date of expiry",
+    "chooseYourService": "Choose your service"
+  },
   "zodError": {
     "login": {
       "email": {
@@ -264,6 +278,11 @@
       },
       "confPassword": {
         "required": "Password confirmation is required"
+      }
+    },
+    "refundMethod": {
+      "cashless": {
+        "required": "Cashless is required"
       }
     }
   }

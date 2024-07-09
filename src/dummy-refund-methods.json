@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "type": "creditCard",
+    "slug": "credit-card",
+    "isRegister": false,
+    "isChoose": false,
+    "registrationInformation": {}
+  },
+  {
+    "id": "2",
+    "type": "bankTransfer",
+    "slug": "bank-transfer",
+    "isRegister": false,
+    "isChoose": false,
+    "registrationInformation": {}
+  },
+  {
+    "id": "3",
+    "type": "cashLess",
+    "slug": "cashless",
+    "isRegister": false,
+    "isChoose": false,
+    "registrationInformation": {}
+  }
+]

@@ -1,28 +1,29 @@
-import { Button, Heading } from '@/components';
+/* eslint-disable react/button-has-type */
+import { Heading } from '@/components';
 import Image from 'next/image';
 import React from 'react';
 import ButtonRecognition from './button-face-recog';
 
 const FaceRecognition = ({ t, form }) => {
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex w-full flex-col gap-3">
       <Heading level={5} className="text-1422 font-medium ">
         {t('passportPhoto')}
       </Heading>
-      <span className="flex items-center justify-center border-gray-300 border py-5 rounded-[6px] bg-white">
+      <span className="flex items-center justify-center rounded-[6px] border border-gray-300 bg-white py-5">
         <Image
-          src={'/images/passport.png'}
+          src="/images/passport.png"
           width={289}
           height={186}
           alt="passport"
         />
       </span>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         {form === 'form-completed' ? (
-          <button className="flex items-center justify-center border-[1.5px] rounded-[7px] py-2 bg-green w-full">
-            <span className="text-white flex gap-5 text-[16px] font-bold items-center">
+          <button className="flex w-full items-center justify-center rounded-[7px] border-[1.5px] bg-green py-2">
+            <span className="flex items-center gap-5 text-[16px] font-bold text-white">
               <Image
-                src={'/icons/scan-face-white.svg'}
+                src="/icons/scan-face-white.svg"
                 width={32}
                 height={32}
                 alt="passport"
@@ -34,8 +35,8 @@ const FaceRecognition = ({ t, form }) => {
           <ButtonRecognition t={t} />
         )}
       </div>
-      <div className="flex justify-center text-center mb-5">
-        <p className="text-1527 w-[315px]">
+      <div className="mb-5 flex justify-center text-center">
+        <p className="w-[315px] text-1527">
           {t('afterRegisteringYourPassport')}
         </p>
       </div>

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 'use client';
 
 import {
@@ -18,7 +20,6 @@ const StatusOption = ({ t, filter }) => {
     setIsValue(value);
   };
 
-  console.log(isValue);
   return (
     <Select className="w-full ">
       <SelectTrigger

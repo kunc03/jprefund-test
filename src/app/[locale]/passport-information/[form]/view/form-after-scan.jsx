@@ -1,3 +1,8 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -36,7 +41,7 @@ const FormAfterScan = ({ form }) => {
     firstName: defaultValue.firstName,
     lastName: defaultValue.lastName,
     dateOfBirth: defaultValue.dateOfBirth,
-    passportNumber: passportNumber,
+    passportNumber,
     dateOfExpiry: defaultValue.dateOfExpiry,
     passportIssuingCountry: defaultValue.passportIssuingCountry,
     countryOfIssueCode: defaultValue.countryOfIssueCode,
@@ -86,7 +91,7 @@ const FormAfterScan = ({ form }) => {
 
   return (
     <>
-      <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
+      <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
         <FaceRecognition t={t} isOpen={isOpen} form={form} />
 
         <PassportForm
@@ -102,10 +107,10 @@ const FormAfterScan = ({ form }) => {
         />
       </div>
 
-      <div className="flex flex-col w-full items-center justify-center pb-54 gap-[54px]">
+      <div className="flex w-full flex-col items-center justify-center gap-[54px] pb-54">
         <button
           onClick={handleRescanPassport}
-          className="text-red text-16 font-bold underline underline-offset-4"
+          className="text-16 font-bold text-red underline underline-offset-4"
         >
           {t('rescanYourPassport')}
         </button>

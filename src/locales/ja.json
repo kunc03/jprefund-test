@@ -226,6 +226,20 @@
     "statusChangedToCompleted": "ステータスが完了に変更されました",
     "announcementDetails": "お知らせ詳細"
   },
+  "refundMethod": {
+    "metaTitle": "返金方法",
+    "metaDescription": "返金方法ページ",
+    "title": "返金方法",
+    "registration": "登録",
+    "delete": "削除",
+    "choosing": "選択中",
+    "creditCard": "クレジットカード",
+    "bankTransfer": "銀行口座",
+    "cashLess": "キャッシュレスサービス",
+    "noRegistration": "ご登録情報はありません。",
+    "dateOfExpiry": "有効期限",
+    "chooseYourService": "サービスを選択してください"
+  },
   "zodError": {
     "login": {
       "email": {
@@ -262,6 +276,11 @@
       },
       "confPassword": {
         "required": "パスワードの確認が必要です"
+      }
+    },
+    "refundMethod": {
+      "cashless": {
+        "required": "キャッシュレスは必須"
       }
     }
   }

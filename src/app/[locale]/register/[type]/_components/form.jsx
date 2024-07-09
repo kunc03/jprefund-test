@@ -64,7 +64,7 @@ const Form = ({ type }) => {
   const handleSubmit = (data) => {
     if (type === 'email' && data.email === 'unregister@mail.com') {
       router.push('/register/email/otp');
-      return;
+
       // } else if (type === 'email' && data) {
       //   router.push('/register/email/otp');
       //   return;

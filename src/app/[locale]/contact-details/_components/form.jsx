@@ -1,11 +1,13 @@
+/* eslint-disable no-unused-vars */
+
 'use client';
 
-import { useState, useMemo, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Form as UIForm, FormField, FormItem } from '@/components/ui/form';
+import { Form as UIForm } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -15,7 +17,6 @@ import {
   SelectValue,
 } from '@/components';
 import { phoneSchema } from '../../register/_schemas';
-import { SelectOptions } from '../../passport-information/_components';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -24,7 +25,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="w-100 font-bold focus:!outline-none focus:!ring-transparent h-full"
+      className="h-full w-100 font-bold focus:!outline-none focus:!ring-transparent"
       value={selectedPhoneArea}
     >
       <SelectValue
@@ -32,7 +33,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
         className="bg-gray-300"
       />
     </SelectTrigger>
-    <SelectContent className="bg-white rounded-[6px]">
+    <SelectContent className="rounded-[6px] bg-white">
       <SelectItem value="+81">JP (+81)</SelectItem>
       <SelectItem value="+62">ID (+62)</SelectItem>
     </SelectContent>

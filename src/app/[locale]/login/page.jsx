@@ -16,7 +16,7 @@ const Login = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh flex-col justify-between">
-      <div className="flex flex-1 flex-col items-center mt-14">
+      <div className="mt-14 flex flex-1 flex-col items-center">
         <Logo />
         <Form />
       </div>
