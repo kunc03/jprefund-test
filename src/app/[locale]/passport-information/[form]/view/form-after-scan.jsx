@@ -25,33 +25,24 @@ const FormAfterScan = ({ form }) => {
 
   const [firstName, setFirstName] = useState(defaultValue.firstName);
   const [lastName, setLastName] = useState(defaultValue.lastName);
-  const [dateOfBirth, setDateOfBirth] = useState(defaultValue.dateOfBirth);
   const [passportNumber, setPassportNumber] = useState(
     defaultValue.passportNumber,
   );
-  const [dateOfExpiry, setDateOfExpiry] = useState(defaultValue.dateOfExpiry);
-  const [pasportIssuingCountry, setPassportIssuingCountry] = useState('');
-  const [countryOfIssueCode, setCountryOfIssueCode] = useState('');
-  const [gender, setGender] = useState('');
 
   const [isForm, setIsForm] = useState({
-    firstName: firstName,
-    lastName: lastName,
-    dateOfBirth: dateOfBirth,
+    firstName: defaultValue.firstName,
+    lastName: defaultValue.lastName,
+    dateOfBirth: defaultValue.dateOfBirth,
     passportNumber: passportNumber,
-    dateOfExpiry: dateOfExpiry,
-    passportIssuingCountry: null,
-    countryOfIssueCode: null,
-    gender: null,
+    dateOfExpiry: defaultValue.dateOfExpiry,
+    passportIssuingCountry: '',
+    countryOfIssueCode: '',
+    gender: '',
   });
 
   const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
   const hasDateOfExpiry = isForm?.dateOfExpiry !== defaultValue.dateOfExpiry;
-  const hasPassportIssuing =
-    isForm?.passportIssuingCountry !== defaultValue.passportIssuingCountry;
-  const hasCountryIssue =
-    isForm?.countryOfIssueCode !== defaultValue.countryOfIssueCode;
-  const hasGender = isForm?.gender !== defaultValue.gender;
+  const hasFirstName = isForm?.firstName !== defaultValue.firstName;
 
   useEffect(() => {
     isForm;
@@ -60,28 +51,18 @@ const FormAfterScan = ({ form }) => {
 
   useEffect(() => {
     const isChanged =
-      firstName !== defaultValue.firstName ||
+      hasFirstName ||
       lastName !== defaultValue.lastName ||
       hasDateOfBirth ||
       passportNumber !== defaultValue.passportNumber ||
       hasDateOfExpiry ||
-      pasportIssuingCountry !== '' ||
-      countryOfIssueCode !== '' ||
-      gender !== '' ||
+      isForm?.passportIssuingCountry !== '' ||
+      isForm.countryOfIssueCode !== '' ||
+      isForm.gender !== '' ||
       form === 'form-completed';
 
     setIsDisabled(!isChanged);
-  }, [
-    firstName,
-    lastName,
-    dateOfBirth,
-    passportNumber,
-    dateOfExpiry,
-    pasportIssuingCountry,
-    countryOfIssueCode,
-    gender,
-    defaultValue,
-  ]);
+  }, [firstName, lastName, passportNumber, defaultValue]);
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
@@ -100,12 +81,6 @@ const FormAfterScan = ({ form }) => {
     setIsOpen(false);
   };
 
-  // useEffect(() => {
-  //   if (form === 'form-completed') {
-  //     setIsDisabled(true);
-  //   }
-  // });
-
   console.log(isForm);
 
   return (
@@ -123,9 +98,6 @@ const FormAfterScan = ({ form }) => {
           setFirstName={setFirstName}
           setLastName={setLastName}
           setPassportNumber={setPassportNumber}
-          setPassportIssuingCountry={setPassportIssuingCountry}
-          setCountryOfIssueCode={setCountryOfIssueCode}
-          setGender={setGender}
         />
       </div>
 
