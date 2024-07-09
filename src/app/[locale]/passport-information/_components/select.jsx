@@ -10,61 +10,58 @@ import {
 import { cn } from '@/utils';
 import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const SelectOptions = ({
-  values,
-  placeholder,
-  t,
-  className,
-  onHandleSelected,
-}) => {
-  const [isValue, setIsValue] = React.useState('');
+const SelectOptions = ({ values, className, handleChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSelected, setIsSelected] = useState('');
 
-  const handleChange = (value) => {
-    setIsValue(value);
-    if (onHandleSelected) {
-      onHandleSelected(value); // Meneruskan nilai yang dipilih ke komponen induk
-    }
+  const handleClick = () => {
+    setIsOpen(!isOpen);
   };
 
-  console.log('isValue', isValue);
-
   return (
-    <Select className="w-full ">
-      <SelectTrigger
+    <div className="w-full">
+      <button
+        onClick={handleClick}
         className={cn(
-          'text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-[50px] relative',
+          'w-full text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-[50px] relative',
           className,
           '!bg-white text-gray hover:!border-red border-gray-300 border',
         )}
       >
-        <SelectValue placeholder={values[0]} />
-
+        {isSelected ? isSelected : values[0]}
         <ChevronDown
           size={24}
           className={cn(
             'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-105',
+            isOpen && 'rotate-180',
           )}
         />
-      </SelectTrigger>
-
-      <SelectContent className="bg-white focus:!outline-none focus:!ring-transparent">
-        {values.map((value, index) => (
-          <SelectItem
-            key={index}
-            className={cn(
-              'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-4 p-14 transition-colors mb-1',
-              'hover:border-red focus:border-red bg-white text-gray border',
-            )}
-            value={value}
-            onClick={() => handleChange(value)}
-          >
-            {value}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+      </button>
+      {isOpen && (
+        <ul className="focus:!outline-none focus:!ring-transparent mt-1 overflow-y-auto">
+          {values?.map((value, index) => (
+            <li
+              key={index}
+              className={cn(
+                'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-4 p-14 transition-colors mb-1',
+                'hover:border-red focus:border-red bg-white text-gray border',
+              )}
+              onClick={() => {
+                if (value !== isSelected) {
+                  setIsSelected(value);
+                  setIsOpen(false);
+                  handleChange(value);
+                }
+              }}
+            >
+              {value}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 
