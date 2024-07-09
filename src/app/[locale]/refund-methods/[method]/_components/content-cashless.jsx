@@ -55,7 +55,6 @@ const ContentCashLess = () => {
     setIsSuccess(true);
   };
 
-  console.log(isSuccess);
   return (
     <>
       <div className="flex w-full grow flex-col items-center gap-145 px-29">
