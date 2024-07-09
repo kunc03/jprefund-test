@@ -241,7 +241,8 @@
     "chooseYourService": "サービスを選択してください",
     "deleteConfirmation": "返金方法{}を削除しますか？",
     "cancel": "キャンセル",
-    "ok": "O K"
+    "ok": "O K",
+    "registrationCompleted": "{name}登録完了"
   },
   "zodError": {
     "login": {

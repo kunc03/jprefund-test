@@ -242,6 +242,7 @@
     "dateOfExpiry": "Date of expiry",
     "chooseYourService": "Choose your service",
     "deleteConfirmation": "Would you like to delete your refund method of {name}?",
+    "registrationCompleted": "{name} registration completed",
     "cancel": "Cancel",
     "ok": "O K"
   },
