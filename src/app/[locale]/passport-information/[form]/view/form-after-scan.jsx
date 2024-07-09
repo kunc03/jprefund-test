@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FaceRecognition, PassportForm } from '../_components';
+import { cn } from '@/utils';
 
 const FormAfterScan = ({ form }) => {
   const t = useTranslations('passportInformation');
@@ -12,16 +13,59 @@ const FormAfterScan = ({ form }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const defaultValue = {
+    firstName: 'Joni',
+    lastName: 'Mitchell',
+    dateOfBirth: '1997.9.25',
+    passportNumber: '00000000',
+    dateOfExpiry: '1997.9.25',
+    passportIssuingCountry: 'USA',
+    countryOfIssueCode: 'USA',
+    gender: 'Male',
+  };
+
+  const [firstName, setFirstName] = useState(defaultValue.firstName);
+  const [lastName, setLastName] = useState(defaultValue.lastName);
+  const [passportNumber, setPassportNumber] = useState(
+    defaultValue.passportNumber,
+  );
+
   const [isForm, setIsForm] = useState({
-    firstName: null,
-    lastName: null,
-    dateOfBirth: null,
-    passportNumber: null,
-    dateOfExpiry: null,
-    passportIssuingCountry: null,
-    countryOfIssueCode: null,
-    gender: null,
+    firstName: defaultValue.firstName,
+    lastName: defaultValue.lastName,
+    dateOfBirth: defaultValue.dateOfBirth,
+    passportNumber: passportNumber,
+    dateOfExpiry: defaultValue.dateOfExpiry,
+    passportIssuingCountry: defaultValue.passportIssuingCountry,
+    countryOfIssueCode: defaultValue.countryOfIssueCode,
+    gender: defaultValue.gender,
   });
+
+  const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
+  const hasDateOfExpiry = isForm?.dateOfExpiry !== defaultValue.dateOfExpiry;
+  const hasFirstName = isForm?.firstName !== defaultValue.firstName;
+
+  useEffect(() => {
+    isForm;
+    setIsDisabled(false);
+  }, []);
+
+  useEffect(() => {
+    const isChanged =
+      hasFirstName ||
+      lastName !== defaultValue.lastName ||
+      hasDateOfBirth ||
+      passportNumber !== defaultValue.passportNumber ||
+      hasDateOfExpiry ||
+      isForm?.passportIssuingCountry !== '' ||
+      isForm.countryOfIssueCode !== '' ||
+      isForm.gender !== '' ||
+      form === 'form-completed';
+
+    setIsDisabled(!isChanged);
+  }, [firstName, lastName, passportNumber, defaultValue]);
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
@@ -34,14 +78,6 @@ const FormAfterScan = ({ form }) => {
       return { ...old, dateOfExpiry: date };
     });
   };
-
-  const hasDateOfBirth = isForm?.dateOfBirth !== null;
-  const hasDateOfExpiry = isForm?.dateOfExpiry !== null;
-
-  // const handleFaceRecognition = () => {
-  //   router.push('/passport-information/take-portrait');
-  //   // setIsOpen(true);
-  // };
 
   const handleRescanPassport = () => {
     router.push('/passport-information/scan-your-passport');
@@ -56,10 +92,13 @@ const FormAfterScan = ({ form }) => {
         <PassportForm
           t={t}
           formId={isForm}
+          setIsForm={setIsForm}
           handleSelectedDateOfBirth={handleSelectedDateOfBirth}
           handleSelectedDateOfExpiry={handleSelectedDateOfExpiry}
-          hasDateOfBirth={hasDateOfBirth}
-          hasDateOfExpiry={hasDateOfExpiry}
+          defaultValue={defaultValue}
+          setFirstName={setFirstName}
+          setLastName={setLastName}
+          setPassportNumber={setPassportNumber}
         />
       </div>
 
@@ -72,10 +111,11 @@ const FormAfterScan = ({ form }) => {
         </button>
 
         <Button
+          disabled={isDisabled}
           onClick={() =>
             router.push('/passport-information/form/contact-information')
           }
-          className="w-[173px]"
+          className={cn('w-[173px]', isDisabled && 'bg-gray-300')}
         >
           {t('save')}
         </Button>
