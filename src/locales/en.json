@@ -246,11 +246,11 @@
     "registrationCompleted": "{name} registration completed",
     "cancel": "Cancel",
     "ok": "O K",
-    "cardNumber":"Card number",
-    "dateOfExpired":"Date of expiry",
-    "securityCode":"Security code",
-    "monthYear":"Month/Year",
-    "changeRefundMethod":"Change refund method"
+    "cardNumber": "Card number",
+    "dateOfExpired": "Date of expiry",
+    "securityCode": "Security code",
+    "monthYear": "Month/Year",
+    "changeRefundMethod": "Change refund method"
   },
   "zodError": {
     "login": {
@@ -293,7 +293,7 @@
     "refundMethod": {
       "cashless": {
         "required": "Cashless is required"
-      }, 
+      },
       "cardNumber": {
         "required": "Card number is required",
         "format": "Card number min 14 digit"

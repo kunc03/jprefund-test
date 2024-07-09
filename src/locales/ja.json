@@ -244,11 +244,11 @@
     "cancel": "キャンセル",
     "ok": "O K",
     "registrationCompleted": "{name}登録完了",
-    "cardNumber":"カード番号",
-    "dateOfExpired":"有効期限",
-    "securityCode":"セキュリティコード",
-    "monthYear":"月/年",
-    "changeRefundMethod":"返金方法を変更"
+    "cardNumber": "カード番号",
+    "dateOfExpired": "有効期限",
+    "securityCode": "セキュリティコード",
+    "monthYear": "月/年",
+    "changeRefundMethod": "返金方法を変更"
   },
   "zodError": {
     "login": {
