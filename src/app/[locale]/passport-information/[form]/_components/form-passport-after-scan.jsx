@@ -14,6 +14,7 @@ const PassportForm = ({
   setFirstName,
   setLastName,
   setPassportNumber,
+  setPassportIssuingCountry,
 }) => {
   const handleFirstName = (e) => {
     setFirstName(e.target.value);

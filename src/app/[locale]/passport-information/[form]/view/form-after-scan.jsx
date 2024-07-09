@@ -59,9 +59,9 @@ const FormAfterScan = ({ form }) => {
       hasDateOfBirth ||
       passportNumber !== defaultValue.passportNumber ||
       hasDateOfExpiry ||
-      isForm?.passportIssuingCountry !== '' ||
-      isForm.countryOfIssueCode !== '' ||
-      isForm.gender !== '' ||
+      isForm?.passportIssuingCountry !== defaultValue.passportIssuingCountry ||
+      isForm.countryOfIssueCode !== defaultValue.countryOfIssueCode ||
+      isForm.gender !== defaultValue.gender ||
       form === 'form-completed';
 
     setIsDisabled(!isChanged);

@@ -8,16 +8,18 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Form as UIForm, FormField, Input } from '@/components';
 import { useFormRef } from '@/hooks';
 import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Form = () => {
   const t = useTranslations('login');
   const formRef = useRef();
   const { setFormRef } = useFormRef();
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '',
+      // email: '',
       password: '',
     },
   });
@@ -26,12 +28,18 @@ const Form = () => {
     setFormRef(formRef.current);
   }, [setFormRef]);
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    router.push('/home');
+  };
 
   return (
     <div className="mt-9 flex w-full flex-col px-7">
-      <Heading className="mb-5 text-center text-3xl font-medium">
+      {/* <Heading className="mb-5 text-center text-3xl font-medium">
         {t('title')}
+      </Heading> */}
+
+      <Heading className="mb-5 text-center text-2122 font-medium">
+        {t('form.label.password')}
       </Heading>
 
       <UIForm {...form}>
@@ -40,7 +48,8 @@ const Form = () => {
           onSubmit={form.handleSubmit(handleSubmit)}
           className="flex w-full flex-col gap-6"
         >
-          <FormField
+          {/* EMail */}
+          {/* <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
@@ -52,7 +61,7 @@ const Form = () => {
                 {...field}
               />
             )}
-          />
+          /> */}
 
           <div>
             <FormField

@@ -62,12 +62,13 @@ const Form = ({ type }) => {
   }, [setFormRef]);
 
   const handleSubmit = (data) => {
-    if (type === 'email' && data) {
+    if (type === 'email' && data.email === 'unregister@mail.com') {
       router.push('/register/email/otp');
       return;
-    }
-
-    if (selectedPhoneArea && data) {
+      // } else if (type === 'email' && data) {
+      //   router.push('/register/email/otp');
+      //   return;
+    } else if (selectedPhoneArea && data) {
       router.push('/register/phone/otp');
     }
   };
