@@ -49,7 +49,7 @@ const ContentCashLess = () => {
 
   const handleSubmit = (data) => {
     // todo integratin witha api
-    setData('3', { registrationInformation: data });
+    setData('3', data);
     router.push('/refund-methods');
   };
 

@@ -4,6 +4,7 @@ import { cn } from '@/utils';
 import { ButtonAddRegistration } from './button-add-registration';
 import { RegistrationInformation } from './registration-item-information';
 import { useTranslations } from 'next-intl';
+import { ButtonDeleteRegistration } from './button-delete-registration';
 
 const paymentImages = {
   creditCard: '/icons/credit-card.svg',
@@ -48,18 +49,7 @@ const RegistrationItem = ({ item }) => {
           <p className="text-1212 text-white"> {t('choosing')}</p>
         </div>
       )}
-      {item.isRegister && (
-        <div className="flex flex-row items-center justify-between gap-11">
-          <p className="text-1212 font-bold">{t('delete')}</p>
-          <Image
-            alt="info"
-            height={24}
-            src="/icons/trash.svg"
-            width={24}
-            className="size-24 cursor-pointer"
-          />
-        </div>
-      )}
+      {item.isRegister && <ButtonDeleteRegistration item={item} />}
       {!item.isRegister && (
         <div className="flex flex-row items-center justify-between gap-11">
           <p className="text-1112 font-bold text-gray">{t('registration')}</p>

@@ -238,7 +238,10 @@
     "cashLess": "キャッシュレスサービス",
     "noRegistration": "ご登録情報はありません。",
     "dateOfExpiry": "有効期限",
-    "chooseYourService": "サービスを選択してください"
+    "chooseYourService": "サービスを選択してください",
+    "deleteConfirmation":"返金方法{}を削除しますか？",
+    "cancel":"キャンセル",
+    "ok":"O K"
   },
   "zodError": {
     "login": {

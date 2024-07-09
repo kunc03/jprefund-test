@@ -8,8 +8,10 @@ const pxToEm = ($px) => {
 const remBorderRadius = {
   1.5: pxToEm(1.5),
   4: pxToEm(4),
+  6: pxToEm(6),
   8: pxToEm(8),
   12: pxToEm(12),
+  14: pxToEm(14),
   21: pxToEm(21),
 };
 
@@ -102,6 +104,7 @@ const remSize = {
   74: pxToEm(74),
   90: pxToEm(90),
   100: pxToEm(100),
+  111: pxToEm(111),
   120: pxToEm(120),
   128: pxToEm(128),
   131: pxToEm(131),
@@ -160,6 +163,7 @@ const remFontSize = {
   1722: [pxToEm(17), { lineHeight: pxToEm(22) }],
   1818: [pxToEm(18), { lineHeight: pxToEm(18) }],
   1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
+  1826: [pxToEm(18), { lineHeight: pxToEm(26) }],
   2020: [pxToEm(20), { lineHeight: pxToEm(20) }],
   2021: [pxToEm(20), { lineHeight: pxToEm(21) }],
   2022: [pxToEm(20), { lineHeight: pxToEm(22) }],

@@ -240,7 +240,10 @@
     "cashLess": "Cashless service",
     "noRegistration": "There is no registration information.",
     "dateOfExpiry": "Date of expiry",
-    "chooseYourService": "Choose your service"
+    "chooseYourService": "Choose your service",
+    "deleteConfirmation":"Would you like to delete your refund method of {name}?",
+    "cancel":"Cancel",
+    "ok":"O K"
   },
   "zodError": {
     "login": {

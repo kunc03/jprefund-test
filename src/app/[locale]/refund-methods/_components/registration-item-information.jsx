@@ -12,6 +12,14 @@ const RegistrationInformation = ({ item, t }) => {
         </p>
       </div>
     );
+
+  if (item.type === 'cashLess')
+    return (
+      <div className="text-1218 font-normal text-gray">
+        <p>{item.registrationInformation?.type ?? 'asd'}</p>
+      </div>
+    );
+
   return <div>asds</div>;
 };
 

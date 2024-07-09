@@ -21,3 +21,4 @@ export * from './ui/calendar';
 export * from './ui/popover';
 export * from './ui/accordion';
 export * from './ui/radio-group';
+export * from './ui/alert-dialog';
