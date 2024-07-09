@@ -5,6 +5,7 @@ import { ButtonAddRegistration } from './button-add-registration';
 import { RegistrationInformation } from './registration-item-information';
 import { useTranslations } from 'next-intl';
 import { ButtonDeleteRegistration } from './button-delete-registration';
+import { ButtonChangeRegistration } from './button-change-registration';
 
 const paymentImages = {
   creditCard: '/icons/credit-card.svg',
@@ -48,6 +49,9 @@ const RegistrationItem = ({ item }) => {
         <div className="absolute right-0 top-3  rounded-l-4 bg-red px-21 py-4 text-center">
           <p className="text-1212 text-white"> {t('choosing')}</p>
         </div>
+      )}
+      {!item.isChoose && item.isRegister && (
+        <ButtonChangeRegistration item={item} />
       )}
       {item.isRegister && <ButtonDeleteRegistration item={item} />}
       {!item.isRegister && (

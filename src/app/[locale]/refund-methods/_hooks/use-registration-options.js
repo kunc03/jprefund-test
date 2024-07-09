@@ -3,6 +3,15 @@ import dummyData from '@/dummy-refund-methods.json';
 
 const useRegistrationOptions = create((set) => ({
   data: dummyData,
+  toggleChoose: (id) =>
+    set((state) => ({
+      data: state.data.map(
+        (item) =>
+          item.id === id
+            ? { ...item, isChoose: true } // Set isChoose to true for the matching id
+            : { ...item, isChoose: false }, // Set isChoose to false for all other ids
+      ),
+    })),
   deleteData: (id) =>
     set((state) => ({
       data: state.data.map((item) =>

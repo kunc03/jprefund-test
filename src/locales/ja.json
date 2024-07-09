@@ -240,9 +240,15 @@
     "dateOfExpiry": "有効期限",
     "chooseYourService": "サービスを選択してください",
     "deleteConfirmation": "返金方法{}を削除しますか？",
+    "changeConfirmation": "払い戻し方法をこの {name} に変更しますか?",
     "cancel": "キャンセル",
     "ok": "O K",
-    "registrationCompleted": "{name}登録完了"
+    "registrationCompleted": "{name}登録完了",
+    "cardNumber":"カード番号",
+    "dateOfExpired":"有効期限",
+    "securityCode":"セキュリティコード",
+    "monthYear":"月/年",
+    "changeRefundMethod":"返金方法を変更"
   },
   "zodError": {
     "login": {
@@ -285,6 +291,16 @@
     "refundMethod": {
       "cashless": {
         "required": "キャッシュレスは必須"
+      },
+      "cardNumber": {
+        "required": "カード番号は必須です",
+        "format": "カード番号 14 桁以上"
+      },
+      "dateOfExpired": {
+        "required": "有効期限が切れた日付は必須です"
+      },
+      "securityCode": {
+        "required": "セキュリティコードが必要です"
       }
     }
   }

@@ -95,7 +95,11 @@ const ContentCashLess = () => {
             </form>
           </UIForm>
         </div>
-        <Button className="w-173" onClick={handleSubmitClick}>
+        <Button
+          className="w-173"
+          onClick={handleSubmitClick}
+          disabled={!form.formState.isValid}
+        >
           {t('registration')}
         </Button>
       </div>

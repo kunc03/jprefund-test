@@ -19,4 +19,8 @@ const formatNumber = (number, isCurrency = false) => {
   return formatter.format(number);
 };
 
-export { formatNumber };
+const isObjectEmpty = (obj) => {
+  return Object.keys(obj).length === 0;
+};
+
+export { formatNumber, isObjectEmpty };

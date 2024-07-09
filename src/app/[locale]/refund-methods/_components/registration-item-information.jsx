@@ -6,9 +6,10 @@ const RegistrationInformation = ({ item, t }) => {
   if (item.type === 'creditCard')
     return (
       <div className="text-1218 font-normal text-gray">
-        <p>{maskCardNumber(item.registrationInformation.cardNumber)}</p>
+        <p>{maskCardNumber(item.registrationInformation?.cardNumber ?? '')}</p>
         <p>
-          {t('dateOfExpiry')}: {item.registrationInformation.expDate}
+          {t('dateOfExpiry')}:{' '}
+          {item.registrationInformation?.dateOfExpired ?? '-'}
         </p>
       </div>
     );
