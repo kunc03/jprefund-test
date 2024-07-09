@@ -54,6 +54,7 @@ const remPadding = {
   43: pxToEm(43),
   65: pxToEm(65),
   77: pxToEm(77),
+  80: pxToEm(80),
 };
 
 const remMargin = {
