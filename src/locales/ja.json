@@ -167,9 +167,14 @@
     "title": "アカウント",
     "change": "変更",
     "email": "変更",
+    "newEmail": "新しいメールアドレス",
+    "placeholder":{
+      "newEmail": "メールアドレス"
+    },
     "password": "パスワード",
     "cancel": "キャンセル",
-    "deleteAccount": "アカウントを削除"
+    "deleteAccount": "アカウントを削除",
+    "sendVerificationCode": "認証コードを送信"
   },
   "detail": {
     "metaTitle": "購入品の詳細",

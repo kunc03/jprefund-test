@@ -10,6 +10,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils';
 import { useState } from 'react';
+import { FormEmail } from './form-email';
 
 const AccountInformationAccordion = ({
   id,
@@ -56,7 +57,7 @@ const AccountInformationAccordion = ({
         </AccordionTrigger>
         <AccordionContent className="! w-full py-20 md:max-w-md">
           <div className="mr-23 rounded-6 border-1.5 border-red p-18">
-            Yes. It adheres to the WAI-ARIA design pattern.
+            {label === 'email' && <FormEmail />}
           </div>
         </AccordionContent>
       </AccordionItem>

@@ -217,9 +217,14 @@
     "title": "Account",
     "change": "Change",
     "email": "Email address",
+    "newEmail": "New Email address",
+    "placeholder":{
+      "newEmail": "New Email address"
+    },
     "password": "Password",
     "cancel": "Cancel",
-    "deleteAccount": "Delete Account"
+    "deleteAccount": "Delete Account",
+    "sendVerificationCode": "Send verification code"
   },
   "detail": {
     "metaTitle": "Purchase details",

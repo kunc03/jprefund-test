@@ -49,7 +49,7 @@ const Select = ({
             {description}
           </FormDescription>
         )}
-        <FormMessage className="text-sm font-normal text-red-dark" />
+        <FormMessage className="mt-6 text-1217 font-normal text-red-error" />
       </div>
     </FormItem>
   );

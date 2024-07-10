@@ -46,8 +46,10 @@ const remPadding = {
   10: pxToEm(10),
   10.5: pxToEm(10.5),
   11: pxToEm(11),
+  11.5: pxToEm(11.5),
   13: pxToEm(13),
   14: pxToEm(14),
+  14.5: pxToEm(14.5),
   15: pxToEm(15),
   15.5: pxToEm(15.5),
   18: pxToEm(18),
@@ -220,6 +222,7 @@ const tailwindConfig = {
       },
       gray: {
         50: '#fafaf9',
+        80: '#F4F4F4',
         100: '#D9D9D9',
         150: '#9F9F9F',
         200: '#909090',
@@ -232,6 +235,7 @@ const tailwindConfig = {
       },
       red: {
         DEFAULT: '#dd5c45',
+        error: '#FF4B33',
         light: '#ff0000',
         dark: '#b91300',
       },
