@@ -170,8 +170,14 @@
     "newEmail": "新しいメールアドレス",
     "newPhone": "新しい電話番号",
     "placeholder": {
-      "newEmail": "メールアドレス"
+      "newEmail": "メールアドレス",
+      "currentPassword": "半角英数8文字以上",
+      "newPassword": "半角英数8文字以上",
+      "passwordConfirmation": "確認のためもう一度入力"
     },
+    "currentPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "passwordConfirmation": "パスワード確認",
     "password": "パスワード",
     "cancel": "キャンセル",
     "deleteAccount": "アカウントを削除",
@@ -289,9 +295,10 @@
     },
     "password": {
       "required": "パスワードが必要",
-      "min": "最小パスワードは 8 です",
-      "mismatch": "パスワードと確認用パスワードは一致する必要があります",
-      "confPass": "パスワードの確認が必要です"
+      "min": "8文字以上で設定してください。",
+      "mismatch": "パスワードが一致しません。",
+      "confPass": "パスワードの確認が必要です",
+      "incorrect":"パスワードが違います。"
     },
     "cashless": {
       "required": "キャッシュレスは必須"

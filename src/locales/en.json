@@ -288,53 +288,54 @@
   },
   "zodError": {
     "email": {
-      "required": "Email is required",
-      "invalid": "Format email is wrong"
+      "required": "Email is required.",
+      "invalid": "Format email is wrong."
     },
     "password": {
-      "required": "Password is required",
-      "min": "Min password is 8",
-      "mismatch": "Password and confirm password must match",
-      "confPass": "Password confirmation is required"
+      "required": "Password is required.",
+      "min": "Please set it to 8 characters or more.",
+      "mismatch": "Passwords do not match.",
+      "confPass": "Password confirmation is required.",
+      "incorrect":"Password is incorrect."
     },
     "phone": {
-      "required": "Phone is required",
-      "invalid": "Format phone is wrong"
+      "required": "Phone is required.",
+      "invalid": "Format phone is wrong."
     },
     "otp": {
-      "required": "Otp is required",
-      "min": "Min Otp is 6"
+      "required": "Otp is required.",
+      "min": "Min Otp is 6."
     },
     "cashless": {
-      "required": "Cashless is required"
+      "required": "Cashless is required."
     },
     "cardNumber": {
-      "required": "Card number is required",
-      "format": "Card number min 14 digit"
+      "required": "Card number is required.",
+      "format": "Card number min 14 digit."
     },
     "dateOfExpired": {
-      "required": "Date of expired is required"
+      "required": "Date of expired is required."
     },
     "securityCode": {
-      "required": "Security code is required"
+      "required": "Security code is required."
     },
     "financialInstituteName": {
-      "required": "Financial institute name is required"
+      "required": "Financial institute name is required."
     },
     "branchName": {
-      "required": "Branch name name is required"
+      "required": "Branch name name is required."
     },
     "accountNumber": {
-      "required": "Account number name is required"
+      "required": "Account number name is required."
     },
     "accountType": {
-      "required": "Account type name is required"
+      "required": "Account type name is required."
     },
     "firstName": {
-      "required": "First name is required"
+      "required": "First name is required."
     },
     "lastName": {
-      "required": "Last name is required"
+      "required": "Last name is required."
     }
   }
 }

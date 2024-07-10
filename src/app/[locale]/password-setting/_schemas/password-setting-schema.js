@@ -15,7 +15,7 @@ const passwordSettingSchema = z
       )
       .refine(
         (value) => {
-          return value.length === 8;
+          return value.length > 8;
         },
         {
           message: 'password.min',

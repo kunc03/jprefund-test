@@ -4,15 +4,17 @@ import { Button, Form as UIForm, FormField, Input } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { phoneSchema } from '../_schemas';
+import { passwordSchema } from '../_schemas';
 
 const FormPassword = () => {
   const t = useTranslations('accountInformation');
 
   const form = useForm({
-    resolver: zodResolver(phoneSchema),
+    resolver: zodResolver(passwordSchema),
     defaultValues: {
-      phone: '',
+      password: '',
+      newPassword: '',
+      confPassword: '',
     },
   });
 
@@ -26,16 +28,54 @@ const FormPassword = () => {
       >
         <FormField
           control={form.control}
-          name="email"
+          name="password"
           render={({ field }) => {
             return (
               <Input
                 hasForm
-                type="number"
+                type="password"
                 value={field.value}
-                label={t('newPhone')}
+                label={t('currentPassword')}
                 disabled={false}
-                placeholder="000-0000-0000"
+                placeholder={t('placeholder.currentPassword')}
+                className="!h-50 bg-gray-80 !px-14 !py-18"
+                {...field}
+              />
+            );
+          }}
+        />
+
+        <FormField
+          control={form.control}
+          name="newPassword"
+          render={({ field }) => {
+            return (
+              <Input
+                hasForm
+                type="password"
+                value={field.value}
+                label={t('newPassword')}
+                disabled={false}
+                placeholder={t('placeholder.newPassword')}
+                className="!h-50 bg-gray-80 !px-14 !py-18"
+                {...field}
+              />
+            );
+          }}
+        />
+
+        <FormField
+          control={form.control}
+          name="confPassword"
+          render={({ field }) => {
+            return (
+              <Input
+                hasForm
+                type="password"
+                value={field.value}
+                label={t('passwordConfirmation')}
+                disabled={false}
+                placeholder={t('placeholder.passwordConfirmation')}
                 className="!h-50 bg-gray-80 !px-14 !py-18"
                 {...field}
               />
