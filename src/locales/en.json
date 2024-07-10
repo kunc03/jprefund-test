@@ -31,6 +31,7 @@
     "register": "Register",
     "registered": "Not registered yet?",
     "createAccount": "Create an account",
+    "login/signup": "Log In / Sign up",
     "continueWithApple": "Continue with your Apple account",
     "continueWithGoogle": "Continue with your Google account",
     "continueWithFacebook": "Continue with Facebook",
@@ -222,6 +223,31 @@
     "qrScanSuccessful": "QR scan successful",
     "statusChangedToCompleted": "Status changed to Completed",
     "announcementDetails": "Announcement details"
+  },
+  "resetPassword": {
+    "metaTitle": "Reset Password",
+    "metaDescription": "Reset Password page",
+    "title": "Resetting a Password",
+    "resetByEmail": "A URL for resetting your password will be sent to your registered email address.",
+    "resetByPhone": "A password reset SMS will be sent to your registered phone number.",
+    "form": {
+      "label": {
+        "email": "Email address",
+        "phone": "Telephone number"
+      },
+      "placeholder": {
+        "email": "Email address",
+        "phone": "000-0000-0000"
+      }
+    },
+    "send": "Send",
+    "resetEmailSendToYou": "A reset email has been sent to you",
+    "resetSmsSendToYou": "A reset SMS has been sent to you",
+    "clickOnUrlInEmail": "Click on the URL in the email to reset your password.",
+    "clickOnUrlInSms": "Click on the URL in the SMS to reset your password.",
+    "expiresUrl": "The URL will expires in 24 hours.",
+    "emailInstruction": "*If you do not receive the email, please check your email address. *If you have set up your email reception settings to receive emails from domains, please make sure that you can receive emails from 'jprefund.com'. *Please also check your spam folder.",
+    "smsInstruction": "*If you don't receive an SMS, please check your phone number.*Please make sure you are not outside of the communication range. *Please make sure your phone is set up to receive SMS."
   },
   "zodError": {
     "login": {

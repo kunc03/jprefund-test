@@ -9,6 +9,8 @@ import { Form as UIForm, FormField, Input } from '@/components';
 import { useFormRef } from '@/hooks';
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import { cn } from '@/utils';
+import Link from 'next/link';
 
 const Form = () => {
   const t = useTranslations('login');
@@ -19,7 +21,6 @@ const Form = () => {
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      // email: '',
       password: '',
     },
   });
@@ -34,10 +35,6 @@ const Form = () => {
 
   return (
     <div className="mt-9 flex w-full flex-col px-7">
-      {/* <Heading className="mb-5 text-center text-3xl font-medium">
-        {t('title')}
-      </Heading> */}
-
       <Heading className="mb-5 text-center text-2122 font-medium">
         {t('form.label.password')}
       </Heading>
@@ -48,21 +45,6 @@ const Form = () => {
           onSubmit={form.handleSubmit(handleSubmit)}
           className="flex w-full flex-col gap-6"
         >
-          {/* EMail */}
-          {/* <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <Input
-                hasForm
-                label={t('form.label.email')}
-                placeholder={t('form.placeholder.email')}
-                disabled={false}
-                {...field}
-              />
-            )}
-          /> */}
-
           <div>
             <FormField
               control={form.control}
@@ -78,9 +60,12 @@ const Form = () => {
                 />
               )}
             />
-            <p className="mt-2 text-end text-1522 font-medium">
+            <Link
+              href="/reset-password/email"
+              className={cn('mt-2 w-full text-end text-1522 font-medium')}
+            >
               {t('form.label.forgetPass')}
-            </p>
+            </Link>
           </div>
         </form>
       </UIForm>

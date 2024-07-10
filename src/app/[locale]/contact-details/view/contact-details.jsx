@@ -70,11 +70,13 @@ const ContactDetails = ({}) => {
     defaultValue,
   ]);
 
-  console.log(isForm);
-
   return (
     <>
-      <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
+      <div
+        className={cn(
+          'flex grow flex-col items-center justify-center gap-22 w-full p-28',
+        )}
+      >
         <FormContactDetails
           defaultValue={defaultValue}
           setEmail={setEmail}
@@ -94,7 +96,11 @@ const ContactDetails = ({}) => {
         <p className="text-left">{t('uploadDocumentInstruction')}</p>
       </div>
 
-      <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
+      <div
+        className={cn(
+          'flex grow flex-col items-center justify-center gap-22 w-full p-28',
+        )}
+      >
         <SelectOptions values={['Document type']} className=" !rounded-[6px]" />
 
         <ButtonCertificate className="my-[1rem]" />

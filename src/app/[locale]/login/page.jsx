@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Form, ButtonLogin } from './_components';
 import { Logo } from '@/components';
 import Link from 'next/link';
+import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -16,7 +17,7 @@ const Login = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh flex-col justify-between">
-      <div className="flex flex-1 flex-col items-center mt-14">
+      <div className={cn('flex flex-1 flex-col items-center mt-14')}>
         <Logo />
         <Form />
       </div>

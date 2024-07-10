@@ -8,6 +8,7 @@ const pxToEm = ($px) => {
 const remBorderRadius = {
   1.5: pxToEm(1.5),
   4: pxToEm(4),
+  6: pxToEm(6),
   8: pxToEm(8),
   12: pxToEm(12),
   21: pxToEm(21),
@@ -30,6 +31,8 @@ const remGap = {
 };
 
 const remPadding = {
+  1.1: pxToEm(1),
+  1.2: pxToEm(2),
   4.5: pxToEm(4.5),
   8: pxToEm(8),
   9.5: pxToEm(9.5),
@@ -110,6 +113,7 @@ const remFontSize = {
   1010: [pxToEm(10), { lineHeight: pxToEm(10) }],
   1012: [pxToEm(10), { lineHeight: pxToEm(12) }],
   1022: [pxToEm(10), { lineHeight: pxToEm(22) }],
+  1116: [pxToEm(11), { lineHeight: pxToEm(16) }],
   1118: [pxToEm(11), { lineHeight: pxToEm(18) }],
   1217: [pxToEm(12), { lineHeight: pxToEm(17) }],
   1222: [pxToEm(12), { lineHeight: pxToEm(22) }],

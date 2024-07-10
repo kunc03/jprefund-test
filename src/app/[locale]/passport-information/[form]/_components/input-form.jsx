@@ -2,7 +2,7 @@
 
 import { Heading, Input } from '@/components';
 import { cn } from '@/utils';
-import React, { useState } from 'react';
+import React from 'react';
 
 const InputForm = ({
   t,
@@ -14,12 +14,6 @@ const InputForm = ({
   value,
   onChange,
 }) => {
-  const [inputValue, setInputValue] = useState(null);
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
   return (
     <>
       <Heading level={5} className="text-1422 font-medium">
@@ -33,7 +27,7 @@ const InputForm = ({
         onChange={onChange}
         type={type}
         className={cn(
-          'h-[50px] text-gray border-gray-300 border rounded-[6px] focus:!border-red hover:!border-red',
+          'h-56 text-gray border-gray-300 border !rounded-6 focus:!border-red hover:!border-red',
           className,
         )}
       />

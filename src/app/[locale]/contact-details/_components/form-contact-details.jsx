@@ -2,10 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import InputForm from '../../passport-information/[form]/_components/input-form';
-import { Heading, Input } from '@/components';
-import { SelectOptions } from '../../passport-information/_components';
-import { Form } from './form';
+import { Heading } from '@/components';
 import { cn } from '@/utils';
+import InputPhone from './input-phone';
 import { useState } from 'react';
 
 const FormContactDetails = ({
@@ -21,6 +20,7 @@ const FormContactDetails = ({
   setIsForm,
 }) => {
   const t = useTranslations('contactDetails');
+  const [selectedPhoneArea, setSelectedPhoneArea] = useState();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -66,7 +66,7 @@ const FormContactDetails = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className={cn('flex flex-col gap-3 w-full')}>
       {/* Email address */}
       <InputForm
         t={t}
@@ -81,27 +81,17 @@ const FormContactDetails = ({
       <Heading level={5} className="text-1422 font-medium">
         {t('telephoneNumber')}
       </Heading>
-      {/* Perlu perbaikan */}
-      <div className="rounded-[6px] bg-transparent h-[50px] flex p-[0.1px] relative">
-        <SelectOptions
-          values={['JP (+81)', 'ID (+62)']}
-          className="w-[7rem] !bg-transparent left-1 top-1 h-[2.6rem] rounded-[6px] absolute"
-        />
-        <Input
-          placeholder={'000-0000-0000'}
-          onChange={handlePhone}
-          type="number"
-          className={cn(
-            'h-[50px] text-gray border-gray-300 border !rounded-[6px] pl-[8rem] focus:!border-red hover:!border-red',
-          )}
-        />
-      </div>
-      {/* */}
+      <InputPhone
+        selectedPhoneArea={selectedPhoneArea}
+        setSelectedPhoneArea={setSelectedPhoneArea}
+        onChange={handlePhone}
+      />
+      {/* Telephone number */}
 
       {/* Building name and room number */}
       <InputForm
         t={t}
-        label={'buildingNameRoomNumber'}
+        label="buildingNameRoomNumber"
         placeholder={t('buildingNameRoomNumber')}
         onChange={handleBuilding}
         type="text"

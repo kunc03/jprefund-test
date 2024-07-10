@@ -21,10 +21,10 @@ const RegisterEmailPhonePage = async ({ params }) => {
         <div className="mt-6 flex w-full flex-1 flex-col items-center px-28">
           <Logo />
           <Heading
-            className="mt-28.5 text-center text-2122 font-medium"
+            className="mt-23 text-center text-2022 font-medium"
             key="createAccount"
           >
-            {t('createAccount')}
+            {t('login/signup')}
           </Heading>
 
           <Form type={type} />

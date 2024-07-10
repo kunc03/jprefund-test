@@ -2,65 +2,45 @@
 
 import {
   Select,
-  SelectTrigger,
   SelectContent,
   SelectItem,
+  SelectTrigger,
   SelectValue,
 } from '@/components';
 import { cn } from '@/utils';
 import { ChevronDown } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-const SelectOptions = ({ values, className, handleChange }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isSelected, setIsSelected] = useState('');
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+const SelectOptions = ({ values, handleChange }) => {
+  const [selectedPhoneArea, setSelectedPhoneArea] = useState('');
 
   return (
     <div className="w-full">
-      <button
-        onClick={handleClick}
-        className={cn(
-          'w-full text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-[50px] relative',
-          className,
-          '!bg-white text-gray hover:!border-red border-gray-300 border',
-        )}
+      <Select
+        onValueChange={(value) => {
+          setSelectedPhoneArea(value);
+          handleChange(value);
+        }}
       >
-        {isSelected ? isSelected : values[0]}
-        <ChevronDown
-          size={24}
+        <SelectTrigger
           className={cn(
-            'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-105',
-            isOpen && 'rotate-180',
+            'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-6 p-14 transition-colors focus:!outline-none focus:!ring-transparent h-13 relative',
+
+            '!bg-white text-gray hover:!border-red border-gray-300 border',
           )}
-        />
-      </button>
-      {isOpen && (
-        <ul className="focus:!outline-none focus:!ring-transparent mt-1 overflow-y-auto">
-          {values?.map((value, index) => (
-            <li
-              key={index}
-              className={cn(
-                'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-4 p-14 transition-colors mb-1',
-                'hover:border-red focus:border-red bg-white text-gray border',
-              )}
-              onClick={() => {
-                if (value !== isSelected) {
-                  setIsSelected(value);
-                  setIsOpen(false);
-                  handleChange(value);
-                }
-              }}
-            >
+          value={selectedPhoneArea}
+        >
+          <SelectValue placeholder={values[0]} />
+          <ChevronDown size={24} className={cn('absolute right-3')} />
+        </SelectTrigger>
+        <SelectContent className="bg-white">
+          {values.map((value) => (
+            <SelectItem value={value} key={value}>
               {value}
-            </li>
+            </SelectItem>
           ))}
-        </ul>
-      )}
+        </SelectContent>
+      </Select>
     </div>
   );
 };

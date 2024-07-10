@@ -1,22 +1,31 @@
 'use client';
 
-// import { useDrawer } from '@/hooks';
 import { useState } from 'react';
-import { useDrawer } from '@/hooks';
 import Image from 'next/image';
 import { cn } from '@/utils';
 import { ChevronLeft, X } from 'lucide-react';
 import { Heading } from './heading';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Sidebar } from './sidebar';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
 const Header = ({ hasBack = false, title = null }) => {
-  const { setIsOpen } = useDrawer();
+  const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const handleSidebar = () => {
     setIsSidebarOpen((oldVal) => !oldVal);
+  };
+
+  const handleBack = () => {
+    if (
+      pathname === '/passport-information/form' ||
+      pathname === '/passport-information/form-completed'
+    ) {
+      router.push('/home');
+    } else {
+      router.back();
+    }
   };
 
   return (
@@ -55,14 +64,6 @@ const Header = ({ hasBack = false, title = null }) => {
               />
               <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
             </div>
-            {/* <Image
-              alt="filter"
-              className="cursor-pointer"
-              height={24}
-              src="/icons/triple-dot.svg"
-              width={24}
-              onClick={() => setIsOpen(true)}
-            /> */}
           </div>
           {isSidebarOpen && (
             <Drawer direction="left" open={isSidebarOpen}>
@@ -88,7 +89,7 @@ const Header = ({ hasBack = false, title = null }) => {
           <ChevronLeft
             size={24}
             className="cursor-pointer text-gray-200"
-            onClick={() => router.back()}
+            onClick={handleBack}
           />
           {title && (
             <Heading className="w-full text-center text-1822 font-medium text-gray">

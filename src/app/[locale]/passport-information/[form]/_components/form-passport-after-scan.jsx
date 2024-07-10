@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading, Input } from '@/components';
+import { Heading } from '@/components';
 import { InputDate, SelectOptions } from '../../_components';
 import InputForm from './input-form';
 
@@ -14,7 +14,6 @@ const PassportForm = ({
   setFirstName,
   setLastName,
   setPassportNumber,
-  setPassportIssuingCountry,
 }) => {
   const handleFirstName = (e) => {
     setFirstName(e.target.value);

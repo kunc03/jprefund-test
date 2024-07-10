@@ -4,19 +4,22 @@ import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 import { useFormRef } from '@/hooks';
 
-const ButtonLogin = () => {
-  const t = useTranslations('login');
+const ButtonSend = () => {
+  const t = useTranslations('resetPassword');
   const submitForm = useFormRef((state) => state.submitForm);
 
-  const handleLoginClick = () => {
+  const handleClick = () => {
     submitForm();
   };
 
   return (
-    <Button className="mb-9 w-249" onClick={handleLoginClick}>
-      {t('login')}
+    <Button
+      className="mb-9 w-249 items-center justify-center"
+      onClick={handleClick}
+    >
+      {t('send')}
     </Button>
   );
 };
 
-export { ButtonLogin };
+export { ButtonSend };
