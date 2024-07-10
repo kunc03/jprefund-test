@@ -60,7 +60,7 @@ const InputOTP = React.forwardRef(
               {description}
             </FormDescription>
           )}
-          <FormMessage className="mt-6 text-1217 font-normal text-red-error" />
+          <FormMessage className="ml-28 mt-6 text-1217 font-normal text-red-error" />
         </div>
       </FormItem>
     );

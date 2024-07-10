@@ -219,6 +219,7 @@
     "email": "Email address",
     "newEmail": "New Email address",
     "newPhone": "New phone number",
+    "accountDeletion": "Account deletion",
     "placeholder": {
       "newEmail": "New Email address",
       "currentPassword": "At least 8 alphanumeric characters",
@@ -231,7 +232,8 @@
     "password": "Password",
     "cancel": "Cancel",
     "deleteAccount": "Delete Account",
-    "sendVerificationCode": "Send verification code"
+    "sendVerificationCode": "Send verification code",
+    "verificationCodeSent": "Verification code sent"
   },
   "detail": {
     "metaTitle": "Purchase details",

@@ -23,7 +23,7 @@ const OtpExpireTime = () => {
       </p>
 
       {timeLeft === 0 && (
-        <p className="mb-36 w-full text-center text-2022 font-medium text-red">
+        <p className="mt-28 w-full text-center text-2022 font-medium text-red md:mt-36">
           {t('reissueAuthCode')}
         </p>
       )}

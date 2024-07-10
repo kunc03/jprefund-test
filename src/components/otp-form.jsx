@@ -11,7 +11,7 @@ import { useEffect, useRef, useMemo } from 'react';
 import { otpSchema } from '../app/[locale]/register/_schemas';
 import { useRouter } from 'next/navigation';
 
-const OtpForm = () => {
+const OtpForm = ({ redirect = null }) => {
   const t = useTranslations('register');
   const formRef = useRef();
   const { setFormRef } = useFormRef();
@@ -34,7 +34,7 @@ const OtpForm = () => {
 
   const handleSubmit = (data) => {
     if (data) {
-      router.push('/password-setting');
+      router.push(redirect ?? '/password-setting');
     }
   };
 

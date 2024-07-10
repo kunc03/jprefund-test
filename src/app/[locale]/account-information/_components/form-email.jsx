@@ -5,9 +5,11 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { emailSchema } from '../_schemas';
+import { useRouter } from 'next/navigation';
 
 const FormEmail = () => {
   const t = useTranslations('accountInformation');
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(emailSchema),
@@ -16,7 +18,9 @@ const FormEmail = () => {
     },
   });
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    router.push('/account-information/email/otp');
+  };
 
   return (
     <UIForm {...form}>

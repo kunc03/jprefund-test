@@ -5,8 +5,10 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { phoneSchema } from '../_schemas';
+import { useRouter } from 'next/navigation';
 
 const FormPhone = () => {
+  const router = useRouter();
   const t = useTranslations('accountInformation');
 
   const form = useForm({
@@ -16,7 +18,9 @@ const FormPhone = () => {
     },
   });
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    router.push('/account-information/password/otp');
+  };
 
   return (
     <UIForm {...form}>
