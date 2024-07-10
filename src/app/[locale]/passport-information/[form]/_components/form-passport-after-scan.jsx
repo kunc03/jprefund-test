@@ -3,6 +3,7 @@
 import { Heading } from '@/components';
 import { InputDate, SelectOptions } from '../../_components';
 import InputForm from './input-form';
+import { cn } from '@/utils';
 
 const PassportForm = ({
   t,
@@ -51,7 +52,7 @@ const PassportForm = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className={cn('flex flex-col gap-3 w-full')}>
       <InputForm
         t={t}
         label="firstName"

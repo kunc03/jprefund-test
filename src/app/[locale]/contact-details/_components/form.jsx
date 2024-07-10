@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useMemo, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Form as UIForm, FormField, FormItem } from '@/components/ui/form';
+import { Form as UIForm } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from '@/components';
 import { phoneSchema } from '../../register/_schemas';
-import { SelectOptions } from '../../passport-information/_components';
+import { cn } from '@/utils';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -24,7 +24,9 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="w-100 font-bold focus:!outline-none focus:!ring-transparent h-full"
+      className={cn(
+        'w-100 font-bold focus:!outline-none focus:!ring-transparent h-full',
+      )}
       value={selectedPhoneArea}
     >
       <SelectValue
