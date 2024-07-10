@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable filenames/match-regex */
 /** @type {import('next').NextConfig} */
 import createBundleAnalyzer from '@next/bundle-analyzer';
 import createNextIntlPlugin from 'next-intl/plugin';
