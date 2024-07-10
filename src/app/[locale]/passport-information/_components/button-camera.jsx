@@ -1,3 +1,6 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+
 'use client';
 
 import { Circle } from 'lucide-react';
@@ -18,7 +21,7 @@ const ButtonCamera = ({ form }) => {
   return (
     <button
       onClick={handleClick}
-      className="absolute bottom-[40px] w-[64px] h-[64px] bg-white rounded-full flex items-center justify-center"
+      className="absolute bottom-[40px] flex size-[64px] items-center justify-center rounded-full bg-white"
     >
       <Circle className="text-black" size={62} />
     </button>

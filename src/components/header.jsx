@@ -9,17 +9,29 @@ import { useRouter } from 'next/navigation';
 import { Sidebar } from './sidebar';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
-const Header = ({ hasBack = false, hasBorderBottom = true, title = null }) => {
+const Header = ({
+  hasBack = false,
+  hasBorderBottom = true,
+  title = null,
+  onHandleBack = null,
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const handleSidebar = () => {
     setIsSidebarOpen((oldVal) => !oldVal);
   };
+  const handleBack = () => {
+    if (onHandleBack) {
+      onHandleBack();
+    } else {
+      router.back();
+    }
+  };
 
   return (
     <div
       className={cn(
-        'flex flex-row bg-white px-3 py-5',
+        'flex flex-row bg-white px-3 py-5 w-full',
         hasBack ? 'items-center justify-start' : 'items-center justify-between',
         hasBorderBottom && 'border-b border-b-gray-500',
       )}
@@ -78,7 +90,7 @@ const Header = ({ hasBack = false, hasBorderBottom = true, title = null }) => {
           <ChevronLeft
             size={24}
             className="cursor-pointer text-gray-200"
-            onClick={() => router.back()}
+            onClick={handleBack}
           />
           {title && (
             <Heading className="w-full text-center text-1822 font-medium text-gray">

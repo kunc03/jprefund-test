@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading, Input } from '@/components';
+import { Heading } from '@/components';
 import { InputDate, SelectOptions } from '../../_components';
 import InputForm from './input-form';
 
@@ -14,7 +14,6 @@ const PassportForm = ({
   setFirstName,
   setLastName,
   setPassportNumber,
-  setPassportIssuingCountry,
 }) => {
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
@@ -52,7 +51,7 @@ const PassportForm = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex w-full flex-col gap-3">
       <InputForm
         t={t}
         label="firstName"

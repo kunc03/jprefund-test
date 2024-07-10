@@ -1,3 +1,9 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/button-has-type */
+
 'use client';
 
 import {
@@ -30,7 +36,7 @@ const SelectOptions = ({ values, className, handleChange }) => {
           '!bg-white text-gray hover:!border-red border-gray-300 border',
         )}
       >
-        {isSelected ? isSelected : values[0]}
+        {isSelected || values[0]}
         <ChevronDown
           size={24}
           className={cn(
@@ -40,7 +46,7 @@ const SelectOptions = ({ values, className, handleChange }) => {
         />
       </button>
       {isOpen && (
-        <ul className="focus:!outline-none focus:!ring-transparent mt-1 overflow-y-auto">
+        <ul className="mt-1 overflow-y-auto focus:!outline-none focus:!ring-transparent">
           {values?.map((value, index) => (
             <li
               key={index}

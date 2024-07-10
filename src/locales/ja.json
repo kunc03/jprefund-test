@@ -226,6 +226,42 @@
     "statusChangedToCompleted": "ステータスが完了に変更されました",
     "announcementDetails": "お知らせ詳細"
   },
+  "refundMethod": {
+    "metaTitle": "返金方法",
+    "metaDescription": "返金方法ページ",
+    "title": "返金方法",
+    "registration": "登録",
+    "delete": "削除",
+    "choosing": "選択中",
+    "creditCard": "クレジットカード",
+    "bankTransfer": "銀行口座",
+    "cashLess": "キャッシュレスサービス",
+    "noRegistration": "ご登録情報はありません。",
+    "dateOfExpiry": "有効期限",
+    "chooseYourService": "サービスを選択してください",
+    "deleteConfirmation": "返金方法{}を削除しますか？",
+    "changeConfirmation": "払い戻し方法をこの {name} に変更しますか?",
+    "cancel": "キャンセル",
+    "ok": "O K",
+    "registrationCompleted": "{name}登録完了",
+    "cardNumber": "カード番号",
+    "dateOfExpired": "有効期限",
+    "securityCode": "セキュリティコード",
+    "monthYear": "月/年",
+    "changeRefundMethod": "返金方法を変更",
+    "pleaseSelectYourFinancialInstitution": "金融機関を選択してください",
+    "financialInstitutionName": "金融機関名",
+    "branchName": "支店名",
+    "accountNumber": "口座番号",
+    "accountType": "口座種別",
+    "firstName": "ファーストネーム",
+    "lastName": "ラストネーム",
+    "placeholder": {
+      "pleaseSelect": "選択してください",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    }
+  },
   "zodError": {
     "login": {
       "email": {
@@ -262,6 +298,39 @@
       },
       "confPassword": {
         "required": "パスワードの確認が必要です"
+      }
+    },
+    "refundMethod": {
+      "cashless": {
+        "required": "キャッシュレスは必須"
+      },
+      "cardNumber": {
+        "required": "カード番号は必須です",
+        "format": "カード番号 14 桁以上"
+      },
+      "dateOfExpired": {
+        "required": "有効期限が切れた日付は必須です"
+      },
+      "securityCode": {
+        "required": "セキュリティコードが必要です"
+      },
+      "financialInstituteName": {
+        "required": "金融機関名は必須です"
+      },
+      "branchName": {
+        "required": "支店名 名前は必須です"
+      },
+      "accountNumber": {
+        "required": "口座番号名は必須です"
+      },
+      "accountType": {
+        "required": "アカウントタイプ名は必須です"
+      },
+      "firstName": {
+        "required": "名は必須です"
+      },
+      "lastName": {
+        "required": "姓は必須です"
       }
     }
   }

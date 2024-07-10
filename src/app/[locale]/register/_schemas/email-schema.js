@@ -2,8 +2,6 @@ import { z } from 'zod';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const unregisteredEmails = ['unregister@mail.com'];
-
 const emailSchema = z.object({
   email: z
     .string()
@@ -16,9 +14,9 @@ const emailSchema = z.object({
         message: 'register.email.required',
       },
     )
-    // .refine((value) => emailRegex.test(value), {
-    //   message: 'register.email.invalid',
-    // })
+    .refine((value) => emailRegex.test(value), {
+      message: 'register.email.invalid',
+    })
 
     .refine((value) => {
       if (!emailRegex.test(value)) {

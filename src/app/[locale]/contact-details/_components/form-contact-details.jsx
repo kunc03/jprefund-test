@@ -4,9 +4,7 @@ import { useTranslations } from 'next-intl';
 import InputForm from '../../passport-information/[form]/_components/input-form';
 import { Heading, Input } from '@/components';
 import { SelectOptions } from '../../passport-information/_components';
-import { Form } from './form';
 import { cn } from '@/utils';
-import { useState } from 'react';
 
 const FormContactDetails = ({
   defaultValue,
@@ -66,7 +64,7 @@ const FormContactDetails = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex w-full flex-col gap-3">
       {/* Email address */}
       <InputForm
         t={t}
@@ -82,13 +80,13 @@ const FormContactDetails = ({
         {t('telephoneNumber')}
       </Heading>
       {/* Perlu perbaikan */}
-      <div className="rounded-[6px] bg-transparent h-[50px] flex p-[0.1px] relative">
+      <div className="relative flex h-[50px] rounded-[6px] bg-transparent p-[0.1px]">
         <SelectOptions
           values={['JP (+81)', 'ID (+62)']}
-          className="w-[7rem] !bg-transparent left-1 top-1 h-[2.6rem] rounded-[6px] absolute"
+          className="absolute left-1 top-1 h-[2.6rem] w-28 rounded-[6px] !bg-transparent"
         />
         <Input
-          placeholder={'000-0000-0000'}
+          placeholder="000-0000-0000"
           onChange={handlePhone}
           type="number"
           className={cn(
@@ -101,7 +99,7 @@ const FormContactDetails = ({
       {/* Building name and room number */}
       <InputForm
         t={t}
-        label={'buildingNameRoomNumber'}
+        label="buildingNameRoomNumber"
         placeholder={t('buildingNameRoomNumber')}
         onChange={handleBuilding}
         type="text"

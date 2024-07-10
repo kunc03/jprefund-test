@@ -20,7 +20,7 @@ const Register = async ({ params }) => {
         {t('createAccount')}
       </Heading>
 
-      <div className="mt-6 flex w-full flex-col gap-8  px-6">
+      <div className="mt-43 flex w-full flex-col gap-8  px-6">
         <ButtonRegistration
           type="email"
           label={t('continueWithEmail')}

@@ -3,6 +3,7 @@
 import { Heading, PurchaseItemSection } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useActiveSummary } from '../_hooks/use-active-summary';
+import { isObjectEmpty } from '@/utils';
 
 const EmptyState = ({ t }) => (
   <div className="mx-auto size-full flex-1 flex-col gap-2 pb-6 md:max-w-xs ">
@@ -30,8 +31,8 @@ const Content = () => {
 
   return (
     <section className="flex h-[calc(100dvh-230px)] flex-wrap pb-77">
-      {Object.keys(selectedData).length === 0 && <EmptyState t={t} />}
-      {Object.keys(selectedData).length > 0 && (
+      {isObjectEmpty(selectedData) && <EmptyState t={t} />}
+      {!isObjectEmpty(selectedData) && (
         <div className="flex h-full flex-1 flex-col items-center overflow-y-auto">
           {Object.entries(selectedData).map(([date, items]) => (
             <PurchaseItemSection date={date} items={items} key={date} />

@@ -62,8 +62,6 @@ const FilterBottomDrawer = () => {
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
 
-  console.log(filter);
-
   return (
     <Drawer onClose={onCloseDrawer} open={isOpen}>
       <DrawerContent className="mx-auto w-full max-w-md px-2">

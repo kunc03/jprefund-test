@@ -228,6 +228,42 @@
     "statusChangedToCompleted": "Status changed to Completed",
     "announcementDetails": "Announcement details"
   },
+  "refundMethod": {
+    "metaTitle": "Refund Methods",
+    "metaDescription": "Refund Methods page",
+    "title": "Refund Methods",
+    "registration": "Registration",
+    "delete": "Delete",
+    "choosing": "Choosing",
+    "creditCard": "Credit card",
+    "bankTransfer": "Bank accounts",
+    "cashLess": "Cashless service",
+    "noRegistration": "There is no registration information.",
+    "dateOfExpiry": "Date of expiry",
+    "chooseYourService": "Choose your service",
+    "deleteConfirmation": "Would you like to delete your refund method of {name}?",
+    "changeConfirmation": "Would you like to change your refund method to this {name}?",
+    "registrationCompleted": "{name} registration completed",
+    "cancel": "Cancel",
+    "ok": "O K",
+    "cardNumber": "Card number",
+    "dateOfExpired": "Date of expiry",
+    "securityCode": "Security code",
+    "monthYear": "Month/Year",
+    "changeRefundMethod": "Change refund method",
+    "pleaseSelectYourFinancialInstitution": "Please select your financial institution",
+    "financialInstitutionName": "Financial institution name",
+    "branchName": "Branch Name",
+    "accountNumber": "Account Number",
+    "accountType": "Account Type",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "placeholder": {
+      "pleaseSelect": "Please select",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    }
+  },
   "zodError": {
     "login": {
       "email": {
@@ -264,6 +300,39 @@
       },
       "confPassword": {
         "required": "Password confirmation is required"
+      }
+    },
+    "refundMethod": {
+      "cashless": {
+        "required": "Cashless is required"
+      },
+      "cardNumber": {
+        "required": "Card number is required",
+        "format": "Card number min 14 digit"
+      },
+      "dateOfExpired": {
+        "required": "Date of expired is required"
+      },
+      "securityCode": {
+        "required": "Security code is required"
+      },
+      "financialInstituteName": {
+        "required": "Financial institute name is required"
+      },
+      "branchName": {
+        "required": "Branch name name is required"
+      },
+      "accountNumber": {
+        "required": "Account number name is required"
+      },
+      "accountType": {
+        "required": "Account type name is required"
+      },
+      "firstName": {
+        "required": "First name is required"
+      },
+      "lastName": {
+        "required": "Last name is required"
       }
     }
   }

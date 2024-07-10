@@ -1,16 +1,18 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { ContactInform } from '../_components';
 import ButtonCertificate from '../_components/button-certificate';
 import { SelectOptions } from '../../passport-information/_components';
 import { cn } from '@/utils';
 import { FormContactDetails } from '../_components/form-contact-details';
 
-const ContactDetails = ({}) => {
+const ContactDetails = () => {
   const t = useTranslations('contactDetails');
   const router = useRouter();
 
@@ -70,11 +72,9 @@ const ContactDetails = ({}) => {
     defaultValue,
   ]);
 
-  console.log(isForm);
-
   return (
     <>
-      <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
+      <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
         <FormContactDetails
           defaultValue={defaultValue}
           setEmail={setEmail}
@@ -89,12 +89,12 @@ const ContactDetails = ({}) => {
         />
       </div>
 
-      <div className="flex grow flex-col gap-22 w-full p-28 text-1422">
-        <h1 className="font-medium text-start">{t('proofOfResidence')}</h1>
+      <div className="flex w-full grow flex-col gap-22 p-28 text-1422">
+        <h1 className="text-start font-medium">{t('proofOfResidence')}</h1>
         <p className="text-left">{t('uploadDocumentInstruction')}</p>
       </div>
 
-      <div className="flex grow flex-col items-center justify-center gap-22 w-full p-28">
+      <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
         <SelectOptions values={['Document type']} className=" !rounded-[6px]" />
 
         <ButtonCertificate className="my-[1rem]" />

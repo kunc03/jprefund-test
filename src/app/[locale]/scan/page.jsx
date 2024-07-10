@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import { Heading, Button, Input } from '@/components';
+import { Heading } from '@/components';
 
 import { ButtonSend, QrScan } from './_components';
 
@@ -24,14 +24,6 @@ const Scan = async ({ params }) => {
 
         <div className="flex w-full flex-col items-center justify-center bg-black px-7 py-53 ">
           <div className="flex w-full max-w-xs flex-row items-center justify-center gap-2 ">
-            {/* <Input
-              placeholder={t('enterTransactionNumber')}
-              type="text"
-              className="!h-42 !rounded-21 p-0 !px-14 !py-13 !text-1616"
-            />
-            <Button className="!h-42 !shrink-0 !px-14 !py-13">
-              {t('send')}
-            </Button> */}
             <ButtonSend />
           </div>
           <Heading className="mt-4 w-full max-w-231 text-center text-1626 font-medium text-white">

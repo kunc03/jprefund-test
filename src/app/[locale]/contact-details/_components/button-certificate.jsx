@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -11,11 +13,11 @@ const ButtonCertificate = ({ className }) => {
   return (
     <button
       onClick={() => router.push('/contact-details/scan-certificate')}
-      className={`${className} flex items-center justify-center border-2 border-red rounded-[7px] p-2 bg-white hover:bg-white-dark delay-1000 duration-1000`}
+      className={`${className} flex items-center justify-center rounded-[7px] border-2 border-red bg-white p-2 delay-1000 duration-1000 hover:bg-white-dark`}
     >
-      <span className="text-red flex gap-5 text-[16px] font-bold items-center">
+      <span className="flex items-center gap-5 text-[16px] font-bold text-red">
         <Image
-          src={'/icons/check-star.svg'}
+          src="/icons/check-star.svg"
           width={32}
           height={32}
           alt="scan certificate"
