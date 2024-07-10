@@ -21,7 +21,16 @@ const RegistrationInformation = ({ item, t }) => {
       </div>
     );
 
-  return <div>asds</div>;
+  return (
+    <div className="text-1218 font-normal text-gray">
+      <p>
+        {maskCardNumber(
+          item.registrationInformation?.financialInstituteName ?? '-',
+        )}
+      </p>
+      <p>{item.registrationInformation?.accountNumber ?? '-'}</p>
+    </div>
+  );
 };
 
 export { RegistrationInformation };

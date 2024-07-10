@@ -251,7 +251,19 @@
     "securityCode": "Security code",
     "monthYear": "Month/Year",
     "changeRefundMethod": "Change refund method",
-    "pleaseSelectYourFinancialInstitution": "Please select your financial institution"
+    "pleaseSelectYourFinancialInstitution": "Please select your financial institution",
+    "financialInstitutionName": "Financial institution name",
+    "branchName": "Branch Name",
+    "accountNumber": "Account Number",
+    "accountType": "Account Type",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "placeholder":{
+      "pleaseSelect":"Please select",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    } 
+    
   },
   "zodError": {
     "login": {

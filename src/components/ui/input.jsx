@@ -34,7 +34,7 @@ const Input = React.forwardRef(
         autoComplete="off"
         autoCorrect="off"
         className={cn(
-          'flex w-full bg-white px-2.5 rounded-sm py-18 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
+          'flex w-full bg-white px-2.5 rounded-6 py-18 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
         )}
         disabled={disabled}
@@ -48,7 +48,7 @@ const Input = React.forwardRef(
     }
 
     return (
-      <FormItem className={cn('flex w-full gap-3 flex-col ')}>
+      <FormItem className="flex w-full flex-col gap-3">
         {label && (
           <FormLabel className="shrink-0 text-1622">
             {label}
@@ -58,7 +58,7 @@ const Input = React.forwardRef(
         <div className="!mt-0 flex flex-1 flex-col ">
           <div
             className={cn(
-              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border-gray-300 focus-within:rounded-sm bg-white',
+              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border-gray-300 focus-within:rounded-6 bg-white',
               disabled ? 'cursor-not-allowed' : '',
             )}
           >

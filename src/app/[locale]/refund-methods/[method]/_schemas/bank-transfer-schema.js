@@ -1,17 +1,6 @@
 import { z } from 'zod';
 
 const bankTransferSchema = z.object({
-  financialInstituteName: z
-    .string()
-    .optional()
-    .refine(
-      (value) => {
-        return value !== undefined && value.trim() !== '';
-      },
-      {
-        message: 'refundMethod.financialInstituteName.required',
-      },
-    ),
   branchName: z
     .string()
     .optional()

@@ -1,33 +1,85 @@
 'use client';
 
-import * as React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { Check, ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
 
+import {
+  FormControl,
+  FormDescription,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { cn } from '@/utils';
 
-const Select = SelectPrimitive.Root;
-
 const SelectGroup = SelectPrimitive.Group;
-
 const SelectValue = SelectPrimitive.Value;
 
-const SelectTrigger = React.forwardRef(
-  ({ className, children, ...props }, ref) => (
-    <SelectPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        'bg-white  flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
-        className,
+const Select = ({
+  children,
+  hasForm = false,
+  isRequired = false,
+  isResponsive,
+  containerClassName,
+  label,
+  labelClassName,
+  description,
+  error,
+  ...props
+}) => {
+  const SelectComp = (
+    <SelectPrimitive.Root {...props}>{children}</SelectPrimitive.Root>
+  );
+
+  if (!hasForm) return SelectComp;
+
+  return (
+    <FormItem className="flex w-full flex-col gap-3">
+      {label && (
+        <FormLabel className="shrink-0 text-1622">
+          {label}
+          {isRequired && <span className="text-red">*</span>}
+        </FormLabel>
       )}
-      {...props}
-    >
-      {children}
-      <SelectPrimitive.Icon asChild>
-        <ChevronDown className="size-16 font-medium text-gray" />
-      </SelectPrimitive.Icon>
-    </SelectPrimitive.Trigger>
-  ),
+      <div className="!mt-0 flex flex-1 flex-col">
+        {SelectComp}
+        {description && (
+          <FormDescription className="text-sm font-normal text-black">
+            {description}
+          </FormDescription>
+        )}
+        <FormMessage className="text-sm font-normal text-red-dark" />
+      </div>
+    </FormItem>
+  );
+};
+Select.displayName = SelectPrimitive.Root.displayName;
+
+const SelectTrigger = React.forwardRef(
+  ({ value, className, children, hasForm = false, ...props }, ref) => {
+    const SelectTriggerComp = (
+      <SelectPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          'bg-white  flex h-10 w-full items-center justify-between rounded-md border border-input px-3 py-2 text-sm ring-offset-white placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-red disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
+          className,
+        )}
+        {...props}
+      >
+        {children}
+        <SelectPrimitive.Icon asChild>
+          <ChevronDown className="size-16 font-medium text-gray" />
+        </SelectPrimitive.Icon>
+      </SelectPrimitive.Trigger>
+    );
+
+    if (!hasForm) {
+      return SelectTriggerComp;
+    }
+
+    return <FormControl>{SelectTriggerComp}</FormControl>;
+  },
 );
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
@@ -57,7 +109,7 @@ const SelectScrollDownButton = React.forwardRef(
       )}
       {...props}
     >
-      <ChevronDown className="size-4" />
+      <ChevronDown className="size-16" />
     </SelectPrimitive.ScrollDownButton>
   ),
 );
@@ -65,15 +117,25 @@ SelectScrollDownButton.displayName =
   SelectPrimitive.ScrollDownButton.displayName;
 
 const SelectContent = React.forwardRef(
-  ({ className, children, position = 'popper', ...props }, ref) => (
+  (
+    {
+      className,
+      children,
+      position = 'popper',
+      isInsideModal = false,
+      ...props
+    },
+    ref,
+  ) => (
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
         ref={ref}
         className={cn(
-          'relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+          'relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 bg-white',
           position === 'popper' &&
             'data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
           className,
+          isInsideModal ? 'z-50' : 'z-30',
         )}
         position={position}
         {...props}
@@ -109,7 +171,7 @@ const SelectItem = React.forwardRef(
     <SelectPrimitive.Item
       ref={ref}
       className={cn(
-        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-white-dark focus:text-black hover:bg-white-dark data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none bg-white focus:bg-white-dark focus:text-black hover:bg-white-dark data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className,
       )}
       {...props}
@@ -137,13 +199,13 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export {
   Select,
-  SelectGroup,
-  SelectValue,
-  SelectTrigger,
   SelectContent,
-  SelectLabel,
+  SelectGroup,
   SelectItem,
-  SelectSeparator,
-  SelectScrollUpButton,
+  SelectLabel,
   SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
 };
