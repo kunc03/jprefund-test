@@ -1,9 +1,4 @@
-import {
-  Button,
-  Header,
-  Heading,
-  PassportRegistrationIcon,
-} from '@/components';
+import { Header, Heading, PassportRegistrationIcon } from '@/components';
 import { getTranslations } from 'next-intl/server';
 import { ButtonScanPassport } from './_components';
 

@@ -25,7 +25,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="w-100 font-bold focus:!outline-none focus:!ring-transparent h-38"
+      className="h-full w-100 font-bold focus:!outline-none focus:!ring-transparent"
       value={selectedPhoneArea}
     >
       <SelectValue placeholder={t('form.placeholder.phoneArea')} />

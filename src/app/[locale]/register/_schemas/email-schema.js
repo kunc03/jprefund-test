@@ -14,6 +14,9 @@ const emailSchema = z.object({
         message: 'register.email.required',
       },
     )
+    .refine((value) => emailRegex.test(value), {
+      message: 'register.email.invalid',
+    })
 
     .refine((value) => {
       if (value === 'unregister@mail.com') {

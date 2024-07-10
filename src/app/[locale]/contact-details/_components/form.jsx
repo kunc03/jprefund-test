@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
@@ -34,7 +36,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
         className="bg-gray-300"
       />
     </SelectTrigger>
-    <SelectContent className="bg-white rounded-[6px]">
+    <SelectContent className="rounded-[6px] bg-white">
       <SelectItem value="+81">JP (+81)</SelectItem>
       <SelectItem value="+62">ID (+62)</SelectItem>
     </SelectContent>

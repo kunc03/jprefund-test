@@ -43,4 +43,24 @@ const formatSecondToTime = (seconds) => {
   return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 };
 
-export { formatDateTime, getDateOnly, formatSecondToTime };
+const formatDateSimple = (dateTimeStr) => {
+  const date = new Date(dateTimeStr);
+
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  };
+
+  const dateFormatter = new Intl.DateTimeFormat('en-US', options);
+  const formattedDate = dateFormatter.format(date);
+
+  const parts = formattedDate.split(' ');
+  const month = parts[0];
+  const day = parts[1].replace(',', '');
+  const year = parts[2];
+
+  return `${year} ${month}. ${day}`;
+};
+
+export { formatDateTime, getDateOnly, formatSecondToTime, formatDateSimple };

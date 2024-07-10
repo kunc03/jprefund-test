@@ -1,3 +1,9 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/button-has-type */
+
 'use client';
 
 import {

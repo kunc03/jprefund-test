@@ -5,24 +5,24 @@ import Image from 'next/image';
 import { cn } from '@/utils';
 import { ChevronLeft, X } from 'lucide-react';
 import { Heading } from './heading';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Sidebar } from './sidebar';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
-const Header = ({ hasBack = false, title = null }) => {
-  const pathname = usePathname();
+const Header = ({
+  hasBack = false,
+  hasBorderBottom = true,
+  title = null,
+  onHandleBack = null,
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const handleSidebar = () => {
     setIsSidebarOpen((oldVal) => !oldVal);
   };
-
   const handleBack = () => {
-    if (
-      pathname === '/passport-information/form' ||
-      pathname === '/passport-information/form-completed'
-    ) {
-      router.push('/home');
+    if (onHandleBack) {
+      onHandleBack();
     } else {
       router.back();
     }
@@ -31,8 +31,9 @@ const Header = ({ hasBack = false, title = null }) => {
   return (
     <div
       className={cn(
-        'flex flex-row  border-b border-b-gray-500 bg-white px-3 py-5',
+        'flex flex-row bg-white px-3 py-5 w-full',
         hasBack ? 'items-center justify-start' : 'items-center justify-between',
+        hasBorderBottom && 'border-b border-b-gray-500',
       )}
     >
       {!hasBack && (

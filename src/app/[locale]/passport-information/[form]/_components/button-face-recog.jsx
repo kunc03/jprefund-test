@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+
 'use client';
 
 import Image from 'next/image';
@@ -9,11 +11,11 @@ const ButtonRecognition = ({ t }) => {
   return (
     <button
       onClick={() => router.push('/passport-information/take-portrait')}
-      className="flex items-center justify-center border-[1.5px] border-red rounded-[7px] py-2 bg-white w-[70%] hover:bg-white-dark delay-1000 duration-1000"
+      className="flex w-[70%] items-center justify-center rounded-[7px] border-[1.5px] border-red bg-white py-2 delay-1000 duration-1000 hover:bg-white-dark"
     >
-      <span className="text-red flex gap-5 text-[16px] font-bold items-center">
+      <span className="flex items-center gap-5 text-[16px] font-bold text-red">
         <Image
-          src={'/icons/scan-face.svg'}
+          src="/icons/scan-face.svg"
           width={32}
           height={32}
           alt="passport"

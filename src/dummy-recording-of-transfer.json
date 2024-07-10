@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "date": "2024-06-06T08:55:00",
+    "transactions": [
+      {
+        "id": "1",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      },
+      {
+        "id": "2",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      },
+      {
+        "id": "3",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "date": "2024-08-12T08:55:00",
+    "transactions": [
+      {
+        "id": "1",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      },
+      {
+        "id": "2",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      },
+      {
+        "id": "3",
+        "refundableAmount": 36740,
+        "refundFee": -4560,
+        "remittanceFee": -200,
+        "refundAmount": 29192
+      }
+    ]
+  }
+]

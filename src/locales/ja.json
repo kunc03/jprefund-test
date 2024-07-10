@@ -29,8 +29,7 @@
     "metaDescription": "登録ページ",
     "title": "登録する",
     "register": "登録する",
-    "createAccount": "アカウントを作成",
-    "login/signup": "ログイン/登録",
+    "createAccount": "ログイン/登録",
     "continueWithApple": "Appleアカウントで続ける",
     "continueWithGoogle": "Googleアカウントで続ける",
     "continueWithFacebook": "Facebookアカウントで続ける",
@@ -156,6 +155,11 @@
         "confirmPassword": "確認のためもう一度入力"
       }
     }
+  },
+  "recordingOfTransfer": {
+    "metaTitle": "転送の記録",
+    "metaDescription": "転送ページの記録",
+    "title": "転送の記録"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
@@ -283,6 +287,39 @@
       },
       "confPassword": {
         "required": "パスワードの確認が必要です"
+      }
+    },
+    "refundMethod": {
+      "cashless": {
+        "required": "キャッシュレスは必須"
+      },
+      "cardNumber": {
+        "required": "カード番号は必須です",
+        "format": "カード番号 14 桁以上"
+      },
+      "dateOfExpired": {
+        "required": "有効期限が切れた日付は必須です"
+      },
+      "securityCode": {
+        "required": "セキュリティコードが必要です"
+      },
+      "financialInstituteName": {
+        "required": "金融機関名は必須です"
+      },
+      "branchName": {
+        "required": "支店名 名前は必須です"
+      },
+      "accountNumber": {
+        "required": "口座番号名は必須です"
+      },
+      "accountType": {
+        "required": "アカウントタイプ名は必須です"
+      },
+      "firstName": {
+        "required": "名は必須です"
+      },
+      "lastName": {
+        "required": "姓は必須です"
       }
     }
   }

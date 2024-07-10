@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 'use client';
 
 import {
@@ -11,7 +13,13 @@ import { cn } from '@/utils';
 import { ChevronDown } from 'lucide-react';
 import React from 'react';
 
-const StatusOption = ({ t }) => {
+const StatusOption = ({ t, filter }) => {
+  const [isValue, setIsValue] = React.useState('');
+
+  const handleChange = (value) => {
+    setIsValue(value);
+  };
+
   return (
     <Select className="w-full ">
       <SelectTrigger

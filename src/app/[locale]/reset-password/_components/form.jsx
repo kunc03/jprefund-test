@@ -68,11 +68,13 @@ const Form = () => {
         <form
           ref={formRef}
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="mt-8 flex w-full flex-col gap-6"
+          className="mt-7 flex w-full flex-col gap-6"
         >
           {resetType === 'email' && (
             <>
-              <p className={cn('text-1522 text-center')}>{t('resetByEmail')}</p>
+              <p className={cn('text-1522 text-center mb-8')}>
+                {t('resetByEmail')}
+              </p>
               <FormField
                 control={form.control}
                 name="email"
@@ -80,7 +82,7 @@ const Form = () => {
                   <Input
                     hasForm
                     label={t('form.label.email')}
-                    className={cn('!border !border-gray-300 !rounded-6')}
+                    className={cn('!border rounded-6')}
                     placeholder={t('form.placeholder.email')}
                     disabled={false}
                     {...field}
@@ -91,7 +93,9 @@ const Form = () => {
           )}
           {resetType === 'phone' && (
             <>
-              <p className={cn('text-1522 text-center')}>{t('resetByPhone')}</p>
+              <p className={cn('text-1522 text-center mb-8')}>
+                {t('resetByPhone')}
+              </p>
 
               <Heading level={5} className="text-1622 font-medium">
                 {t('form.label.phone')}
