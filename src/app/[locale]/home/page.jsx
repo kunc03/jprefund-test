@@ -28,14 +28,16 @@ const HomePage = async ({ params, searchParams }) => {
     <>
       <Header />
       <Heading className="bg-white text-center text-lg font-medium ">
-        <div className="flex items-center justify-center px-2.5">
-          {t('recordOfTaxFreePurchases')}
-          <ButtonFilter />
+        <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
+          <p className="grow text-center text-1822">
+            {t('recordOfTaxFreePurchases')}
+          </p>
+          <ButtonFilter className="shrink-0" />
         </div>
       </Heading>
       <div className="flex flex-row items-center justify-center gap-7 bg-white px-2.5 pt-3.5">
         <SummaryCard
-          number={46520}
+          number={99999999}
           title={t('refundApplication')}
           status="refundApplication"
         />

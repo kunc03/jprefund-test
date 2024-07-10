@@ -2,8 +2,8 @@
   {
     "id": "1",
     "date": "2024-05-17T08:55:00",
-    "totalPurchasePrice": 7150,
-    "expectedRefundAmount": 715,
+    "totalPurchasePrice": 990000000,
+    "expectedRefundAmount": 99000000,
     "label": "Receipt registration completed",
     "status": "refundApplication",
     "storeName": "UNIQLO Ginza",
