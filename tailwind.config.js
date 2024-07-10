@@ -242,6 +242,9 @@ const tailwindConfig = {
         sans: ['var(--font-sans)'],
       },
 
+      borderWidth: {
+        1.5: pxToEm(1.5),
+      },
       colors: {
         border: 'hsl(var(--border))',
         background: 'hsl(var(--background))',

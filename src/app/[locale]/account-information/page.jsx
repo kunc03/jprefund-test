@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Header } from '@/components';
 import { AccountInformationAccordion } from './_components';
+import Link from 'next/link';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -35,6 +36,12 @@ const Login = async ({ params }) => {
           isMasking
         />
       </div>
+      <Link
+        href="/delete-account"
+        className="w-full cursor-pointer bg-white pb-30 text-center text-1422 font-bold text-red"
+      >
+        Delete Account
+      </Link>
     </div>
   );
 };

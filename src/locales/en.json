@@ -217,7 +217,8 @@
     "title": "Account",
     "change": "Change",
     "email": "Email address",
-    "password": "Password"
+    "password": "Password",
+    "cancel": "Cancel"
   },
   "detail": {
     "metaTitle": "Purchase details",

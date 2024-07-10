@@ -9,6 +9,7 @@ import {
 
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils';
+import { useState } from 'react';
 
 const AccountInformationAccordion = ({
   id,
@@ -16,10 +17,16 @@ const AccountInformationAccordion = ({
   inputValue,
   isMasking = false,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('accountInformation');
 
   return (
-    <Accordion type="single" collapsible className="ml-23 w-full">
+    <Accordion
+      type="single"
+      collapsible
+      className="ml-23 w-full"
+      onValueChange={(value) => setIsOpen(value !== '')}
+    >
       <AccordionItem
         value={`${label}-${id}`}
         className="!border-b border-b-gray-400 py-24 pr-18"
@@ -36,12 +43,21 @@ const AccountInformationAccordion = ({
               {inputValue}
             </p>
           </div>
-          <div className="!h-fit !w-68 cursor-pointer rounded-11 bg-red !px-3 !py-4.5 text-1313 !font-semibold !text-white ">
-            {t('change')}
-          </div>
+          {!isOpen && (
+            <div className="!h-fit !w-68 cursor-pointer rounded-11 bg-red !px-3 !py-4.5 text-1313 !font-semibold !text-white ">
+              {t('change')}
+            </div>
+          )}
+          {isOpen && (
+            <div className="cursor-pointer !px-3 !py-4.5 text-1313 !font-semibold text-gray">
+              {t('cancel')}
+            </div>
+          )}
         </AccordionTrigger>
-        <AccordionContent className="py-20">
-          Yes. It adheres to the WAI-ARIA design pattern.
+        <AccordionContent className="! w-full py-20 md:max-w-md">
+          <div className="mr-23 rounded-6 border-1.5 border-red p-18">
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

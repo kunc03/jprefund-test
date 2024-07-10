@@ -167,7 +167,8 @@
     "title": "アカウント",
     "change": "変更",
     "email": "変更",
-    "password": "パスワード"
+    "password": "パスワード",
+    "cancel": "キャンセル"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
