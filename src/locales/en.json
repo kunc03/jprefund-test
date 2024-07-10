@@ -253,6 +253,42 @@
     "emailInstruction": "*If you do not receive the email, please check your email address. *If you have set up your email reception settings to receive emails from domains, please make sure that you can receive emails from 'jprefund.com'. *Please also check your spam folder.",
     "smsInstruction": "*If you don't receive an SMS, please check your phone number.*Please make sure you are not outside of the communication range. *Please make sure your phone is set up to receive SMS."
   },
+  "refundMethod": {
+    "metaTitle": "Refund Methods",
+    "metaDescription": "Refund Methods page",
+    "title": "Refund Methods",
+    "registration": "Registration",
+    "delete": "Delete",
+    "choosing": "Choosing",
+    "creditCard": "Credit card",
+    "bankTransfer": "Bank accounts",
+    "cashLess": "Cashless service",
+    "noRegistration": "There is no registration information.",
+    "dateOfExpiry": "Date of expiry",
+    "chooseYourService": "Choose your service",
+    "deleteConfirmation": "Would you like to delete your refund method of {name}?",
+    "changeConfirmation": "Would you like to change your refund method to this {name}?",
+    "registrationCompleted": "{name} registration completed",
+    "cancel": "Cancel",
+    "ok": "O K",
+    "cardNumber": "Card number",
+    "dateOfExpired": "Date of expiry",
+    "securityCode": "Security code",
+    "monthYear": "Month/Year",
+    "changeRefundMethod": "Change refund method",
+    "pleaseSelectYourFinancialInstitution": "Please select your financial institution",
+    "financialInstitutionName": "Financial institution name",
+    "branchName": "Branch Name",
+    "accountNumber": "Account Number",
+    "accountType": "Account Type",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "placeholder": {
+      "pleaseSelect": "Please select",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    }
+  },
   "zodError": {
     "login": {
       "email": {

@@ -53,12 +53,6 @@ const FilterBottomDrawer = () => {
       endDate: null,
     });
   };
-
-  // const hasSubmitted = filter?.status === 'submitted' ?? false;
-  // const hasJacApproval = filter?.status === 'jcApproval' ?? false;
-  // const hasStoreApproval = filter?.status === 'storeApproval' ?? false;
-  // const hasStatusEndDate = filter?.status === 'endDate' ?? false;
-
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
 

@@ -30,14 +30,13 @@ const SelectOptions = ({ values, handleChange }) => {
       >
         <SelectTrigger
           className={cn(
-            'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-6 p-14 transition-colors focus:!outline-none focus:!ring-transparent h-13 relative',
+            'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-6 p-14 transition-colors focus:!outline-none focus:!ring-transparent h-13',
 
             '!bg-white text-gray hover:!border-red border-gray-300 border',
           )}
           value={selectedPhoneArea}
         >
           <SelectValue placeholder={values[0]} />
-          <ChevronDown size={24} className={cn('absolute right-3')} />
         </SelectTrigger>
         <SelectContent className="bg-white">
           {values.map((value) => (

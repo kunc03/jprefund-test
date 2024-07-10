@@ -10,7 +10,6 @@ import {
 } from '@/components';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils';
-import { ChevronDown } from 'lucide-react';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   <Select
@@ -25,10 +24,6 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
       value={selectedPhoneArea}
     >
       <SelectValue placeholder="JP (+81)" />
-      <ChevronDown
-        size={20}
-        className={cn('absolute right-1 top-2.5 text-gray')}
-      />
     </SelectTrigger>
     <SelectContent className="bg-white">
       <SelectItem value="+81">JP (+81)</SelectItem>

@@ -57,7 +57,7 @@ const Select = ({
 Select.displayName = SelectPrimitive.Root.displayName;
 
 const SelectTrigger = React.forwardRef(
-  ({ value, className, children, hasForm = false, icon, ...props }, ref) => {
+  ({ value, className, children, hasForm = false, ...props }, ref) => {
     const SelectTriggerComp = (
       <SelectPrimitive.Trigger
         ref={ref}
@@ -68,7 +68,9 @@ const SelectTrigger = React.forwardRef(
         {...props}
       >
         {children}
-        <SelectPrimitive.Icon asChild>{icon}</SelectPrimitive.Icon>
+        <SelectPrimitive.Icon asChild>
+          <ChevronDown className="size-16 font-medium text-gray" />
+        </SelectPrimitive.Icon>
       </SelectPrimitive.Trigger>
     );
 

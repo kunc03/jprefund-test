@@ -1,11 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import InputForm from '../../passport-information/[form]/_components/input-form';
 import { Heading } from '@/components';
 import { cn } from '@/utils';
-import InputPhone from './input-phone';
 import { useState } from 'react';
+import { InputForm } from './input-form';
+import { InputPhone } from './input-phone';
 
 const FormContactDetails = ({
   defaultValue,

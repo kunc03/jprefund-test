@@ -1,9 +1,9 @@
 'use client';
 
 import { Heading } from '@/components';
-import { InputDate, SelectOptions } from '../../_components';
-import InputForm from './input-form';
+import { InputForm } from './input-form';
 import { cn } from '@/utils';
+import { InputDate, SelectOptions } from '../../_components';
 
 const PassportForm = ({
   t,
@@ -108,7 +108,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
-        // setSelected={setPassportIssuingCountry}
         handleChange={handlePassportIssuing}
         t={t}
       />
@@ -118,7 +117,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
-        // setSelected={setCountryOfIssueCode}
         handleChange={handleCountryIssue}
         t={t}
       />
@@ -128,7 +126,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['Male', 'Female']}
-        // setSelected={setGender}
         handleChange={handleGender}
         t={t}
       />

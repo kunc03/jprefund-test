@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import ButtonCertificate from '../_components/button-certificate';
 import { SelectOptions } from '../../passport-information/_components';
 import { cn } from '@/utils';
 import { FormContactDetails } from '../_components/form-contact-details';
+import { ButtonCertificate } from '../_components';
 
 const ContactDetails = () => {
   const t = useTranslations('contactDetails');

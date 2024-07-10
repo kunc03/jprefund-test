@@ -9,9 +9,7 @@ import {
   SelectValue,
 } from '@/components';
 import { useTranslations } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
 import { cn } from '@/utils';
-import { ChevronDown } from 'lucide-react';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   <Select
@@ -21,29 +19,25 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   >
     <SelectTrigger
       className={cn(
-        'w-100 font-bold focus:!outline-none focus:!ring-transparent h-38 absolute bottom-2 left-2',
+        'w-111 font-bold focus:!outline-none focus:!ring-transparent h-38 absolute bottom-2 left-2',
       )}
       value={selectedPhoneArea}
     >
       <SelectValue placeholder="JP (+81)" />
-      <ChevronDown
-        size={20}
-        className={cn('absolute right-1 top-2.5 text-gray')}
-      />
     </SelectTrigger>
-    <SelectContent className="bg-white">
-      <SelectItem value="+81">JP (+81)</SelectItem>
-      <SelectItem value="+62">ID (+62)</SelectItem>
+    <SelectContent className="!w-111 bg-white">
+      <SelectItem value="+81" className="w-100">
+        JP (+81)
+      </SelectItem>
+      <SelectItem value="+62" className="w-100">
+        ID (+62)
+      </SelectItem>
     </SelectContent>
   </Select>
 );
 
 const InputPhone = ({ setSelectedPhoneArea, selectedPhoneArea, onChange }) => {
   const t = useTranslations('contactDetails');
-  const searchParams = useSearchParams();
-
-  const key = searchParams.get('key');
-  console.log(key);
 
   return (
     <form className="relative">
@@ -66,4 +60,4 @@ const InputPhone = ({ setSelectedPhoneArea, selectedPhoneArea, onChange }) => {
   );
 };
 
-export default InputPhone;
+export { InputPhone };
