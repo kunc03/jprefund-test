@@ -15,7 +15,7 @@
       "setting": "Setting",
       "changePassword": "Change Password",
       "languageSettings": "Language settings",
-      "accountDeletion": "Account deletion",
+      "accountInformation": "Account information",
       "helpSupport": "Help Support",
       "ifYouLoseYourReceipt": "If you lose your receipt",
       "faq": "FAQ",
@@ -210,6 +210,14 @@
     "metaTitle": "Recording Of Transfer",
     "metaDescription": "Recording Of Transfer page",
     "title": "Recording of transfer"
+  },
+  "accountInformation": {
+    "metaTitle": "Account Information",
+    "metaDescription": "Account Information page",
+    "title": "Account",
+    "change": "Change",
+    "email": "Email address",
+    "password": "Password"
   },
   "detail": {
     "metaTitle": "Purchase details",

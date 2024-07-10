@@ -10,6 +10,7 @@ const remBorderRadius = {
   4: pxToEm(4),
   6: pxToEm(6),
   8: pxToEm(8),
+  11: pxToEm(11),
   12: pxToEm(12),
   14: pxToEm(14),
   21: pxToEm(21),
@@ -37,6 +38,7 @@ const remGap = {
 };
 
 const remPadding = {
+  3: pxToEm(3),
   4: pxToEm(4),
   4.5: pxToEm(4.5),
   8: pxToEm(8),
@@ -54,6 +56,7 @@ const remPadding = {
   17.5: pxToEm(17.5),
   20: pxToEm(20),
   22.5: pxToEm(22.5),
+  24: pxToEm(24),
   27.5: pxToEm(27.5),
   21: pxToEm(21),
   28: pxToEm(28),
@@ -154,6 +157,7 @@ const remFontSize = {
   1219.64: [pxToEm(12), { lineHeight: pxToEm(19.64) }],
   1315: [pxToEm(13), { lineHeight: pxToEm(15) }],
   1313: [pxToEm(13), { lineHeight: pxToEm(13) }],
+  1314: [pxToEm(13), { lineHeight: pxToEm(14) }],
   1320: [pxToEm(13), { lineHeight: pxToEm(20) }],
   1322: [pxToEm(13), { lineHeight: pxToEm(22) }],
   1414: [pxToEm(14), { lineHeight: pxToEm(14) }],
@@ -217,6 +221,7 @@ const tailwindConfig = {
       gray: {
         50: '#fafaf9',
         100: '#D9D9D9',
+        150: '#9F9F9F',
         200: '#909090',
         300: '#bfbfbf',
         400: '#cfcece',

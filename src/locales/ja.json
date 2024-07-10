@@ -15,7 +15,7 @@
       "setting": "設定",
       "changePassword": "パスワード変更",
       "languageSettings": "言語設定",
-      "accountDeletion": "アカウント削除",
+      "accountInformation": "アカウント",
       "helpSupport": "ヘルプサポート",
       "ifYouLoseYourReceipt": "レシートを無くした場合",
       "faq": "よくある質問",
@@ -160,6 +160,14 @@
     "metaTitle": "転送の記録",
     "metaDescription": "転送ページの記録",
     "title": "転送の記録"
+  },
+  "accountInformation": {
+    "metaTitle": "口座情報",
+    "metaDescription": "アカウント情報ページ",
+    "title": "アカウント",
+    "change": "変更",
+    "email": "変更",
+    "password": "パスワード"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
