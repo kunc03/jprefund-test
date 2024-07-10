@@ -9,6 +9,8 @@ export { Logo } from './logo';
 export { DatePicker } from './date-picker';
 export { PassportRegistrationIcon } from './passport-registration';
 export { PurchaseItemSection } from './purchase-item-section';
+export { OtpExpireTime } from './otp-expire-time';
+export { OtpForm } from './otp-form';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';

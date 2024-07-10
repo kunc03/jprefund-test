@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
 import { formatSecondToTime } from '@/utils';
 
-const ExpireTime = () => {
+const OtpExpireTime = () => {
   const t = useTranslations('register');
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes
 
@@ -31,4 +31,4 @@ const ExpireTime = () => {
   );
 };
 
-export { ExpireTime };
+export { OtpExpireTime };

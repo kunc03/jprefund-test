@@ -5,13 +5,13 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form as UIForm, FormField } from '@/components/ui/form';
-import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from './ui/input-otp';
 import { useFormRef } from '@/hooks';
 import { useEffect, useRef, useMemo } from 'react';
-import { otpSchema } from '../../../_schemas';
+import { otpSchema } from '../app/[locale]/register/_schemas';
 import { useRouter } from 'next/navigation';
 
-const Form = () => {
+const OtpForm = () => {
   const t = useTranslations('register');
   const formRef = useRef();
   const { setFormRef } = useFormRef();
@@ -73,4 +73,4 @@ const Form = () => {
   );
 };
 
-export { Form };
+export { OtpForm };

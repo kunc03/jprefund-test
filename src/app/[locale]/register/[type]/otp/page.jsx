@@ -1,7 +1,6 @@
-import { Heading, Logo } from '@/components';
+import { Heading, Logo, OtpForm, OtpExpireTime } from '@/components';
 import { getTranslations } from 'next-intl/server';
 import { ButtonNext } from '../../_components';
-import { Form, ExpireTime } from './_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -19,7 +18,7 @@ const RegisterOtpPage = async ({ params }) => {
       <div className="flex flex-1 flex-col items-center  justify-center ">
         <div className="mt-6 flex w-full flex-1 flex-col items-center">
           <div className="flex w-full flex-col items-center px-28">
-            <Logo />
+            <Logo className="mt-41 h-40.8 w-192" />
             <Heading
               className="mt-28.5 text-center text-1522 font-normal"
               key="verifyCodeSend"
@@ -43,8 +42,8 @@ const RegisterOtpPage = async ({ params }) => {
             </Heading>
           </div>
 
-          <Form />
-          <ExpireTime />
+          <OtpForm />
+          <OtpExpireTime />
         </div>
       </div>
 
