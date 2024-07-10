@@ -11,11 +11,11 @@ const emailSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'login.email.required',
+        message: 'email.required',
       },
     )
     .refine((value) => emailRegex.test(value), {
-      message: 'login.email.invalid',
+      message: 'email.invalid',
     }),
 });
 

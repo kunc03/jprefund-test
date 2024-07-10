@@ -11,11 +11,11 @@ const phoneSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'register.phone.required',
+        message: 'phone.required',
       },
     )
     .refine((value) => phoneRegex.test(value), {
-      message: 'register.phone.invalid',
+      message: 'phone.invalid',
     }),
 });
 

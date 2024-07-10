@@ -218,9 +218,16 @@
     "change": "Change",
     "email": "Email address",
     "newEmail": "New Email address",
-    "placeholder":{
-      "newEmail": "New Email address"
+    "newPhone": "New phone number",
+    "placeholder": {
+      "newEmail": "New Email address",
+      "currentPassword": "At least 8 alphanumeric characters",
+      "newPassword": "At least 8 alphanumeric characters",
+      "passwordConfirmation": "Enter again to confirm"
     },
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "passwordConfirmation": "Password confirmation",
     "password": "Password",
     "cancel": "Cancel",
     "deleteAccount": "Delete Account",
@@ -280,75 +287,54 @@
     }
   },
   "zodError": {
-    "login": {
-      "email": {
-        "required": "Email is required",
-        "invalid": "Format email is wrong"
-      },
-      "phone": {
-        "invalid": "Format phone is wrong"
-      },
-      "password": {
-        "required": "Password is required",
-        "min": "Min password is 8"
-      }
+    "email": {
+      "required": "Email is required",
+      "invalid": "Format email is wrong"
     },
-    "register": {
-      "email": {
-        "required": "Email is required",
-        "invalid": "Format email is wrong"
-      },
-      "phone": {
-        "required": "Phone is required",
-        "invalid": "Format phone is wrong"
-      },
-      "otp": {
-        "required": "Otp is required",
-        "min": "Min Otp is 6"
-      }
+    "password": {
+      "required": "Password is required",
+      "min": "Min password is 8",
+      "mismatch": "Password and confirm password must match",
+      "confPass": "Password confirmation is required"
     },
-    "settingPassword": {
-      "password": {
-        "required": "Password is required",
-        "min": "Min password is 8",
-        "mismatch": "Password and confirm password must match"
-      },
-      "confPassword": {
-        "required": "Password confirmation is required"
-      }
+    "phone": {
+      "required": "Phone is required",
+      "invalid": "Format phone is wrong"
     },
-    "refundMethod": {
-      "cashless": {
-        "required": "Cashless is required"
-      },
-      "cardNumber": {
-        "required": "Card number is required",
-        "format": "Card number min 14 digit"
-      },
-      "dateOfExpired": {
-        "required": "Date of expired is required"
-      },
-      "securityCode": {
-        "required": "Security code is required"
-      },
-      "financialInstituteName": {
-        "required": "Financial institute name is required"
-      },
-      "branchName": {
-        "required": "Branch name name is required"
-      },
-      "accountNumber": {
-        "required": "Account number name is required"
-      },
-      "accountType": {
-        "required": "Account type name is required"
-      },
-      "firstName": {
-        "required": "First name is required"
-      },
-      "lastName": {
-        "required": "Last name is required"
-      }
+    "otp": {
+      "required": "Otp is required",
+      "min": "Min Otp is 6"
+    },
+    "cashless": {
+      "required": "Cashless is required"
+    },
+    "cardNumber": {
+      "required": "Card number is required",
+      "format": "Card number min 14 digit"
+    },
+    "dateOfExpired": {
+      "required": "Date of expired is required"
+    },
+    "securityCode": {
+      "required": "Security code is required"
+    },
+    "financialInstituteName": {
+      "required": "Financial institute name is required"
+    },
+    "branchName": {
+      "required": "Branch name name is required"
+    },
+    "accountNumber": {
+      "required": "Account number name is required"
+    },
+    "accountType": {
+      "required": "Account type name is required"
+    },
+    "firstName": {
+      "required": "First name is required"
+    },
+    "lastName": {
+      "required": "Last name is required"
     }
   }
 }

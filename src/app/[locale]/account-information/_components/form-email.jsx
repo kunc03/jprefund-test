@@ -4,7 +4,7 @@ import { Button, Form as UIForm, FormField, Input } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { emailSchema } from '../_schemas/email-schema';
+import { emailSchema } from '../_schemas';
 
 const FormEmail = () => {
   const t = useTranslations('accountInformation');
