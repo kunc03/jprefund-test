@@ -105,6 +105,7 @@ const Form = ({ type }) => {
                 label={t('form.label.phone')}
                 placeholder={t('form.placeholder.phone')}
                 disabled={false}
+                type="number"
                 pre={
                   <PhoneNumberOption
                     t={t}
