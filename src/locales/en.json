@@ -258,12 +258,11 @@
     "accountType": "Account Type",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "placeholder":{
-      "pleaseSelect":"Please select",
+    "placeholder": {
+      "pleaseSelect": "Please select",
       "firstName": "First Name",
       "lastName": "Last Name"
-    } 
-    
+    }
   },
   "zodError": {
     "login": {

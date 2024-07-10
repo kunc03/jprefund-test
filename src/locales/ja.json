@@ -256,11 +256,11 @@
     "accountType": "口座種別",
     "firstName": "ファーストネーム",
     "lastName": "ラストネーム",
-    "placeholder":{
-      "pleaseSelect":"選択してください",
+    "placeholder": {
+      "pleaseSelect": "選択してください",
       "firstName": "First Name",
       "lastName": "Last Name"
-    } 
+    }
   },
   "zodError": {
     "login": {
