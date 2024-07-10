@@ -218,7 +218,8 @@
     "change": "Change",
     "email": "Email address",
     "password": "Password",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "deleteAccount": "Delete Account"
   },
   "detail": {
     "metaTitle": "Purchase details",

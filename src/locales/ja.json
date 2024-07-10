@@ -168,7 +168,8 @@
     "change": "変更",
     "email": "変更",
     "password": "パスワード",
-    "cancel": "キャンセル"
+    "cancel": "キャンセル",
+    "deleteAccount": "アカウントを削除"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
