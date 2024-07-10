@@ -296,7 +296,7 @@
       "min": "Please set it to 8 characters or more.",
       "mismatch": "Passwords do not match.",
       "confPass": "Password confirmation is required.",
-      "incorrect":"Password is incorrect."
+      "incorrect": "Password is incorrect."
     },
     "phone": {
       "required": "Phone is required.",
