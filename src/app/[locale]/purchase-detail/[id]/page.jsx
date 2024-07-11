@@ -7,7 +7,7 @@ import {
   ItemDetail,
 } from '@/components';
 import dataDummy from '@/dummy-data.json';
-import { formatNumber, formatDateTime } from '@/utils';
+import { formatNumber, formatTimeOnly } from '@/utils';
 import { ReceiptList, TransactionProcess } from '../_components';
 
 export const generateMetadata = async ({ params }) => {
@@ -42,7 +42,7 @@ const DetailPage = async ({ params }) => {
     {
       id: 'dateTime',
       key: 'Date/Time',
-      value: formatDateTime(selectedData.date),
+      value: formatTimeOnly(selectedData.date),
     },
     {
       id: 'salesAmount',
