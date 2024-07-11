@@ -69,6 +69,7 @@ const remPadding = {
   33.5: pxToEm(33.5),
   36: pxToEm(36),
   43: pxToEm(43),
+  55: pxToEm(55),
   65: pxToEm(65),
   77: pxToEm(77),
   80: pxToEm(80),
@@ -256,7 +257,7 @@ const tailwindConfig = {
     },
     extend: {
       screens: {
-        small: { min: pxToEm(280), max: pxToEm(399) },
+        small: { min: '280px', max: '300px' },
       },
 
       fontFamily: {

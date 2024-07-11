@@ -34,7 +34,7 @@ const DatePicker = ({
               : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
           )}
         >
-          {selectedDate ? (
+          {selectedDate && isSelected ? (
             format(selectedDate, 'dd/MM/yy')
           ) : (
             <span className=" font-medium text-gray-300">{label}</span>
@@ -55,7 +55,7 @@ const DatePicker = ({
             onHandleSelected(day, selectedDay, activeModifiers, e);
             setIsOpen(false);
           }}
-          initialFocus
+          // initialFocus
           className="bg-white"
         />
       </PopoverContent>

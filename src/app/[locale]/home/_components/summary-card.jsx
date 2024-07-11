@@ -59,7 +59,10 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
       <Heading className="text-1012 font-bold small:text-1718" level={5}>
         {title}
       </Heading>
-      <Heading className="text-right text-lg  font-bold" level={1}>
+      <Heading
+        className="whitespace-nowrap text-right  text-lg font-bold"
+        level={1}
+      >
         {formatNumber(number, true)}
       </Heading>
     </div>

@@ -35,7 +35,7 @@ const HomePage = async ({ params, searchParams }) => {
           <ButtonFilter className="shrink-0" />
         </div>
       </Heading>
-      <div className="flex flex-row items-center justify-center gap-7 bg-white px-2.5 pt-3.5">
+      <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pt-3.5">
         <SummaryCard
           number={99999999}
           title={t('refundApplication')}
