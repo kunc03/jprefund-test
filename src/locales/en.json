@@ -183,7 +183,11 @@
     "countryOfIssueCode": "Country of issue code",
     "gender": "Gender",
     "rescanYourPassport": "Rescan your passport",
-    "save": "Save"
+    "save": "Save",
+    "success": "Success",
+    "successInfo": "Your changes have been saved successfully",
+    "failed": "Failed",
+    "actionFailedInfo": "Incomplete fields, please fill in all information"
   },
   "contactDetails": {
     "metaTitle": "Contact information",
@@ -312,6 +316,12 @@
       "firstName": "First Name",
       "lastName": "Last Name"
     }
+  },
+
+  "helpSupport": {
+    "metaTitle": "Help Support",
+    "metaDescription": "Help Support page",
+    "title": "Help Support"
   },
   "zodError": {
     "email": {

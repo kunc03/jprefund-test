@@ -218,7 +218,11 @@
     "countryOfIssueCode": "発行国コード",
     "gender": "性別",
     "rescanYourPassport": "パスポートを再スキャン",
-    "save": "保存"
+    "save": "保存",
+    "success": "成功",
+    "successInfo": "変更は正常に保存されました",
+    "failed": "失敗した",
+    "failedInfo": "不完全なフィールドがあります。すべての情報を入力してください"
   },
   "contactDetails": {
     "metaTitle": "連絡先情報",
