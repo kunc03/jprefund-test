@@ -73,7 +73,7 @@ const Input = React.forwardRef(
               {description}
             </FormDescription>
           )}
-          <FormMessage className={cn('text-sm font-normal', 'text-red-dark')} />
+          <FormMessage className="mt-6 text-1217 font-normal text-red-error" />
         </div>
       </FormItem>
     );

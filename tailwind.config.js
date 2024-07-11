@@ -10,6 +10,7 @@ const remBorderRadius = {
   4: pxToEm(4),
   6: pxToEm(6),
   8: pxToEm(8),
+  11: pxToEm(11),
   12: pxToEm(12),
   14: pxToEm(14),
   21: pxToEm(21),
@@ -37,6 +38,8 @@ const remGap = {
 };
 
 const remPadding = {
+  3: pxToEm(3),
+  4: pxToEm(4),
   1.1: pxToEm(1),
   1.2: pxToEm(2),
   4.5: pxToEm(4.5),
@@ -45,8 +48,10 @@ const remPadding = {
   10: pxToEm(10),
   10.5: pxToEm(10.5),
   11: pxToEm(11),
+  11.5: pxToEm(11.5),
   13: pxToEm(13),
   14: pxToEm(14),
+  14.5: pxToEm(14.5),
   15: pxToEm(15),
   15.5: pxToEm(15.5),
   18: pxToEm(18),
@@ -55,11 +60,14 @@ const remPadding = {
   17.5: pxToEm(17.5),
   20: pxToEm(20),
   22.5: pxToEm(22.5),
+  24: pxToEm(24),
   27.5: pxToEm(27.5),
   21: pxToEm(21),
   28: pxToEm(28),
   29: pxToEm(29),
+  30: pxToEm(30),
   33.5: pxToEm(33.5),
+  36: pxToEm(36),
   43: pxToEm(43),
   65: pxToEm(65),
   77: pxToEm(77),
@@ -78,10 +86,12 @@ const remMargin = {
   27: pxToEm(27),
   28: pxToEm(28),
   28.5: pxToEm(28.5),
+  31: pxToEm(31),
   40: pxToEm(40),
   41: pxToEm(41),
   43: pxToEm(43),
   46: pxToEm(46),
+  48: pxToEm(48),
   100: pxToEm(100),
 };
 
@@ -156,6 +166,7 @@ const remFontSize = {
   1219.64: [pxToEm(12), { lineHeight: pxToEm(19.64) }],
   1315: [pxToEm(13), { lineHeight: pxToEm(15) }],
   1313: [pxToEm(13), { lineHeight: pxToEm(13) }],
+  1314: [pxToEm(13), { lineHeight: pxToEm(14) }],
   1320: [pxToEm(13), { lineHeight: pxToEm(20) }],
   1322: [pxToEm(13), { lineHeight: pxToEm(22) }],
   1414: [pxToEm(14), { lineHeight: pxToEm(14) }],
@@ -219,7 +230,9 @@ const tailwindConfig = {
       },
       gray: {
         50: '#fafaf9',
+        80: '#F4F4F4',
         100: '#D9D9D9',
+        150: '#9F9F9F',
         200: '#909090',
         300: '#bfbfbf',
         400: '#cfcece',
@@ -230,6 +243,7 @@ const tailwindConfig = {
       },
       red: {
         DEFAULT: '#dd5c45',
+        error: '#FF4B33',
         light: '#ff0000',
         dark: '#b91300',
       },
@@ -240,6 +254,9 @@ const tailwindConfig = {
         sans: ['var(--font-sans)'],
       },
 
+      borderWidth: {
+        1.5: pxToEm(1.5),
+      },
       colors: {
         border: 'hsl(var(--border))',
         background: 'hsl(var(--background))',

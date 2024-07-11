@@ -9,7 +9,7 @@ const bankTransferSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.branchName.required',
+        message: 'branchName.required',
       },
     ),
   accountNumber: z
@@ -20,7 +20,7 @@ const bankTransferSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.accountNumber.required',
+        message: 'accountNumber.required',
       },
     ),
   accountType: z
@@ -31,7 +31,7 @@ const bankTransferSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.accountType.required',
+        message: 'accountType.required',
       },
     ),
   firstName: z
@@ -42,7 +42,7 @@ const bankTransferSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.firstName.required',
+        message: 'firstName.required',
       },
     ),
   lastName: z
@@ -53,7 +53,7 @@ const bankTransferSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.lastName.required',
+        message: 'lastName.required',
       },
     ),
 });

@@ -10,11 +10,11 @@ const loginSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'login.password.required',
+        message: 'password.required',
       },
     )
     .refine((value) => value.length >= 8, {
-      message: 'login.password.min',
+      message: 'password.min',
     }),
 });
 

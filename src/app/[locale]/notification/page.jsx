@@ -18,7 +18,7 @@ const NotificationPage = async ({ params }) => {
   return (
     <div className="flex min-h-dvh flex-col bg-white">
       <Header hasBack title={t('title')} />
-      <div className="max-h-[calc(100dvh-100px)]  grow overflow-y-auto pl-4 pt-2">
+      <div className="max-h-[calc(100dvh-100px)]  grow overflow-y-auto pl-17.5 pt-2">
         <ul className="list-none">
           {NOTIFICATIONS.map((item) => (
             <li key={item.id}>

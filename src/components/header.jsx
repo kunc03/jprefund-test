@@ -37,7 +37,7 @@ const Header = ({
   return (
     <div
       className={cn(
-        'flex flex-row bg-white px-3 py-5 w-full',
+        'flex flex-row bg-white px-10 py-5 w-full',
         hasBack ? 'items-center justify-start' : 'items-center justify-between',
         hasBorderBottom && 'border-b border-b-gray-500',
       )}

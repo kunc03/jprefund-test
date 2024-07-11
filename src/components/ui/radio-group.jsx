@@ -30,7 +30,7 @@ const RadioGroup = React.forwardRef(
             />
           </FormControl>
 
-          <FormMessage className="mt-2 text-sm font-normal text-red-dark" />
+          <FormMessage className="mt-6 text-1217 font-normal text-red-error" />
         </div>
       </FormItem>
     );

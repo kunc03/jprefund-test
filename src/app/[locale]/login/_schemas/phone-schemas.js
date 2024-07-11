@@ -4,18 +4,18 @@ const phoneRegex = /^\d{10,15}$/;
 
 const phoneSchema = z.object({
   email: z
-    .string({ message: 'login.email.required' })
+    .string({ message: 'email.required' })
     .optional()
     .refine(
       (value) => {
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'login.email.required',
+        message: 'email.required',
       },
     )
     .refine((value) => phoneRegex.test(value), {
-      message: 'login.phone.invalid',
+      message: 'phone.invalid',
     })
     .refine((value) => {
       if (value === 'unregister@mail.com') {
