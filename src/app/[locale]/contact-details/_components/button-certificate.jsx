@@ -2,6 +2,7 @@
 
 'use client';
 
+import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -11,7 +12,7 @@ const ButtonCertificate = ({ className }) => {
   const t = useTranslations('contactDetails');
   const router = useRouter();
   return (
-    <button
+    <Button
       onClick={() => router.push('/contact-details/scan-certificate')}
       className={`${className} flex items-center justify-center rounded-[7px] border-2 border-red bg-white p-2 delay-1000 duration-1000 hover:bg-white-dark`}
     >
@@ -24,8 +25,8 @@ const ButtonCertificate = ({ className }) => {
         />
         {t('photograph')}
       </span>
-    </button>
+    </Button>
   );
 };
 
-export default ButtonCertificate;
+export { ButtonCertificate };

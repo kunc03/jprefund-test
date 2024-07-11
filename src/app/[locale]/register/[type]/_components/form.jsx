@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from '@/components';
 import { useRouter } from 'next/navigation';
+import { cn } from '@/utils';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -64,10 +65,6 @@ const Form = ({ type }) => {
   const handleSubmit = (data) => {
     if (type === 'email' && data.email === 'unregister@mail.com') {
       router.push('/register/email/otp');
-
-      // } else if (type === 'email' && data) {
-      //   router.push('/register/email/otp');
-      //   return;
     } else if (selectedPhoneArea && data) {
       router.push('/register/phone/otp');
     }
@@ -87,6 +84,7 @@ const Form = ({ type }) => {
             render={({ field }) => (
               <Input
                 hasForm
+                className={cn('!border !border-gray-300 !rounded-6')}
                 label={t('form.label.email')}
                 placeholder={t('form.placeholder.email')}
                 disabled={false}
@@ -105,6 +103,7 @@ const Form = ({ type }) => {
                 label={t('form.label.phone')}
                 placeholder={t('form.placeholder.phone')}
                 disabled={false}
+                type="number"
                 pre={
                   <PhoneNumberOption
                     t={t}

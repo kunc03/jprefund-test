@@ -1,9 +1,8 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-
 'use client';
 
-import { Circle } from 'lucide-react';
+import { Button } from '@/components';
+import { cn } from '@/utils';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -19,12 +18,14 @@ const ButtonCamera = ({ form }) => {
   };
 
   return (
-    <button
+    <Button
       onClick={handleClick}
-      className="absolute bottom-[40px] flex size-[64px] items-center justify-center rounded-full bg-white"
+      className={cn(
+        'absolute bottom-6 flex h-auto items-center justify-center rounded-full bg-transparent hover:!bg-transparent focus:!bg-transparent focus:outline-none',
+      )}
     >
-      <Circle className="text-black" size={62} />
-    </button>
+      <Image src="/icons/camera.svg" width={64} height={64} alt="icon" />
+    </Button>
   );
 };
 

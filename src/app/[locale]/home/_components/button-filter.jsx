@@ -26,21 +26,6 @@ const ButtonFilter = ({ className, hasBack = false }) => {
           />
         </div>
       )}
-
-      {/* {hasBack && (
-        <>
-          <ChevronLeft
-            size={24}
-            className="cursor-pointer text-gray-200"
-            onClick={() => router.back()}
-          />
-          {title && (
-            <Heading className="w-full text-center text-1822 font-medium text-gray">
-              {title}
-            </Heading>
-          )}
-        </>
-      )} */}
     </div>
   );
 };

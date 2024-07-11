@@ -11,21 +11,18 @@ const emailSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'register.email.required',
+        message: 'email.required',
       },
     )
     .refine((value) => emailRegex.test(value), {
-      message: 'register.email.invalid',
+      message: 'email.invalid',
     })
 
     .refine((value) => {
-      if (!emailRegex.test(value)) {
-        return false; // Format email tidak valid
-      }
       if (value === 'unregister@mail.com') {
         // Redirect langsung ke OTP
         window.location.href = '/register/email/otp';
-        return true; // Validasi berhasil untuk email ini
+        return true;
       }
       // Redirect registered emails to /login
       window.location.href = '/login';

@@ -9,7 +9,7 @@ const otpSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'register.otp.required',
+        message: 'otp.required',
       },
     ),
 });

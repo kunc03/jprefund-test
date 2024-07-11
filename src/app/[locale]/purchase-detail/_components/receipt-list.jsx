@@ -24,7 +24,7 @@ const ReceiptList = ({ rows }) => {
       onValueChange={(value) => setIsOpen(value !== '')}
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger>
+        <AccordionTrigger className="hover:underline">
           {isOpen ? t('detailsClose') : t('receiptDetails')}
         </AccordionTrigger>
         {rows.map((item, index) => {

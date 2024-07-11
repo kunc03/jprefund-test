@@ -55,12 +55,10 @@ const ContentBankTransfer = () => {
   };
 
   const handleSubmit = (data) => {
-    // todo integratin witha api
     const payload = {
       financialInstituteName: selectedFinancialInstituteName,
       ...data,
     };
-    console.log(payload);
     setData('2', payload);
     setIsSuccess(true);
   };
@@ -81,7 +79,7 @@ const ContentBankTransfer = () => {
 
   useEffect(() => {
     if (!registrationInformation.financialInstituteName && isSelected) {
-      // setIsSelected(false);
+      setIsSelected(false);
     }
   }, [registrationInformation, isSelected]);
 
