@@ -291,6 +291,34 @@
       "lastName": "Last Name"
     }
   },
+  "helpSupport": {
+    "metaTitle": "ヘルプサポート",
+    "metaDescription": "ヘルプサポートページ",
+    "title": "ヘルプサポート",
+    "faq": "よくある質問",
+    "refundStatus": "返金ステータス",
+    "privacyPolicy": {
+      "title": "プライバシーポリシー",
+      "content1": "At Refund Tax Company, we prioritize the confidentiality and security of your personal information. Our privacy policy ensures that any data shared with us during the refund process is treated with the utmost care and is strictly utilized for the purpose of facilitating tax-related services.",
+      "content2": "We commit to safeguarding your sensitive details, adhering to industry-standard encryption practices, and maintaining strict internal protocols to protect your privacy. Additionally, any financial transactions or refund-related information will be handled securely and in compliance with relevant legal regulations.",
+      "content3": "Our commitment to transparency and privacy underscores our dedication to providing you with a trusted and secure environment for all your tax refund needs."
+    },
+    "userTerms": {
+      "title": "ユーザー規約",
+      "content1": "User Agreement Welcome to Refund Gate! By accessing or using our website (www.refundgate.com) and any related services (collectively referred to as the \"Service\"), you agree to be bound by the following terms and conditions (\"User Agreement\"). Please read these terms carefully before accessing or using the Service. If you do not agree with any part of the terms, you may not access the Service.",
+      "content2": "Acceptance of Terms By accessing or using the Service, you agree to be bound by this User Agreement, as well as any additional terms and conditions that may apply to specific sections of the Service.",
+      "content3": "Eligibility You must be at least 18 years old to access or use the Service. By accessing or using the Service, you represent and warrant that you are at least 18 years old and have the legal capacity to enter into this User Agreement",
+      "content4": "User Accounts To access certain features of the Service, you may be required to create a user account. You agree to provide accurate and complete information when creating your account and to keep your password secure. You are responsible for all activities that occur under your account.",
+      "content5": "Privacy Policy Our Privacy Policy outlines how we collect, use, and disclose your personal information. By using the Service, you consent to the collection, use, and disclosure of your personal information as described in the Privacy Policy.",
+      "content6": "Intellectual Property All content included on the Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Refund Gate or its content suppliers and is protected by copyright laws and international treaties.",
+      "content7": "Prohibited Conduct You agree not to engage in any of the following prohibited activities: Use the Service for any illegal or unauthorized purpose. Attempt to gain unauthorized access to any portion or feature of the Service. Interfere with or disrupt the operation of the Service or servers or networks connected to the Service. Impersonate any person or entity or falsely state or otherwise misrepresent your affiliation with a person or entity. Violate any applicable laws or regulations.",
+      "content8": "Disclaimer of Warranties The Service is provided on an \"as is\" and \"as available\" basis without any representations or warranties, express or implied. Refund Gate does not warrant that the Service will be error-free or uninterrupted.",
+      "content9": "Limitation of Liability In no event shall Refund Gate be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Service.",
+      "content10": "Governing Law This User Agreement shall be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law provisions.",
+      "content11": "Changes to Terms Refund Gate reserves the right to modify or replace any part of this User Agreement at any time. It is your responsibility to check this User Agreement periodically for changes. Your continued use of the Service following the posting of any changes to this User Agreement constitutes acceptance of those changes."
+    }
+  },
+
   "zodError": {
     "login": {
       "email": {

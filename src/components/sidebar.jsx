@@ -195,7 +195,7 @@ const Sidebar = () => {
             isUnregister: false,
           },
           {
-            href: `/${locale}/privacy-policies`,
+            href: `/${locale}/privacy-policy`,
             label: t('routes.privacyPolicy'),
             active: pathname === `/privacy-policy`,
             icon: <IconImage image="privacy-policy.svg" />,
