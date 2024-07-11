@@ -6,15 +6,13 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
 import { SelectOptions } from '../../passport-information/_components';
 import { cn } from '@/utils';
 import { FormContactDetails } from '../_components/form-contact-details';
-import { ButtonCertificate } from '../_components';
+import { ButtonCertificate, SuccessDialog } from '../_components';
 
 const ContactDetails = () => {
   const t = useTranslations('contactDetails');
-  const router = useRouter();
 
   const defaultValue = {
     email: 'andreas.andi@talenavi.com',
@@ -29,6 +27,8 @@ const ContactDetails = () => {
   const [state, setState] = useState('');
   const [postCode, setPostCode] = useState('');
   const [country, setCountry] = useState('');
+
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const [isForm, setIsForm] = useState({
     emailAddress: email,
@@ -47,6 +47,14 @@ const ContactDetails = () => {
     isForm;
     setIsButtonDisabled(false);
   }, []);
+
+  const handleClickSave = () => {
+    setIsSuccess(true);
+  };
+
+  useEffect(() => {
+    setIsSuccess(false);
+  });
 
   useEffect(() => {
     const isChanged =
@@ -108,7 +116,7 @@ const ContactDetails = () => {
         <ButtonCertificate className="my-[1rem]" />
 
         <Button
-          onClick={() => router.push('/home')}
+          onClick={handleClickSave}
           className={cn(
             'w-[173px] my-[1rem]',
             isButtonDisabled && '!bg-gray-300',
@@ -118,6 +126,8 @@ const ContactDetails = () => {
           {t('save')}
         </Button>
       </div>
+
+      <SuccessDialog isOpen={isSuccess} />
     </>
   );
 };

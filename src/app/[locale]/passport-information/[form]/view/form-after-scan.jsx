@@ -11,13 +11,14 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FaceRecognition, PassportForm } from '../_components';
 import { cn } from '@/utils';
+import { SuccessDialog } from '../_components/success-dialog';
 
 const FormAfterScan = ({ form }) => {
   const t = useTranslations('passportInformation');
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isSuccess, setIsSuccess] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
   const defaultValue = {
@@ -56,6 +57,14 @@ const FormAfterScan = ({ form }) => {
     isForm;
     setIsDisabled(false);
   }, []);
+
+  const handleClickSave = () => {
+    setIsSuccess(true);
+  };
+
+  useEffect(() => {
+    setIsSuccess(false);
+  });
 
   useEffect(() => {
     const isChanged =
@@ -119,14 +128,13 @@ const FormAfterScan = ({ form }) => {
 
         <Button
           disabled={isDisabled}
-          onClick={() =>
-            router.push('/passport-information/form/contact-information')
-          }
+          onClick={handleClickSave}
           className={cn('w-173', isDisabled && 'bg-gray-300')}
         >
           {t('save')}
         </Button>
       </div>
+      <SuccessDialog isOpen={isSuccess} />
     </>
   );
 };

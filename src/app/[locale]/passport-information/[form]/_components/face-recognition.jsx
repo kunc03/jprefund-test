@@ -23,7 +23,7 @@ const FaceRecognition = ({ t, form }) => {
         {form === 'form-completed' ? (
           <Button
             className={cn(
-              'flex justify-center rounded-6 border-[1.5px] bg-green py-2',
+              'flex justify-center rounded-6 border-[1.5px] bg-green hover:bg-green py-2',
             )}
           >
             <span className="flex items-center justify-center gap-5 text-1618 font-bold text-white">

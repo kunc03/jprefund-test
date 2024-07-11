@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { cn } from '@/utils';
 import { ChevronLeft, X } from 'lucide-react';
 import { Heading } from './heading';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Sidebar } from './sidebar';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from './ui/drawer';
 
@@ -17,11 +17,17 @@ const Header = ({
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   const handleSidebar = () => {
     setIsSidebarOpen((oldVal) => !oldVal);
   };
   const handleBack = () => {
-    if (onHandleBack) {
+    if (
+      pathname === '/passport-information/form-completed' ||
+      pathname === '/passport-information/form'
+    ) {
+      router.push('/home');
+    } else if (onHandleBack) {
       onHandleBack();
     } else {
       router.back();
