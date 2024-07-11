@@ -1,10 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import InputForm from '../../passport-information/[form]/_components/input-form';
-import { Heading, Input } from '@/components';
-import { SelectOptions } from '../../passport-information/_components';
+import { Heading } from '@/components';
 import { cn } from '@/utils';
+import { useState } from 'react';
+import { InputForm } from './input-form';
+import { InputPhone } from './input-phone';
 
 const FormContactDetails = ({
   defaultValue,
@@ -19,6 +20,7 @@ const FormContactDetails = ({
   setIsForm,
 }) => {
   const t = useTranslations('contactDetails');
+  const [selectedPhoneArea, setSelectedPhoneArea] = useState();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -64,7 +66,7 @@ const FormContactDetails = ({
   };
 
   return (
-    <div className="flex w-full flex-col gap-3">
+    <div className={cn('flex flex-col gap-3 w-full')}>
       {/* Email address */}
       <InputForm
         t={t}
@@ -79,22 +81,12 @@ const FormContactDetails = ({
       <Heading level={5} className="text-1422 font-medium">
         {t('telephoneNumber')}
       </Heading>
-      {/* Perlu perbaikan */}
-      <div className="relative flex h-[50px] rounded-[6px] bg-transparent p-[0.1px]">
-        <SelectOptions
-          values={['JP (+81)', 'ID (+62)']}
-          className="absolute left-1 top-1 h-[2.6rem] w-28 rounded-[6px] !bg-transparent"
-        />
-        <Input
-          placeholder="000-0000-0000"
-          onChange={handlePhone}
-          type="number"
-          className={cn(
-            'h-[50px] text-gray border-gray-300 border !rounded-[6px] pl-[8rem] focus:!border-red hover:!border-red',
-          )}
-        />
-      </div>
-      {/* */}
+      <InputPhone
+        selectedPhoneArea={selectedPhoneArea}
+        setSelectedPhoneArea={setSelectedPhoneArea}
+        onChange={handlePhone}
+      />
+      {/* Telephone number */}
 
       {/* Building name and room number */}
       <InputForm

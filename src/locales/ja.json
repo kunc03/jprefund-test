@@ -29,7 +29,7 @@
     "metaDescription": "登録ページ",
     "title": "登録する",
     "register": "登録する",
-    "createAccount": "アカウントを作成",
+    "createAccount": "ログイン/登録",
     "continueWithApple": "Appleアカウントで続ける",
     "continueWithGoogle": "Googleアカウントで続ける",
     "continueWithFacebook": "Facebookアカウントで続ける",
@@ -249,6 +249,31 @@
     "qrScanSuccessful": "QRのスキャンが成功しました",
     "statusChangedToCompleted": "ステータスが完了に変更されました",
     "announcementDetails": "お知らせ詳細"
+  },
+  "resetPassword": {
+    "metaTitle": "パスワード再設定",
+    "metaDescription": "パスワード再設定ページ",
+    "title": "パスワード再設定",
+    "resetByEmail": "ご登録のメールアドレスへ パスワード再設定用のURLを送信します。",
+    "resetByPhone": "ご登録の電話番号へ パスワード再設定用のSMSを送信します。",
+    "form": {
+      "label": {
+        "email": "メールアドレス",
+        "phone": "電話番号"
+      },
+      "placeholder": {
+        "email": "メールアドレス",
+        "phone": "000-0000-0000"
+      }
+    },
+    "send": "送信",
+    "resetEmailSendToYou": "再設定用メールをお送りしました",
+    "resetSmsSendToYou": "再設定用SMSをお送りしました",
+    "clickOnUrlInEmail": "メールに記載されているURLをクリックして パスワードを再設定してください。",
+    "clickOnUrlInSms": "SMSに記載されているURLをクリックして パスワードを再設定してください。",
+    "expiresUrl": "URLの有効期限は24時間です。",
+    "emailInstruction": "※メールが届かない場合はメールアドレスをご確認ください。※ドメイン受信設定をしている方は「jprefund.com」を受信できるようにしてください。※迷惑メールフォルダもお確かめください。",
+    "smsInstruction": "※SMSが届かない場合は電話番号をご確認ください。※通信圏外になっていないかご確認ください。※SMSが受け取れる設定になっているかお確かめください。"
   },
   "refundMethod": {
     "metaTitle": "返金方法",

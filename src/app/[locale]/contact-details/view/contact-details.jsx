@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import ButtonCertificate from '../_components/button-certificate';
 import { SelectOptions } from '../../passport-information/_components';
 import { cn } from '@/utils';
 import { FormContactDetails } from '../_components/form-contact-details';
+import { ButtonCertificate } from '../_components';
 
 const ContactDetails = () => {
   const t = useTranslations('contactDetails');
@@ -74,7 +74,11 @@ const ContactDetails = () => {
 
   return (
     <>
-      <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
+      <div
+        className={cn(
+          'flex grow flex-col items-center justify-center gap-22 w-full p-28',
+        )}
+      >
         <FormContactDetails
           defaultValue={defaultValue}
           setEmail={setEmail}
@@ -94,7 +98,11 @@ const ContactDetails = () => {
         <p className="text-left">{t('uploadDocumentInstruction')}</p>
       </div>
 
-      <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
+      <div
+        className={cn(
+          'flex grow flex-col items-center justify-center gap-22 w-full p-28',
+        )}
+      >
         <SelectOptions values={['Document type']} className=" !rounded-[6px]" />
 
         <ButtonCertificate className="my-[1rem]" />

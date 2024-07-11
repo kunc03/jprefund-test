@@ -68,7 +68,7 @@ const TakePortrait = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !h-[450px]">
+      <div ref={qrBoxEl} className="qr-box">
         <Image
           alt="Qr Frame"
           className="qr-frame"

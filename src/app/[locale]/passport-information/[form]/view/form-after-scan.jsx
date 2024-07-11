@@ -108,19 +108,21 @@ const FormAfterScan = ({ form }) => {
       </div>
 
       <div className="flex w-full flex-col items-center justify-center gap-[54px] pb-54">
-        <button
+        <Button
           onClick={handleRescanPassport}
-          className="text-16 font-bold text-red underline underline-offset-4"
+          className={cn(
+            'text-16 font-bold bg-transparent hover:!bg-transparent text-red underline underline-offset-4',
+          )}
         >
           {t('rescanYourPassport')}
-        </button>
+        </Button>
 
         <Button
           disabled={isDisabled}
           onClick={() =>
             router.push('/passport-information/form/contact-information')
           }
-          className={cn('w-[173px]', isDisabled && 'bg-gray-300')}
+          className={cn('w-173', isDisabled && 'bg-gray-300')}
         >
           {t('save')}
         </Button>

@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from '@/components';
 import { phoneSchema } from '../../register/_schemas';
+import { cn } from '@/utils';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -25,7 +26,9 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="h-full w-100 font-bold focus:!outline-none focus:!ring-transparent"
+      className={cn(
+        'w-100 font-bold focus:!outline-none focus:!ring-transparent h-full',
+      )}
       value={selectedPhoneArea}
     >
       <SelectValue

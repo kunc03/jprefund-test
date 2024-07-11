@@ -22,7 +22,7 @@ const ScanCertificatePage = async ({ params }) => {
         </Heading>
 
         <div className="relative flex h-[200px] w-full flex-col items-center justify-center bg-black px-7 py-[2rem]">
-          <Heading className="mb-28 w-full max-w-301 text-center text-1422 font-medium text-white">
+          <Heading className="mb-100 w-full max-w-301 text-center text-1422 font-medium text-white">
             {t('scanCertificateInstruction')}
           </Heading>
           <ButtonCamera />
