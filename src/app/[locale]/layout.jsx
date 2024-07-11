@@ -16,8 +16,10 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
   userScalable: false,
+  shrinkToFit: 'no',
 };
 
 const RootLayout = async ({ children, params }) => {
@@ -28,7 +30,7 @@ const RootLayout = async ({ children, params }) => {
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-dvh bg-gray-400 antialiased flex flex-col items-center',
+          'min-h-dvh bg-white md:bg-gray-400 antialiased flex flex-col items-center',
           inter.variable,
         )}
       >

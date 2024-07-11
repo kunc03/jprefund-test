@@ -195,6 +195,10 @@ const tailwindConfig = {
       padding: '2rem',
       screens: {
         '2xl': pxToEm(1400),
+        sm: pxToEm(640),
+        md: pxToEm(786),
+        lg: pxToEm(1024),
+        xl: pxToEm(1280),
       },
     },
     colors: {
@@ -232,6 +236,10 @@ const tailwindConfig = {
       shadow: '#000 / 0.15',
     },
     extend: {
+      screens: {
+        small: { min: pxToEm(280), max: pxToEm(399) },
+      },
+
       fontFamily: {
         sans: ['var(--font-sans)'],
       },
