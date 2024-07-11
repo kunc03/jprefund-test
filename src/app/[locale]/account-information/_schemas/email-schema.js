@@ -16,17 +16,6 @@ const emailSchema = z.object({
     )
     .refine((value) => emailRegex.test(value), {
       message: 'email.invalid',
-    })
-
-    .refine((value) => {
-      if (value === 'unregister@mail.com') {
-        // Redirect langsung ke OTP
-        window.location.href = '/register/email/otp';
-        return true;
-      }
-      // Redirect registered emails to /login
-      window.location.href = '/login';
-      return true; // Validation passes for registered emails
     }),
 });
 

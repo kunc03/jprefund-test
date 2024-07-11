@@ -79,3 +79,8 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   @apply appearance-none m-0;
 }
+
+.masked-password {
+  -webkit-text-security: disc; /* For WebKit browsers */
+  text-security: disc; /* For other browsers */
+}

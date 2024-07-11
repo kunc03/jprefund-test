@@ -9,7 +9,7 @@ const creditCardSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.cardNumber.required',
+        message: 'cardNumber.required',
       },
     )
     .refine(
@@ -17,7 +17,7 @@ const creditCardSchema = z.object({
         return value.length > 14;
       },
       {
-        message: 'refundMethod.cardNumber.format',
+        message: 'cardNumber.format',
       },
     ),
   dateOfExpired: z
@@ -28,7 +28,7 @@ const creditCardSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.dateOfExpired.required',
+        message: 'dateOfExpired.required',
       },
     ),
   securityCode: z
@@ -39,7 +39,7 @@ const creditCardSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.securityCode.required',
+        message: 'securityCode.required',
       },
     ),
 });

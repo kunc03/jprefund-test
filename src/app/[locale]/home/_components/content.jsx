@@ -30,7 +30,7 @@ const Content = () => {
   const { selectedData } = useActiveSummary();
 
   return (
-    <section className="flex h-[calc(100dvh-230px)] flex-wrap pb-77">
+    <section className="flex h-[calc(100dvh-230px)] flex-wrap pb-30">
       {isObjectEmpty(selectedData) && <EmptyState t={t} />}
       {!isObjectEmpty(selectedData) && (
         <div className="flex h-full flex-1 flex-col items-center overflow-y-auto">

@@ -9,7 +9,7 @@ const cashLessSchema = z.object({
         return value !== undefined && value.trim() !== '';
       },
       {
-        message: 'refundMethod.cashless.required',
+        message: 'cashless.required',
       },
     ),
 });

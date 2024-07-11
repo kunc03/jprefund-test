@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
 import { formatSecondToTime } from '@/utils';
 
-const ExpireTime = () => {
+const OtpExpireTime = () => {
   const t = useTranslations('register');
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes
 
@@ -23,7 +23,7 @@ const ExpireTime = () => {
       </p>
 
       {timeLeft === 0 && (
-        <p className="mb-36 w-full text-center text-2022 font-medium text-red">
+        <p className="mt-28 w-full text-center text-2022 font-medium text-red md:mt-36">
           {t('reissueAuthCode')}
         </p>
       )}
@@ -31,4 +31,4 @@ const ExpireTime = () => {
   );
 };
 
-export { ExpireTime };
+export { OtpExpireTime };
