@@ -36,6 +36,8 @@ const Input = React.forwardRef(
         className={cn(
           'flex w-full bg-white px-2.5 rounded-6 py-18 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
+          type === 'number' &&
+            'file::-webkit-outer-spin-button, file::-webkit-inner-spin-button { display: none; }',
         )}
         disabled={disabled}
         type={type}

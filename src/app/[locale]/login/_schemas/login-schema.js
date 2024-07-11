@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { z } from 'zod';
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^\d{10,15}$/;
-const registeredEmails = [
-  'user1@example.com',
-  'user2@example.com',
-  'register@mail.com',
-];
+// const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// const phoneRegex = /^\d{10,15}$/;
+// const registeredEmails = [
+//   'user1@example.com',
+//   'user2@example.com',
+//   'register@mail.com',
+// ];
 
 const loginSchema = z.object({
   // email: z

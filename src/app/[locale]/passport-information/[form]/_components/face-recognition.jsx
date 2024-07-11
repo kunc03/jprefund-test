@@ -1,8 +1,9 @@
 /* eslint-disable react/button-has-type */
-import { Heading } from '@/components';
+import { Button, Heading } from '@/components';
 import Image from 'next/image';
 import React from 'react';
-import ButtonRecognition from './button-face-recog';
+import { cn } from '@/utils';
+import { ButtonRecognition } from './button-face-recog';
 
 const FaceRecognition = ({ t, form }) => {
   return (
@@ -20,8 +21,12 @@ const FaceRecognition = ({ t, form }) => {
       </span>
       <div className="flex items-center justify-center">
         {form === 'form-completed' ? (
-          <button className="flex w-full items-center justify-center rounded-[7px] border-[1.5px] bg-green py-2">
-            <span className="flex items-center gap-5 text-[16px] font-bold text-white">
+          <Button
+            className={cn(
+              'flex justify-center rounded-6 border-[1.5px] bg-green py-2',
+            )}
+          >
+            <span className="flex items-center justify-center gap-5 text-1618 font-bold text-white">
               <Image
                 src="/icons/scan-face-white.svg"
                 width={32}
@@ -30,7 +35,7 @@ const FaceRecognition = ({ t, form }) => {
               />
               {t('faceAuthenticationCompleted')}
             </span>
-          </button>
+          </Button>
         ) : (
           <ButtonRecognition t={t} />
         )}

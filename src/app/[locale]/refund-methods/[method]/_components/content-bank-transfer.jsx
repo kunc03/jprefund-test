@@ -60,7 +60,6 @@ const ContentBankTransfer = () => {
       financialInstituteName: selectedFinancialInstituteName,
       ...data,
     };
-    console.log(payload);
     setData('2', payload);
     setIsSuccess(true);
   };

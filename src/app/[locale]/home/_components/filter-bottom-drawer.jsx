@@ -53,12 +53,6 @@ const FilterBottomDrawer = () => {
       endDate: null,
     });
   };
-
-  // const hasSubmitted = filter?.status === 'submitted' ?? false;
-  // const hasJacApproval = filter?.status === 'jcApproval' ?? false;
-  // const hasStoreApproval = filter?.status === 'storeApproval' ?? false;
-  // const hasStatusEndDate = filter?.status === 'endDate' ?? false;
-
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
 
@@ -93,54 +87,6 @@ const FilterBottomDrawer = () => {
             filter={filter?.status}
             setFilter={setFilter}
           />
-
-          {/* <div className="flex w-full flex-row justify-between gap-3">
-            <ItemFilter
-              label={t('submitted')}
-              className="w-full !items-center !justify-center"
-              onHandleClick={() =>
-                handleSelectedStatus(
-                  filter?.status === 'submitted' ? null : 'submitted',
-                )
-              }
-              isSelected={hasSubmitted}
-            />
-
-            <ItemFilter
-              label={t('jcApproval')}
-              className="w-full !items-center !justify-center"
-              onHandleClick={() =>
-                handleSelectedStatus(
-                  filter?.status === 'jcApproval' ? null : 'jcApproval',
-                )
-              }
-              isSelected={hasJacApproval}
-            />
-          </div> */}
-
-          {/*   <div className="flex w-full flex-row justify-between gap-3">
-            <ItemFilter
-              label={t('storeApproval')}
-              className="w-full !items-center !justify-center"
-              onHandleClick={() =>
-                handleSelectedStatus(
-                  filter?.status === 'storeApproval' ? null : 'storeApproval',
-                )
-              }
-              isSelected={hasStoreApproval}
-            />
-            <ItemFilter
-              label={t('endDate')}
-              className="w-full !items-center !justify-center"
-              onHandleClick={() =>
-                handleSelectedStatus(
-                  filter?.status === 'endDate' ? null : 'endDate',
-                )
-              }
-              isSelected={hasStatusEndDate}
-            />
-          </div> */}
-          {/* Status end */}
 
           {/* Date */}
           <Heading level={5} className="text-1422 font-medium">

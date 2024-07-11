@@ -22,8 +22,8 @@ const TakePortraitView = async ({ params }) => {
           {t('takePortrait')}
         </Heading>
 
-        <div className="relative flex h-[200px] w-full flex-col items-center justify-center bg-black px-7 py-[2rem]">
-          <Heading className="mb-28 w-full max-w-301 text-center text-1422 font-medium text-white">
+        <div className="relative flex h-231 w-full flex-col items-center bg-black px-7 py-[2rem]">
+          <Heading className="w-full max-w-334 text-center text-1422 font-medium text-white">
             {t('takePortraitInstruction')}
           </Heading>
           <ButtonCamera form="photo" />

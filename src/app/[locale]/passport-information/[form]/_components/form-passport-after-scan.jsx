@@ -1,8 +1,9 @@
 'use client';
 
 import { Heading } from '@/components';
+import { InputForm } from './input-form';
+import { cn } from '@/utils';
 import { InputDate, SelectOptions } from '../../_components';
-import InputForm from './input-form';
 
 const PassportForm = ({
   t,
@@ -51,7 +52,7 @@ const PassportForm = ({
   };
 
   return (
-    <div className="flex w-full flex-col gap-3">
+    <div className={cn('flex flex-col gap-3 w-full')}>
       <InputForm
         t={t}
         label="firstName"
@@ -107,7 +108,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
-        // setSelected={setPassportIssuingCountry}
         handleChange={handlePassportIssuing}
         t={t}
       />
@@ -117,7 +117,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
-        // setSelected={setCountryOfIssueCode}
         handleChange={handleCountryIssue}
         t={t}
       />
@@ -127,7 +126,6 @@ const PassportForm = ({
       </Heading>
       <SelectOptions
         values={['Male', 'Female']}
-        // setSelected={setGender}
         handleChange={handleGender}
         t={t}
       />

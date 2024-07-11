@@ -37,7 +37,8 @@ const remGap = {
 };
 
 const remPadding = {
-  4: pxToEm(4),
+  1.1: pxToEm(1),
+  1.2: pxToEm(2),
   4.5: pxToEm(4.5),
   8: pxToEm(8),
   9.5: pxToEm(9.5),
@@ -81,6 +82,7 @@ const remMargin = {
   41: pxToEm(41),
   43: pxToEm(43),
   46: pxToEm(46),
+  100: pxToEm(100),
 };
 
 const remSize = {
@@ -144,6 +146,7 @@ const remFontSize = {
   1012: [pxToEm(10), { lineHeight: pxToEm(12) }],
   1022: [pxToEm(10), { lineHeight: pxToEm(22) }],
   1112: [pxToEm(11), { lineHeight: pxToEm(12) }],
+  1116: [pxToEm(11), { lineHeight: pxToEm(16) }],
   1118: [pxToEm(11), { lineHeight: pxToEm(18) }],
   1217: [pxToEm(12), { lineHeight: pxToEm(17) }],
   1222: [pxToEm(12), { lineHeight: pxToEm(22) }],
@@ -167,6 +170,7 @@ const remFontSize = {
   1620.8: [pxToEm(16), { lineHeight: pxToEm(20.8) }],
   1622: [pxToEm(16), { lineHeight: pxToEm(22) }],
   1616: [pxToEm(16), { lineHeight: pxToEm(16) }],
+  1618: [pxToEm(16), { lineHeight: pxToEm(18) }],
   1626: [pxToEm(16), { lineHeight: pxToEm(26) }],
   1718: [pxToEm(17), { lineHeight: pxToEm(18) }],
   1722: [pxToEm(17), { lineHeight: pxToEm(22) }],

@@ -26,8 +26,6 @@ const DetailBottomDrawer = (props) => {
   const onCloseDrawer = () => {
     setIsOpen(false);
 
-    // console.log(props.isOpen);
-
     router.push('/home');
   };
 
@@ -73,12 +71,6 @@ const DetailBottomDrawer = (props) => {
             >
               {t('checkReceipt')}
             </DialogTitle>
-            {/* <Heading
-              className="flex-1 text-center text-lg font-medium"
-              level={3}
-            >
-              {t('checkReceipt')}
-            </Heading> */}
           </div>
         </DrawerHeader>
         <div className="mx-2 flex flex-col gap-6">
