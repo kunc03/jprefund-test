@@ -29,7 +29,7 @@ const HomePage = async ({ params, searchParams }) => {
       <Header />
       <Heading className="bg-white text-center text-lg font-medium ">
         <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
-          <p className="grow text-center text-1822">
+          <p className="grow text-center text-1822 small:text-1422">
             {t('recordOfTaxFreePurchases')}
           </p>
           <ButtonFilter className="shrink-0" />

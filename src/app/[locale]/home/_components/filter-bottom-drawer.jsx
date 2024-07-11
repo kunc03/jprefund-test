@@ -152,12 +152,14 @@ const FilterBottomDrawer = () => {
               onHandleSelected={handleSelectedStartDate}
               selectedDate={filter?.startDate}
               isSelected={hasStartDate}
+              isInsideModal
             />
             <DatePicker
               label={t('endDate')}
               onHandleSelected={handleSelectedEndDate}
               selectedDate={filter?.endDate}
               isSelected={hasEndDate}
+              isInsideModal
             />
           </div>
           {/* Date end */}

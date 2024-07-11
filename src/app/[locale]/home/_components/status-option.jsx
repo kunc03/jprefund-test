@@ -21,7 +21,7 @@ const StatusOption = ({ t, filter }) => {
   };
 
   return (
-    <Select className="w-full ">
+    <Select className="w-full">
       <SelectTrigger
         className={cn(
           'text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-12 relative',
@@ -30,16 +30,12 @@ const StatusOption = ({ t, filter }) => {
         )}
       >
         <SelectValue placeholder={t('placeholder.status')} />
-        <span
-          className={cn(
-            'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-105',
-          )}
-        >
-          <ChevronDown size={24} />
-        </span>
       </SelectTrigger>
 
-      <SelectContent className="bg-white focus:!outline-none focus:!ring-transparent">
+      <SelectContent
+        className="bg-white focus:!outline-none focus:!ring-transparent"
+        isInsideModal
+      >
         <SelectItem
           className={cn(
             'text-1313 font-medium flex cursor-pointer items-center justify-between rounded-4 p-14 transition-colors mb-1',

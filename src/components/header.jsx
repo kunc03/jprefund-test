@@ -50,7 +50,15 @@ const Header = ({
             <span className="absolute -right-1 top-[-3px] size-[10px] rounded-full bg-red-light" />
           </div>
 
-          <Image alt="logo" height={20} src="/images/logo.svg" width={164} />
+          <Image alt="logo" height={34} src="/images/logo.svg" width={160} />
+
+          {/* <Image
+            alt="logo"
+            src="/images/logo.svg"
+            layout="fill"
+            objectFit="contain"
+            className="w-164 small:w-160"
+          /> */}
           <div className="flex flex-row gap-2">
             <div className="relative">
               <Image

@@ -56,7 +56,7 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
       role="button"
       tabIndex="0"
     >
-      <Heading className="text-1012 font-bold" level={5}>
+      <Heading className="text-1012 font-bold small:text-1718" level={5}>
         {title}
       </Heading>
       <Heading className="text-right text-lg  font-bold" level={1}>
