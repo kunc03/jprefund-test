@@ -15,7 +15,7 @@
       "setting": "設定",
       "changePassword": "パスワード変更",
       "languageSettings": "言語設定",
-      "accountDeletion": "アカウント削除",
+      "accountInformation": "アカウント",
       "helpSupport": "ヘルプサポート",
       "ifYouLoseYourReceipt": "レシートを無くした場合",
       "faq": "よくある質問",
@@ -161,6 +161,30 @@
     "metaDescription": "転送ページの記録",
     "title": "転送の記録"
   },
+  "accountInformation": {
+    "metaTitle": "口座情報",
+    "metaDescription": "アカウント情報ページ",
+    "title": "アカウント",
+    "change": "変更",
+    "email": "変更",
+    "accountDeletion": "アカウント削除",
+    "newEmail": "新しいメールアドレス",
+    "newPhone": "新しい電話番号",
+    "placeholder": {
+      "newEmail": "メールアドレス",
+      "currentPassword": "半角英数8文字以上",
+      "newPassword": "半角英数8文字以上",
+      "passwordConfirmation": "確認のためもう一度入力"
+    },
+    "currentPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "passwordConfirmation": "パスワード確認",
+    "password": "パスワード",
+    "cancel": "キャンセル",
+    "deleteAccount": "アカウントを削除",
+    "sendVerificationCode": "認証コードを送信",
+    "verificationCodeSent": "認証コードを送信しました"
+  },
   "detail": {
     "metaTitle": "購入品の詳細",
     "metaDescription": "購入品の詳細ページ",
@@ -292,75 +316,51 @@
     }
   },
   "zodError": {
-    "login": {
-      "email": {
-        "required": "メールアドレスは必須です",
-        "invalid": "メールの形式が間違っています"
-      },
-      "phone": {
-        "invalid": "電話機のフォーマットが間違っています"
-      },
-      "password": {
-        "required": "パスワードが必要",
-        "min": "最小パスワードは 8 です"
-      }
+    "email": {
+      "required": "メールアドレスは必須です",
+      "invalid": "メールの形式が間違っています"
     },
-    "register": {
-      "email": {
-        "required": "メールアドレスは必須です",
-        "invalid": "メールの形式が間違っています"
-      },
-      "phone": {
-        "required": "電話番号は必須です",
-        "invalid": "電話機のフォーマットが間違っています"
-      },
-      "otp": {
-        "required": "OTPは必須です",
-        "min": "最小OTPは6です"
-      }
+    "phone": {
+      "required": "電話番号は必須です",
+      "invalid": "電話機のフォーマットが間違っています"
     },
-    "settingPassword": {
-      "password": {
-        "required": "パスワードが必要",
-        "min": "最小パスワードは 8 です",
-        "mismatch": "パスワードと確認用パスワードは一致する必要があります"
-      },
-      "confPassword": {
-        "required": "パスワードの確認が必要です"
-      }
+    "password": {
+      "required": "パスワードが必要",
+      "min": "8文字以上で設定してください。",
+      "mismatch": "パスワードが一致しません。",
+      "confPass": "パスワードの確認が必要です",
+      "incorrect": "パスワードが違います。"
     },
-    "refundMethod": {
-      "cashless": {
-        "required": "キャッシュレスは必須"
-      },
-      "cardNumber": {
-        "required": "カード番号は必須です",
-        "format": "カード番号 14 桁以上"
-      },
-      "dateOfExpired": {
-        "required": "有効期限が切れた日付は必須です"
-      },
-      "securityCode": {
-        "required": "セキュリティコードが必要です"
-      },
-      "financialInstituteName": {
-        "required": "金融機関名は必須です"
-      },
-      "branchName": {
-        "required": "支店名 名前は必須です"
-      },
-      "accountNumber": {
-        "required": "口座番号名は必須です"
-      },
-      "accountType": {
-        "required": "アカウントタイプ名は必須です"
-      },
-      "firstName": {
-        "required": "名は必須です"
-      },
-      "lastName": {
-        "required": "姓は必須です"
-      }
+    "cashless": {
+      "required": "キャッシュレスは必須"
+    },
+    "cardNumber": {
+      "required": "カード番号は必須です",
+      "format": "カード番号 14 桁以上"
+    },
+    "dateOfExpired": {
+      "required": "有効期限が切れた日付は必須です"
+    },
+    "securityCode": {
+      "required": "セキュリティコードが必要です"
+    },
+    "financialInstituteName": {
+      "required": "金融機関名は必須です"
+    },
+    "branchName": {
+      "required": "支店名 名前は必須です"
+    },
+    "accountNumber": {
+      "required": "口座番号名は必須です"
+    },
+    "accountType": {
+      "required": "アカウントタイプ名は必須です"
+    },
+    "firstName": {
+      "required": "名は必須です"
+    },
+    "lastName": {
+      "required": "姓は必須です"
     }
   }
 }

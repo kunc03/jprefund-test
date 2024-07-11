@@ -15,7 +15,7 @@
       "setting": "Setting",
       "changePassword": "Change Password",
       "languageSettings": "Language settings",
-      "accountDeletion": "Account deletion",
+      "accountInformation": "Account information",
       "helpSupport": "Help Support",
       "ifYouLoseYourReceipt": "If you lose your receipt",
       "faq": "FAQ",
@@ -215,6 +215,30 @@
     "metaDescription": "Recording Of Transfer page",
     "title": "Recording of transfer"
   },
+  "accountInformation": {
+    "metaTitle": "Account Information",
+    "metaDescription": "Account Information page",
+    "title": "Account",
+    "change": "Change",
+    "email": "Email address",
+    "newEmail": "New Email address",
+    "newPhone": "New phone number",
+    "accountDeletion": "Account deletion",
+    "placeholder": {
+      "newEmail": "New Email address",
+      "currentPassword": "At least 8 alphanumeric characters",
+      "newPassword": "At least 8 alphanumeric characters",
+      "passwordConfirmation": "Enter again to confirm"
+    },
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "passwordConfirmation": "Password confirmation",
+    "password": "Password",
+    "cancel": "Cancel",
+    "deleteAccount": "Delete Account",
+    "sendVerificationCode": "Send verification code",
+    "verificationCodeSent": "Verification code sent"
+  },
   "detail": {
     "metaTitle": "Purchase details",
     "metaDescription": "Purchase details page",
@@ -293,76 +317,62 @@
       "lastName": "Last Name"
     }
   },
+
+  "helpSupport": {
+    "metaTitle": "Help Support",
+    "metaDescription": "Help Support page",
+    "title": "Help Support"
+  },
   "zodError": {
-    "login": {
-      "email": {
-        "required": "Email is required",
-        "invalid": "Format email is wrong"
-      },
-      "phone": {
-        "invalid": "Format phone is wrong"
-      },
-      "password": {
-        "required": "Password is required",
-        "min": "Min password is 8"
-      }
+    "email": {
+      "required": "Email is required.",
+      "invalid": "Format email is wrong."
     },
-    "register": {
-      "email": {
-        "required": "Email is required",
-        "invalid": "Format email is wrong"
-      },
-      "phone": {
-        "required": "Phone is required",
-        "invalid": "Format phone is wrong"
-      },
-      "otp": {
-        "required": "Otp is required",
-        "min": "Min Otp is 6"
-      }
+    "password": {
+      "required": "Password is required.",
+      "min": "Please set it to 8 characters or more.",
+      "mismatch": "Passwords do not match.",
+      "confPass": "Password confirmation is required.",
+      "incorrect": "Password is incorrect."
     },
-    "settingPassword": {
-      "password": {
-        "required": "Password is required",
-        "min": "Min password is 8",
-        "mismatch": "Password and confirm password must match"
-      },
-      "confPassword": {
-        "required": "Password confirmation is required"
-      }
+    "phone": {
+      "required": "Phone is required.",
+      "invalid": "Format phone is wrong."
     },
-    "refundMethod": {
-      "cashless": {
-        "required": "Cashless is required"
-      },
-      "cardNumber": {
-        "required": "Card number is required",
-        "format": "Card number min 14 digit"
-      },
-      "dateOfExpired": {
-        "required": "Date of expired is required"
-      },
-      "securityCode": {
-        "required": "Security code is required"
-      },
-      "financialInstituteName": {
-        "required": "Financial institute name is required"
-      },
-      "branchName": {
-        "required": "Branch name name is required"
-      },
-      "accountNumber": {
-        "required": "Account number name is required"
-      },
-      "accountType": {
-        "required": "Account type name is required"
-      },
-      "firstName": {
-        "required": "First name is required"
-      },
-      "lastName": {
-        "required": "Last name is required"
-      }
+    "otp": {
+      "required": "Otp is required.",
+      "min": "Min Otp is 6."
+    },
+    "cashless": {
+      "required": "Cashless is required."
+    },
+    "cardNumber": {
+      "required": "Card number is required.",
+      "format": "Card number min 14 digit."
+    },
+    "dateOfExpired": {
+      "required": "Date of expired is required."
+    },
+    "securityCode": {
+      "required": "Security code is required."
+    },
+    "financialInstituteName": {
+      "required": "Financial institute name is required."
+    },
+    "branchName": {
+      "required": "Branch name name is required."
+    },
+    "accountNumber": {
+      "required": "Account number name is required."
+    },
+    "accountType": {
+      "required": "Account type name is required."
+    },
+    "firstName": {
+      "required": "First name is required."
+    },
+    "lastName": {
+      "required": "Last name is required."
     }
   }
 }

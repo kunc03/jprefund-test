@@ -10,15 +10,15 @@ const passwordSettingSchema = z
           return value !== undefined && value.trim() !== '';
         },
         {
-          message: 'settingPassword.password.required',
+          message: 'password.required',
         },
       )
       .refine(
         (value) => {
-          return value.length === 8;
+          return value.length > 8;
         },
         {
-          message: 'settingPassword.password.min',
+          message: 'password.min',
         },
       ),
     confirmPassword: z
@@ -29,12 +29,12 @@ const passwordSettingSchema = z
           return value !== undefined && value.trim() !== '';
         },
         {
-          message: 'settingPassword.confPassword.required',
+          message: 'confPass.required',
         },
       ),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: 'settingPassword.password.mismatch',
+    message: 'password.mismatch',
     path: ['confirmPassword'],
   });
 
