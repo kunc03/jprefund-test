@@ -2,14 +2,6 @@ import React from 'react';
 import { cn, formatDateTime } from '@/utils';
 
 const TransactionProcess = ({ transaction, isLast }) => {
-  /* if (status === 'JC Approval.') {
-    statusStyle = 'text-orange font-semibold';
-  } else if (status === 'Completed') {
-    statusStyle = 'text-blue-system font-semibold';
-    additionalMessage =
-      "<span class='noto-sans-jp-500 text-gray-100 leading-4 pr-8'>with settlement ID 6684 - 758 - A2 - DD.</span>";
-  } */
-
   const getContent = (content) => {
     return content.replace(
       /(ready to submit|jc approval|completed)/gi,

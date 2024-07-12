@@ -70,6 +70,7 @@ const remPadding = {
   33.5: pxToEm(33.5),
   36: pxToEm(36),
   43: pxToEm(43),
+  55: pxToEm(55),
   65: pxToEm(65),
   77: pxToEm(77),
   80: pxToEm(80),
@@ -93,6 +94,8 @@ const remMargin = {
   43: pxToEm(43),
   46: pxToEm(46),
   48: pxToEm(48),
+  50: pxToEm(50),
+  80: pxToEm(80),
   100: pxToEm(100),
 };
 
@@ -133,6 +136,7 @@ const remSize = {
   138: pxToEm(138),
   145: pxToEm(145),
   154: pxToEm(154),
+  160: pxToEm(160),
   164: pxToEm(164),
   173: pxToEm(173),
   187: pxToEm(187),
@@ -211,6 +215,10 @@ const tailwindConfig = {
       padding: '2rem',
       screens: {
         '2xl': pxToEm(1400),
+        sm: pxToEm(640),
+        md: pxToEm(786),
+        lg: pxToEm(1024),
+        xl: pxToEm(1280),
       },
     },
     colors: {
@@ -251,6 +259,10 @@ const tailwindConfig = {
       shadow: '#000 / 0.15',
     },
     extend: {
+      screens: {
+        small: { min: '150px', max: '300px' },
+      },
+
       fontFamily: {
         sans: ['var(--font-sans)'],
       },

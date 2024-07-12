@@ -16,7 +16,6 @@ import {
   SelectValue,
 } from '@/components';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/utils';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -25,7 +24,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
     }}
   >
     <SelectTrigger
-      className="h-full w-100 font-bold focus:!outline-none focus:!ring-transparent"
+      className="h-full w-100 !p-9.5 font-bold focus:!outline-none focus:!ring-transparent"
       value={selectedPhoneArea}
     >
       <SelectValue placeholder={t('form.placeholder.phoneArea')} />
@@ -88,7 +87,6 @@ const Form = ({ type }) => {
             render={({ field }) => (
               <Input
                 hasForm
-                className={cn('!border !border-gray-300 !rounded-6')}
                 label={t('form.label.email')}
                 placeholder={t('form.placeholder.email')}
                 disabled={false}

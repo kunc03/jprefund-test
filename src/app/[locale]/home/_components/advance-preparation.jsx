@@ -34,14 +34,14 @@ const AdvancePreparation = () => {
     <Dialog>
       <DialogTrigger className="w-full">
         <div
-          className="mt-3 flex h-9 cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white"
+          className="flex h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
           aria-hidden="true"
           role="button"
           tabIndex="0"
           key="preparationHasNotBeenCompleted"
         >
           <Image alt="info" height={20} src="/images/info.svg" width={20} />
-          <span className="text-1414 font-medium">
+          <span className="text-1414 font-medium small:text-1022">
             {t('preparationHasNotBeenCompleted')}
           </span>
           <ChevronRight />

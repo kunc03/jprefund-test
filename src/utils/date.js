@@ -1,36 +1,60 @@
 const formatDateTime = (dateTimeStr, options = { showTime: true }) => {
-  const date = new Date(dateTimeStr);
+  try {
+    const date = new Date(dateTimeStr);
 
-  const dateOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: '2-digit',
-  };
+    const dateOptions = {
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit',
+    };
 
-  const timeOptions = {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  };
+    const timeOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+    };
 
-  const dateFormatter = new Intl.DateTimeFormat('en-US', dateOptions);
-  const timeFormatter = new Intl.DateTimeFormat('en-US', timeOptions);
+    const dateFormatter = new Intl.DateTimeFormat('en-US', dateOptions);
+    const timeFormatter = new Intl.DateTimeFormat('en-US', timeOptions);
 
-  const formattedDate = dateFormatter.format(date);
-  const formattedTime = timeFormatter.format(date);
+    const formattedDate = dateFormatter.format(date);
+    const formattedTime = timeFormatter.format(date);
 
-  const formattedDateParts = formattedDate.split(' ');
-  const day = formattedDateParts[1].replace(',', '');
-  const month = formattedDateParts[0];
-  const year = formattedDateParts[2];
+    const formattedDateParts = formattedDate.split(' ');
+    const day = formattedDateParts[1].replace(',', '');
+    const month = formattedDateParts[0];
+    const year = formattedDateParts[2];
 
-  const finalFormattedDate = `${year} ${month} ${day}`;
+    const finalFormattedDate = `${year} ${month} ${day}`;
 
-  if (options.showTime) {
-    return `${finalFormattedDate} at ${formattedTime}`;
+    if (options.showTime) {
+      return `${finalFormattedDate} at ${formattedTime}`;
+    }
+
+    return formattedDate;
+  } catch (error) {
+    return dateTimeStr;
   }
+};
 
-  return formattedDate;
+const formatTimeOnly = (dateTimeStr) => {
+  try {
+    const date = new Date(dateTimeStr);
+
+    const timeOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+    };
+
+    const timeFormatter = new Intl.DateTimeFormat('en-US', timeOptions);
+
+    const formattedTime = timeFormatter.format(date);
+
+    return formattedTime;
+  } catch (error) {
+    return dateTimeStr;
+  }
 };
 
 const getDateOnly = (dateTimeStr) => {
@@ -44,23 +68,34 @@ const formatSecondToTime = (seconds) => {
 };
 
 const formatDateSimple = (dateTimeStr) => {
-  const date = new Date(dateTimeStr);
+  try {
+    const date = new Date(dateTimeStr);
 
-  const options = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  };
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    };
 
-  const dateFormatter = new Intl.DateTimeFormat('en-US', options);
-  const formattedDate = dateFormatter.format(date);
+    const dateFormatter = new Intl.DateTimeFormat('en-US', options);
+    const formattedDate = dateFormatter.format(date);
 
-  const parts = formattedDate.split(' ');
-  const month = parts[0];
-  const day = parts[1].replace(',', '');
-  const year = parts[2];
+    const parts = formattedDate.split(' ');
+    const month = parts[0];
+    const day = parts[1].replace(',', '');
+    const year = parts[2];
 
-  return `${year} ${month}. ${day}`;
+    return `${year} ${month}. ${day}`;
+  } catch (error) {
+    console.log(error);
+    return dateTimeStr;
+  }
 };
 
-export { formatDateTime, getDateOnly, formatSecondToTime, formatDateSimple };
+export {
+  formatDateTime,
+  getDateOnly,
+  formatSecondToTime,
+  formatDateSimple,
+  formatTimeOnly,
+};

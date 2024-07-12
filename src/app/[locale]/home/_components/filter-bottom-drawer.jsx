@@ -14,8 +14,8 @@ import {
   DatePicker,
 } from '@/components';
 import { useDrawer } from '@/hooks';
-import { SelectOptions } from './select';
 import { cn } from '@/utils';
+import { StatusOption } from './status-option';
 
 const FilterBottomDrawer = () => {
   const { isOpen, setIsOpen } = useDrawer();
@@ -82,34 +82,33 @@ const FilterBottomDrawer = () => {
               {t('status')}
             </Heading>
 
-            <SelectOptions
+            <StatusOption
               t={t}
               handleChange={handleSelectedStatus}
-              values={['submitted', 'jcApproval', 'storeApproval']}
               selectedDate={filter?.status}
               isSelected={hasStatus}
             />
           </div>
 
           {/* Date */}
-          <div className="flex flex-col gap-3">
-            <Heading level={5} className="text-1422 font-medium">
-              {t('period')}
-            </Heading>
-            <div className="flex w-full flex-row justify-between gap-3">
-              <DatePicker
-                label={t('startDate')}
-                onHandleSelected={handleSelectedStartDate}
-                selectedDate={filter?.startDate}
-                isSelected={hasStartDate}
-              />
-              <DatePicker
-                label={t('endDate')}
-                onHandleSelected={handleSelectedEndDate}
-                selectedDate={filter?.endDate}
-                isSelected={hasEndDate}
-              />
-            </div>
+          <Heading level={5} className="text-1422 font-medium">
+            {t('period')}
+          </Heading>
+          <div className="flex w-full flex-row justify-between gap-3 small:flex-wrap">
+            <DatePicker
+              label={t('startDate')}
+              onHandleSelected={handleSelectedStartDate}
+              selectedDate={filter?.startDate ?? new Date()}
+              isSelected={hasStartDate}
+              isInsideModal
+            />
+            <DatePicker
+              label={t('endDate')}
+              onHandleSelected={handleSelectedEndDate}
+              selectedDate={filter?.endDate ?? new Date()}
+              isSelected={hasEndDate}
+              isInsideModal
+            />
           </div>
           {/* Date end */}
         </div>
