@@ -34,7 +34,7 @@ const Input = React.forwardRef(
         autoComplete="off"
         autoCorrect="off"
         className={cn(
-          'flex w-full bg-white h-50 px-14 py-18 rounded-6 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
+          'flex w-full bg-white px-14 py-18 rounded-6 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
           type === 'number' &&
             'file::-webkit-outer-spin-button, file::-webkit-inner-spin-button { display: none; }',
