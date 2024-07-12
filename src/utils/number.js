@@ -8,14 +8,13 @@ const formatNumber = (number, isCurrency = false) => {
   };
 
   if (isCurrency && number > 0) {
-    formatterOptions.currencyDisplay = 'code'; // Menggunakan kode (JPY) sebagai simbol
-    formatterOptions.style = 'currency';
-    formatterOptions.currency = 'JPY';
+    formatterOptions.currencyDisplay = 'symbol';
   }
 
   const formatter = new Intl.NumberFormat('ja-JP', formatterOptions);
 
-  if (number < 0 && isCurrency) return `JPY ${formatter.format(number)}`;
+  if (isCurrency) return `¥ ${formatter.format(number)}`;
+
   return formatter.format(number);
 };
 

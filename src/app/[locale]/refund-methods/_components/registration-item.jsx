@@ -18,7 +18,7 @@ const RegistrationItem = ({ item }) => {
 
   return (
     <div
-      className="relative mx-28 flex flex-row items-center justify-between rounded-md border border-gray-500 bg-white px-13 py-33.5"
+      className="relative mx-28 flex flex-row flex-wrap items-center justify-between rounded-md border border-gray-500 bg-white px-13 py-33.5"
       key={item.id}
     >
       <div
@@ -55,8 +55,10 @@ const RegistrationItem = ({ item }) => {
       )}
       {item.isRegister && <ButtonDeleteRegistration item={item} />}
       {!item.isRegister && (
-        <div className="flex flex-row items-center justify-between gap-11">
-          <p className="text-1112 font-bold text-gray">{t('registration')}</p>
+        <div className="flex grow flex-row flex-wrap items-center justify-between gap-11 ">
+          <p className=" grow text-end text-1112 font-bold text-gray">
+            {t('registration')}
+          </p>
           <ButtonAddRegistration slug={item.slug} />
         </div>
       )}

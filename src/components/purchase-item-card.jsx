@@ -5,7 +5,7 @@
 import { StatusContainer } from './status-container';
 import { StoreInformation } from './store-information';
 import React from 'react';
-import { formatDateTime, formatNumber } from '@/utils';
+import { formatTimeOnly, formatNumber } from '@/utils';
 import { useRouter } from 'next/navigation';
 
 const PurchaseItemCard = ({ item }) => {
@@ -36,7 +36,7 @@ const PurchaseItemCard = ({ item }) => {
       <div className="flex w-full flex-row justify-between">
         <StatusContainer label={item.label} color={colorLabelContainer} />
         <p className="!text-1322 font-medium text-gray">
-          {formatDateTime(item.date)}
+          {formatTimeOnly(item.date)}
         </p>
       </div>
       <div>

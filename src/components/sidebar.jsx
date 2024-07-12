@@ -33,21 +33,28 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
       )}
     >
       {subMenu.isRequired && (
-        <div className="absolute -left-2 top-2 size-10 rounded-full bg-red-light" />
+        <div className="absolute left-0 top-3 size-10 rounded-full bg-red-light small:top-5" />
       )}
       <div className="flex flex-row items-center justify-start gap-12">
         {subMenu.icon}
-        <p className="text-1416 font-medium text-gray ">{subMenu.label}</p>
+        <p className="text-1416 font-medium text-gray small:text-1010  ">
+          {subMenu.label}
+        </p>
       </div>
-      <div className="flex flex-1 shrink-0 flex-row items-center  justify-end gap-2">
-        {subMenu.isRequired && (
-          <span className="text-1222 font-bold text-red">{t('required')}</span>
-        )}
-        {subMenu.isUnregister && (
-          <span className="text-1222 font-normal text-gray">
-            {t('unregistered')}
-          </span>
-        )}
+      <div className="flex shrink-0 grow flex-row items-center justify-end gap-2">
+        <div className="flex flex-row flex-wrap gap-2 small:flex-col small:gap-0.5">
+          {subMenu.isRequired && (
+            <span className="text-1222 font-bold text-red small:text-1022">
+              {t('required')}
+            </span>
+          )}
+          {subMenu.isUnregister && (
+            <span className="text-1222 font-normal  text-gray small:text-1022">
+              {t('unregistered')}
+            </span>
+          )}
+        </div>
+
         <ChevronRight size={16} className="place-items-end text-gray" />
       </div>
     </div>
@@ -57,7 +64,9 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
 const MenuItem = ({ menu, t }) => {
   return (
     <div className="w-full">
-      <Heading className="text-1718 font-bold text-gray">{menu.label}</Heading>
+      <Heading className="text-1718 font-bold text-gray sm:text-1416">
+        {menu.label}
+      </Heading>
       {menu.subMenu.map((item, index) => {
         return (
           <Link
@@ -210,12 +219,13 @@ const Sidebar = () => {
 
   return (
     <div className="fixed left-0 top-0 flex h-full w-10/12 overflow-y-auto bg-white px-15 pt-20">
-      <div className="flex grow flex-col gap-29  pb-4">
+      <div className="flex h-full flex-col gap-29">
         {ROUTES.map((item) => {
           return (
             <MenuItem menu={item} key={`${item.href}-${item.menu}`} t={t} />
           );
         })}
+        <div className="size-38 text-white">&nbsp;</div>
       </div>
       <div className="fixed inset-x-0 bottom-0 w-10/12 bg-white py-15 text-center text-1422 font-bold text-red">
         {t('logout')}

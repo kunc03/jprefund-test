@@ -18,6 +18,7 @@ const DatePicker = ({
   onHandleSelected,
   selectedDate,
   isSelected = null,
+  isInsideModal = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +34,7 @@ const DatePicker = ({
               : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
           )}
         >
-          {selectedDate ? (
+          {selectedDate && isSelected ? (
             format(selectedDate, 'dd/MM/yy')
           ) : (
             <span className=" font-medium text-gray-300">{label}</span>
@@ -44,7 +45,9 @@ const DatePicker = ({
           />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0">
+      <PopoverContent
+        className={cn('w-auto p-0', isInsideModal ? 'z-50' : 'z-30')}
+      >
         <Calendar
           mode="single"
           selected={selectedDate}
@@ -52,7 +55,7 @@ const DatePicker = ({
             onHandleSelected(day, selectedDay, activeModifiers, e);
             setIsOpen(false);
           }}
-          initialFocus
+          // initialFocus
           className="bg-white"
         />
       </PopoverContent>
