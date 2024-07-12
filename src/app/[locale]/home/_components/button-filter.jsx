@@ -4,13 +4,13 @@ import { useDrawer } from '@/hooks';
 import Image from 'next/image';
 import { cn } from '@/utils';
 
-const ButtonFilter = ({ hasBack = false }) => {
+const ButtonFilter = ({ className, hasBack = false }) => {
   const { setIsOpen } = useDrawer();
 
   return (
     <div
       className={cn(
-        '',
+        className,
         hasBack ? 'items-center justify-start' : 'items-center justify-between',
       )}
     >
@@ -18,10 +18,10 @@ const ButtonFilter = ({ hasBack = false }) => {
         <div className="absolute right-2.5">
           <Image
             alt="filter-button"
-            className="cursor-pointer"
-            height={24}
+            className="size-auto cursor-pointer"
+            height={4}
             src="/icons/triple-dot.svg"
-            width={24}
+            width={20}
             onClick={() => setIsOpen(true)}
           />
         </div>
