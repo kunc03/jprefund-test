@@ -16,7 +16,6 @@ import {
   SelectValue,
 } from '@/components';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/utils';
 
 const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea, t }) => (
   <Select
@@ -84,7 +83,6 @@ const Form = ({ type }) => {
             render={({ field }) => (
               <Input
                 hasForm
-                className={cn('!border !border-gray-300 !rounded-6')}
                 label={t('form.label.email')}
                 placeholder={t('form.placeholder.email')}
                 disabled={false}

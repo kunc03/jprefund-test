@@ -103,7 +103,7 @@ const ContentCreditCard = () => {
                               : selectedCard.image
                           }
                           width={34}
-                          className="size-34"
+                          className="size-34 min-h-34 min-w-34"
                         />
                       }
                       ref={field.ref}

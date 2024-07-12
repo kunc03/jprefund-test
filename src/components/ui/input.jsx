@@ -25,7 +25,7 @@ const Input = React.forwardRef(
     },
     ref,
   ) => {
-    const PreInputComp = <div className="px-3">{pre}</div>;
+    const PreInputComp = <div className="pl-14 pr-3">{pre}</div>;
     const SufInputComp = <div className="px-3">{suf}</div>;
 
     const InputComp = (
@@ -34,7 +34,7 @@ const Input = React.forwardRef(
         autoComplete="off"
         autoCorrect="off"
         className={cn(
-          'flex w-full bg-white px-2.5 rounded-6 py-18 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
+          'flex w-full bg-white h-50 px-14 py-18 rounded-6 text-1613 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-medium placeholder:text-1613 placeholder:text-gray-300 disabled:cursor-not-allowed disabled:text-white focus-visible:outline-none focus-visible:ring-offset-0 ',
           className,
           type === 'number' &&
             'file::-webkit-outer-spin-button, file::-webkit-inner-spin-button { display: none; }',
@@ -60,7 +60,7 @@ const Input = React.forwardRef(
         <div className="!mt-0 flex flex-1 flex-col ">
           <div
             className={cn(
-              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border-gray-300 focus-within:rounded-6 bg-white',
+              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border border-gray-300 focus-within:rounded-6 rounded-6 bg-white',
               disabled ? 'cursor-not-allowed' : '',
             )}
           >

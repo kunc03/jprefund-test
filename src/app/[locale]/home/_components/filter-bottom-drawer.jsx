@@ -92,7 +92,7 @@ const FilterBottomDrawer = () => {
           <Heading level={5} className="text-1422 font-medium">
             {t('period')}
           </Heading>
-          <div className="flex w-full flex-row flex-wrap justify-between gap-3">
+          <div className="flex w-full flex-row justify-between gap-3 small:flex-wrap">
             <DatePicker
               label={t('startDate')}
               onHandleSelected={handleSelectedStartDate}

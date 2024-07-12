@@ -196,11 +196,7 @@ const ContentBankTransfer = () => {
                         label={t('branchName')}
                         onValueChange={field.onChange}
                       >
-                        <SelectTrigger
-                          hasForm
-                          value={field.value}
-                          className="!h-50 !px-14 !py-18"
-                        >
+                        <SelectTrigger hasForm value={field.value}>
                           <SelectValue
                             placeholder={t('placeholder.pleaseSelect')}
                           />
@@ -229,7 +225,6 @@ const ContentBankTransfer = () => {
                         disabled={false}
                         {...field}
                         type="number"
-                        className="!h-50 border border-gray-500 !px-14 !py-18"
                       />
                     );
                   }}
@@ -248,11 +243,7 @@ const ContentBankTransfer = () => {
                         label={t('accountType')}
                         onValueChange={field.onChange}
                       >
-                        <SelectTrigger
-                          hasForm
-                          value={field.value}
-                          className="!h-50 !px-14 !py-18"
-                        >
+                        <SelectTrigger hasForm value={field.value}>
                           <SelectValue
                             placeholder={t('placeholder.pleaseSelect')}
                           />
@@ -277,7 +268,6 @@ const ContentBankTransfer = () => {
                         label={t('firstName')}
                         disabled={false}
                         placeholder={t('placeholder.firstName')}
-                        className="!h-50 border border-gray-500 !px-14 !py-18"
                         {...field}
                       />
                     );
@@ -294,7 +284,7 @@ const ContentBankTransfer = () => {
                         label={t('lastName')}
                         disabled={false}
                         placeholder={t('placeholder.lastName')}
-                        className="!h-50 border border-gray-500 !px-14 !py-18"
+                        className="!h-50  !px-14 !py-18"
                         {...field}
                       />
                     );
@@ -306,7 +296,7 @@ const ContentBankTransfer = () => {
         </div>
         {isSelected && (
           <Button
-            className="w-173 "
+            className="w-173"
             onClick={handleSubmitClick}
             disabled={!form.formState.isValid}
           >
