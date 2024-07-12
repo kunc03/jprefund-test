@@ -6,7 +6,7 @@ import { useActiveSummary } from '../_hooks/use-active-summary';
 import { isObjectEmpty } from '@/utils';
 
 const EmptyState = ({ t }) => (
-  <div className="mx-auto size-full flex-1 flex-col gap-2 pb-6 md:max-w-xs ">
+  <div className="mx-auto size-full flex-1 flex-col gap-2 md:max-w-xs ">
     <div className="mt-14 flex shrink-0 flex-col items-center justify-center gap-2">
       <Heading className="text-lg font-bold small:text-1422">
         {t('noTaxExemptionRecordsSaved')}
@@ -30,7 +30,7 @@ const Content = () => {
   const { selectedData } = useActiveSummary();
 
   return (
-    <section className="flex h-[calc(100dvh-230px)] flex-wrap pb-8">
+    <section className="flex h-[calc(100dvh-230px)] flex-wrap pb-3">
       {isObjectEmpty(selectedData) && <EmptyState t={t} />}
       {!isObjectEmpty(selectedData) && (
         <div className="flex h-full flex-1 flex-col items-center overflow-y-auto">

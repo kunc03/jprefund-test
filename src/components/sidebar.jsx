@@ -33,7 +33,7 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
       )}
     >
       {subMenu.isRequired && (
-        <div className="absolute -left-2 top-2 size-10 rounded-full bg-red-light" />
+        <div className="absolute left-0 top-3 size-10 rounded-full bg-red-light small:top-5" />
       )}
       <div className="flex flex-row items-center justify-start gap-12">
         {subMenu.icon}
