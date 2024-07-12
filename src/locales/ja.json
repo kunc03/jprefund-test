@@ -161,6 +161,14 @@
     "metaDescription": "転送ページの記録",
     "title": "転送の記録"
   },
+  "faq": {
+    "metaTitle": "よくある質問",
+    "metaDescription": "よくある質問ページ",
+    "title": "FAQ",
+    "aboutTheService": "サービスについて",
+    "howToUse": "使い方について"
+    
+  },
   "accountInformation": {
     "metaTitle": "口座情報",
     "metaDescription": "アカウント情報ページ",

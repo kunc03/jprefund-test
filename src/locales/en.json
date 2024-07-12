@@ -215,6 +215,13 @@
     "metaDescription": "Recording Of Transfer page",
     "title": "Recording of transfer"
   },
+  "faq": {
+    "metaTitle": "FAQ",
+    "metaDescription": "FAQ page",
+    "title": "FAQ",
+    "aboutTheService": "About the Service",
+    "howToUse": "How to use"
+  },
   "accountInformation": {
     "metaTitle": "Account Information",
     "metaDescription": "Account Information page",
