@@ -22,7 +22,7 @@ const ButtonCamera = () => {
         }}
         size="floating"
         variant="floating"
-        className="fixed inset-x-1/2 bottom-2 z-50 -translate-x-1/2 -translate-y-1/2 bg-red"
+        className="fixed inset-x-1/2 bottom-0 z-50 -translate-x-1/2 -translate-y-1/2 bg-red"
       >
         <Image alt="logo" height={32} src="/images/qr.svg" width={32} />
       </Button>
