@@ -161,6 +161,11 @@
     "metaDescription": "転送ページの記録",
     "title": "転送の記録"
   },
+  "refundStatus": {
+    "metaTitle": "返金ステータス",
+    "metaDescription": "返済状況ページ",
+    "title": "返金ステータス"
+  },
   "faq": {
     "metaTitle": "よくある質問",
     "metaDescription": "よくある質問ページ",
