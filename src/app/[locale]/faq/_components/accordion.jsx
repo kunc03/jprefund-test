@@ -22,9 +22,9 @@ const Accordion = ({ label, content }) => {
     >
       <AccordionItem
         value={`${label}`}
-        className="!border-b border-b-gray-400 bg-white px-18 py-24"
+        className="!border-b border-b-gray-400 bg-white"
       >
-        <AccordionTrigger className="flex w-full cursor-default flex-row ">
+        <AccordionTrigger className="flex w-full cursor-default flex-row px-18 py-24">
           <Image src="/icons/q.svg" width={24} height={24} alt="icon" />
           <p className="flex-1 text-1521 font-medium text-gray">{label}</p>
           {!isOpen && (
@@ -46,9 +46,8 @@ const Accordion = ({ label, content }) => {
             />
           )}
         </AccordionTrigger>
-        <AccordionContent className="! w-full py-20 md:max-w-md">
+        <AccordionContent className="! w-full bg-gray-500 px-18 py-20 md:max-w-md">
           <p className="text-start text-1422 font-normal text-black">
-            {' '}
             {content}
           </p>
         </AccordionContent>

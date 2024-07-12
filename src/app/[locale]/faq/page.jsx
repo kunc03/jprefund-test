@@ -19,7 +19,7 @@ const Faq = async ({ params }) => {
       <Header hasBack title={t('title')} />
       <div className="flex grow flex-col ">
         <div className="flex flex-1 flex-col ">
-          <Heading className="flex h-58 items-end  border-b border-b-gray-500 pb-12 pl-16 text-1616 font-semibold text-black">
+          <Heading className="flex h-58 items-end  border-b border-b-gray-500 bg-white pb-12 pl-16 text-1616 font-semibold text-black">
             {t('aboutTheService')}
           </Heading>
           {[...Array(10)].map((_, index) => {
@@ -33,7 +33,7 @@ const Faq = async ({ params }) => {
           })}
         </div>
         <div className="flex flex-1 flex-col ">
-          <Heading className="flex h-58 items-end  border-b border-b-gray-500 pb-12 pl-16 text-1616 font-semibold text-black">
+          <Heading className="flex h-58 items-end  border-b border-b-gray-500 bg-white pb-12 pl-16 text-1616 font-semibold text-black">
             {t('howToUse')}
           </Heading>
           {[...Array(10)].map((_, index) => {
