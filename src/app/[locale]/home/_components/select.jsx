@@ -44,7 +44,9 @@ const SelectOptions = ({
           )}
           classNameIcon={cn(isSelected && 'text-white')}
         >
-          <SelectValue>{isSelected ? t(selectedStatus) : '---'}</SelectValue>
+          <SelectValue placeholder="---">
+            {!isSelected ? '---' : t(selectedStatus)}
+          </SelectValue>
         </SelectTrigger>
         <SelectContent isInsideModal className="bg-white">
           {values.map((value) => (
