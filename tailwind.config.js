@@ -257,7 +257,7 @@ const tailwindConfig = {
     },
     extend: {
       screens: {
-        small: { min: '280px', max: '300px' },
+        small: { min: '150px', max: '300px' },
       },
 
       fontFamily: {

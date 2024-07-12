@@ -43,10 +43,15 @@ const HomePage = async ({ params, searchParams }) => {
             status="refundApplication"
           />
           <SummaryCard
+            number={99999999}
             title={t('remittanceProcedureCompleted')}
             status="remittanceProcedureCompleted"
           />
-          <SummaryCard title={t('nonRefundable')} status="nonRefundable" />
+          <SummaryCard
+            number={99999999}
+            title={t('nonRefundable')}
+            status="nonRefundable"
+          />
         </div>
       </div>
       <AdvancePreparation />

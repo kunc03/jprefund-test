@@ -37,7 +37,9 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
       )}
       <div className="flex flex-row items-center justify-start gap-12">
         {subMenu.icon}
-        <p className="text-1416 font-medium text-gray ">{subMenu.label}</p>
+        <p className="text-1416 font-medium text-gray small:text-1010  ">
+          {subMenu.label}
+        </p>
       </div>
       <div className="flex shrink-0 grow flex-row items-center justify-end gap-2">
         <div className="flex flex-row flex-wrap gap-2 small:flex-col small:gap-0.5">
@@ -62,7 +64,9 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
 const MenuItem = ({ menu, t }) => {
   return (
     <div className="w-full">
-      <Heading className="text-1718 font-bold text-gray">{menu.label}</Heading>
+      <Heading className="text-1718 font-bold text-gray sm:text-1416">
+        {menu.label}
+      </Heading>
       {menu.subMenu.map((item, index) => {
         return (
           <Link
