@@ -26,26 +26,28 @@ const HomePage = async ({ params, searchParams }) => {
 
   return (
     <>
-      <Header />
-      <Heading className="bg-white text-center text-lg font-medium ">
-        <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
-          <p className="grow text-center text-1822 small:text-1422">
-            {t('recordOfTaxFreePurchases')}
-          </p>
-          <ButtonFilter className="shrink-0" />
+      <div className="bg-white">
+        <Header />
+        <Heading className="bg-white text-center text-lg font-medium ">
+          <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
+            <p className="grow text-center text-1822 small:text-1422">
+              {t('recordOfTaxFreePurchases')}
+            </p>
+            <ButtonFilter className="shrink-0" />
+          </div>
+        </Heading>
+        <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pt-3.5">
+          <SummaryCard
+            number={99999999}
+            title={t('refundApplication')}
+            status="refundApplication"
+          />
+          <SummaryCard
+            title={t('remittanceProcedureCompleted')}
+            status="remittanceProcedureCompleted"
+          />
+          <SummaryCard title={t('nonRefundable')} status="nonRefundable" />
         </div>
-      </Heading>
-      <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pt-3.5">
-        <SummaryCard
-          number={99999999}
-          title={t('refundApplication')}
-          status="refundApplication"
-        />
-        <SummaryCard
-          title={t('remittanceProcedureCompleted')}
-          status="remittanceProcedureCompleted"
-        />
-        <SummaryCard title={t('nonRefundable')} status="nonRefundable" />
       </div>
       <AdvancePreparation />
 
