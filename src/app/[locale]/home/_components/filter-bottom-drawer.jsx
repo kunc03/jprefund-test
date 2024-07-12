@@ -14,7 +14,8 @@ import {
   DatePicker,
 } from '@/components';
 import { useDrawer } from '@/hooks';
-import { StatusOption } from './status-option';
+import { SelectOptions } from './select';
+import { cn } from '@/utils';
 
 const FilterBottomDrawer = () => {
   const { isOpen, setIsOpen } = useDrawer();
@@ -48,13 +49,13 @@ const FilterBottomDrawer = () => {
   const handleResetFilter = () => {
     setFilter({
       status: null,
-      sort: null,
       startDate: null,
       endDate: null,
     });
   };
   const hasStartDate = filter?.startDate !== null;
   const hasEndDate = filter?.endDate !== null;
+  const hasStatus = filter?.status !== null;
 
   return (
     <Drawer onClose={onCloseDrawer} open={isOpen}>
@@ -74,42 +75,46 @@ const FilterBottomDrawer = () => {
           </DrawerTitle>
         </DrawerHeader>
 
-        <div className="flex flex-col gap-3 px-27.5">
-          {/* Status start */}
-          <Heading level={5} className="text-1422 font-medium">
-            {t('status')}
-          </Heading>
+        <div className={cn('flex flex-col px-27.5 gap-5')}>
+          {/* Status */}
+          <div className="flex flex-col gap-3">
+            <Heading level={5} className="text-1422 font-medium">
+              {t('status')}
+            </Heading>
 
-          <StatusOption
-            t={t}
-            selectedDate={filter?.status}
-            handleSelectedStatus={handleSelectedStatus}
-            filter={filter?.status}
-            setFilter={setFilter}
-          />
+            <SelectOptions
+              t={t}
+              handleChange={handleSelectedStatus}
+              values={['submitted', 'jcApproval', 'storeApproval']}
+              selectedDate={filter?.status}
+              isSelected={hasStatus}
+            />
+          </div>
 
           {/* Date */}
-          <Heading level={5} className="text-1422 font-medium">
-            {t('period')}
-          </Heading>
-          <div className="flex w-full flex-row justify-between gap-3">
-            <DatePicker
-              label={t('startDate')}
-              onHandleSelected={handleSelectedStartDate}
-              selectedDate={filter?.startDate}
-              isSelected={hasStartDate}
-            />
-            <DatePicker
-              label={t('endDate')}
-              onHandleSelected={handleSelectedEndDate}
-              selectedDate={filter?.endDate}
-              isSelected={hasEndDate}
-            />
+          <div className="flex flex-col gap-3">
+            <Heading level={5} className="text-1422 font-medium">
+              {t('period')}
+            </Heading>
+            <div className="flex w-full flex-row justify-between gap-3">
+              <DatePicker
+                label={t('startDate')}
+                onHandleSelected={handleSelectedStartDate}
+                selectedDate={filter?.startDate}
+                isSelected={hasStartDate}
+              />
+              <DatePicker
+                label={t('endDate')}
+                onHandleSelected={handleSelectedEndDate}
+                selectedDate={filter?.endDate}
+                isSelected={hasEndDate}
+              />
+            </div>
           </div>
           {/* Date end */}
         </div>
 
-        <DrawerFooter className="mt-5 flex flex-col items-center justify-center gap-17">
+        <DrawerFooter className="my-10 flex flex-col items-center justify-center gap-17">
           <Button
             className="w-249"
             variant="outline"

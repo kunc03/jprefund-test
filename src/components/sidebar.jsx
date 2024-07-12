@@ -163,14 +163,6 @@ const Sidebar = () => {
         label: t('routes.helpSupport'),
         subMenu: [
           {
-            href: `/${locale}/if-you-lose-your-receipts`,
-            label: t('routes.ifYouLoseYourReceipt'),
-            active: pathname === `/if-you-lose-your-receipts`,
-            icon: <IconImage image="if-you-lose-your-receipt.svg" />,
-            isRequired: false,
-            isUnregister: false,
-          },
-          {
             href: `/${locale}/faq`,
             label: t('routes.faq'),
             active: pathname === `/faq`,
@@ -199,6 +191,14 @@ const Sidebar = () => {
             label: t('routes.userTerms'),
             active: pathname === `/user-terms`,
             icon: <IconImage image="user-term.svg" />,
+            isRequired: false,
+            isUnregister: false,
+          },
+          {
+            href: `/${locale}/if-you-lose-your-receipts`,
+            label: t('routes.ifYouLoseYourReceipt'),
+            active: pathname === `/if-you-lose-your-receipts`,
+            icon: <IconImage image="if-you-lose-your-receipt.svg" />,
             isRequired: false,
             isUnregister: false,
           },

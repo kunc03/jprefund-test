@@ -39,14 +39,14 @@ const InputDate = ({
       <PopoverTrigger asChild>
         <Button
           className={cn(
-            'w-full rounded-[6px] justify-between text-1313 !py-6 px-3',
+            'w-full rounded-6 justify-between text-1313 !py-6 px-10',
             '!bg-white text-gray hover:!border-red border-gray-300 border  focus:!border-red overlay-none',
           )}
         >
           {selectedDate ? (
             format(selectedDate, 'yyyy.m.dd')
           ) : (
-            <span className=" font-medium text-gray-300">{label}</span>
+            <span className="font-medium text-gray-300">{label}</span>
           )}
           <CalendarIcon size={24} className={cn('text-gray-105')} />
         </Button>

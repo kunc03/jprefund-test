@@ -7,6 +7,7 @@ const pxToEm = ($px) => {
 
 const remBorderRadius = {
   1.5: pxToEm(1.5),
+  2: pxToEm(2),
   4: pxToEm(4),
   6: pxToEm(6),
   8: pxToEm(8),

@@ -2,16 +2,17 @@ import Image from 'next/image';
 import React from 'react';
 
 import { Heading } from '@/components/heading';
+import { cn } from '@/utils';
 
 const StoreInformation = ({ imageSrc, storeName, storeAdd }) => {
   return (
-    <div className="flex flex-row gap-3">
+    <div className={cn('flex flex-row gap-2 items-center')}>
       <Image
         alt={storeName}
         height={38}
         src={imageSrc}
         width={38}
-        className="min-h-38 min-w-38 shrink-0"
+        className={cn('rounded-4 min-h-35 min-w-35 shrink-0')}
       />
 
       <div>

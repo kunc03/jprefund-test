@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Heading } from '@/components';
 
 import { ButtonSend, QrScan } from './_components';
+import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -22,13 +23,25 @@ const Scan = async ({ params }) => {
           {t('receiptScan')}
         </Heading>
 
-        <div className="flex w-full flex-col items-center justify-center bg-black px-7 py-53 ">
-          <div className="flex w-full max-w-xs flex-row items-center justify-center gap-2 ">
+        <div
+          className={cn(
+            'flex w-full flex-col items-center justify-center bg-black px-7 pt-43 pb-65',
+          )}
+        >
+          <div
+            className={cn(
+              'flex flex-col w-full max-w-xs  items-center justify-center gap-3',
+            )}
+          >
             <ButtonSend />
+            <Heading
+              className={cn(
+                'w-full max-w-258 text-center text-1626 font-medium text-white',
+              )}
+            >
+              {t('qrAlert')}
+            </Heading>
           </div>
-          <Heading className="mt-4 w-full max-w-231 text-center text-1626 font-medium text-white">
-            {t('qrAlert')}
-          </Heading>
         </div>
       </div>
       <QrScan />
