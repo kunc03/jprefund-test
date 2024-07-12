@@ -26,42 +26,40 @@ const HomePage = async ({ params, searchParams }) => {
 
   return (
     <>
-      <div className="bg-white">
-        <Header />
-        <Heading className="bg-white text-center text-lg font-medium ">
-          <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
-            <p className="grow text-center text-1822 small:text-1422">
-              {t('recordOfTaxFreePurchases')}
-            </p>
-            <ButtonFilter className="shrink-0" />
+      <div className="relative flex min-h-dvh flex-col">
+        <div className="border-b border-b-gray-500 bg-white">
+          <Header />
+          <Heading className="bg-white text-center text-lg font-medium ">
+            <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
+              <p className="grow text-center text-1822 small:text-1422">
+                {t('recordOfTaxFreePurchases')}
+              </p>
+              <ButtonFilter className="shrink-0" />
+            </div>
+          </Heading>
+          <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5">
+            <SummaryCard
+              number={99999999}
+              title={t('refundApplication')}
+              status="refundApplication"
+            />
+            <SummaryCard
+              number={99999999}
+              title={t('remittanceProcedureCompleted')}
+              status="remittanceProcedureCompleted"
+            />
+            <SummaryCard
+              number={99999999}
+              title={t('nonRefundable')}
+              status="nonRefundable"
+            />
           </div>
-        </Heading>
-        <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pt-3.5">
-          <SummaryCard
-            number={99999999}
-            title={t('refundApplication')}
-            status="refundApplication"
-          />
-          <SummaryCard
-            number={99999999}
-            title={t('remittanceProcedureCompleted')}
-            status="remittanceProcedureCompleted"
-          />
-          <SummaryCard
-            number={99999999}
-            title={t('nonRefundable')}
-            status="nonRefundable"
-          />
         </div>
+        <AdvancePreparation />
+        <Content />
+        <ButtonCamera />
       </div>
-      <AdvancePreparation />
-
-      <Content />
-
-      <ButtonCamera />
-
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
-
       <FilterBottomDrawer />
       <AuthBottomDrawer />
     </>
