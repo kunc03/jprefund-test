@@ -20,7 +20,7 @@ const ButtonUseNow = () => {
   };
 
   return (
-    <Heading className="mt-41 text-1722 font-normal">
+    <Heading className="mt-41 text-1722 font-normal text-gray">
       {t.rich('useNowWithoutRegistering', {
         useNow: (
           <span
