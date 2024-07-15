@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { loginSchema } from '../_schemas/login-schema';
-import { Heading } from '@/components/heading';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form as UIForm, FormField, Input } from '@/components';
@@ -34,11 +33,7 @@ const Form = () => {
   };
 
   return (
-    <div className="mt-9 flex w-full flex-col px-7">
-      <Heading className="mb-5 text-center text-2122 font-medium">
-        {t('form.label.password')}
-      </Heading>
-
+    <div className="mt-8 flex w-full flex-col px-7">
       <UIForm {...form}>
         <form
           ref={formRef}

@@ -13,7 +13,7 @@ const ButtonLogin = () => {
   };
 
   return (
-    <Button className="mb-9 w-249" onClick={handleLoginClick}>
+    <Button className="mb-50 w-249" onClick={handleLoginClick}>
       {t('login')}
     </Button>
   );

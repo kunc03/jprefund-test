@@ -30,7 +30,7 @@ const Scan = async ({ params }) => {
         >
           <div
             className={cn(
-              'flex flex-col w-full max-w-xs  items-center justify-center gap-3',
+              'flex flex-col w-full max-w-xs items-center justify-center gap-3',
             )}
           >
             <ButtonSend />

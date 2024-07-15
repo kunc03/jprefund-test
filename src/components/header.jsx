@@ -29,7 +29,8 @@ const Header = ({
   const handleBack = () => {
     if (
       pathname === '/passport-information/form-completed' ||
-      pathname === '/passport-information/form'
+      pathname === '/passport-information/form' ||
+      pathname === '/refund-methods'
     ) {
       router.push('/home');
     } else if (onHandleBack) {
@@ -50,7 +51,7 @@ const Header = ({
       {!hasBack && (
         <>
           <DropdownMenu>
-            <DropdownMenuTrigger className="relative pl-10">
+            <DropdownMenuTrigger className="relative pl-10 outline-none">
               <Image
                 alt="menu"
                 className="cursor-pointer"
@@ -63,19 +64,20 @@ const Header = ({
             <DropdownMenuContent
               align="start"
               className={cn(
-                'mx-auto max-w-md relative w-[500px] h-screen bg-transparent border-none',
+                'mx-auto max-w-md w-screen h-screen bg-transparent border-none',
               )}
             >
               <DropdownMenuItem
                 className={cn('relative w-full bg-black/50 h-screen mt-25.5')}
               >
-                <Sidebar />
-
                 <X
-                  className="absolute right-2 top-2 cursor-pointer font-bold text-white"
+                  className={cn(
+                    'absolute right-5 top-5 cursor-pointer font-bold text-white',
+                  )}
                   size={24}
                 />
               </DropdownMenuItem>
+              <Sidebar />
             </DropdownMenuContent>
           </DropdownMenu>
 
