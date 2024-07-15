@@ -215,6 +215,18 @@
     "metaDescription": "Recording Of Transfer page",
     "title": "Recording of transfer"
   },
+  "faq": {
+    "metaTitle": "FAQ",
+    "metaDescription": "FAQ page",
+    "title": "FAQ",
+    "aboutTheService": "About the Service",
+    "howToUse": "How to use"
+  },
+  "refundStatus": {
+    "metaTitle": "Refund Status",
+    "metaDescription": "Refund Status page",
+    "title": "Refund Status"
+  },
   "accountInformation": {
     "metaTitle": "Account Information",
     "metaDescription": "Account Information page",
