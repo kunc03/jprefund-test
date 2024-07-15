@@ -18,23 +18,31 @@ const OPTIONS = [
   { value: 'storeApproval', label: 'storeApproval' },
   { value: 'endDate', label: 'endDate' },
 ];
-const StatusOption = ({ t, filter }) => {
+const StatusOption = ({ t, selectedDate, isSelected, handleChange }) => {
   const [isValue, setIsValue] = React.useState('');
 
-  const handleChange = (value) => {
-    setIsValue(value);
-  };
-
   return (
-    <Select className="w-full">
+    <Select
+      onValueChange={(value) => {
+        setIsValue(value);
+        handleChange(isValue);
+      }}
+      className="w-full"
+    >
       <SelectTrigger
         className={cn(
           'text-1313 font-medium flex cursor-pointer items-center justify-between rounded p-14 transition-colors focus:!outline-none focus:!ring-transparent h-12 relative',
 
-          '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
+          !selectedDate && 'text-gray-50',
+          isSelected
+            ? 'bg-red text-white'
+            : '!bg-white-dark text-gray hover:!border-red border-gray-300 border',
         )}
+        classNameIcon={cn(isSelected && 'text-white')}
       >
-        <SelectValue placeholder={t('placeholder.status')} />
+        <SelectValue placeholder="---">
+          {!isSelected ? '---' : t(isValue)}
+        </SelectValue>
       </SelectTrigger>
 
       <SelectContent

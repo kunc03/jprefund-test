@@ -6,28 +6,10 @@ const emailSchema = z.object({
   email: z
     .string()
     .optional()
-    .refine(
-      (value) => {
-        return value !== undefined && value.trim() !== '';
-      },
-      {
-        message: 'email.required',
-      },
-    )
-    .refine((value) => emailRegex.test(value), {
-      message: 'email.invalid',
+    .refine((value) => value !== undefined && value.trim() !== '', {
+      message: 'email.required',
     })
-
-    .refine((value) => {
-      if (value === 'unregister@mail.com') {
-        // Redirect langsung ke OTP
-        window.location.href = '/register/email/otp';
-        return true;
-      }
-      // Redirect registered emails to /login
-      window.location.href = '/login';
-      return true; // Validation passes for registered emails
-    }),
+    .refine((value) => emailRegex.test(value), { message: 'email.invalid' }),
 });
 
 export { emailSchema };

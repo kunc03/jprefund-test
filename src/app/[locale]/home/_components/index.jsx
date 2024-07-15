@@ -6,5 +6,4 @@ export { DetailBottomDrawer } from './detail-bottom-drawer';
 export { FilterBottomDrawer } from './filter-bottom-drawer';
 export { ItemFilter } from './item-filter';
 export { ButtonFilter } from './button-filter';
-export { StatusOption } from './status-option';
 export { AuthBottomDrawer } from './auth-bottom-drawer';

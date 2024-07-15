@@ -15,12 +15,12 @@ const ButtonSend = () => {
   };
 
   return (
-    <>
+    <div className="flex gap-2">
       <Input
         value={inputValue}
         onChange={handleInputChange}
         placeholder={t('enterTransactionNumber')}
-        type="text"
+        type="number"
         className="!h-42 !rounded-21 p-0 !px-14 !py-13 !text-1616"
       />
       <Button
@@ -40,13 +40,7 @@ const ButtonSend = () => {
           {t('send')}
         </Link>
       </Button>
-
-      {/* {showDetailBottomDrawer === true ? (
-        <DetailBottomDrawer isOpen={showDetailBottomDrawer} />
-      ) : (
-        ''
-      )} */}
-    </>
+    </div>
   );
 };
 

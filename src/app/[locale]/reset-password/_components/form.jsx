@@ -48,7 +48,7 @@ const Form = () => {
   }, [setFormRef]);
 
   const handleSubmit = (data) => {
-    if (resetType === 'email' && data.email) {
+    if (resetType === 'email' && registerSchema && data.email) {
       router.push('/reset-password/email/verification');
     } else if (resetType === 'phone' && data.phone && data.length >= 10) {
       router.push('/reset-password/phone/verification');
