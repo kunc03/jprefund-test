@@ -25,7 +25,7 @@ const StatusOption = ({ t, selectedDate, isSelected, handleChange }) => {
     <Select
       onValueChange={(value) => {
         setIsValue(value);
-        handleChange(isValue);
+        handleChange(value);
       }}
       className="w-full"
     >
