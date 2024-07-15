@@ -33,7 +33,7 @@ const ButtonRegistration = ({ imageSrc, label, type, isDark = false }) => {
       className={cn(
         'w-full !justify-start !px-10 gap-8 !text-1222 text-wrap',
         isDark
-          ? '!bg-black !text-white hover:!bg-dark/30'
+          ? '!bg-white !text-red !border !border-red hover:!bg-dark/30'
           : '!border !border-gray-500 !bg-white !text-gray hover:!bg-white/30',
       )}
       onClick={handleClick}
