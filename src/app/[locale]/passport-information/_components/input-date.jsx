@@ -36,7 +36,7 @@ const InputDate = ({
 
   return (
     <Popover onOpenChange={setIsOpen} open={isOpen}>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild className="h-50">
         <Button
           className={cn(
             'w-full rounded-6 justify-between text-1313 !py-6 px-10',

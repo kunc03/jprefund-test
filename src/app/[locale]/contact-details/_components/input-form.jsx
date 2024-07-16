@@ -29,7 +29,7 @@ const InputForm = ({
         onChange={onChange}
         type={type}
         className={cn(
-          'h-56 text-gray border-gray-300 border !rounded-6 focus:!border-red hover:!border-red',
+          'h-50 text-gray border-gray-300 border !rounded-6 focus:!border-red hover:!border-red',
           className,
         )}
       />
