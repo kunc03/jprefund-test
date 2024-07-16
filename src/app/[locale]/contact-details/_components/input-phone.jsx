@@ -19,7 +19,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   >
     <SelectTrigger
       className={cn(
-        'w-111 font-bold focus:!outline-none focus:!ring-transparent h-38 absolute bottom-2 left-2',
+        'w-111 font-bold focus:!outline-none focus:!ring-transparent h-38 absolute bottom-1.5 left-2',
       )}
       value={selectedPhoneArea}
     >
@@ -52,7 +52,7 @@ const InputPhone = ({ setSelectedPhoneArea, selectedPhoneArea, onChange }) => {
         disabled={false}
         onChange={onChange}
         className={cn(
-          '!h-56 !rounded-6 !border border-gray-300 focus:border-red hover:border-red',
+          '!h-50 !rounded-6 !border border-gray-300 focus:border-red hover:border-red',
           '!pl-32',
         )}
       />
