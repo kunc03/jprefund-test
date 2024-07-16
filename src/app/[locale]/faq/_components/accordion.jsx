@@ -26,7 +26,9 @@ const Accordion = ({ label, content }) => {
       >
         <AccordionTrigger className="flex w-full cursor-default flex-row px-18 py-24">
           <Image src="/icons/q.svg" width={24} height={24} alt="icon" />
-          <p className="flex-1 text-1521 font-medium text-gray">{label}</p>
+          <p className="flex-1 text-start text-1521 font-medium text-gray">
+            {label}
+          </p>
           {!isOpen && (
             <Image
               src="/icons/plus.svg"
