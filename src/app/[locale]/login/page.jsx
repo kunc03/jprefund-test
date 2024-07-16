@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Form, ButtonLogin } from './_components';
-import { Logo } from '@/components';
-import Link from 'next/link';
+import { Heading, Logo } from '@/components';
 import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
@@ -17,20 +16,14 @@ const Login = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh flex-col justify-between">
-      <div className={cn('flex flex-1 flex-col items-center mt-14')}>
-        <Logo />
+      <div className={cn('flex flex-1 flex-col items-center')}>
+        <Logo className="mt-41 h-40.8 w-192" />
+        <Heading className="mt-28.5 text-center text-2122 font-medium">
+          {t('form.label.password')}
+        </Heading>
         <Form />
       </div>
       <div className="flex w-full shrink-0 flex-col items-center gap-9">
-        <div className="text-center text-1527 text-gray">
-          <p className="font-normal">{t('registered')}</p>
-          <Link href="/register">
-            <p className="cursor-pointer font-bold underline">
-              {t('createAccount')}
-            </p>
-          </Link>
-        </div>
-
         <ButtonLogin />
       </div>
     </div>

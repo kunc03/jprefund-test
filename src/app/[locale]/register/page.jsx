@@ -18,7 +18,7 @@ const Register = async ({ params }) => {
     <div className="flex min-h-dvh flex-col items-center justify-between pb-16">
       <div className={cn('flex flex-col justify-center items-center')}>
         <Logo className="mt-41 h-40.8 w-192" />
-        <Heading className="mt-28.5 text-center text-2122 font-medium">
+        <Heading className="mt-28.5 text-center text-2122 font-medium text-gray">
           {t('createAccount')}
         </Heading>
 

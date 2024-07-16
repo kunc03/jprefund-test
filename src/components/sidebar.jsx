@@ -64,7 +64,7 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
 const MenuItem = ({ menu, t }) => {
   return (
     <div className="w-full">
-      <Heading className="text-1718 font-bold text-gray sm:text-1416">
+      <Heading className={cn('text-1718 font-bold text-gray sm:text-1416')}>
         {menu.label}
       </Heading>
       {menu.subMenu.map((item, index) => {
@@ -203,14 +203,14 @@ const Sidebar = () => {
             isRequired: false,
             isUnregister: false,
           },
-          {
-            href: `/${locale}/if-you-lose-your-receipts`,
-            label: t('routes.ifYouLoseYourReceipt'),
-            active: pathname === `/if-you-lose-your-receipts`,
-            icon: <IconImage image="if-you-lose-your-receipt.svg" />,
-            isRequired: false,
-            isUnregister: false,
-          },
+          // {
+          //   href: `/${locale}/if-you-lose-your-receipts`,
+          //   label: t('routes.ifYouLoseYourReceipt'),
+          //   active: pathname === `/if-you-lose-your-receipts`,
+          //   icon: <IconImage image="if-you-lose-your-receipt.svg" />,
+          //   isRequired: false,
+          //   isUnregister: false,
+          // },
         ],
       },
     ],
@@ -218,17 +218,25 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="fixed left-0 top-0 flex h-full w-10/12 overflow-y-auto bg-white px-15 pt-20">
-      <div className="flex h-full flex-col gap-29">
+    <div
+      className={cn(
+        'fixed left-0 top-0 flex flex-col h-full w-10/12 overflow-y-auto bg-white px-15 mt-26.5 pt-24',
+      )}
+    >
+      <div className="flex h-full flex-col gap-20">
         {ROUTES.map((item) => {
           return (
             <MenuItem menu={item} key={`${item.href}-${item.menu}`} t={t} />
           );
         })}
-        <div className="size-38 text-white">&nbsp;</div>
-      </div>
-      <div className="fixed inset-x-0 bottom-0 w-10/12 bg-white py-15 text-center text-1422 font-bold text-red">
-        {t('logout')}
+        <div
+          className={cn(
+            'hover:bg-red hover:text-white rounded-md duration-150 py-[20px] text-center text-1422 font-bold text-red cursor-pointer',
+          )}
+        >
+          {t('logout')}
+        </div>
+        <div className="py-24 text-white">&nbsp;</div>
       </div>
     </div>
   );
