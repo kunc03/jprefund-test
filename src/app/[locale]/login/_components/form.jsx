@@ -40,7 +40,7 @@ const Form = () => {
           onSubmit={form.handleSubmit(handleSubmit)}
           className="flex w-full flex-col gap-6"
         >
-          <div>
+          <div className="flex flex-col">
             <FormField
               control={form.control}
               name="password"

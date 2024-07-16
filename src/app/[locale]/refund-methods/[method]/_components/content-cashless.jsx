@@ -25,8 +25,8 @@ const CONTACTLESS_METHODS = [
   },
   {
     id: 2,
-    value: 'weCattPay',
-    name: 'WeCattPay',
+    value: 'weChatPay',
+    name: 'WeChatPay',
   },
 ];
 const ContentCashLess = () => {

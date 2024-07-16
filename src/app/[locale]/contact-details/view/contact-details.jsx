@@ -16,69 +16,61 @@ const ContactDetails = () => {
 
   const defaultValue = {
     email: 'andreas.andi@talenavi.com',
-    phone: '1234567890',
+    phone: '',
+    building: '',
+    address: '',
+    city: '',
+    isState: '',
+    isPostCode: '',
+    isCountry: '',
   };
 
   const [email, setEmail] = useState(defaultValue.email);
-  const [phone, setPhone] = useState('');
-  const [building, setBuilding] = useState('');
-  const [address, setAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
-  const [postCode, setPostCode] = useState('');
-  const [country, setCountry] = useState('');
+  const [phone, setPhone] = useState(defaultValue.phone);
+  const [building, setBuilding] = useState(defaultValue.building);
+  const [address, setAddress] = useState(defaultValue.address);
+  const [city, setCity] = useState(defaultValue.city);
+  const [isState, setIsState] = useState(defaultValue.isState);
+  const [isPostCode, setIsPostCode] = useState(defaultValue.isPostCode);
+  const [isCountry, setIsCountry] = useState(defaultValue.isCountry);
 
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [isForm, setIsForm] = useState({
     emailAddress: email,
-    phoneNumber: null,
-    buildingNameRoomNumber: null,
-    addressStreet: null,
-    cityCountry: null,
-    state: null,
-    postCode: null,
-    country: null,
+    phoneNumber: phone,
+    buildingNameRoomNumber: building,
+    addressStreet: address,
+    cityCountry: city,
+    state: isState,
+    postCode: isPostCode,
+    country: isCountry,
   });
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   useEffect(() => {
-    isForm;
-    setIsButtonDisabled(false);
-  }, []);
+    const isChanged =
+      email !== defaultValue.email ||
+      phone !== defaultValue.phone ||
+      building !== defaultValue.building ||
+      address !== defaultValue.address ||
+      city !== defaultValue.city ||
+      isState !== defaultValue.isState ||
+      isPostCode !== defaultValue.isPostCode ||
+      isCountry !== defaultValue.isCountry;
 
-  const handleClickSave = () => {
-    setIsSuccess(true);
-  };
+    setIsButtonDisabled(!isChanged);
+  }, [email, phone, building, address, city, isState, isPostCode, isCountry]);
 
   useEffect(() => {
     setIsSuccess(false);
   });
 
-  useEffect(() => {
-    const isChanged =
-      email !== defaultValue.email ||
-      phone !== '' ||
-      building !== '' ||
-      address !== '' ||
-      city !== '' ||
-      state !== '' ||
-      postCode !== '' ||
-      country !== '';
-
-    setIsButtonDisabled(!isChanged);
-  }, [
-    email,
-    phone,
-    building,
-    address,
-    city,
-    state,
-    postCode,
-    country,
-    defaultValue,
-  ]);
+  const handleClickSave = () => {
+    setIsSuccess(true);
+    setIsButtonDisabled(true);
+  };
 
   return (
     <>
@@ -88,15 +80,15 @@ const ContactDetails = () => {
         )}
       >
         <FormContactDetails
-          defaultValue={defaultValue}
+          isForm={isForm}
           setEmail={setEmail}
           setPhone={setPhone}
           setBuilding={setBuilding}
           setAddress={setAddress}
           setCity={setCity}
-          setState={setState}
-          setPostCode={setPostCode}
-          setCountry={setCountry}
+          setState={setIsState}
+          setPostCode={setIsPostCode}
+          setCountry={setIsCountry}
           setIsForm={setIsForm}
         />
       </div>

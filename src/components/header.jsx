@@ -12,7 +12,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-// import { useState } from 'react';
 
 const Header = ({
   hasBack = false,
@@ -20,18 +19,18 @@ const Header = ({
   title = null,
   onHandleBack = null,
 }) => {
-  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  // const handleSidebar = () => {
-  //   setIsSidebarOpen((oldVal) => !oldVal);
-  // };
+
   const handleBack = () => {
-    if (
-      pathname === '/passport-information/form-completed' ||
-      pathname === '/passport-information/form' ||
-      pathname === '/refund-methods'
-    ) {
+    const routesToRedirect = {
+      '/passport-information/form-completed': true,
+      '/passport-information/form': true,
+      '/refund-methods': true,
+      '/contact-details': true,
+    };
+
+    if (routesToRedirect[pathname]) {
       router.push('/home');
     } else if (onHandleBack) {
       onHandleBack();

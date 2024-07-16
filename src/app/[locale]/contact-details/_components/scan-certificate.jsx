@@ -68,13 +68,13 @@ const ScanCertificate = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !h-[450px]">
+      <div ref={qrBoxEl} className="qr-box !top-10">
         <Image
           alt="Qr Frame"
           className="qr-frame"
-          height={256}
+          height={250}
           src="/icons/certif-scan.svg"
-          width={320}
+          width={300}
           priority
         />
       </div>

@@ -32,17 +32,17 @@ const FormAfterScan = ({ form }) => {
     gender: 'Male',
   };
 
-  const [firstName, setFirstName] = useState(defaultValue.firstName);
-  const [lastName, setLastName] = useState(defaultValue.lastName);
-  const [passportNumber, setPassportNumber] = useState(
+  const [isFirstName, setIsFirstName] = useState(defaultValue.firstName);
+  const [isLastName, setIsLastName] = useState(defaultValue.lastName);
+  const [isPassportNumber, setIsPassportNumber] = useState(
     defaultValue.passportNumber,
   );
 
   const [isForm, setIsForm] = useState({
-    firstName: defaultValue.firstName,
-    lastName: defaultValue.lastName,
+    firstName: isFirstName,
+    lastName: isLastName,
     dateOfBirth: defaultValue.dateOfBirth,
-    passportNumber,
+    passportNumber: isPassportNumber,
     dateOfExpiry: defaultValue.dateOfExpiry,
     passportIssuingCountry: defaultValue.passportIssuingCountry,
     countryOfIssueCode: defaultValue.countryOfIssueCode,
@@ -51,16 +51,7 @@ const FormAfterScan = ({ form }) => {
 
   const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
   const hasDateOfExpiry = isForm?.dateOfExpiry !== defaultValue.dateOfExpiry;
-  const hasFirstName = isForm?.firstName !== defaultValue.firstName;
-
-  useEffect(() => {
-    isForm;
-    setIsDisabled(false);
-  }, []);
-
-  const handleClickSave = () => {
-    setIsSuccess(true);
-  };
+  const hasFirstName = isForm?.firstName;
 
   useEffect(() => {
     setIsSuccess(false);
@@ -69,17 +60,17 @@ const FormAfterScan = ({ form }) => {
   useEffect(() => {
     const isChanged =
       hasFirstName ||
-      lastName !== defaultValue.lastName ||
+      isForm.lastName ||
       hasDateOfBirth ||
-      passportNumber !== defaultValue.passportNumber ||
+      isForm.passportNumber ||
       hasDateOfExpiry ||
-      isForm?.passportIssuingCountry !== defaultValue.passportIssuingCountry ||
-      isForm.countryOfIssueCode !== defaultValue.countryOfIssueCode ||
-      isForm.gender !== defaultValue.gender ||
+      isForm?.passportIssuingCountry ||
+      isForm.countryOfIssueCode ||
+      isForm.gender ||
       form === 'form-completed';
 
     setIsDisabled(!isChanged);
-  }, [firstName, lastName, passportNumber, defaultValue]);
+  }, [isForm]);
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
@@ -98,6 +89,11 @@ const FormAfterScan = ({ form }) => {
     setIsOpen(false);
   };
 
+  const handleClickSave = () => {
+    setIsSuccess(true);
+    setIsDisabled(true);
+  };
+
   return (
     <>
       <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
@@ -110,9 +106,9 @@ const FormAfterScan = ({ form }) => {
           handleSelectedDateOfBirth={handleSelectedDateOfBirth}
           handleSelectedDateOfExpiry={handleSelectedDateOfExpiry}
           defaultValue={defaultValue}
-          setFirstName={setFirstName}
-          setLastName={setLastName}
-          setPassportNumber={setPassportNumber}
+          setFirstName={setIsFirstName}
+          setLastName={setIsLastName}
+          setPassportNumber={setIsPassportNumber}
         />
       </div>
 
