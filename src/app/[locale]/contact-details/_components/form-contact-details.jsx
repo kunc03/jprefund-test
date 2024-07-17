@@ -8,7 +8,7 @@ import { InputForm } from './input-form';
 import { InputPhone } from './input-phone';
 
 const FormContactDetails = ({
-  defaultValue,
+  isForm,
   setEmail,
   setPhone,
   setAddress,
@@ -67,17 +67,15 @@ const FormContactDetails = ({
 
   return (
     <div className={cn('flex flex-col gap-3 w-full')}>
-      {/* Email address */}
       <InputForm
         t={t}
         label="emailAddress"
         placeholder={t('emailAddress')}
-        defaultValue={defaultValue.email}
+        defaultValue={isForm.emailAddress}
         onChange={handleEmail}
         type="email"
       />
 
-      {/* Telephone number */}
       <Heading level={5} className="text-1422 font-medium">
         {t('telephoneNumber')}
       </Heading>
@@ -86,9 +84,7 @@ const FormContactDetails = ({
         setSelectedPhoneArea={setSelectedPhoneArea}
         onChange={handlePhone}
       />
-      {/* Telephone number */}
 
-      {/* Building name and room number */}
       <InputForm
         t={t}
         label="buildingNameRoomNumber"
@@ -97,7 +93,6 @@ const FormContactDetails = ({
         type="text"
       />
 
-      {/* Address and street */}
       <InputForm
         t={t}
         label="addressAndStreet"
@@ -106,7 +101,6 @@ const FormContactDetails = ({
         onChange={handleAddress}
       />
 
-      {/* City or country */}
       <InputForm
         t={t}
         label="cityOrCountry"
@@ -115,7 +109,6 @@ const FormContactDetails = ({
         onChange={handleCity}
       />
 
-      {/* State */}
       <InputForm
         t={t}
         label="state"
@@ -124,7 +117,6 @@ const FormContactDetails = ({
         onChange={handleState}
       />
 
-      {/* Post code */}
       <InputForm
         t={t}
         label="postCode"
@@ -133,7 +125,6 @@ const FormContactDetails = ({
         onChange={handlePostCode}
       />
 
-      {/* Country */}
       <InputForm
         t={t}
         label="country"

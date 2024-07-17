@@ -113,14 +113,6 @@ const Sidebar = () => {
             isRequired: false,
             isUnregister: true,
           },
-          {
-            href: `/${locale}/residence-information`,
-            label: t('routes.residenceInformation'),
-            active: pathname === `/residence-information`,
-            icon: <IconImage image="residence-information.svg" />,
-            isRequired: false,
-            isUnregister: true,
-          },
         ],
       },
       {
