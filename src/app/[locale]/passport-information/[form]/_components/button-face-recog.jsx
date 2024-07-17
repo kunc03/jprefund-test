@@ -7,11 +7,10 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-const ButtonRecognition = ({ t, setIsDisabled }) => {
+const ButtonRecognition = ({ t }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    setIsDisabled(true);
     router.push('/passport-information/take-portrait');
   };
   return (

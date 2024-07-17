@@ -91,7 +91,7 @@ const FormAfterScan = ({ form }) => {
   return (
     <>
       <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
-        <FaceRecognition setIsDisabled={setIsDisabled} t={t} form={form} />
+        <FaceRecognition t={t} form={form} />
 
         <PassportForm
           t={t}
