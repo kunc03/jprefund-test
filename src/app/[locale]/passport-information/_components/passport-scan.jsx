@@ -67,7 +67,7 @@ const PassportScan = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box" />
+      <div ref={qrBoxEl} className="qr-box !top-10" />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import React from 'react';
 import { cn } from '@/utils';
 import { ButtonRecognition } from './button-face-recog';
 
-const FaceRecognition = ({ t, form }) => {
+const FaceRecognition = ({ t, form, setIsDisabled }) => {
   return (
     <div className="flex w-full flex-col gap-3">
       <Heading level={5} className="text-1422 font-medium ">
@@ -37,7 +37,7 @@ const FaceRecognition = ({ t, form }) => {
             </span>
           </Button>
         ) : (
-          <ButtonRecognition t={t} />
+          <ButtonRecognition setIsDisabled={setIsDisabled} t={t} />
         )}
       </div>
       <div className="mb-5 flex justify-center text-center">

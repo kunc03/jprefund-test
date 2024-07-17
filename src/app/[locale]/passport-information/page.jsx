@@ -34,7 +34,6 @@ const PassportInformationPage = async ({ params }) => {
         </div>
       </div>
       <div className="flex w-full items-center justify-center pb-54">
-        {/* <Button className="w-249">{t('scanYourPassport')}</Button> */}
         <ButtonScanPassport />
       </div>
     </div>
