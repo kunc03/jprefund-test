@@ -39,13 +39,14 @@ const HomePage = async ({ params, searchParams }) => {
               <ButtonFilter className="shrink-0" />
             </div>
           </Heading>
-          <div className={cn(
+          <div
+            className={cn(
               'flex flex-row items-center justify-center py-2 gap-7 bg-white px-1 overflow-x-auto',
             )}
-          > 
+          >
             {/* Ganjelan Scrolling */}
             {/* Dont erase */}
-            <div className='small:flex medium:hidden w-[15px] h-[10px] text-white'>
+            <div className="h-[10px] w-[15px] text-white small:flex medium:hidden">
               Abc
             </div>
             <SummaryCard
