@@ -17,7 +17,6 @@ const FormAfterScan = ({ form }) => {
   const t = useTranslations('passportInformation');
   const router = useRouter();
 
-  const [isOpen, setIsOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -41,36 +40,32 @@ const FormAfterScan = ({ form }) => {
   const [isForm, setIsForm] = useState({
     firstName: isFirstName,
     lastName: isLastName,
-    dateOfBirth: defaultValue.dateOfBirth,
     passportNumber: isPassportNumber,
+    dateOfBirth: defaultValue.dateOfBirth,
     dateOfExpiry: defaultValue.dateOfExpiry,
     passportIssuingCountry: defaultValue.passportIssuingCountry,
     countryOfIssueCode: defaultValue.countryOfIssueCode,
     gender: defaultValue.gender,
   });
 
-  const hasDateOfBirth = isForm?.dateOfBirth !== defaultValue.dateOfBirth;
-  const hasDateOfExpiry = isForm?.dateOfExpiry !== defaultValue.dateOfExpiry;
-  const hasFirstName = isForm?.firstName;
-
-  useEffect(() => {
-    setIsSuccess(false);
-  });
-
   useEffect(() => {
     const isChanged =
-      hasFirstName ||
-      isForm.lastName ||
-      hasDateOfBirth ||
-      isForm.passportNumber ||
-      hasDateOfExpiry ||
-      isForm?.passportIssuingCountry ||
-      isForm.countryOfIssueCode ||
-      isForm.gender ||
+      isForm?.firstName !== defaultValue.firstName ||
+      isForm?.lastName !== defaultValue.lastName ||
+      isForm?.dateOfBirth !== defaultValue.dateOfBirth ||
+      isForm?.passportNumber !== defaultValue.passportNumber ||
+      isForm?.dateOfExpiry !== defaultValue.dateOfExpiry ||
+      isForm?.passportIssuingCountry !== defaultValue.passportIssuingCountry ||
+      isForm?.countryOfIssueCode !== defaultValue.countryOfIssueCode ||
+      isForm?.gender !== defaultValue.gender ||
       form === 'form-completed';
 
     setIsDisabled(!isChanged);
   }, [isForm]);
+
+  useEffect(() => {
+    setIsSuccess(false);
+  });
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
@@ -86,7 +81,6 @@ const FormAfterScan = ({ form }) => {
 
   const handleRescanPassport = () => {
     router.push('/passport-information/scan-your-passport');
-    setIsOpen(false);
   };
 
   const handleClickSave = () => {
@@ -97,7 +91,7 @@ const FormAfterScan = ({ form }) => {
   return (
     <>
       <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">
-        <FaceRecognition t={t} isOpen={isOpen} form={form} />
+        <FaceRecognition t={t} form={form} />
 
         <PassportForm
           t={t}
