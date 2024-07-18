@@ -172,6 +172,7 @@ const remFontSize = {
   1112: [pxToEm(11), { lineHeight: pxToEm(12) }],
   1116: [pxToEm(11), { lineHeight: pxToEm(16) }],
   1118: [pxToEm(11), { lineHeight: pxToEm(18) }],
+  1213: [pxToEm(12), { lineHeight: pxToEm(13) }],
   1217: [pxToEm(12), { lineHeight: pxToEm(17) }],
   1222: [pxToEm(12), { lineHeight: pxToEm(22) }],
   1212: [pxToEm(12), { lineHeight: pxToEm(12) }],
