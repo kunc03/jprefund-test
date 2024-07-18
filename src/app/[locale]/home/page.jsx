@@ -12,6 +12,7 @@ import {
   ButtonFilter,
   AuthBottomDrawer,
 } from './_components';
+import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -37,7 +38,11 @@ const HomePage = async ({ params, searchParams }) => {
               <ButtonFilter className="shrink-0" />
             </div>
           </Heading>
-          <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5">
+          <div
+            className={cn(
+              'flex flex-nowrap gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5 px-1',
+            )}
+          >
             <SummaryCard
               number={99999999}
               title={t('refundApplication')}

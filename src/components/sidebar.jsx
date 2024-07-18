@@ -42,7 +42,11 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
         </p>
       </div>
       <div className="flex shrink-0 grow flex-row items-center justify-end gap-2">
-        <div className="flex flex-row flex-wrap gap-2 small:flex-col small:gap-0.5">
+        <div
+          className={cn(
+            'flex flex-row flex-wrap gap-2 medium:flex-col small:flex-col small:gap-0.5',
+          )}
+        >
           {subMenu.isRequired && (
             <span className="text-1222 font-bold text-red small:text-1022">
               {t('required')}
@@ -195,14 +199,6 @@ const Sidebar = () => {
             isRequired: false,
             isUnregister: false,
           },
-          // {
-          //   href: `/${locale}/if-you-lose-your-receipts`,
-          //   label: t('routes.ifYouLoseYourReceipt'),
-          //   active: pathname === `/if-you-lose-your-receipts`,
-          //   icon: <IconImage image="if-you-lose-your-receipt.svg" />,
-          //   isRequired: false,
-          //   isUnregister: false,
-          // },
         ],
       },
     ],
