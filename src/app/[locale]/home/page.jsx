@@ -13,6 +13,8 @@ import {
   AuthBottomDrawer,
 } from './_components';
 
+import { cn } from '@/utils';
+
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -37,7 +39,16 @@ const HomePage = async ({ params, searchParams }) => {
               <ButtonFilter className="shrink-0" />
             </div>
           </Heading>
-          <div className="mx-2.5 flex flex-row items-center justify-center gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5">
+          <div
+            className={cn(
+              'flex flex-row items-center justify-center py-2 gap-7 bg-white px-1 overflow-x-auto',
+            )}
+          >
+            {/* Ganjelan Scrolling */}
+            {/* Dont erase */}
+            <div className="h-[10px] w-[15px] text-white small:flex medium:hidden">
+              Abc
+            </div>
             <SummaryCard
               number={99999999}
               title={t('refundApplication')}

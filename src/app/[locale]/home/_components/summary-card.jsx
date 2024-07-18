@@ -42,7 +42,7 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
   return (
     <div
       className={cn(
-        'py-1 px-2.5 h-68 rounded-lg flex flex-col justify-between cursor-pointer text-white outline-none md:min-w-128 w-full',
+        'py-1 px-2 h-68 small:h-85 rounded-lg flex flex-1 flex-col justify-between cursor-pointer text-white outline-none w-full',
         !isActive && 'bg-gray-500',
         isActive && status === 'refundApplication' && 'bg-orange',
         isActive && status === 'remittanceProcedureCompleted' && 'bg-blue',
