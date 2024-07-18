@@ -40,7 +40,7 @@ const HomePage = async ({ params, searchParams }) => {
           </Heading>
           <div
             className={cn(
-              'flex flex-nowrap gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5 px-1',
+              'flex flex-nowrap gap-7 overflow-x-auto bg-white pb-17.5 pt-3.5 px-1.5',
             )}
           >
             <SummaryCard

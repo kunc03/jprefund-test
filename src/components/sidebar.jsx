@@ -219,7 +219,7 @@ const Sidebar = () => {
         })}
         <div
           className={cn(
-            'hover:bg-red hover:text-white rounded-md duration-150 py-[20px] text-center text-1422 font-bold text-red cursor-pointer',
+            'hover:bg-red hover:text-white rounded-md duration-150 py-18 text-center text-1422 font-bold text-red cursor-pointer',
           )}
         >
           {t('logout')}
