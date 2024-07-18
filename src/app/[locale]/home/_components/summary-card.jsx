@@ -42,7 +42,7 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
   return (
     <div
       className={cn(
-        'py-1 px-2 h-68 small:h-85 rounded-lg flex flex-1 flex-col justify-between cursor-pointer text-white outline-none w-full',
+        'py-1 px-2.5 h-68 rounded-lg flex flex-col justify-between cursor-pointer text-white outline-none md:min-w-128 w-full',
         !isActive && 'bg-gray-500',
         isActive && status === 'refundApplication' && 'bg-orange',
         isActive && status === 'remittanceProcedureCompleted' && 'bg-blue',
@@ -56,19 +56,11 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
       role="button"
       tabIndex="0"
     >
-      <Heading
-        className={cn(
-          'text-1213 font-bold small:text-1715 break-all line-clamp-3',
-        )}
-        level={5}
-      >
+      <Heading className="text-1012 font-bold small:text-1718" level={5}>
         {title}
       </Heading>
-
       <Heading
-        className={cn(
-          'whitespace-nowrap text-right text-1620 font-bold small:text-1916 text-wrap break-all line-clamp-2',
-        )}
+        className="whitespace-nowrap text-right  text-lg font-bold"
         level={1}
       >
         {formatNumber(number, true)}
