@@ -35,7 +35,7 @@ const Content = () => {
       {!isObjectEmpty(selectedData) && (
         <div
           className={cn(
-            'flex py-2 flex-1 flex-col items-center overflow-y-auto',
+            'flex pb-2 flex-1 flex-col items-center overflow-y-auto',
           )}
         >
           {Object.entries(selectedData).map(([date, items]) => (
