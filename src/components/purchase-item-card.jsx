@@ -52,7 +52,7 @@ const PurchaseItemCard = ({ item }) => {
           <span className="!text-1322 font-bold text-gray">
             Expected refund amount
           </span>
-          <span className="!text-1322 font-bold text-gray">
+          <span className="!text-2022 font-bold text-red">
             {formatNumber(item.expectedRefundAmount, true)}
           </span>
         </div>

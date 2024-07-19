@@ -3,12 +3,12 @@
 import { Heading, PurchaseItemSection } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useActiveSummary } from '../_hooks/use-active-summary';
-import { isObjectEmpty } from '@/utils';
+import { cn, isObjectEmpty } from '@/utils';
 
 const EmptyState = ({ t }) => (
   <div className="mx-auto flex size-full grow flex-col gap-2  md:max-w-xs">
     <div className="mt-14 flex shrink-0 flex-col items-center justify-center gap-2">
-      <Heading className="text-lg font-bold small:text-1422">
+      <Heading className={cn('text-lg text-center font-bold small:text-1422')}>
         {t('noTaxExemptionRecordsSaved')}
       </Heading>
       <Heading
@@ -33,7 +33,11 @@ const Content = () => {
     <section className="flex grow flex-col flex-wrap">
       {isObjectEmpty(selectedData) && <EmptyState t={t} />}
       {!isObjectEmpty(selectedData) && (
-        <div className="flex max-h-[calc(100dvh-250px)] flex-1 flex-col items-center overflow-y-auto">
+        <div
+          className={cn(
+            'flex py-2 flex-1 flex-col items-center overflow-y-auto',
+          )}
+        >
           {Object.entries(selectedData).map(([date, items]) => (
             <PurchaseItemSection date={date} items={items} key={date} />
           ))}
