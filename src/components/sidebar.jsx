@@ -32,24 +32,24 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
         index === total - 1 && 'border-b border-t border-gray-300',
       )}
     >
-      {subMenu.isRequired && (
-        <div className="absolute left-0 top-3 size-10 rounded-full bg-red-light small:top-5" />
-      )}
-      <div className="flex flex-row items-center justify-start gap-12">
+      <div className="relative flex flex-row items-center justify-start gap-12">
         {subMenu.icon}
+        {subMenu.isRequired && (
+          <div className="absolute left-0 top-0 size-10 rounded-full bg-red-light small:top-5" />
+        )}
         <p className="text-1416 font-medium text-gray small:text-1010  ">
           {subMenu.label}
         </p>
       </div>
-      <div className="flex shrink-0 grow flex-row items-center justify-end gap-2">
-        <div className="flex flex-row flex-wrap gap-2 small:flex-col small:gap-0.5">
+      <div className="inline-flex flex-row items-center justify-end gap-2 md:shrink-0">
+        <div className="inline-flex flex-row flex-wrap justify-end gap-2 small:flex-col small:gap-0.5">
           {subMenu.isRequired && (
-            <span className="text-1222 font-bold text-red small:text-1022">
+            <span className="text-start text-1222 font-bold text-red small:text-1022">
               {t('required')}
             </span>
           )}
           {subMenu.isUnregister && (
-            <span className="text-1222 font-normal  text-gray small:text-1022">
+            <span className="text-1222 font-normal text-gray small:text-1022">
               {t('unregistered')}
             </span>
           )}
@@ -195,14 +195,6 @@ const Sidebar = () => {
             isRequired: false,
             isUnregister: false,
           },
-          // {
-          //   href: `/${locale}/if-you-lose-your-receipts`,
-          //   label: t('routes.ifYouLoseYourReceipt'),
-          //   active: pathname === `/if-you-lose-your-receipts`,
-          //   icon: <IconImage image="if-you-lose-your-receipt.svg" />,
-          //   isRequired: false,
-          //   isUnregister: false,
-          // },
         ],
       },
     ],
@@ -223,12 +215,12 @@ const Sidebar = () => {
         })}
         <div
           className={cn(
-            'hover:bg-red hover:text-white rounded-md duration-150 py-[20px] text-center text-1422 font-bold text-red cursor-pointer',
+            'mb-50 py-10 hover:bg-red hover:text-white rounded-md duration-150 text-center text-1422 font-bold text-red cursor-pointer',
           )}
         >
           {t('logout')}
         </div>
-        <div className="py-24 text-white">&nbsp;</div>
+        <div className=" text-red">&nbsp;</div>
       </div>
     </div>
   );

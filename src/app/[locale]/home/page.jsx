@@ -12,7 +12,6 @@ import {
   ButtonFilter,
   AuthBottomDrawer,
 } from './_components';
-
 import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
@@ -33,7 +32,11 @@ const HomePage = async ({ params, searchParams }) => {
           <Header />
           <Heading className="bg-white text-center text-lg font-medium ">
             <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
-              <p className="grow text-center text-1822 small:text-1422">
+              <p
+                className={cn(
+                  'grow text-center text-1822 medium:text-1722 small:text-1422',
+                )}
+              >
                 {t('recordOfTaxFreePurchases')}
               </p>
               <ButtonFilter className="shrink-0" />
@@ -41,14 +44,9 @@ const HomePage = async ({ params, searchParams }) => {
           </Heading>
           <div
             className={cn(
-              'flex flex-row items-center justify-center py-2 gap-7 bg-white px-1 overflow-x-auto',
+              'inline-flex w-full  py-2 gap-7 bg-white px-1 overflow-x-auto whitespace-nowrap',
             )}
           >
-            {/* Ganjelan Scrolling */}
-            {/* Dont erase */}
-            <div className="h-[10px] w-[15px] text-white small:flex medium:hidden">
-              Abc
-            </div>
             <SummaryCard
               number={99999999}
               title={t('refundApplication')}

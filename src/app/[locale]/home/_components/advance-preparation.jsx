@@ -41,7 +41,11 @@ const AdvancePreparation = () => {
           key="preparationHasNotBeenCompleted"
         >
           <Image alt="info" height={20} src="/images/info.svg" width={20} />
-          <span className="text-1414 font-medium small:text-1022">
+          <span
+            className={cn(
+              'text-1414 font-medium small:text-1022 medium:text-1315 flex items-center',
+            )}
+          >
             {t('preparationHasNotBeenCompleted')}
           </span>
           <ChevronRight />

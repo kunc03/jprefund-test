@@ -105,7 +105,7 @@ const ContactDetails = () => {
       >
         <SelectOptions values={['Document type']} className=" !rounded-[6px]" />
 
-        <ButtonCertificate className="my-[1rem]" />
+        <ButtonCertificate className="my-[1rem] w-auto" />
 
         <Button
           onClick={handleClickSave}

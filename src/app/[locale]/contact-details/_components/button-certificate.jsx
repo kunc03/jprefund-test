@@ -3,6 +3,7 @@
 'use client';
 
 import { Button } from '@/components';
+import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -14,17 +15,18 @@ const ButtonCertificate = ({ className }) => {
   return (
     <Button
       onClick={() => router.push('/contact-details/scan-certificate')}
-      className={`${className} flex items-center justify-center rounded-[7px] border-2 border-red bg-white p-2 delay-1000 duration-1000 hover:bg-white-dark`}
+      className={cn(
+        `flex items-center rounded-6 border-2 border-red bg-white p-2 hover:bg-white-dark text-1618 small:text-1212 font-bold text-red gap-2 px-2`,
+        className,
+      )}
     >
-      <span className="flex items-center gap-5 text-[16px] font-bold text-red">
-        <Image
-          src="/icons/check-star.svg"
-          width={32}
-          height={32}
-          alt="scan certificate"
-        />
-        {t('photograph')}
-      </span>
+      <Image
+        src="/icons/check-star.svg"
+        width={32}
+        height={32}
+        alt="scan certificate"
+      />
+      {t('photograph')}
     </Button>
   );
 };

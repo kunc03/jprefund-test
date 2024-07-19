@@ -72,10 +72,12 @@ const remPadding = {
   33.5: pxToEm(33.5),
   36: pxToEm(36),
   43: pxToEm(43),
+  46: pxToEm(46),
   55: pxToEm(55),
   65: pxToEm(65),
   77: pxToEm(77),
   80: pxToEm(80),
+  108: pxToEm(108),
 };
 
 const remMargin = {
@@ -172,6 +174,7 @@ const remFontSize = {
   1112: [pxToEm(11), { lineHeight: pxToEm(12) }],
   1116: [pxToEm(11), { lineHeight: pxToEm(16) }],
   1118: [pxToEm(11), { lineHeight: pxToEm(18) }],
+  1213: [pxToEm(12), { lineHeight: pxToEm(13) }],
   1217: [pxToEm(12), { lineHeight: pxToEm(17) }],
   1222: [pxToEm(12), { lineHeight: pxToEm(22) }],
   1212: [pxToEm(12), { lineHeight: pxToEm(12) }],
@@ -270,7 +273,7 @@ const tailwindConfig = {
     extend: {
       screens: {
         small: { min: '150px', max: '300px' },
-        medium: { min: '400px' },
+        medium: { min: '300px', max: '400px' },
       },
 
       fontFamily: {
