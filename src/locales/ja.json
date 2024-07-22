@@ -34,8 +34,8 @@
     "continueWithGoogle": "Googleアカウントで続ける",
     "continueWithFacebook": "Facebookアカウントで続ける",
     "continueWithTwitter": "Xアカウントで続ける",
-    "continueWithEmail": "メールでアカウント作成",
-    "continueWithPhone": "電話番号でアカウント作成",
+    "continueWithEmail": "メールアドレスで続行",
+    "continueWithPhone": "電話番号で続行（中国+86 のみ",
     "or": "または",
     "acceptTermCondition": "登録すると{term}, {privacyPolicy}, {cookies} に同意したものとみなされます",
     "term": "利用規約",
@@ -55,7 +55,7 @@
       "placeholder": {
         "email": "メールアドレス",
         "phone": "000-0000-0000",
-        "phoneArea": "コード"
+        "phoneArea": "CH (+86)"
       }
     },
     "verifyCodeSend": "認証コードを送信しました",
@@ -63,7 +63,8 @@
     "enterAuthCodePhone": "SMSに記載されている{authCode}を入力して電話番号を認証してください。",
     "authCode": "認証コード",
     "dateOfExpiry": "有効期限",
-    "reissueAuthCode": "認証コードを再発行"
+    "reissueAuthCode": "認証コードを再発行",
+    "alertPhoneArea": "中国（+86）以外の電話番号では登録できません。"
   },
   "login": {
     "metaTitle": "ログイン",
