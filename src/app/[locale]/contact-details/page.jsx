@@ -1,6 +1,6 @@
 import { Header } from '@/components';
-import { ContactDetails } from './view';
 import { getTranslations } from 'next-intl/server';
+import { ContactDetails } from './form/contact-details';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;

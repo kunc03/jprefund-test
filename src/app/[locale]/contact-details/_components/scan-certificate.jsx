@@ -59,7 +59,7 @@ const ScanCertificate = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/contact-details');
+      router.push('/contact-details?s=sc');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);

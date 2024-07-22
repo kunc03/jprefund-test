@@ -18,7 +18,7 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
     <div
       key={`${subMenu.href}`}
       className={cn(
-        'flex flex-row justify-between py-14 items-center gap-11 relative',
+        'flex flex-row justify-between py-14 items-center gap-11',
         index === 0 && 'border-t border-gray-300 mt-17',
         index > 0 && index < total - 1 && 'border-t border-gray-300',
         index > 0 &&

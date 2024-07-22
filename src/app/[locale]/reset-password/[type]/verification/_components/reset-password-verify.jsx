@@ -33,7 +33,6 @@ const ResetPasswordVerify = () => {
 
   return (
     <div className={cn('flex flex-col justify-center ')}>
-      {/* <h1 className="text-center">{verify.sendUrl}</h1> */}
       <Heading
         className="my-28.5 text-center text-2122 font-medium"
         key="createAccount"
