@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
 import {
-  Heading,
   StoreInformation,
   ItemDetail,
   Drawer,
@@ -16,7 +15,7 @@ import {
   DialogTitle,
 } from '@/components';
 import { useQrScan } from '@/hooks';
-import { formatNumber } from '@/utils';
+import { cn } from '@/utils';
 import { useRouter } from 'next/navigation';
 
 const DetailBottomDrawer = (props) => {
@@ -41,12 +40,12 @@ const DetailBottomDrawer = (props) => {
     {
       id: 'salesAmount',
       key: 'Sales Amount',
-      value: formatNumber(7150, true),
+      value: 'JPY 7150',
     },
     {
       id: 'refundAmount',
       key: 'Expected Refund Amount',
-      value: formatNumber(715, true),
+      value: 'JPY 715',
     },
     {
       id: 'transactionID',
@@ -66,7 +65,7 @@ const DetailBottomDrawer = (props) => {
         <DrawerHeader>
           <div className="flex justify-between bg-white text-base font-bold">
             <DialogTitle
-              className="flex-1 text-center text-lg font-medium"
+              className={cn('flex-1 py-5 text-center text-lg font-medium')}
               level={3}
             >
               {t('checkReceipt')}
@@ -81,14 +80,14 @@ const DetailBottomDrawer = (props) => {
               storeName="UNIQLO Ginza"
             />
 
-            <div className="flex h-42 items-center justify-center rounded-sm border border-orange">
+            {/* <div className="flex h-42 items-center justify-center rounded-sm border border-orange">
               <Heading
                 className="text-center text-1422 font-bold text-orange"
                 level={3}
               >
                 {t('purchaseHistoryHasBeenRegistered')}
               </Heading>
-            </div>
+            </div> */}
 
             <ItemDetail rows={rows} />
           </div>
