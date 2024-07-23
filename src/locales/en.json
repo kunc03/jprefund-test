@@ -35,9 +35,8 @@
     "continueWithGoogle": "Continue with your Google account",
     "continueWithFacebook": "Continue with Facebook",
     "continueWithTwitter": "Continue with X account",
-    "continueWithEmail": "Create an account by email",
-    "continueWithPhone": "Create an account with your phone number",
-    "or": "Or",
+    "continueWithEmail": "Email address",
+    "continueWithPhone": "Phone number (China+86 only)",
     "acceptTermCondition": "By registering, you agree to our {term}, {privacyPolicy} {cookies}.",
     "term": "Terms of Use",
     "privacyPolicy": "Privacy Policy",
@@ -56,7 +55,7 @@
       "placeholder": {
         "email": "Email address",
         "phone": "000-0000-0000",
-        "phoneArea": "Code"
+        "phoneArea": "CH (+86)"
       }
     },
     "verifyCodeSend": "Verification code sent",
@@ -64,7 +63,8 @@
     "enterAuthCodePhone": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
     "authCode": "authentication code",
     "dateOfExpiry": "Date of expiry",
-    "reissueAuthCode": "Reissue authentication code"
+    "reissueAuthCode": "Reissue authentication code",
+    "alertPhoneArea": "You cannot register with a phone number other than China (+86)."
   },
   "login": {
     "metaTitle": "Login",
