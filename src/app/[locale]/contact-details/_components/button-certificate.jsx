@@ -1,33 +1,37 @@
-/* eslint-disable react/button-has-type */
-
 'use client';
 
-import { Button } from '@/components';
 import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import React from 'react';
 
-const ButtonCertificate = ({ className }) => {
+const ButtonCertificate = ({ className, sParam }) => {
   const t = useTranslations('contactDetails');
-  const router = useRouter();
   return (
-    <Button
-      onClick={() => router.push('/contact-details/scan-certificate')}
+    <div
       className={cn(
-        `flex items-center rounded-6 border-2 border-red bg-white p-2 hover:bg-white-dark text-1618 small:text-1212 font-bold text-red gap-2 px-2`,
-        className,
+        'w-full py-10 rounded-6 flex justify-center items-center bg-white border border-gray-300',
       )}
     >
-      <Image
-        src="/icons/check-star.svg"
-        width={32}
-        height={32}
-        alt="scan certificate"
-      />
-      {t('photograph')}
-    </Button>
+      {sParam === 'sc' ? (
+        <Image
+          src="images/certif.svg"
+          width={243.86}
+          height={152.78}
+          alt="certif image"
+        />
+      ) : (
+        <Link
+          href="/contact-details/scan-certificate"
+          className={`${className} flex items-center justify-center rounded-[7px] border-2 border-red bg-white p-2 delay-1000 duration-1000 hover:bg-white-dark`}
+        >
+          <span className="flex items-center gap-5 text-1618 font-bold text-red">
+            {t('photograph')}
+          </span>
+        </Link>
+      )}
+    </div>
   );
 };
 

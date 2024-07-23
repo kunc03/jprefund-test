@@ -82,7 +82,7 @@ const ContentBankTransfer = () => {
       setIsSelected(false);
     }
   }, [registrationInformation, isSelected]);
-
+  console.log(form);
   return (
     <>
       <div className="flex w-full grow flex-col items-center gap-9 pb-2 md:gap-98">

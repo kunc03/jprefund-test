@@ -21,7 +21,7 @@ const ButtonCamera = ({ form }) => {
     <Button
       onClick={handleClick}
       className={cn(
-        'absolute bottom-6 flex h-auto items-center justify-center rounded-full bg-transparent hover:!bg-transparent focus:!bg-transparent focus:outline-none',
+        'flex h-auto items-center justify-center rounded-full bg-transparent hover:!bg-transparent focus:!bg-transparent focus:outline-none',
       )}
     >
       <Image src="/icons/camera.svg" width={64} height={64} alt="icon" />

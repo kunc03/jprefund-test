@@ -44,7 +44,7 @@ const HomePage = async ({ params, searchParams }) => {
           </Heading>
           <div
             className={cn(
-              'inline-flex w-full  py-2 gap-7 bg-white px-1 overflow-x-auto whitespace-nowrap',
+              'inline-flex w-full py-12 gap-7 bg-white px-1 overflow-x-auto whitespace-nowrap',
             )}
           >
             <SummaryCard

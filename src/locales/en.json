@@ -202,10 +202,11 @@
     "state": "State",
     "postCode": "Post code",
     "country": "Country",
+    "id": "ID",
     "proofOfResidence": "Proof of residence",
     "uploadDocumentInstruction": "Upload a document that proves your permanent residence: permit, visa If your permanent address is in a different tax jurisdiction than your passport country, please provide a residence certificate. Example: I have an EU passport but live outside the EU.",
     "documentType": "Document type",
-    "photograph": "Photograph the certificate",
+    "photograph": "Photograph your ID",
     "rescanYourPassport": "Rescan your passport",
     "save": "Save",
     "scanCertificateInstruction": "In good light, a plain background will make the text and photos stand out clearly, making your ID stand out."
@@ -422,6 +423,24 @@
     },
     "lastName": {
       "required": "Last name is required"
+    },
+    "buildingNameRoomNumber": {
+      "min": "Min characters is 2 or more"
+    },
+    "addressStreet": {
+      "min": "Min characters is 2 or more"
+    },
+    "cityCountry": {
+      "min": "Min characters is 2 or more"
+    },
+    "state": {
+      "min": "Min characters is 2 or more"
+    },
+    "postCode": {
+      "min": "Min characters is 4 or more"
+    },
+    "country": {
+      "min": "Min characters is 2 or more"
     }
   }
 }

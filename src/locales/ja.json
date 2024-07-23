@@ -249,11 +249,12 @@
     "state": "州名",
     "postCode": "郵便番号",
     "country": "国名",
+    "id": "身分証",
     "proofOfResidence": "居住地の証明",
     "uploadDocumentInstruction": "永住権を証明する書類をアップロードしてください。 許可証、ビザ本籍地がパスポートの国とは別の課税地域にある場合は、居住証明書を提示してください。 例: EU パスポートを持っていますが、EU 外に住んでいます。",
     "documentType": "書類の種類",
     "rescanYourPassport": "パスポートを再スキャン",
-    "photograph": "証明書を撮影する",
+    "photograph": "身分証を撮影",
     "save": "保存",
     "scanCertificateInstruction": "十分な光の下で、無地の背景を選ぶと、文字や写真が鮮明に映り、身分証が目立ちやすくなります。"
   },
@@ -417,6 +418,24 @@
     },
     "lastName": {
       "required": "姓は必須です"
+    },
+    "buildingNameRoomNumber": {
+      "min": "最小文字数は2文字以上です"
+    },
+    "addressStreet": {
+      "min": "最小文字数は2文字以上です"
+    },
+    "cityCountry": {
+      "min": "最小文字数は2文字以上です"
+    },
+    "state": {
+      "min": "最小文字数は2文字以上です"
+    },
+    "postCode": {
+      "min": "最小文字数は4文字以上です"
+    },
+    "country": {
+      "min": "最小文字数は2文字以上です"
     }
   }
 }
