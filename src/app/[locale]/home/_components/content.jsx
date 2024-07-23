@@ -38,9 +38,9 @@ const Content = () => {
             'flex pb-2 flex-1 flex-col items-center overflow-y-auto',
           )}
         >
-          {Object.entries(selectedData).map(([date, items]) => (
-            <PurchaseItemSection date={date} items={items} key={date} />
-          ))}
+          {Object.entries(selectedData).map(([date, items]) => {
+            return <PurchaseItemSection date={date} items={items} key={date} />;
+          })}
         </div>
       )}
     </section>

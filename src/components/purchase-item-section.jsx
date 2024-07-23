@@ -1,7 +1,9 @@
+'use client';
+
 import { Heading } from './heading';
 import { PurchaseItemCard } from './purchase-item-card';
 
-const PurchaseItemSection = ({ date, items }) => {
+const PurchaseItemSection = ({ date, items, setIsUnKyc }) => {
   return (
     <section key={date} className="w-full px-3">
       <Heading
@@ -11,9 +13,15 @@ const PurchaseItemSection = ({ date, items }) => {
         {date}
       </Heading>
       <div className="mt-3 flex w-full flex-col gap-3">
-        {items.map((item) => (
-          <PurchaseItemCard key={item.id} item={item} />
-        ))}
+        {items.map((item) => {
+          return (
+            <PurchaseItemCard
+              setIsUnKyc={setIsUnKyc}
+              key={item.id}
+              item={item}
+            />
+          );
+        })}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components';
+import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -12,11 +13,11 @@ const ButtonScanPassport = () => {
   return (
     <Button
       onClick={() => {
-        router.push('/passport-information/scan-your-passport');
+        router.push('/passport-information/photograph-passport');
       }}
-      className="w-249"
+      className={cn('px-5 mb-2 text-1515 text-white')}
     >
-      {t('scanYourPassport')}
+      {t('photographingPassport')}
     </Button>
   );
 };

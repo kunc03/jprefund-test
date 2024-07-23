@@ -4,13 +4,18 @@
 
 import { StatusContainer } from './status-container';
 import { StoreInformation } from './store-information';
-import React from 'react';
-import { formatTimeOnly, formatNumber } from '@/utils';
-import { useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
+import { formatTimeOnly, formatNumber, cn } from '@/utils';
+import { usePathname, useRouter } from 'next/navigation';
 
-const PurchaseItemCard = ({ item }) => {
+const PurchaseItemCard = ({ item, setIsUnKyc }) => {
   const router = useRouter();
+  const pathname = usePathname();
   let colorLabelContainer = '';
+
+  useEffect(() => {
+    setIsUnKyc(item.unKyc);
+  });
 
   switch (item.status) {
     case 'remittanceProcedureCompleted':
@@ -24,17 +29,33 @@ const PurchaseItemCard = ({ item }) => {
       break;
   }
 
+  const disabledItem = item.unKyc && pathname === '/home/un-kyc';
+
+  const handleClick = () => {
+    if (disabledItem) {
+      return;
+    }
+    router.push(`/purchase-detail/${item.id}`);
+  };
+
   return (
     <div
       key={item.id}
-      className="flex w-full cursor-pointer flex-col gap-2 rounded-8 border border-gray-500 bg-white px-14 py-13"
-      onClick={() => router.push(`/purchase-detail/${item.id}`)}
+      className={cn(
+        'flex w-full flex-col gap-2 rounded-8 border border-gray-500 bg-white px-14 py-13  cursor-pointer',
+        disabledItem && 'opacity-50 cursor-default',
+      )}
+      onClick={handleClick}
       role="button"
       tabIndex="0"
       aria-hidden="true"
     >
       <div className="flex w-full flex-row justify-between">
-        <StatusContainer label={item.label} color={colorLabelContainer} />
+        <StatusContainer
+          label={item.label}
+          unKyc={item.unKyc}
+          color={colorLabelContainer}
+        />
         <p className="!text-1322 font-medium text-gray">
           {formatTimeOnly(item.date)}
         </p>

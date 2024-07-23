@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/utils';
 
-const StatusContainer = ({ label, color, className }) => {
+const StatusContainer = ({ label, color, className, unKyc }) => {
   return (
     <div
       className={cn(
@@ -12,7 +12,7 @@ const StatusContainer = ({ label, color, className }) => {
         className,
       )}
     >
-      {label}
+      {!unKyc ? label : 'Disabled'}
     </div>
   );
 };

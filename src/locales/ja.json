@@ -129,7 +129,11 @@
     "signUp": "新規登録",
     "placeholder": {
       "status": "---"
-    }
+    },
+    "disabled": "無効化されました",
+    "receiptCantBeRegister": "このレシートはすでに他のユーザーによって本人認証されているので、登録できません。",
+    "disableItemNotification": "スキャンしたレシートの内1点が他のユーザーによって認証されましたので無効化しました。",
+    "receiptHaveBeenAuthenticated": "スキャンしたレシートの内３点が本人認証されましたので、税還付申請が開始されます。"
   },
   "scan": {
     "metaTitle": "スキャン",
@@ -232,10 +236,21 @@
     "gender": "性別",
     "rescanYourPassport": "パスポートを再スキャン",
     "save": "保存",
+    "send": "送信",
     "success": "成功",
     "successInfo": "変更は正常に保存されました",
     "failed": "失敗した",
-    "failedInfo": "不完全なフィールドがあります。すべての情報を入力してください"
+    "failedInfo": "不完全なフィールドがあります。すべての情報を入力してください",
+    "photographingPassport": "パスポートを撮影",
+    "photoInstruction": "枠の中に顔写真や文字コードが、収まるように撮影してください。",
+    "pleaseTakeAPhoto": "パスポートの顔写真ページおよびご自身の顔写真（セルフィ）を撮影して下さい。なお、撮影したパスポート情報は自動的に表示されます。自動表示の内容に誤りがある場合、手入力で補正して下さい。",
+    "note": {
+      "head": "＜注意事項＞",
+      "1": "写真や文字を鮮明に撮影しないとリファンドを受け取ることはできません。",
+      "2": "✔︎顔写真や文字が見切れない様、券面全体を撮影。",
+      "3": "✔︎券面と画面が平行になるように。",
+      "4": "✔︎窓際などの自然光を利用、または、券面を立てて光が反射しないように。"
+    }
   },
   "contactDetails": {
     "metaTitle": "連絡先情報",
@@ -419,6 +434,21 @@
     },
     "lastName": {
       "required": "姓は必須です"
+    },
+    "birthday": {
+      "required": "誕生日は必須です"
+    },
+    "passportNumber": {
+      "required": "パスポート番号は必須です"
+    },
+    "passportIssuingCountry": {
+      "required": "パスポート発行国は必須です"
+    },
+    "countryOfIssueCode": {
+      "required": "発行国コードは必須です"
+    },
+    "gender": {
+      "required": "性別は必須です"
     },
     "buildingNameRoomNumber": {
       "min": "最小文字数は2文字以上です"

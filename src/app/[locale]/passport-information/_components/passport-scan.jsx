@@ -8,6 +8,7 @@ import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
+import Image from 'next/image';
 
 const PassportScan = () => {
   const scanner = useRef(null);
@@ -56,18 +57,27 @@ const PassportScan = () => {
       );
   }, [qrOn]);
 
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
-    }, 4000);
+  // useEffect(() => {
+  //   const redirectTimeout = setTimeout(() => {
+  //     router.push('/passport-information/form');
+  //   }, 4000);
 
-    return () => clearTimeout(redirectTimeout);
-  }, []);
+  //   return () => clearTimeout(redirectTimeout);
+  // }, []);
 
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !top-10" />
+      <div ref={qrBoxEl} className="qr-box !top-10">
+        <Image
+          alt="passport Frame"
+          className=""
+          height={250}
+          src="/images/scan-passport.svg"
+          width={300}
+          priority
+        />
+      </div>
     </div>
   );
 };

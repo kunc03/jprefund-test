@@ -1,6 +1,8 @@
 import { Heading } from '@/components';
 import { getTranslations } from 'next-intl/server';
 import { PassportScan } from '../_components/passport-scan';
+import { cn } from '@/utils';
+import { ButtonCamera } from '../../contact-details/_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -19,6 +21,20 @@ const ScanYourPassport = async ({ params }) => {
         <Heading className="pt-9 text-center text-1822 font-medium text-white">
           {t('scanYourPassport')}
         </Heading>
+        <div
+          className={cn(
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-5',
+          )}
+        >
+          <Heading
+            className={cn(
+              'w-full px-2 text-center text-1422 font-medium text-white',
+            )}
+          >
+            {t('photoInstruction')}
+          </Heading>
+          <ButtonCamera />
+        </div>
       </div>
       <PassportScan />
     </div>

@@ -130,7 +130,11 @@
     "signUp": "Sign up",
     "placeholder": {
       "status": "---"
-    }
+    },
+    "disabled": "Disabled",
+    "receiptCantBeRegister": "This receipt cannot be registered because it has already been authenticated by another user.",
+    "disableItemNotification": "One of the scanned receipts has been authenticated by another user and has been invalidated.",
+    "receiptHaveBeenAuthenticated": "Now that three of the scanned receipts have been authenticated, your tax refund application will begin."
   },
   "scan": {
     "metaTitle": "Scan",
@@ -161,7 +165,7 @@
   "passportInformation": {
     "metaTitle": "Passport Information",
     "metaDescription": "Passport Information page",
-    "title": "Passport Information",
+    "title": "Identity authentication",
     "scanYourPassport": "Scan your passport",
     "takePortrait": "Take a portrait",
     "takePortraitInstruction": "Taking a photo in a bright location with a simple background will make your face appear clearer and make it easier to recognize.",
@@ -176,7 +180,7 @@
     "afterRegisteringYourPassport": "After registering your passport, please take a selfie to verify your face.",
     "firstName": "First name",
     "lastName": "Last name",
-    "dateOfBirth": "Date of birth",
+    "birthday": "Birthday",
     "passportNumber": "Passport number",
     "dateOfExpiry": "Date of expiry",
     "passportIssuingCountry": "Passport issuing country",
@@ -184,10 +188,21 @@
     "gender": "Gender",
     "rescanYourPassport": "Rescan your passport",
     "save": "Save",
+    "send": "Send",
     "success": "Success",
     "successInfo": "Your changes have been saved successfully",
     "failed": "Failed",
-    "actionFailedInfo": "Incomplete fields, please fill in all information"
+    "actionFailedInfo": "Incomplete fields, please fill in all information",
+    "photographingPassport": "Photographing a passport",
+    "photoInstruction": "Please make sure that your face photo and character code fit within the frame.",
+    "pleaseTakeAPhoto": "Please take a photo of your passport's photo page and your own face (selfie). The passport information you take will be displayed automatically. If there are any errors in the automatically displayed information, please correct them manually.",
+    "note": {
+      "head": "Note",
+      "1": "You will not be able to receive a refund unless you take a clear photo and text.",
+      "2": "✔︎The entire passport is photographed so that the face photo and text are not cut off.",
+      "3": "✔︎Make sure the passport face and the screen are parallel.",
+      "4": "✔︎Use natural light, such as by a window, or hold the passport upright to prevent light reflections."
+    }
   },
   "contactDetails": {
     "metaTitle": "Contact information",
@@ -423,6 +438,21 @@
     },
     "lastName": {
       "required": "Last name is required"
+    },
+    "birthday": {
+      "required": "Birthday is required"
+    },
+    "passportNumber": {
+      "required": "Passport number is required"
+    },
+    "passportIssuingCountry": {
+      "required": "Passport issuing country is required"
+    },
+    "countryOfIssueCode": {
+      "required": "Country of issue code is required"
+    },
+    "gender": {
+      "required": "Gender is required"
     },
     "buildingNameRoomNumber": {
       "min": "Min characters is 2 or more"
