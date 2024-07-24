@@ -1,1 +1,1 @@
-export { identityAuth } from './form-identity';
+export { identityAuth } from './identity-auth';

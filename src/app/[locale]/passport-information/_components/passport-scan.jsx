@@ -57,24 +57,27 @@ const PassportScan = () => {
       );
   }, [qrOn]);
 
-  // useEffect(() => {
-  //   const redirectTimeout = setTimeout(() => {
-  //     router.push('/passport-information/form');
-  //   }, 4000);
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      router.push('/passport-information/form');
+    }, 4000);
 
-  //   return () => clearTimeout(redirectTimeout);
-  // }, []);
+    return () => clearTimeout(redirectTimeout);
+  }, []);
 
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !top-10">
+      <div
+        ref={qrBoxEl}
+        className="qr-box !top-14 flex items-center justify-center"
+      >
         <Image
           alt="passport Frame"
-          className=""
-          height={250}
+          className="mirror"
+          height={200}
           src="/images/scan-passport.svg"
-          width={300}
+          width={230}
           priority
         />
       </div>

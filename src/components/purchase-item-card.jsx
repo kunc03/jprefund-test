@@ -13,10 +13,6 @@ const PurchaseItemCard = ({ item, setIsUnKyc }) => {
   const pathname = usePathname();
   let colorLabelContainer = '';
 
-  useEffect(() => {
-    setIsUnKyc(item.unKyc);
-  });
-
   switch (item.status) {
     case 'remittanceProcedureCompleted':
       colorLabelContainer = 'blue';
@@ -29,7 +25,17 @@ const PurchaseItemCard = ({ item, setIsUnKyc }) => {
       break;
   }
 
-  const disabledItem = item.unKyc && pathname === '/home/un-kyc';
+  const handleUnKyc = () => {
+    if (pathname === '/home2') {
+      setIsUnKyc(item.unKyc);
+    }
+  };
+
+  useEffect(() => {
+    handleUnKyc();
+  });
+
+  const disabledItem = item.unKyc && pathname === '/home2';
 
   const handleClick = () => {
     if (disabledItem) {

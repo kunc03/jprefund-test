@@ -1,6 +1,6 @@
 import { Header } from '@/components';
 import { getTranslations } from 'next-intl/server';
-import { FormAfterScan } from './view';
+import { Form } from './view';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -18,7 +18,7 @@ const FormPassportInformation = async ({ params }) => {
       <div className="flex grow flex-col">
         <Header hasBack title={t('title')} />
 
-        <FormAfterScan form={form} />
+        <Form form={form} />
       </div>
     </div>
   );

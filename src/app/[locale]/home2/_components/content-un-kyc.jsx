@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl';
 import { cn, isObjectEmpty } from '@/utils';
 import { useEffect, useState } from 'react';
 import { DisabledDialog } from './disabled-dialog';
-import { useActiveSummary } from '../../_hooks/use-active-summary';
-import { AdvancePreparation } from '../../_components';
+import { useActiveSummary } from '../../home/_hooks/use-active-summary';
+import { AdvancePreparation } from '../../home/_components';
 
 const EmptyState = ({ t }) => (
   <div className="mx-auto flex size-full grow flex-col gap-2  md:max-w-xs">

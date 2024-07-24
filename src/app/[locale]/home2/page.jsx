@@ -8,7 +8,7 @@ import {
   DetailBottomDrawer,
   FilterBottomDrawer,
   SummaryCard,
-} from '../_components';
+} from '../home/_components';
 import { ContentUnKyc } from './_components';
 
 export const generateMetadata = async ({ params }) => {

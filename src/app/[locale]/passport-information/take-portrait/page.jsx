@@ -3,6 +3,7 @@ import { Heading } from '@/components';
 import { TakePortrait } from '../_components/take-portrait-scan';
 import { ButtonCamera } from '../_components/button-camera';
 import { getTranslations } from 'next-intl/server';
+import { cn } from '@/utils';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -22,8 +23,12 @@ const TakePortraitView = async ({ params }) => {
           {t('takePortrait')}
         </Heading>
 
-        <div className="relative flex h-231 w-full flex-col items-center bg-black px-7 py-[2rem]">
-          <Heading className="w-full max-w-334 text-center text-1422 font-medium text-white">
+        <div
+          className={cn(
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-5',
+          )}
+        >
+          <Heading className="w-full px-2 text-center text-1422 font-medium text-white">
             {t('takePortraitInstruction')}
           </Heading>
           <ButtonCamera form="photo" />

@@ -189,6 +189,7 @@
     "rescanYourPassport": "Rescan your passport",
     "save": "Save",
     "send": "Send",
+    "cancel": "Cancel",
     "success": "Success",
     "successInfo": "Your changes have been saved successfully",
     "failed": "Failed",
@@ -202,7 +203,29 @@
       "2": "✔︎The entire passport is photographed so that the face photo and text are not cut off.",
       "3": "✔︎Make sure the passport face and the screen are parallel.",
       "4": "✔︎Use natural light, such as by a window, or hold the passport upright to prevent light reflections."
-    }
+    },
+    "photographFace": "Photograph your face",
+    "faceRecognitionPhoto": "Face recognition photo",
+    "reshoot": "Reshoot",
+    "notifSend": {
+      "1": "Your passport registration application will begin.",
+      "2": "Please note the following points",
+      "3": "Please check that there are no errors in the information on your passport.",
+      "4": "You cannot change the information after registration.",
+      "5": "The review process will be completed within 24 hours on average."
+    },
+    "notComplete": "Passport registration is not complete",
+    "complete": "Passport registration complete",
+    "pending": "Passport registration pending",
+    "problem": "There is a problem with the information",
+    "problemMessage1": "Your passport image is unclear.",
+    "problemMessage2": "Your passport information is incorrect.",
+    "problemMessage3": "Your facial recognition photo is unclear.",
+    "terrorist": "This passport cannot be used.",
+    "informationDeficiency": "There is an error in your passport information. Please check the details and submit again.",
+    "blurredPassportPhoto": "Your passport photo is unclear. Please take a new passport photo.",
+    "faceRecognitionPhotoIsUnclear": "The facial recognition photo is unclear. Please take a new facial recognition photo.",
+    "facesDontMatch": "Your passport photo and facial recognition photo do not match. Please check."
   },
   "contactDetails": {
     "metaTitle": "Contact information",
