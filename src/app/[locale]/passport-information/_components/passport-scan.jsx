@@ -8,6 +8,7 @@ import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
+import Image from 'next/image';
 
 const PassportScan = () => {
   const scanner = useRef(null);
@@ -67,7 +68,19 @@ const PassportScan = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !top-10" />
+      <div
+        ref={qrBoxEl}
+        className="qr-box !top-14 flex items-center justify-center"
+      >
+        <Image
+          alt="passport Frame"
+          className="mirror"
+          height={200}
+          src="/images/scan-passport.svg"
+          width={230}
+          priority
+        />
+      </div>
     </div>
   );
 };

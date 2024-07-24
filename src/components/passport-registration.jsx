@@ -6,7 +6,7 @@ const PassportRegistrationIcon = ({ height = 55, width = 115 }) => {
     <Image
       alt="passport regist icon"
       height={height}
-      src="/icons/passport1.svg"
+      src="/images/identity.svg"
       width={width}
     />
   );

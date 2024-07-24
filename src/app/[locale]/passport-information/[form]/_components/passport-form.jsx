@@ -72,12 +72,12 @@ const PassportForm = ({
       />
 
       <Heading level={5} className="text-1422 font-medium">
-        {t('dateOfBirth')}
+        {t('birthday')}
       </Heading>
 
       <InputDate
         selectedDate={formId.dateOfBirth}
-        label={t('dateOfBirth')}
+        label={t('birthday')}
         defaultValue={defaultValue.dateOfBirth}
         onHandleSelected={handleSelectedDateOfBirth}
         filter={formId}
@@ -109,6 +109,7 @@ const PassportForm = ({
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
         handleChange={handlePassportIssuing}
+        defaultValue={defaultValue.passportIssuingCountry}
         t={t}
       />
 
@@ -118,6 +119,7 @@ const PassportForm = ({
       <SelectOptions
         values={['USA', 'IDN', 'JP']}
         handleChange={handleCountryIssue}
+        defaultValue={defaultValue.countryOfIssueCode}
         t={t}
       />
 
@@ -127,6 +129,7 @@ const PassportForm = ({
       <SelectOptions
         values={['Male', 'Female']}
         handleChange={handleGender}
+        defaultValue={defaultValue.gender}
         t={t}
       />
     </div>

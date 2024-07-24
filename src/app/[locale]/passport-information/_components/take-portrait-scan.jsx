@@ -59,7 +59,7 @@ const TakePortrait = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form-completed');
+      router.push('/passport-information/not-complete');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);
@@ -68,13 +68,15 @@ const TakePortrait = () => {
   return (
     <div className="qr-reader">
       <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !top-10">
+      <div
+        ref={qrBoxEl}
+        className="qr-box !top-14 flex items-center justify-center"
+      >
         <Image
-          alt="Qr Frame"
-          className="qr-frame"
-          height={256}
-          src="/icons/portrait-frame.svg"
-          width={320}
+          alt="face Frame"
+          height={298}
+          src="/images/face-frame.svg"
+          width={339.5}
           priority
         />
       </div>

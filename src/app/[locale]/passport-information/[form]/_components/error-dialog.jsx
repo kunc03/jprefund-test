@@ -12,23 +12,10 @@ import {
 import { useTranslations } from 'next-intl';
 import { AlertDialogTitle } from '@radix-ui/react-alert-dialog';
 import { cn } from '@/utils';
-import { useRouter } from 'next/navigation';
 
-const SuccessDialog = ({ isOpen, form }) => {
+const ErrorDialog = ({ isOpen }) => {
   const t = useTranslations('passportInformation');
   const [open, setOpen] = useState();
-  const router = useRouter();
-
-  // useEffect(() => {
-  //   let timer;
-  //   if (open) {
-  //     timer = setTimeout(() => {
-  //       setOpen(false);
-  //     }, 2000);
-  //   }
-
-  //   return () => clearTimeout(timer);
-  // }, [open]);
 
   useEffect(() => {
     if (isOpen) {
@@ -36,33 +23,21 @@ const SuccessDialog = ({ isOpen, form }) => {
     }
   }, [isOpen]);
 
-  const notes = [
-    'notifSend.1',
-    'notifSend.2',
-    'notifSend.3',
-    'notifSend.4',
-    'notifSend.5',
-  ];
-
-  const handleClickSave = () => {
-    if (form === 'not-complete') {
-      router.push('/passport-information/pending');
-    }
-  };
+  const notes = ['terrorist'];
 
   return (
     <AlertDialog open={open} className="">
       <AlertDialogContent className={cn('flex flex-col justify-between')}>
-        <div className={cn('flex flex-col items-start')}>
+        <div className={cn('flex flex-col')}>
           <AlertDialogHeader>
             <AlertDialogTitle
               className={cn('text-1826 font-medium text-gray')}
             />
             <AlertDialogDescription
-              className={cn('font-medium text-gray flex flex-col')}
+              className={cn('font-medium text-gray flex flex-col p-5')}
             >
               {notes.map((note) => (
-                <span className=" text-center" key={note}>
+                <span className={cn('text-1626 text-center')} key={note}>
                   {t(note)}
                 </span>
               ))}
@@ -72,11 +47,8 @@ const SuccessDialog = ({ isOpen, form }) => {
         <AlertDialogFooter>
           <Button
             onClick={() => setOpen(false)}
-            className={cn('!rounded-6 w-100 bg-gray-300 hover:bg-gray-400')}
+            className={cn('!rounded-6 w-100')}
           >
-            {t('cancel')}
-          </Button>
-          <Button onClick={handleClickSave} className={cn('!rounded-6 w-100')}>
             OK
           </Button>
         </AlertDialogFooter>
@@ -85,4 +57,4 @@ const SuccessDialog = ({ isOpen, form }) => {
   );
 };
 
-export { SuccessDialog };
+export { ErrorDialog };

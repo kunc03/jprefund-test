@@ -17,7 +17,7 @@ import { cn } from '@/utils';
 import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
 
-const SelectOptions = ({ values, handleChange }) => {
+const SelectOptions = ({ values, handleChange, defaultValue }) => {
   const [selectedPhoneArea, setSelectedPhoneArea] = useState('');
 
   return (
@@ -36,7 +36,7 @@ const SelectOptions = ({ values, handleChange }) => {
           )}
           value={selectedPhoneArea}
         >
-          <SelectValue placeholder={values[0]} />
+          <SelectValue placeholder={defaultValue} />
         </SelectTrigger>
         <SelectContent className="bg-white">
           {values.map((value) => (
