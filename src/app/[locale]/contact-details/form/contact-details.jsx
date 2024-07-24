@@ -87,6 +87,7 @@ const ContactDetails = () => {
           >
             <SelectOptions
               values={[t('documentType')]}
+              defaultValue={t('documentType')}
               className=" !rounded-[6px]"
             />
 

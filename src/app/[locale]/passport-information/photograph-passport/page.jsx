@@ -33,7 +33,7 @@ const ScanYourPassport = async ({ params }) => {
           >
             {t('photoInstruction')}
           </Heading>
-          <ButtonCamera />
+          <ButtonCamera form="passport" />
         </div>
       </div>
       <PassportScan />
