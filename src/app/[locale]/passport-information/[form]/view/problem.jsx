@@ -27,7 +27,7 @@ const Problem = ({ form, isForm }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center font-medium text-1422 text-red mt-2">
+      <div className="mt-2 flex flex-col items-center justify-center text-1422 font-medium text-red">
         <p>{t('problemMessage1')}</p>
         <p>{t('problemMessage2')}</p>
         <p>{t('problemMessage3')}</p>

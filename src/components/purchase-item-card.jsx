@@ -8,7 +8,7 @@ import React, { useEffect } from 'react';
 import { formatTimeOnly, formatNumber, cn } from '@/utils';
 import { usePathname, useRouter } from 'next/navigation';
 
-const PurchaseItemCard = ({ item, setIsUnKyc }) => {
+const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
   const router = useRouter();
   const pathname = usePathname();
   let colorLabelContainer = '';
@@ -59,8 +59,10 @@ const PurchaseItemCard = ({ item, setIsUnKyc }) => {
       <div className="flex w-full flex-row justify-between">
         <StatusContainer
           label={item.label}
+          labelUnKyc={item.labelUnKyc}
           unKyc={item.unKyc}
           color={colorLabelContainer}
+          isAuth={isAuth}
         />
         <p className="!text-1322 font-medium text-gray">
           {formatTimeOnly(item.date)}

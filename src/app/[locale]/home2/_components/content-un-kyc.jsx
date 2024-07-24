@@ -1,7 +1,6 @@
 'use client';
 
 import { Heading, PurchaseItemSection } from '@/components';
-import { useTranslations } from 'next-intl';
 import { cn, isObjectEmpty } from '@/utils';
 import { useEffect, useState } from 'react';
 import { DisabledDialog } from './disabled-dialog';
@@ -28,18 +27,26 @@ const EmptyState = ({ t }) => (
   </div>
 );
 
-const ContentUnKyc = ({ status }) => {
-  const t = useTranslations('home');
+const ContentUnKyc = ({ t, setIsAuth, isAuth }) => {
   const { selectedData } = useActiveSummary();
-  const [isUnKyc, setIsUnKyc] = useState(null);
-  const [isAuth, setIsAuth] = useState(false);
   const { selectedValue } = useActiveSummary();
+  const [isUnKyc, setIsUnKyc] = useState(null);
+  const [resetUnKyc, setResetUnKyc] = useState(true);
 
   useEffect(() => {
-    if (selectedValue === status && isUnKyc === null) {
+    // Set isUnKyc to true only when selectedData is not empty
+    if (resetUnKyc && !isObjectEmpty(selectedValue)) {
       setIsUnKyc(true);
+      setResetUnKyc(false);
     }
-  }, [selectedValue, status, isUnKyc]);
+  }, [selectedValue, resetUnKyc]);
+
+  useEffect(() => {
+    // Reset isUnKyc to false when isAuth becomes true
+    if (isAuth) {
+      setIsUnKyc(false);
+    }
+  }, [isAuth]);
 
   return (
     <>
@@ -69,6 +76,7 @@ const ContentUnKyc = ({ status }) => {
                   items={items}
                   key={date}
                   setIsUnKyc={setIsUnKyc}
+                  isAuth={isAuth}
                 />
               );
             })}
@@ -76,7 +84,10 @@ const ContentUnKyc = ({ status }) => {
         )}
       </section>
       <DisabledDialog isOpen={isAuth} label="receiptHaveBeenAuthenticated" />
-      <DisabledDialog isOpen={isUnKyc} label="disableItemNotification" />
+      <DisabledDialog
+        isOpen={isUnKyc && !isAuth}
+        label="disableItemNotification"
+      />
     </>
   );
 };

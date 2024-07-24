@@ -3,7 +3,7 @@
 import { Heading } from './heading';
 import { PurchaseItemCard } from './purchase-item-card';
 
-const PurchaseItemSection = ({ date, items, setIsUnKyc }) => {
+const PurchaseItemSection = ({ date, items, setIsUnKyc, isAuth }) => {
   return (
     <section key={date} className="w-full px-3">
       <Heading
@@ -19,6 +19,7 @@ const PurchaseItemSection = ({ date, items, setIsUnKyc }) => {
               setIsUnKyc={setIsUnKyc}
               key={item.id}
               item={item}
+              isAuth={isAuth}
             />
           );
         })}

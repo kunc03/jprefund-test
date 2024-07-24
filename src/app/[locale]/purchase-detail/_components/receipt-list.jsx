@@ -46,19 +46,29 @@ const ReceiptList = ({ rows }) => {
                 <Heading className="py-8 text-1622 font-medium text-gray">
                   {item.name}
                 </Heading>
-                <ReceiptItem
-                  label="Price"
-                  qty={item.qty}
-                  value={formatNumber(item.price, true)}
-                />
-                <ReceiptItem
-                  label="Subtotal"
-                  value={formatNumber(item.subtotal, true)}
-                />
-                <ReceiptItem
-                  label="Refund amount"
-                  value={formatNumber(item.refund, true)}
-                />
+                {item.status === 'Application Fee' ? (
+                  <ReceiptItem
+                    label="Sales Amount"
+                    qty={item.qty}
+                    value={formatNumber(item.salesAmount, true)}
+                  />
+                ) : (
+                  <>
+                    <ReceiptItem
+                      label="Price"
+                      qty={item.qty}
+                      value={formatNumber(item.price, true)}
+                    />
+                    <ReceiptItem
+                      label="Subtotal"
+                      value={formatNumber(item.subtotal, true)}
+                    />
+                    <ReceiptItem
+                      label="Refund amount"
+                      value={formatNumber(item.refund, true)}
+                    />
+                  </>
+                )}
               </div>
             </AccordionContent>
           );

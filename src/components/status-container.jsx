@@ -1,7 +1,35 @@
+'use client';
+
 import React from 'react';
 import { cn } from '@/utils';
+import { usePathname } from 'next/navigation';
 
-const StatusContainer = ({ label, color, className, unKyc }) => {
+const StatusContainer = ({
+  label,
+  color,
+  className,
+  unKyc,
+  isAuth,
+  labelUnKyc,
+}) => {
+  const pathname = usePathname();
+  const status = {
+    disabled: 'Disabled',
+  };
+  let displayText = label;
+
+  if (pathname === '/home2') {
+    if (unKyc) {
+      displayText = status.disabled;
+    }
+    if (unKyc && isAuth) {
+      displayText = labelUnKyc;
+    }
+    if (!unKyc && isAuth) {
+      displayText = labelUnKyc;
+    }
+  }
+
   return (
     <div
       className={cn(
@@ -12,7 +40,7 @@ const StatusContainer = ({ label, color, className, unKyc }) => {
         className,
       )}
     >
-      {!unKyc ? label : 'Disabled'}
+      {displayText || label}
     </div>
   );
 };
