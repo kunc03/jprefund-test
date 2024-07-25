@@ -295,6 +295,7 @@
     "rescanYourPassport": "パスポートを再スキャン",
     "photograph": "身分証を撮影",
     "save": "保存",
+    "send": "送信",
     "scanCertificateInstruction": "十分な光の下で、無地の背景を選ぶと、文字や写真が鮮明に映り、身分証が目立ちやすくなります。"
   },
   "notification": {

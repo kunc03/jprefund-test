@@ -24,8 +24,11 @@ const Header = ({
 
   const handleBack = () => {
     const routesToRedirect = {
-      '/passport-information/form-completed': true,
       '/passport-information/form': true,
+      '/passport-information/not-complete': true,
+      '/passport-information/pending': true,
+      '/passport-information/problem': true,
+      '/passport-information/complete': true,
       '/refund-methods': true,
       '/contact-details': true,
     };

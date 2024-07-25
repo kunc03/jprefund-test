@@ -9,6 +9,7 @@ import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
+import { cn } from '@/utils';
 
 const ScanCertificate = () => {
   const scanner = useRef(null);
@@ -66,12 +67,25 @@ const ScanCertificate = () => {
   }, []);
 
   return (
-    <div className="qr-reader">
-      <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box !top-10">
+    <div
+      className={cn(
+        'relative flex flex-col justify-center items-center min-h-dvh',
+      )}
+    >
+      <video
+        ref={videoEl}
+        style={{ width: '100%', maxWidth: '100%', height: '100%' }}
+        autoPlay
+        playsInline
+        className={cn('object-cover absolute')}
+      />
+      <div
+        ref={qrBoxEl}
+        className={cn('flex flex-col items-center justify-center pb-108')}
+      >
         <Image
           alt="Qr Frame"
-          className="qr-frame"
+          // className="qr-frame"
           height={250}
           src="/icons/certif-scan.svg"
           width={300}
