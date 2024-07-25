@@ -1,6 +1,7 @@
+'use client';
+
 import { Header, Heading } from '@/components';
 import { cn } from '@/utils';
-import { getTranslations } from 'next-intl/server';
 import {
   AuthBottomDrawer,
   ButtonCamera,
@@ -10,17 +11,12 @@ import {
   SummaryCard,
 } from '../home/_components';
 import { ContentUnKyc } from './_components';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
-export const generateMetadata = async ({ params }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'home' });
-
-  return { title: t('metaTitle'), description: t('metaDescription') };
-};
-
-const HomePage = async ({ params, searchParams }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'home' });
+const HomePage = ({ searchParams }) => {
+  const t = useTranslations('home');
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
     <>
@@ -61,7 +57,7 @@ const HomePage = async ({ params, searchParams }) => {
             />
           </div>
         </div>
-        <ContentUnKyc status="refundApplication" />
+        <ContentUnKyc isAuth={isAuth} setIsAuth={setIsAuth} t={t} />
         <ButtonCamera />
       </div>
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />

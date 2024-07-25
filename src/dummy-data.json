@@ -5,6 +5,7 @@
     "totalPurchasePrice": 990000000,
     "expectedRefundAmount": 99000000,
     "label": "Receipt registration completed",
+    "labelUnKyc": "Refund request accepted",
     "unKyc": false,
     "status": "refundApplication",
     "storeName": "UNIQLO Ginza",
@@ -37,6 +38,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -84,6 +92,7 @@
     "totalPurchasePrice": 18300,
     "expectedRefundAmount": 1830,
     "label": "Receipt registration completed",
+    "labelUnKyc": "Passport information mismatch",
     "unKyc": true,
     "status": "refundApplication",
     "storeName": "AEON MALL Lake Town",
@@ -116,6 +125,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -163,6 +179,7 @@
     "totalPurchasePrice": 7150,
     "expectedRefundAmount": 715,
     "label": "Receipt registration completed",
+    "labelUnKyc": "Refund request accepted",
     "unKyc": false,
     "status": "refundApplication",
     "storeName": "UNIQLO Ginza",
@@ -195,6 +212,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -242,6 +266,7 @@
     "totalPurchasePrice": 18300,
     "expectedRefundAmount": 1830,
     "label": "Receipt registration completed",
+    "labelUnKyc": "Refund request accepted",
     "unKyc": false,
     "status": "refundApplication",
     "storeName": "AEON MALL Lake Town",
@@ -274,6 +299,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -321,6 +353,7 @@
     "totalPurchasePrice": 76200,
     "expectedRefundAmount": 7620,
     "label": "Receipt registration completed",
+    "labelUnKyc": "Refund request accepted",
     "unKyc": false,
     "status": "refundApplication",
     "storeName": "LaLaport TOKYO-BAY",
@@ -353,6 +386,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -431,6 +471,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -509,6 +556,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -587,6 +641,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -665,6 +726,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -743,6 +811,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [
@@ -821,6 +896,13 @@
         "price": 3990,
         "subtotal": 3990,
         "refund": 390
+      },
+      {
+        "id": 4,
+        "status": "Application Fee",
+        "name": "Tax Exemption Application Fee",
+        "salesAmount": 3990,
+        "qty": "x 1.65%"
       }
     ],
     "transactions": [

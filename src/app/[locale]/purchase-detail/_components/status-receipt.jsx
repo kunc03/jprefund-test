@@ -9,6 +9,8 @@ const getStatusClasses = (status) => {
       return 'bg-transparent text-blue border-blue border';
     case 'Denial':
       return 'bg-red-dark text-white';
+    case 'Application Fee':
+      return 'bg-green text-white';
     default:
       return 'bg-gray-100 text-gray-500';
   }
