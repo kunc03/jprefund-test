@@ -101,7 +101,7 @@ const ContactDetails = () => {
             className={cn('w-173 my-17 ', isButtonDisabled && '!bg-gray-300')}
             disabled={isButtonDisabled}
           >
-            {t('save')}
+            {t('send')}
           </Button>
         </FormContactDetails>
       </div>

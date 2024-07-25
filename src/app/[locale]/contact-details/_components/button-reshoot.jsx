@@ -11,7 +11,7 @@ const ButtonReshoot = ({ path }) => {
         role="button"
         aria-hidden
         onClick={() => router.push(path)}
-        className="bg-transparent text-red hover:bg-transparent text-1422 font-medium"
+        className="bg-transparent text-1422 font-medium text-red hover:bg-transparent"
       >
         {t('reshoot')}
       </div>

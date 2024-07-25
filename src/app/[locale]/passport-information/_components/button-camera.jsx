@@ -10,10 +10,10 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const handleFaceRecognition = ({ router }) => {
-  router.push('/passport-information/form');
+  router.push('/passport-information/not-complete');
 };
 const handleRoutesPassport = ({ router }) => {
-  router.push('/passport-information/not-complete');
+  router.push('/passport-information/form');
 };
 
 const ButtonCamera = ({ form }) => {
