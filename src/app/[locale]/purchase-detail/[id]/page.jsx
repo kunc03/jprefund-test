@@ -7,7 +7,7 @@ import {
   ItemDetail,
 } from '@/components';
 import dataDummy from '@/dummy-data.json';
-import { formatNumber, formatTimeFull } from '@/utils';
+import { formatDateTime, formatNumber } from '@/utils';
 import { ReceiptList, TransactionProcess } from '../_components';
 import Image from 'next/image';
 
@@ -43,7 +43,7 @@ const DetailPage = async ({ params }) => {
     {
       id: 'dateTime',
       key: 'Date/Time',
-      value: formatTimeFull(selectedData.date),
+      value: formatDateTime(selectedData.date),
     },
     {
       id: 'salesAmount',

@@ -21,13 +21,15 @@ const getStatusClasses = (status, remittance) => {
 
 const StatusReceipt = ({ status, remittance }) => {
   return (
-    <div
-      className={cn(
-        'font-medium rounded-4 text-1215.6 px-11 py-4.5 w-fit',
-        getStatusClasses(status, remittance),
-      )}
-    >
-      {status}
+    <div className="flex items-start">
+      <p
+        className={cn(
+          'font-medium rounded-4 text-1215.6 px-11 py-4.5',
+          getStatusClasses(status, remittance),
+        )}
+      >
+        {status}
+      </p>
     </div>
   );
 };
