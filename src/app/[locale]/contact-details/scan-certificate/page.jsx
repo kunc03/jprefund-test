@@ -34,7 +34,7 @@ const ScanCertificatePage = async ({ params }) => {
           >
             {t('scanCertificateInstruction')}
           </Heading>
-          <ButtonCamera />
+          <ButtonCamera form="certificate" />
         </div>
       </div>
       <ScanCertificate />

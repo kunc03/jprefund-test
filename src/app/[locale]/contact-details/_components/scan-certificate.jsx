@@ -18,7 +18,7 @@ const ScanCertificate = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
+      router.push('/contact-details?s=sc');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);

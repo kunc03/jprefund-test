@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const handleFaceRecognition = ({ router }) => {
-  router.push('/contact-details');
+  router.push('/contact-details?s=sc');
 };
 
 const ButtonCamera = ({ form }) => {
