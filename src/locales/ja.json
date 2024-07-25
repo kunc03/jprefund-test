@@ -208,7 +208,9 @@
     "title": "購入品の詳細",
     "purchaseDetails": "購入品の詳細",
     "receiptDetails": "レシート詳細",
-    "detailsClose": "詳細を閉じる"
+    "detailsClose": "詳細を閉じる",
+    "purchaseHistoryHasBeenRegistered": "レシート登録ができました",
+    "unsuccessInform": "We regret to inform you that your refund request was unsuccessful If you believe we have made a mistake, please reach out to our Administrator or try again with different refund method or account."
   },
   "passportInformation": {
     "metaTitle": "パスポート情報",

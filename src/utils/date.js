@@ -57,6 +57,34 @@ const formatTimeOnly = (dateTimeStr) => {
   }
 };
 
+const formatTimeFull = (dateTimeStr) => {
+  try {
+    const date = new Date(dateTimeStr);
+
+    const dateOptions = {
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit',
+    };
+
+    const timeOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+    };
+
+    const dateFormatter = new Intl.DateTimeFormat('en-US', dateOptions);
+    const timeFormatter = new Intl.DateTimeFormat('en-US', timeOptions);
+
+    const formattedDate = dateFormatter.format(date);
+    const formattedTime = timeFormatter.format(date);
+
+    return `${formattedDate} at ${formattedTime}`;
+  } catch (error) {
+    return dateTimeStr;
+  }
+};
+
 const getDateOnly = (dateTimeStr) => {
   return dateTimeStr.split('T')[0];
 };
@@ -98,4 +126,5 @@ export {
   formatSecondToTime,
   formatDateSimple,
   formatTimeOnly,
+  formatTimeFull,
 };

@@ -297,7 +297,9 @@
     "title": "Purchase details",
     "purchaseDetails": "Purchase details",
     "receiptDetails": "Receipt details",
-    "detailsClose": "Details close"
+    "detailsClose": "Details close",
+    "purchaseHistoryHasBeenRegistered": "Purchase history has been registered",
+    "unsuccessInform": "We regret to inform you that your refund request was unsuccessful If you believe we have made a mistake, please reach out to our Administrator or try again with different refund method or account."
   },
   "notification": {
     "metaTitle": "Notification",

@@ -1,9 +1,12 @@
 import React from 'react';
 import { cn } from '@/utils';
 
-const getStatusClasses = (status) => {
+const getStatusClasses = (status, remittance) => {
   switch (status) {
     case 'Approval':
+      if (remittance === 'remittanceProcedureCompleted') {
+        return 'bg-blue text-white';
+      }
       return 'bg-green text-white';
     case 'Partial Approval':
       return 'bg-transparent text-blue border-blue border';
@@ -16,12 +19,12 @@ const getStatusClasses = (status) => {
   }
 };
 
-const StatusReceipt = ({ status }) => {
+const StatusReceipt = ({ status, remittance }) => {
   return (
     <div
       className={cn(
         'font-medium rounded-4 text-1215.6 px-11 py-4.5 w-fit',
-        getStatusClasses(status),
+        getStatusClasses(status, remittance),
       )}
     >
       {status}
