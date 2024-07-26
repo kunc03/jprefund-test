@@ -31,7 +31,7 @@ const PassportScan = () => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         className="camera"
-        videoConstraints={{ facingMode: 'user' }}
+        videoConstraints={{ facingMode: 'environtment' }}
       />
       <div className="overlay">
         <Image
