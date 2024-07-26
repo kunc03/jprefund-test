@@ -7,7 +7,7 @@ import {
   ItemDetail,
 } from '@/components';
 import dataDummy from '@/dummy-data.json';
-import { formatDateTime, formatNumber } from '@/utils';
+import { cn, formatDateTime, formatNumber } from '@/utils';
 import { ReceiptList, TransactionProcess } from '../_components';
 import Image from 'next/image';
 
@@ -97,13 +97,13 @@ const DetailPage = async ({ params }) => {
               ); // Assuming each transaction has a unique 'id'
             })
           ) : (
-            <div className="flex gap-3 p-1">
+            <div className="flex justify-center gap-3 p-1">
               <Image
                 src="/icons/warning.svg"
                 width={27}
                 height={24}
                 alt="warning icon"
-                className="h-full"
+                className={cn('h-full mt-1')}
               />
               <p className="flex text-1118 text-gray-200">
                 {t('unsuccessInform')}
