@@ -9,20 +9,20 @@ import Webcam from 'react-webcam';
 const PassportScan = () => {
   // const [capturedImage, setCapturedImage] = useState(null);
   const webcamRef = useRef(null);
-  // const router = useRouter();
+  const router = useRouter();
 
   // const capture = useCallback(() => {
   //   const imageSrc = webcamRef.current.getScreenshot();
   //   setCapturedImage(imageSrc);
   // }, [webcamRef]);
 
-  // useEffect(() => {
-  //   const redirectTimeout = setTimeout(() => {
-  //     router.push('/passport-information/form');
-  //   }, 4000);
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      router.push('/passport-information/form');
+    }, 4000);
 
-  //   return () => clearTimeout(redirectTimeout);
-  // }, [router]);
+    return () => clearTimeout(redirectTimeout);
+  }, [router]);
 
   const videoConstraints = {
     facingMode: 'environment',

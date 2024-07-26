@@ -31,7 +31,7 @@ const ScanCertificate = () => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         className="camera"
-        videoConstraints={{ facingMode: 'environtment' }}
+        videoConstraints={{ facingMode: 'environment' }}
       />
       <div className="overlay">
         <Image
