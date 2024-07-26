@@ -11,7 +11,6 @@ import {
   DialogHeader,
   DialogTitle,
   Button,
-  PassportRegistrationIcon,
 } from '@/components';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/utils';
@@ -51,7 +50,7 @@ const AdvancePreparation = () => {
           <ChevronRight />
         </div>
       </DialogTrigger>
-      <DialogContent className="h-4/5 w-11/12  overflow-y-auto sm:h-max sm:max-w-sm">
+      <DialogContent className="w-11/12 overflow-y-auto sm:h-max sm:max-w-sm">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-center">
             <p
@@ -63,10 +62,10 @@ const AdvancePreparation = () => {
           </DialogTitle>
         </DialogHeader>
         <div
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center gap-22"
           key="content"
         >
-          <p className="mt-3 text-center text-1522 font-medium" key="twoSteps">
+          <p className="text-center text-1522 font-medium" key="twoSteps">
             {t.rich('information', {
               redText: (
                 <span className="text-red" key="spanTwoSteps">
@@ -76,26 +75,13 @@ const AdvancePreparation = () => {
             })}
           </p>
 
-          <p
-            className="relative mt-3 border border-green px-10 py-10.5  text-start !text-1217 font-semibold text-green"
-            key="declaimer"
-          >
-            {t.rich('declaimer', {
-              image: (
-                <Image
-                  alt="i"
-                  className="relative -top-px mr-1 inline-block size-[14px]"
-                  height={14}
-                  src="/icons/igreen.png"
-                  width={14}
-                  key="image"
-                />
-              ),
-            })}
-          </p>
-
-          <div className="mt-5 flex flex-col items-center justify-center gap-3">
-            <PassportRegistrationIcon />
+          <div className="flex flex-col items-center justify-center gap-3">
+            <Image
+              alt="refund regist icon"
+              height={54}
+              src="/icons/passport-regis-advance.svg"
+              width={116}
+            />
 
             <Button
               variant={passportRegis ? 'default' : 'outline'}
@@ -108,9 +94,9 @@ const AdvancePreparation = () => {
               {passportRegis && (
                 <Image
                   alt="check"
-                  height={20}
+                  height={26}
                   src="/icons/checked.svg"
-                  width={20}
+                  width={26}
                 />
               )}
               <p className="w-full text-1320">
@@ -119,17 +105,9 @@ const AdvancePreparation = () => {
                   : t('goToPassportRegistration')}
               </p>
             </Button>
-
-            <div className="text-center">
-              <p className="text-1320 font-medium">{t('pleaseTakeAPhoto')}</p>
-              <p className="text-1118 font-normal">{t('ifTakePhotoError')}</p>
-            </div>
-            <p className="text-center text-1320 font-medium">
-              {t('registrationCompleteWord')}
-            </p>
           </div>
 
-          <div className="mt-5 flex flex-col items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-3">
             <Image
               alt="refund regist icon"
               height={53}
@@ -148,20 +126,34 @@ const AdvancePreparation = () => {
               {refundRegis && (
                 <Image
                   alt="check"
-                  height={20}
+                  height={26}
                   src="/icons/checked.svg"
-                  width={20}
+                  width={26}
                 />
               )}
               <p className="w-full text-1320">
                 {refundRegis ? t('goToRefundComplete') : t('goToRefund')}
               </p>
             </Button>
-
-            <p className="text-center text-1320 font-medium">
-              {t('refundDeclaimer')}
-            </p>
           </div>
+
+          <p
+            className="relative mt-3 border border-green px-10 py-10.5  text-start !text-1217 font-semibold text-green"
+            key="declaimer"
+          >
+            {t.rich('declaimer', {
+              image: (
+                <Image
+                  alt="i"
+                  className="relative -top-px mr-1 inline-block size-[14px]"
+                  height={14}
+                  src="/icons/igreen.png"
+                  width={14}
+                  key="image"
+                />
+              ),
+            })}
+          </p>
         </div>
       </DialogContent>
     </Dialog>

@@ -16,7 +16,7 @@ const Complete = ({ form, isForm }) => {
   return (
     <div
       className={cn(
-        'flex w-full grow flex-col items-center justify-center gap-22 px-28 pt-28 pb-108',
+        'flex w-full grow flex-col items-center justify-center px-28 pt-28 pb-108',
       )}
     >
       <PassportFormDisabled isForm={isForm} />
