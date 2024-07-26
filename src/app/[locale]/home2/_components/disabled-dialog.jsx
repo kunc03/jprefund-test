@@ -28,7 +28,7 @@ const DisabledDialog = ({ isOpen, label }) => {
 
   return (
     <AlertDialog open={open}>
-      <AlertDialogContent>
+      <AlertDialogContent className="w-324">
         <AlertDialogTitle>{}</AlertDialogTitle>
         <AlertDialogHeader>
           <AlertDialogDescription className="text-center text-1826 font-medium text-gray">

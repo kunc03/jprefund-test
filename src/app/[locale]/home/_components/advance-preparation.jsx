@@ -99,7 +99,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="w-full text-1320">
+              <p className="text-1320">
                 {passportRegis
                   ? t('passportRegistrationCompleted')
                   : t('goToPassportRegistration')}

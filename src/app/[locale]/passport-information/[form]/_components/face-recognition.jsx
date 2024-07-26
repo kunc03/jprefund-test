@@ -54,7 +54,11 @@ const FaceRecognition = ({ t, form }) => {
       {passportPhoto.map((item) => (
         <div
           key={item.path}
-          className={cn('flex flex-col', item.path === 'complete' && 'gap-22')}
+          className={cn(
+            'flex flex-col',
+            item.path === 'complete' && 'gap-22',
+            item.path === 'pending' && 'gap-22',
+          )}
         >
           {form === item.path && (
             <>
