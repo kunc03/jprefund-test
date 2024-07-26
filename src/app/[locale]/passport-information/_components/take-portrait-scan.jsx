@@ -24,6 +24,11 @@ const TakePortrait = () => {
     return () => clearTimeout(redirectTimeout);
   }, [router]);
 
+  const videoConstraints = {
+    facingMode: 'environment',
+    // facingMode: 'user',
+  };
+
   return (
     <div className="camera-container">
       <Webcam
@@ -31,7 +36,7 @@ const TakePortrait = () => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         className="camera"
-        videoConstraints={{ facingMode: 'user' }}
+        videoConstraints={videoConstraints}
       />
       <div className="overlay">
         <Image
