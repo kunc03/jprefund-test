@@ -13,7 +13,7 @@ import { formatNumber, cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-const ReceiptList = ({ rows }) => {
+const ReceiptList = ({ rows, remittance }) => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('detail');
 
@@ -42,7 +42,7 @@ const ReceiptList = ({ rows }) => {
                     Purchase Contents:
                   </Heading>
                 )}
-                <StatusReceipt status={item.status} />
+                <StatusReceipt status={item.status} remittance={remittance} />
                 <Heading className="py-8 text-1622 font-medium text-gray">
                   {item.name}
                 </Heading>

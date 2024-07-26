@@ -7,8 +7,9 @@ import {
   ItemDetail,
 } from '@/components';
 import dataDummy from '@/dummy-data.json';
-import { formatNumber, formatTimeOnly } from '@/utils';
+import { cn, formatDateTime, formatNumber } from '@/utils';
 import { ReceiptList, TransactionProcess } from '../_components';
+import Image from 'next/image';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -42,7 +43,7 @@ const DetailPage = async ({ params }) => {
     {
       id: 'dateTime',
       key: 'Date/Time',
-      value: formatTimeOnly(selectedData.date),
+      value: formatDateTime(selectedData.date),
     },
     {
       id: 'salesAmount',
@@ -78,11 +79,14 @@ const DetailPage = async ({ params }) => {
 
         <div className="flex flex-col gap-12">
           <ItemDetail rows={rows} />
-          <ReceiptList rows={selectedData.receiptData} />
+          <ReceiptList
+            rows={selectedData.receiptData}
+            remittance={selectedData.status}
+          />
         </div>
 
         <div>
-          {selectedData.status.toLowerCase() !== 'rejected' &&
+          {selectedData.status !== 'nonRefundable' ? (
             selectedData.transactions.map((item, index) => {
               return (
                 <TransactionProcess
@@ -91,7 +95,21 @@ const DetailPage = async ({ params }) => {
                   isLast={index === selectedData.transactions.length - 1}
                 />
               ); // Assuming each transaction has a unique 'id'
-            })}
+            })
+          ) : (
+            <div className="flex justify-center gap-3 p-1">
+              <Image
+                src="/icons/warning.svg"
+                width={27}
+                height={24}
+                alt="warning icon"
+                className={cn('h-full mt-1')}
+              />
+              <p className="flex text-1118 text-gray-200">
+                {t('unsuccessInform')}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
