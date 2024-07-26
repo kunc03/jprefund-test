@@ -25,8 +25,8 @@ const TakePortrait = () => {
   }, [router]);
 
   const videoConstraints = {
-    facingMode: 'environment',
-    // facingMode: 'user',
+    // facingMode: 'environment',
+    facingMode: 'user',
   };
 
   return (
