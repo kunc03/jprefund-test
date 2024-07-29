@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -38,16 +37,7 @@ const TakePortrait = () => {
         className="camera"
         videoConstraints={videoConstraints}
       />
-      <div className="overlay">
-        <Image
-          alt="face Frame"
-          height={298}
-          src="/images/face-frame.svg"
-          width={339.5}
-          priority
-          className="centered-image mb-60"
-        />
-      </div>
+
       {/* <Image src={capturedImage} alt="Captured Image" /> */}
     </div>
   );
