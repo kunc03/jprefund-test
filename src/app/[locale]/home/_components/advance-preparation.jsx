@@ -99,7 +99,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="text-1320">
+              <p className="text-1219.64">
                 {passportRegis
                   ? t('passportRegistrationCompleted')
                   : t('goToPassportRegistration')}
@@ -131,7 +131,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="w-full text-1320">
+              <p className="text-1219.64">
                 {refundRegis ? t('goToRefundComplete') : t('goToRefund')}
               </p>
             </Button>
