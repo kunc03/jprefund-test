@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -38,15 +38,7 @@ const PassportScan = () => {
         className="camera"
         videoConstraints={videoConstraints}
       />
-      <div className="overlay">
-        <Image
-          src="/images/scan-passport.svg"
-          width={265}
-          height={250}
-          alt="Passport Image"
-          className="centered-image mb-36"
-        />
-      </div>
+
       {/* <Image src={capturedImage} alt="Captured Image" /> */}
     </div>
   );

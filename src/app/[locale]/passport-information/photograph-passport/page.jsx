@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { PassportScan } from '../_components/passport-scan';
 import { cn } from '@/utils';
 import { ButtonCamera } from '../_components/button-camera';
+import Image from 'next/image';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -21,9 +22,18 @@ const ScanYourPassport = async ({ params }) => {
         <Heading className="pt-9 text-center text-1822 font-medium text-white">
           {t('photographingPassport')}
         </Heading>
+
+        <Image
+          src="/images/scan-passport.svg"
+          width={265}
+          height={250}
+          alt="Passport Image"
+          className="centered-image h-auto"
+        />
+
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-8',
+            'relative flex w-full flex-col items-center justify-center px-7 py-4',
           )}
         >
           <Heading
