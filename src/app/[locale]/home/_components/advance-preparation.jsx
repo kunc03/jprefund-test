@@ -54,7 +54,7 @@ const AdvancePreparation = () => {
         <DialogHeader>
           <DialogTitle className="flex items-center justify-center">
             <p
-              className="w-187  text-center !text-2021 font-bold text-red"
+              className="w-187 text-center !text-2021 font-bold text-red"
               key="necessaryAdvancePreparations"
             >
               {t('necessaryAdvancePreparations')}
@@ -87,7 +87,7 @@ const AdvancePreparation = () => {
               variant={passportRegis ? 'default' : 'outline'}
               onClick={handlePassportRegistration}
               className={cn(
-                'sm:w-full md:w-318 gap-4',
+                'sm:w-full md:w-318 gap-2',
                 passportRegis && '!flex-row !justify-start !pl-10',
               )}
             >
@@ -99,7 +99,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="text-1219.64">
+              <p className="text-1320">
                 {passportRegis
                   ? t('passportRegistrationCompleted')
                   : t('goToPassportRegistration')}
@@ -119,7 +119,7 @@ const AdvancePreparation = () => {
               variant={refundRegis ? 'default' : 'outline'}
               onClick={() => setRefundRegis((old) => !old)}
               className={cn(
-                'sm:w-full md:w-318 gap-4',
+                'sm:w-full md:w-318 gap-2',
                 refundRegis && '!flex-row !justify-start !pl-10',
               )}
             >
@@ -131,7 +131,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="text-1219.64">
+              <p className="text-1320">
                 {refundRegis ? t('goToRefundComplete') : t('goToRefund')}
               </p>
             </Button>
