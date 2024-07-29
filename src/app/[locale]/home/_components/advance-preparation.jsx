@@ -62,7 +62,7 @@ const AdvancePreparation = () => {
           </DialogTitle>
         </DialogHeader>
         <div
-          className="flex flex-col items-center justify-center gap-22 border"
+          className="flex flex-col items-center justify-center gap-22"
           key="content"
         >
           <p className="text-center text-1522 font-medium" key="twoSteps">
@@ -88,7 +88,7 @@ const AdvancePreparation = () => {
               onClick={handlePassportRegistration}
               className={cn(
                 'w-full gap-2',
-                passportRegis && '!flex items-center border',
+                passportRegis && '!flex items-center',
               )}
             >
               {passportRegis && (
