@@ -23,7 +23,7 @@ const ScanYourPassport = async ({ params }) => {
         </Heading>
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-[10px]',
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-8',
           )}
         >
           <Heading

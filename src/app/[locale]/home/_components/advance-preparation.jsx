@@ -31,7 +31,7 @@ const AdvancePreparation = () => {
   };
   return (
     <Dialog>
-      <DialogTrigger className="w-full">
+      <DialogTrigger className="">
         <div
           className="flex h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
           aria-hidden="true"
@@ -62,7 +62,7 @@ const AdvancePreparation = () => {
           </DialogTitle>
         </DialogHeader>
         <div
-          className="flex flex-col items-center justify-center gap-22"
+          className="flex flex-col items-center justify-center gap-22 border"
           key="content"
         >
           <p className="text-center text-1522 font-medium" key="twoSteps">
@@ -87,8 +87,8 @@ const AdvancePreparation = () => {
               variant={passportRegis ? 'default' : 'outline'}
               onClick={handlePassportRegistration}
               className={cn(
-                'sm:w-full md:w-318 gap-2',
-                passportRegis && '!flex-row !justify-start !pl-10',
+                'w-full gap-2',
+                passportRegis && '!flex items-center border',
               )}
             >
               {passportRegis && (
@@ -99,7 +99,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="text-1320">
+              <p className={cn('text-1315')}>
                 {passportRegis
                   ? t('passportRegistrationCompleted')
                   : t('goToPassportRegistration')}
@@ -119,8 +119,8 @@ const AdvancePreparation = () => {
               variant={refundRegis ? 'default' : 'outline'}
               onClick={() => setRefundRegis((old) => !old)}
               className={cn(
-                'sm:w-full md:w-318 gap-2',
-                refundRegis && '!flex-row !justify-start !pl-10',
+                'gap-2',
+                refundRegis && '!flex items-center border',
               )}
             >
               {refundRegis && (
@@ -131,7 +131,7 @@ const AdvancePreparation = () => {
                   width={26}
                 />
               )}
-              <p className="text-1320">
+              <p className={cn('text-1315')}>
                 {refundRegis ? t('goToRefundComplete') : t('goToRefund')}
               </p>
             </Button>
