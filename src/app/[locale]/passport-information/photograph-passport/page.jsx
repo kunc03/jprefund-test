@@ -28,9 +28,8 @@ const ScanYourPassport = async ({ params }) => {
           width={265}
           height={250}
           alt="Passport Image"
-          className="centered-image h-auto"
+          className={cn('centered-image w-[60%]')}
         />
-
         <div
           className={cn(
             'relative flex w-full flex-col items-center justify-center px-7 py-4',

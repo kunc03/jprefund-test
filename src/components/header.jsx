@@ -107,7 +107,7 @@ const Header = ({
         <>
           <ChevronLeft
             size={24}
-            className="cursor-pointer text-gray-200"
+            className={cn('cursor-pointer text-gray-200 ml-2')}
             onClick={handleBack}
           />
           {title && (

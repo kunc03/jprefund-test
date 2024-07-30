@@ -4,7 +4,7 @@
 'use client';
 
 import { useState } from 'react';
-import { format, parse } from 'date-fns';
+import { format, parse, isValid } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 
 import { cn } from '@/utils';
@@ -23,9 +23,14 @@ const InputDate = ({
   selectedDate: propSelectedDate,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const defaultDate = parse('1997.9.25', 'yyyy.M.d', new Date());
+  const defaultDate = parse('1997.09.25', 'yyyy.MM.dd', new Date());
+
+  const initialDate = propSelectedDate
+    ? new Date(propSelectedDate)
+    : defaultDate;
+
   const [selectedDate, setSelectedDate] = useState(
-    propSelectedDate || defaultDate,
+    isValid(initialDate) ? initialDate : defaultDate,
   );
 
   const handleSelected = (day, selectedDay, useActiveModifiers, e) => {
@@ -44,7 +49,7 @@ const InputDate = ({
           )}
         >
           {selectedDate ? (
-            format(selectedDate, 'yyyy.m.dd')
+            format(selectedDate, 'yyyy.MM.dd')
           ) : (
             <span className="font-medium text-gray-300">{label}</span>
           )}
