@@ -31,7 +31,7 @@ const AdvancePreparation = () => {
   };
   return (
     <Dialog>
-      <DialogTrigger className="">
+      <DialogTrigger className="w-full">
         <div
           className="flex h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
           aria-hidden="true"
@@ -87,8 +87,9 @@ const AdvancePreparation = () => {
               variant={passportRegis ? 'default' : 'outline'}
               onClick={handlePassportRegistration}
               className={cn(
-                'w-full gap-2',
-                passportRegis && '!flex items-center',
+                'w-full gap-2 hover:bg-transparent hover:text-red',
+                passportRegis &&
+                  '!flex items-center hover:bg-red hover:text-white',
               )}
             >
               {passportRegis && (
@@ -119,8 +120,9 @@ const AdvancePreparation = () => {
               variant={refundRegis ? 'default' : 'outline'}
               onClick={() => setRefundRegis((old) => !old)}
               className={cn(
-                'gap-2',
-                refundRegis && '!flex items-center border',
+                'gap-2 hover:bg-transparent hover:text-red',
+                refundRegis &&
+                  '!flex items-center border hover:bg-red hover:text-white',
               )}
             >
               {refundRegis && (
