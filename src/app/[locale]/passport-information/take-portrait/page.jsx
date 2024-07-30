@@ -4,6 +4,7 @@ import { TakePortrait } from '../_components/take-portrait-scan';
 import { ButtonCamera } from '../_components/button-camera';
 import { getTranslations } from 'next-intl/server';
 import { cn } from '@/utils';
+import Image from 'next/image';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -23,9 +24,18 @@ const TakePortraitView = async ({ params }) => {
           {t('takePortrait')}
         </Heading>
 
+        <Image
+          alt="face Frame"
+          height={298}
+          src="/images/face-frame.svg"
+          width={360}
+          priority
+          className="centered-image"
+        />
+
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5 mb-5',
+            'relative flex w-full flex-col items-center justify-center px-7 py-5',
           )}
         >
           <Heading
