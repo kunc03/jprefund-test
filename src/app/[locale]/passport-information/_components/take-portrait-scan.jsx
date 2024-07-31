@@ -2,18 +2,11 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Webcam from 'react-webcam';
 
 const TakePortrait = () => {
-  // const [capturedImage, setCapturedImage] = useState(null);
   const webcamRef = useRef(null);
   const router = useRouter();
-
-  // const capture = useCallback(() => {
-  //   const imageSrc = webcamRef.current.getScreenshot();
-  //   setCapturedImage(imageSrc);
-  // }, [webcamRef]);
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {

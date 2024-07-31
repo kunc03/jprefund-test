@@ -1,8 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
-/* eslint-disable react/button-has-type */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable react-hooks/exhaustive-deps */
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -27,7 +22,7 @@ const NotComplete = ({
 
   useEffect(() => {
     setIsSuccess(false);
-  });
+  }, []);
 
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {

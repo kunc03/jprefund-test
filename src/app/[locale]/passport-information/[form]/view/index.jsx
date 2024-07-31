@@ -5,7 +5,6 @@
 
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { StatusForm } from '../_components/status-form';
 import { useTranslations } from 'next-intl';
 import { NotComplete } from './not-complete';
@@ -16,7 +15,6 @@ import { useState } from 'react';
 
 const Form = ({ form }) => {
   const t = useTranslations('passportInformation');
-  const pathname = usePathname();
 
   const defaultValue = {
     firstName: 'Joni',
@@ -49,7 +47,7 @@ const Form = ({ form }) => {
   return (
     <>
       <StatusForm t={t} form={form} />
-      {pathname === '/passport-information/form' && (
+      {form === 'form' && (
         <NotComplete
           form={form}
           defaultValue={defaultValue}
@@ -60,7 +58,7 @@ const Form = ({ form }) => {
           setIsPassportNumber={setIsPassportNumber}
         />
       )}
-      {pathname === '/passport-information/not-complete' && (
+      {form === 'not-complete' && (
         <NotComplete
           form={form}
           defaultValue={defaultValue}
@@ -71,15 +69,9 @@ const Form = ({ form }) => {
           setIsPassportNumber={setIsPassportNumber}
         />
       )}
-      {pathname === '/passport-information/pending' && (
-        <Pending form={form} isForm={isForm} />
-      )}
-      {pathname === '/passport-information/problem' && (
-        <Problem form={form} isForm={isForm} />
-      )}
-      {pathname === '/passport-information/complete' && (
-        <Complete form={form} isForm={isForm} />
-      )}
+      {form === 'pending' && <Pending form={form} isForm={isForm} />}
+      {form === 'problem' && <Problem form={form} isForm={isForm} />}
+      {form === 'complete' && <Complete form={form} isForm={isForm} />}
     </>
   );
 };

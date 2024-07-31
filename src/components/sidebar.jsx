@@ -210,7 +210,7 @@ const Sidebar = () => {
       <div className="flex h-full flex-col gap-20">
         {ROUTES.map((item) => {
           return (
-            <MenuItem menu={item} key={`${item.href}-${item.menu}`} t={t} />
+            <MenuItem menu={item} key={`${item.href}-${item.label}`} t={t} />
           );
         })}
         <div
