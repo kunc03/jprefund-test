@@ -1,6 +1,7 @@
 'use client';
 
 import {
+  FormField,
   Input,
   Select,
   SelectContent,
@@ -19,7 +20,7 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   >
     <SelectTrigger
       className={cn(
-        'w-100 font-bold focus:!outline-none focus:!ring-transparent h-38 absolute bottom-2 left-2',
+        'h-full w-100 !p-9.5 font-bold focus:!outline-none focus:!ring-transparent',
       )}
       value={selectedPhoneArea}
     >
@@ -32,27 +33,42 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   </Select>
 );
 
-const InputPhone = ({ setSelectedPhoneArea, selectedPhoneArea, onChange }) => {
+const InputPhone = ({ setSelectedPhoneArea, selectedPhoneArea, form }) => {
   const t = useTranslations('resetPassword');
 
   return (
-    <form className="relative">
-      <PhoneNumberOption
-        t={t}
-        selectedPhoneArea={selectedPhoneArea}
-        setSelectedPhoneArea={setSelectedPhoneArea}
+    <>
+      <FormField
+        control={form.control}
+        name="phone"
+        render={({ field }) => (
+          <Input
+            hasForm
+            placeholder={t('form.placeholder.phone')}
+            disabled={false}
+            type="number"
+            pre={
+              <PhoneNumberOption
+                t={t}
+                selectedPhoneArea={selectedPhoneArea}
+                setSelectedPhoneArea={setSelectedPhoneArea}
+              />
+            }
+            {...field}
+          />
+        )}
       />
-      <Input
+
+      {/* <Input
         type="number"
         placeholder="000-0000-0000"
         disabled={false}
-        onChange={onChange}
         className={cn(
           '!h-56 !rounded-6 !border border-gray-300 focus:border-red hover:border-red',
           '!pl-32',
         )}
-      />
-    </form>
+      /> */}
+    </>
   );
 };
 

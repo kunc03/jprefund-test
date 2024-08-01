@@ -4,12 +4,13 @@ import { Heading } from '@/components';
 import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
 
 const ResetPasswordVerify = () => {
   const t = useTranslations('resetPassword');
   const pathname = usePathname();
+  const router = useRouter();
 
   const verifications = {
     emails: {
@@ -31,8 +32,16 @@ const ResetPasswordVerify = () => {
   const isEmailPath = pathname.includes('/email');
   const verify = isEmailPath ? verifications.emails : verifications.phones;
 
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      router.push('/reset-password/resetting');
+    }, 4000);
+
+    return () => clearTimeout(redirectTimeout);
+  }, [router]);
+
   return (
-    <div className={cn('flex flex-col justify-center ')}>
+    <div className={cn('flex flex-col justify-center')}>
       <Heading
         className="my-28.5 text-center text-2122 font-medium"
         key="createAccount"

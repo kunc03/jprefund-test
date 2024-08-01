@@ -315,17 +315,25 @@
     "title": "パスワード再設定",
     "resetByEmail": "ご登録のメールアドレスへ パスワード再設定用のURLを送信します。",
     "resetByPhone": "ご登録の電話番号へ パスワード再設定用のSMSを送信します。",
+    "passwordSetting": "パスワード再設定",
+    "resetCompleted": "パスワード再設定完了",
+    "resetInform": "パスワードの再設定が完了しました引き続きサービスをご利用ください。",
     "form": {
       "label": {
         "email": "メールアドレス",
-        "phone": "電話番号"
+        "phone": "電話番号",
+        "password": "パスワード",
+        "passwordConfirmation": "パスワード確認"
       },
       "placeholder": {
         "email": "メールアドレス",
-        "phone": "000-0000-0000"
+        "phone": "000-0000-0000",
+        "password": "半角英数8文字以上",
+        "passwordConfirmation": "確認のためもう一度入力"
       }
     },
     "send": "送信",
+    "resetting": "再設定",
     "resetEmailSendToYou": "再設定用メールをお送りしました",
     "resetSmsSendToYou": "再設定用SMSをお送りしました",
     "clickOnUrlInEmail": "メールに記載されているURLをクリックして パスワードを再設定してください。",
