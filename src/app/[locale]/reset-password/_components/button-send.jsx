@@ -3,10 +3,12 @@
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 import { useFormRef } from '@/hooks';
+import { usePathname } from 'next/navigation';
 
 const ButtonSend = () => {
   const t = useTranslations('resetPassword');
   const submitForm = useFormRef((state) => state.submitForm);
+  const pathname = usePathname();
 
   const handleClick = () => {
     submitForm();
@@ -17,7 +19,7 @@ const ButtonSend = () => {
       className="mb-9 w-249 items-center justify-center"
       onClick={handleClick}
     >
-      {t('send')}
+      {pathname === '/reset-password/resetting' ? t('resetting') : t('send')}
     </Button>
   );
 };

@@ -1,1 +1,1 @@
-export { Form } from './form.jsx';
+export { ContentResetPassword } from './content-reset-password.jsx';
