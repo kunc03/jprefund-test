@@ -14,7 +14,7 @@ const ButtonDelete = () => {
 
   return (
     <Button
-      className="mt-56 w-231 items-center justify-center"
+      className="mt-100 w-231 items-center justify-center"
       onClick={handleClick}
     >
       {t('accountDeletion')}

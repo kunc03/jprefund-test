@@ -19,11 +19,7 @@ const Login = async ({ params }) => {
       <div className="flex w-full grow flex-col items-center">
         <Header hasBack title={t('accountDeletion')} />
 
-        <div
-          className={cn(
-            'flex flex-col gap-3 px-36 items-center justify-between py-9',
-          )}
-        >
+        <div className={cn('flex flex-col px-36 items-center py-9')}>
           <div className={cn('flex flex-col gap-9 items-center text-gray')}>
             <h2 className={cn('font-bold text-1623')}>{t('askForDeletion')}</h2>
             <h1 className={cn('text-2223 font-bold')}>example@mail.com</h1>
