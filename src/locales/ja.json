@@ -200,7 +200,16 @@
     "cancel": "キャンセル",
     "deleteAccount": "アカウントを削除",
     "sendVerificationCode": "認証コードを送信",
-    "verificationCodeSent": "認証コードを送信しました"
+    "verificationCodeSent": "認証コードを送信しました",
+    "askForDeletion": "以下のアカウントを削除しますか？",
+    "beforeDelete": "アカウントを削除する前に",
+    "ifYouDelete": "アカウントを削除した場合、このアカウントではログインすることも「JPrefund」のサービスが利用できなくなります。",
+    "ifYouWishToReregister": "アカウント削除後に再登録を希望される場合、新規アカウントとして登録する必要があります。以前のデータや設定は引き継ぐことができません。",
+    "passwordAuth": "パスワードによる認証",
+    "toEnsureTheSafe": "アカウント削除を安全に行うため、パスワード入力による認証を行います。",
+    "continue": "続ける",
+    "doYouReallyWantToDelete": "本当にアカウント「example@mail.com」を削除しますか？",
+    "accountDeleted": "アカウントを削除しました"
   },
   "detail": {
     "metaTitle": "購入品の詳細",

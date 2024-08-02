@@ -190,6 +190,7 @@ const remFontSize = {
   1414: [pxToEm(14), { lineHeight: pxToEm(14) }],
   1416: [pxToEm(14), { lineHeight: pxToEm(16) }],
   1422: [pxToEm(14), { lineHeight: pxToEm(22) }],
+  1423: [pxToEm(14), { lineHeight: pxToEm(23) }],
   1515: [pxToEm(15), { lineHeight: pxToEm(15) }],
   1518: [pxToEm(15), { lineHeight: pxToEm(18) }],
   1521: [pxToEm(15), { lineHeight: pxToEm(21) }],
@@ -210,6 +211,7 @@ const remFontSize = {
   2021: [pxToEm(20), { lineHeight: pxToEm(21) }],
   2022: [pxToEm(20), { lineHeight: pxToEm(22) }],
   2122: [pxToEm(21), { lineHeight: pxToEm(22) }],
+  2223: [pxToEm(22), { lineHeight: pxToEm(23) }],
   2437: [pxToEm(24), { lineHeight: pxToEm(37) }],
 };
 

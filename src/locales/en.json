@@ -278,6 +278,7 @@
     "accountDeletion": "Account deletion",
     "placeholder": {
       "newEmail": "New Email address",
+      "enterYourPassword": "Enter your password",
       "currentPassword": "At least 8 alphanumeric characters",
       "newPassword": "At least 8 alphanumeric characters",
       "passwordConfirmation": "Enter again to confirm"
@@ -289,7 +290,16 @@
     "cancel": "Cancel",
     "deleteAccount": "Delete Account",
     "sendVerificationCode": "Send verification code",
-    "verificationCodeSent": "Verification code sent"
+    "verificationCodeSent": "Verification code sent",
+    "askForDeletion": "Do you want to delete the following account?",
+    "beforeDelete": "Before you delete your account",
+    "ifYouDelete": "If you delete your account, you will no longer be able to log in or use JPrefund services with that account.",
+    "ifYouWishToReregister": "If you wish to re-register after deleting your account, you will need to register as a new account. Previous data and settings cannot be carried over.",
+    "passwordAuth": "Password authentication",
+    "toEnsureTheSafe": "To ensure the safe deletion of your account, you will be asked to authenticate by entering your password.",
+    "continue": "Continue",
+    "doYouReallyWantToDelete": "Do you really want to delete the account \"example@mail.com\"?",
+    "accountDeleted": "Account deleted"
   },
   "detail": {
     "metaTitle": "Purchase details",
