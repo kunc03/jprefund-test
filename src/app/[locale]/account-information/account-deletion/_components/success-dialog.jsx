@@ -39,7 +39,7 @@ const SuccessDialog = ({ isOpen }) => {
         <AlertDialogFooter>
           <AlertDialogAction
             className="w-100 rounded-6"
-            onClick={() => router.push('/home')}
+            onClick={() => router.push('/')}
           >
             OK
           </AlertDialogAction>
