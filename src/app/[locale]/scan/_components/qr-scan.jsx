@@ -4,13 +4,16 @@
 
 'use client';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Html5QrcodeScanner } from 'html5-qrcode';
+// import Link from 'next/link';
 // import Image from 'next/image';
 // import QrScanner from 'qr-scanner';
-import { useRef } from 'react';
+import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/navigation';
 // import { useQrScan } from '@/hooks';
 // import { cn } from '@/utils';
-import Webcam from 'react-webcam';
+// import Webcam from 'react-webcam';
 
 const QrScan = () => {
   // const scanner = useRef(null);
@@ -58,8 +61,30 @@ const QrScan = () => {
   //       'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
   //     );
   // }, [qrOn]);
-  const webcamRef = useRef(null);
+  // const webcamRef = useRef(null);
   // const router = useRouter();
+  const [scanResult, setScanResult] = useState(null);
+
+  useEffect(() => {
+    const scanner = new Html5QrcodeScanner('reader', {
+      qrcode: {
+        width: 250,
+        height: 250,
+      },
+      fps: 5,
+    });
+
+    const success = (result) => {
+      scanner.clear();
+      setScanResult(result);
+    };
+
+    const error = (err) => {
+      console.log(err);
+    };
+
+    scanner.render(success, error);
+  }, []);
 
   return (
     // <div
@@ -77,13 +102,19 @@ const QrScan = () => {
 
     // </div>
     <div className="camera-container">
-      <Webcam
-        audio={false}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        className="camera"
-        videoConstraints={{ facingMode: 'environment' }}
-      />
+      {scanResult ? (
+        <div>Success: {scanResult}</div>
+      ) : (
+        <div id="reader" />
+        // <Webcam
+        //   audio={false}
+        //   ref={webcamRef}
+        //   id="reader"
+        //   screenshotFormat="image/jpeg"
+        //   className="camera"
+        //   videoConstraints={{ facingMode: 'environment' }}
+        // />
+      )}
 
       {/* <Image src={capturedImage} alt="Captured Image" /> */}
     </div>
