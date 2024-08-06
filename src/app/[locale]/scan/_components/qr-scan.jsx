@@ -69,7 +69,6 @@ const QrScan = () => {
           ref={qrBoxEl}
           style={{
             position: 'absolute',
-            // border: '2px solid red',
             width: '336px',
             height: '350px',
             transform: 'translate(-50%, -50%)',
