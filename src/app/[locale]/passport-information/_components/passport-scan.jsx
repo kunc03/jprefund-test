@@ -9,13 +9,13 @@ const PassportScan = () => {
   const webcamRef = useRef(null);
   const router = useRouter();
 
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
-    }, 4000);
+  // useEffect(() => {
+  //   const redirectTimeout = setTimeout(() => {
+  //     router.push('/passport-information/form');
+  //   }, 4000);
 
-    return () => clearTimeout(redirectTimeout);
-  }, [router]);
+  //   return () => clearTimeout(redirectTimeout);
+  // }, [router]);
 
   const videoConstraints = {
     facingMode: 'environment',
