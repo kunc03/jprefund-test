@@ -1,12 +1,10 @@
 'use client';
 
-// import { useRouter } from 'next/navigation';
 import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
 const TakePortrait = () => {
   const webcamRef = useRef(null);
-  // const router = useRouter();
 
   // useEffect(() => {
   //   const redirectTimeout = setTimeout(() => {
