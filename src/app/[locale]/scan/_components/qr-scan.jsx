@@ -60,21 +60,9 @@ const QrScan = ({ qrBoxEl }) => {
   return (
     <div
       className={cn('camera-container')}
-      style={{ width: '100%', height: '100vh' }}
+      style={{ width: '100%', height: '100%' }}
     >
       <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
-      {/* <div className="relative">
-        <div
-          ref={qrBoxEl}
-          style={{
-            position: 'absolute',
-            width: '336px',
-            height: '350px',
-            transform: 'translate(-50%, -50%)',
-          }}
-          // className="scanner-box"
-        />
-      </div> */}
     </div>
   );
 };

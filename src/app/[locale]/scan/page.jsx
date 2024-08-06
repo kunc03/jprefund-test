@@ -10,9 +10,6 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const Scan = async () => {
-  // const { locale } = params;
-  // const t = await getTranslations({ locale, namespace: 'scan' });
-
   return (
     <div className="landscape relative min-h-dvh">
       <BodyScan />

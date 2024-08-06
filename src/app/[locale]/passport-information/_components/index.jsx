@@ -1,4 +1,5 @@
-export { ButtonScanPassport } from './button-scan-passport.jsx';
+export { ButtonScanPassport } from './scan/button-scan-passport.jsx';
 export { InputDate } from './input-date.jsx';
-export { FaceScan } from './face-scan.jsx';
 export { SelectOptions } from './select.jsx';
+export { PassportScan } from './scan/passport-scan.jsx';
+export { TakePortrait } from './scan/take-portrait-scan.jsx';

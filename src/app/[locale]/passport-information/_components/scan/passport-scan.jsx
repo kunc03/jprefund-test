@@ -1,7 +1,14 @@
+'use client';
+
 import React from 'react';
 import Webcam from 'react-webcam';
 
-const ScanCertificate = ({ webcamRef }) => {
+const PassportScan = ({ webcamRef }) => {
+  const videoConstraints = {
+    facingMode: 'environment',
+    // facingMode: 'user',
+  };
+
   return (
     <div className="camera-container">
       <Webcam
@@ -9,12 +16,10 @@ const ScanCertificate = ({ webcamRef }) => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         className="camera"
-        videoConstraints={{ facingMode: 'environment' }}
+        videoConstraints={videoConstraints}
       />
-
-      {/* <Image src={capturedImage} alt="Captured Image" /> */}
     </div>
   );
 };
 
-export { ScanCertificate };
+export { PassportScan };
