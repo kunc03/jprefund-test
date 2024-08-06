@@ -11,10 +11,9 @@ import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
 // import Image from 'next/image';
 
-const QrScan = () => {
+const QrScan = ({ qrBoxEl }) => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
-  const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(true);
   const { onSelected } = useQrScan();
   const router = useRouter();
@@ -64,7 +63,7 @@ const QrScan = () => {
       style={{ width: '100%', height: '100vh' }}
     >
       <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
-      <div className="relative">
+      {/* <div className="relative">
         <div
           ref={qrBoxEl}
           style={{
@@ -75,7 +74,7 @@ const QrScan = () => {
           }}
           // className="scanner-box"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
