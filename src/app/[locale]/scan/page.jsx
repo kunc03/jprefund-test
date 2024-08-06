@@ -24,11 +24,11 @@ const Scan = async ({ params }) => {
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay')}>
+        <div className={cn('overlay px-2 mb-2')}>
           <Image
             alt="Qr Frame"
             className="centered-image"
-            height={336}
+            height={250}
             src="/images/qr-frame.svg"
             width={336}
             priority

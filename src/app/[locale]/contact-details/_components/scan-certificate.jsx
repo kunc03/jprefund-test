@@ -16,13 +16,7 @@ const ScanCertificate = () => {
   //   setCapturedImage(imageSrc);
   // }, [webcamRef]);
 
-  // useEffect(() => {
-  //   const redirectTimeout = setTimeout(() => {
   //     router.push('/contact-details?s=sc');
-  //   }, 4000);
-
-  //   return () => clearTimeout(redirectTimeout);
-  // }, [router]);
 
   return (
     <div className="camera-container">

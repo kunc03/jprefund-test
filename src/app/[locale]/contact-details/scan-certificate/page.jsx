@@ -41,7 +41,7 @@ const ScanCertificatePage = async ({ params }) => {
         >
           <Heading
             className={cn(
-              'w-full px-2 text-center text-1422 font-medium text-white',
+              'w-full px-2 text-center text-1422 font-medium text-white small:hidden',
             )}
           >
             {t('scanCertificateInstruction')}
