@@ -4,12 +4,12 @@
 
 'use client';
 
-import Image from 'next/image';
-import QrScanner from 'qr-scanner';
-import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useQrScan } from '@/hooks';
-import { cn } from '@/utils';
+// import Image from 'next/image';
+// import QrScanner from 'qr-scanner';
+import { useRef } from 'react';
+// import { useRouter } from 'next/navigation';
+// import { useQrScan } from '@/hooks';
+// import { cn } from '@/utils';
 import Webcam from 'react-webcam';
 
 const QrScan = () => {
@@ -59,7 +59,7 @@ const QrScan = () => {
   //     );
   // }, [qrOn]);
   const webcamRef = useRef(null);
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     // <div

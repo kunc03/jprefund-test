@@ -1,13 +1,13 @@
 'use client';
 
 // import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+// import { useRouter } from 'next/navigation';
+import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
 const PassportScan = () => {
   const webcamRef = useRef(null);
-  const router = useRouter();
+  // const router = useRouter();
 
   // useEffect(() => {
   //   const redirectTimeout = setTimeout(() => {
