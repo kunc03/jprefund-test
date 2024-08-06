@@ -142,6 +142,10 @@
     margin: 0;
     top: 10;
   }
+
+  .scanner-box {
+    top: -90px;
+  }
 }
 
 input[type='number']::-webkit-inner-spin-button,

@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
+// import Image from 'next/image';
 
 const QrScan = () => {
   const scanner = useRef(null);
@@ -59,28 +60,28 @@ const QrScan = () => {
 
   return (
     <div
-      className={cn('camera-container')}
-      style={{ position: 'relative', width: '100%', height: '100vh' }}
+      className={cn('camera-container bg-green/50')}
+      style={{ width: '100%', height: '100%' }}
     >
       <video
         ref={videoEl}
-        style={{ width: '100%', height: '100%' }}
         autoPlay
         playsInline
-        className={cn('camera')}
+        className={cn('camera bg-green/50')}
       />
-      <div
-        ref={qrBoxEl}
-        style={{
-          position: 'absolute',
-          border: '2px solid red',
-          width: '250px',
-          height: '250px',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
+      <div className="scanner relative bg-red/50">
+        <div
+          ref={qrBoxEl}
+          style={{
+            position: 'absolute',
+            border: '2px solid red',
+            width: '336px',
+            height: '350px',
+            transform: 'translate(-50%, -50%)',
+          }}
+          className="scanner-box"
+        />
+      </div>
     </div>
   );
 };
