@@ -4,7 +4,7 @@
 
 'use client';
 
-// import QrScanner from 'qr-scanner';
+import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
@@ -12,7 +12,8 @@ import { cn } from '@/utils';
 import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 
 const QrScan = () => {
-  const scanner = useRef(null);
+  const qrScanner = useRef(null);
+  const barcodeScanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(true);
@@ -21,48 +22,72 @@ const QrScan = () => {
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.text);
+      onSelected(result.text || result.data);
       router.push('/home');
     }
   };
 
   useEffect(() => {
-    if (videoEl?.current && !scanner.current) {
-      scanner.current = new BrowserMultiFormatReader();
-      scanner.current
-        .listVideoInputDevices()
-        .then((videoInputDevices) => {
-          if (videoInputDevices.length > 0) {
-            scanner.current
-              .decodeFromVideoDevice(
-                videoInputDevices[0].deviceId,
-                videoEl.current,
-                (result, err) => {
-                  if (result) {
-                    onScanSuccess(result);
-                  }
-                  if (err && !(err instanceof NotFoundException)) {
-                    console.error('Decode error:', err);
-                  }
-                },
-              )
-              .then(() => setQrOn(true))
-              .catch((err) => {
-                console.error('Scanner start error:', err);
-                setQrOn(false);
-              });
-          }
-        })
-        .catch((err) => {
-          console.error('Video input devices error:', err);
-          setQrOn(false);
+    if (videoEl?.current) {
+      if (!qrScanner.current) {
+        qrScanner.current = new QrScanner(videoEl.current, onScanSuccess, {
+          onDecodeError: (error) => console.error('Decode error:', error),
+          preferredCamera: 'environment',
+          highlightScanRegion: true,
+          highlightCodeOutline: true,
+          overlay: qrBoxEl.current || undefined,
         });
+
+        qrScanner.current
+          .start()
+          .then(() => setQrOn(true))
+          .catch((err) => {
+            console.error('QR Scanner start error:', err);
+            setQrOn(false);
+          });
+      }
+
+      if (!barcodeScanner.current) {
+        barcodeScanner.current = new BrowserMultiFormatReader();
+        barcodeScanner.current
+          .listVideoInputDevices()
+          .then((videoInputDevices) => {
+            if (videoInputDevices.length > 0) {
+              barcodeScanner.current
+                .decodeFromVideoDevice(
+                  videoInputDevices[0].deviceId,
+                  videoEl.current,
+                  (result, err) => {
+                    if (result) {
+                      onScanSuccess(result);
+                    }
+                    if (err && !(err instanceof NotFoundException)) {
+                      console.error('Barcode decode error:', err);
+                    }
+                  },
+                )
+                .then(() => setQrOn(true))
+                .catch((err) => {
+                  console.error('Barcode Scanner start error:', err);
+                  setQrOn(false);
+                });
+            }
+          })
+          .catch((err) => {
+            console.error('Video input devices error:', err);
+            setQrOn(false);
+          });
+      }
     }
 
     return () => {
-      if (scanner.current) {
-        scanner.current.reset();
-        scanner.current = null;
+      if (qrScanner.current) {
+        qrScanner.current.stop();
+        qrScanner.current = null;
+      }
+      if (barcodeScanner.current) {
+        barcodeScanner.current.reset();
+        barcodeScanner.current = null;
       }
     };
   }, []);
