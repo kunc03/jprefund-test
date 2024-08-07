@@ -9,12 +9,8 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const Scan = async () => {
-  return (
-    <div className="landscape relative min-h-dvh">
-      <BodyScan />
-    </div>
-  );
+const Scan = () => {
+  return <BodyScan />;
 };
 
 export default Scan;
