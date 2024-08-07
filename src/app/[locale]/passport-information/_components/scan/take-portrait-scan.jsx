@@ -1,7 +1,10 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
-const TakePortrait = ({ webcamRef }) => {
+const TakePortrait = () => {
+  const webcamRef = useRef(null);
   const videoConstraints = {
     // facingMode: 'environment',
     facingMode: 'user',

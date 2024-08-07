@@ -9,21 +9,19 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-const handleFaceRecognition = ({ router, captureImage }) => {
-  captureImage();
+const handleFaceRecognition = ({ router }) => {
   router.push('/passport-information/not-complete');
 };
-const handleRoutesPassport = ({ router, captureImage }) => {
-  captureImage();
+const handleRoutesPassport = ({ router }) => {
   router.push('/passport-information/form');
 };
 
-const ButtonCamera = ({ form, captureImage }) => {
+const ButtonCamera = ({ form }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    if (form === 'face') handleFaceRecognition({ router, captureImage });
-    if (form === 'passport') handleRoutesPassport({ router, captureImage });
+    if (form === 'face') handleFaceRecognition({ router });
+    if (form === 'passport') handleRoutesPassport({ router });
   };
 
   return (

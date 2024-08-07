@@ -66,12 +66,12 @@ const QrScan = ({ qrBoxEl }) => {
 
       <div
         className={cn(
-          'flex w-full h-screen items-center justify-center pb-[180px]',
+          'flex w-full h-screen items-center justify-center pb-[120px]',
         )}
       >
-        <canvas
+        <div
           ref={qrBoxEl}
-          className={cn('')}
+          className={cn('bg-red/50')}
           style={{ width: '360px', height: '360px' }}
         />
       </div>

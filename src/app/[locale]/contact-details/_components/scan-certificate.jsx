@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
-const ScanCertificate = ({ webcamRef }) => {
+const ScanCertificate = () => {
+  const webcamRef = useRef(null);
+
   return (
     <div className="camera-container">
       <Webcam

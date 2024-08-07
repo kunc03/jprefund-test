@@ -1,11 +1,17 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
 import Webcam from 'react-webcam';
 
-const PassportScan = ({ webcamRef }) => {
+const PassportScan = () => {
+  const webcamRef = useRef(null);
+
   const videoConstraints = {
     facingMode: 'environment',
     // facingMode: 'user',
   };
+
+  useEffect(() => {});
 
   return (
     <div className="camera-container">
