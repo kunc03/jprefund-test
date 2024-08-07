@@ -4,7 +4,7 @@
 
 'use client';
 
-import QrScanner from 'qr-scanner';
+// import QrScanner from 'qr-scanner';
 import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -12,11 +12,10 @@ import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
 
 const QrScan = () => {
-  const qrScanner = useRef(null);
-  const barcodeScanner = useRef(null);
+  const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
-  const [qrOn, setQrOn] = useState(true);
+  const [scannerActive, setScannerActive] = useState(false);
   const { onSelected } = useQrScan();
   const router = useRouter();
 
@@ -27,79 +26,64 @@ const QrScan = () => {
     }
   };
 
-  useEffect(() => {
-    if (videoEl?.current) {
-      // Initialize QR Scanner
-      if (!qrScanner.current) {
-        qrScanner.current = new QrScanner(videoEl.current, onScanSuccess, {
-          onDecodeError: (error) => console.error('Decode error:', error),
-          preferredCamera: 'environment',
-          highlightScanRegion: true,
-          highlightCodeOutline: true,
-          overlay: qrBoxEl.current || undefined,
+  const initializeScanners = () => {
+    if (videoEl.current && !scanner.current) {
+      scanner.current = new BrowserMultiFormatReader();
+
+      scanner.current
+        .listVideoInputDevices()
+        .then((videoInputDevices) => {
+          if (videoInputDevices.length > 0) {
+            const { deviceId } = videoInputDevices[0];
+
+            scanner.current
+              .decodeFromVideoDevice(
+                deviceId,
+                videoEl.current,
+                (result, err) => {
+                  if (result) {
+                    onScanSuccess(result);
+                  }
+                  if (err && !(err instanceof NotFoundException)) {
+                    console.error('Decode error:', err);
+                  }
+                },
+              )
+              .then(() => setScannerActive(true))
+              .catch((err) => {
+                console.error('Scanner start error:', err);
+                setScannerActive(false);
+              });
+          } else {
+            console.error('No video input devices found.');
+            setScannerActive(false);
+          }
+        })
+        .catch((err) => {
+          console.error('Error listing video input devices:', err);
+          setScannerActive(false);
         });
-
-        qrScanner.current
-          .start()
-          .then(() => setQrOn(true))
-          .catch((err) => {
-            console.error('QR Scanner start error:', err);
-            setQrOn(false);
-          });
-      }
-
-      // Initialize Barcode Scanner
-      if (!barcodeScanner.current) {
-        barcodeScanner.current = new BrowserMultiFormatReader();
-        barcodeScanner.current
-          .listVideoInputDevices()
-          .then((videoInputDevices) => {
-            if (videoInputDevices.length > 0) {
-              barcodeScanner.current
-                .decodeFromVideoDevice(
-                  videoInputDevices[0].deviceId,
-                  videoEl.current,
-                  (result, err) => {
-                    if (result) {
-                      onScanSuccess(result);
-                    }
-                    if (err && !(err instanceof NotFoundException)) {
-                      console.error('Barcode decode error:', err);
-                    }
-                  },
-                )
-                .catch((err) => {
-                  console.error('Barcode Scanner start error:', err);
-                  setQrOn(false);
-                });
-            }
-          })
-          .catch((err) => {
-            console.error('Video input devices error:', err);
-            setQrOn(false);
-          });
-      }
     }
+  };
+
+  useEffect(() => {
+    initializeScanners();
 
     return () => {
-      if (qrScanner.current) {
-        qrScanner.current.stop();
-        qrScanner.current = null;
-      }
-      if (barcodeScanner.current) {
-        barcodeScanner.current.reset();
-        barcodeScanner.current = null;
+      if (scanner.current) {
+        scanner.current.reset();
+        scanner.current = null;
       }
     };
   }, []);
 
   useEffect(() => {
-    if (!qrOn) {
+    if (!scannerActive) {
       alert(
         'Camera is blocked or not accessible. Please allow camera in your browser permissions and reload.',
       );
     }
-  }, [qrOn]);
+  }, [scannerActive]);
 
   return (
     <div
