@@ -5,11 +5,11 @@
 'use client';
 
 import QrScanner from 'qr-scanner';
+import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
-import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 
 const QrScan = () => {
   const qrScanner = useRef(null);
@@ -95,7 +95,7 @@ const QrScan = () => {
   useEffect(() => {
     if (!qrOn) {
       alert(
-        'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
+        'Camera is blocked or not accessible. Please allow camera in your browser permissions and reload.',
       );
     }
   }, [qrOn]);
@@ -116,7 +116,6 @@ const QrScan = () => {
           style={{ width: '360px', height: '360px' }}
         />
       </div>
-
       <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
     </div>
   );
