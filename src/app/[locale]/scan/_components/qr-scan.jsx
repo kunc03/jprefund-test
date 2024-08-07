@@ -4,60 +4,56 @@
 
 'use client';
 
-// import QrScanner from 'qr-scanner';
+import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
-import { BrowserMultiFormatReader } from '@zxing/browser';
 // eslint-disable-next-line import/no-extraneous-dependencies
 // import { BrowserMultiFormatReader } from '@zxing/browser';
 // import Image from 'next/image';
 
 const QrScan = () => {
+  const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
-  const [scanner, setScanner] = useState(null);
   const [qrOn, setQrOn] = useState(true);
   const { onSelected } = useQrScan();
   const router = useRouter();
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.getText()); // Use getText() to retrieve the result
+      onSelected(result.data);
       router.push('/home');
     }
   };
 
   useEffect(() => {
-    const codeReader = new BrowserMultiFormatReader();
-    let videoStream;
+    if (videoEl?.current && !scanner.current) {
+      // Initialize QrScanner with video element and callback
+      scanner.current = new QrScanner(videoEl.current, onScanSuccess, {
+        // Set options for QrScanner
+        onDecodeError: (error) => console.error('Decode error:', error),
+        preferredCamera: 'environment',
+        highlightScanRegion: true,
+        highlightCodeOutline: true,
+        overlay: qrBoxEl.current || undefined,
+      });
 
-    if (videoEl?.current) {
-      codeReader
-        .decodeFromVideoDevice(null, videoEl.current, (result, err) => {
-          if (result) {
-            onScanSuccess(result);
-          }
-          if (err) {
-            console.error('Scan error:', err);
-          }
-        })
-        .then((stream) => {
-          videoStream = stream; // Save video stream to stop later
-          setScanner(codeReader);
-        })
+      // Start scanning
+      scanner.current
+        .start()
+        .then(() => setQrOn(true))
         .catch((err) => {
-          console.error('Error initializing scan:', err);
+          console.error('Scanner start error:', err);
           setQrOn(false);
         });
     }
 
     return () => {
-      if (videoStream) {
-        videoStream.getTracks().forEach((track) => track.stop()); // Stop all tracks from the video stream
+      if (scanner.current) {
+        scanner.current.stop();
       }
-      // No need to call scanner.reset() since it does not exist in @zxing/browser
     };
   }, []);
 
@@ -68,8 +64,6 @@ const QrScan = () => {
       );
     }
   }, [qrOn]);
-
-  console.log(scanner);
 
   return (
     <div
