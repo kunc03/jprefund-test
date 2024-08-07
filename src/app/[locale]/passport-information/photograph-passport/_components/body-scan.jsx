@@ -10,14 +10,14 @@ import { ButtonCamera, PassportScan } from '../../_components';
 const BodyScan = () => {
   const webcamRef = useRef(null);
   const t = useTranslations('passportInformation');
-  const [, setCapturedImage] = useState(null);
+  const [capturedImage, setCapturedImage] = useState(null);
 
   const captureImage = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
   };
 
-  //   console.log(capturedImage);
+  console.log(capturedImage);
   return (
     <>
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">

@@ -1,7 +1,8 @@
+import React from 'react';
 import { Header, Heading, PassportRegistrationIcon } from '@/components';
 import { getTranslations } from 'next-intl/server';
-import { ButtonScanPassport } from './_components';
 import { cn } from '@/utils';
+import { ButtonScanPassport } from './_components/button-scan-passport';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -24,6 +25,7 @@ const PassportInformationPage = async ({ params }) => {
           )}
         >
           <PassportRegistrationIcon height={175} width={292} />
+
           <div className={cn('text-center text-1322')}>
             <Heading className={cn('text-justify')}>
               {t('pleaseTakeAPhoto')}

@@ -9,7 +9,7 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const TakePortraitView = async () => {
+const TakePortraitView = () => {
   return (
     <div className="landscape relative min-h-dvh">
       <BodyScan />
