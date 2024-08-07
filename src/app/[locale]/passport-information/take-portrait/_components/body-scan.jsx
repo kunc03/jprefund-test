@@ -10,14 +10,14 @@ import { ButtonCamera, TakePortrait } from '../../_components';
 const BodyScan = () => {
   const t = useTranslations('passportInformation');
   const webcamRef = useRef(null);
-  const [capturedImage, setCapturedImage] = useState(null);
+  const [, setCapturedImage] = useState(null);
 
   const captureImage = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
   };
 
-  console.log(capturedImage);
+  //   console.log(capturedImage);
 
   return (
     <>
