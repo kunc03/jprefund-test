@@ -4,54 +4,82 @@
 
 'use client';
 
-// import QrScanner from 'qr-scanner';
-import { useEffect, useState } from 'react';
+import QrScanner from 'qr-scanner';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
-import { useZxing } from 'react-zxing';
 
 const QrScan = () => {
-  const [result, setResult] = useState('');
+  const scanner = useRef(null);
+  const videoEl = useRef(null);
+  const qrBoxEl = useRef(null);
+  const [qrOn, setQrOn] = useState(true);
   const { onSelected } = useQrScan();
-  const [showVideoFeed, setShowVideoFeed] = useState(true);
   const router = useRouter();
 
-  const { ref } = useZxing({
-    onDecodeResult(decodeResult) {
-      setResult(decodeResult.getText());
-      setShowVideoFeed(false);
-    },
-  });
-
-  useEffect(() => {
+  const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result);
+      onSelected(result.data);
       router.push('/home');
     }
-  }, [result, onSelected, router]);
+  };
 
-  console.log(showVideoFeed);
+  useEffect(() => {
+    if (videoEl?.current && !scanner.current) {
+      // Initialize QrScanner with video element and callback
+      scanner.current = new QrScanner(videoEl.current, onScanSuccess, {
+        // Set options for QrScanner
+        onDecodeError: (error) => console.error('Decode error:', error),
+        preferredCamera: 'environment',
+        highlightScanRegion: true,
+        highlightCodeOutline: true,
+        overlay: qrBoxEl.current || undefined,
+      });
+
+      // Start scanning
+      scanner.current
+        .start()
+        .then(() => setQrOn(true))
+        .catch((err) => {
+          console.error('Scanner start error:', err);
+          setQrOn(false);
+        });
+    }
+
+    return () => {
+      if (scanner.current) {
+        scanner.current.stop();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!qrOn) {
+      alert(
+        'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
+      );
+    }
+  }, [qrOn]);
 
   return (
     <div
       className={cn('camera-container')}
       style={{ width: '100%', height: '100%' }}
     >
-      {/* <div
+      <div
         className={cn(
           'flex w-full h-screen items-center justify-center relative',
         )}
       >
         <div
-          id="qr-reader"
           ref={qrBoxEl}
           className={cn('scanner absolute top-[100px]')}
           style={{ width: '360px', height: '360px' }}
         />
-      </div> */}
+      </div>
 
-      <video ref={ref} autoPlay playsInline className={cn('camera')} />
+      <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
     </div>
   );
 };
