@@ -29,6 +29,7 @@ const QrScan = () => {
 
   useEffect(() => {
     if (videoEl?.current) {
+      // Initialize QR Scanner
       if (!qrScanner.current) {
         qrScanner.current = new QrScanner(videoEl.current, onScanSuccess, {
           onDecodeError: (error) => console.error('Decode error:', error),
@@ -47,6 +48,7 @@ const QrScan = () => {
           });
       }
 
+      // Initialize Barcode Scanner
       if (!barcodeScanner.current) {
         barcodeScanner.current = new BrowserMultiFormatReader();
         barcodeScanner.current
