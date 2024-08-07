@@ -66,7 +66,6 @@ const QrScan = () => {
                     }
                   },
                 )
-                .then(() => setQrOn(true))
                 .catch((err) => {
                   console.error('Barcode Scanner start error:', err);
                   setQrOn(false);
