@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { BrowserMultiFormatReader } from '@zxing/browser';
+// import { BrowserMultiFormatReader } from '@zxing/browser';
 // import Image from 'next/image';
 
 const QrScan = () => {
@@ -23,62 +23,46 @@ const QrScan = () => {
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.data);
+      onSelected(result.data); // `result.data` should work for both QR code and barcode
       router.push('/home');
     }
   };
 
   useEffect(() => {
     if (videoEl?.current && !scanner.current) {
-      scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
-        onDecodeError: () => {},
+      // Initialize QrScanner with video element and callback
+      scanner.current = new QrScanner(videoEl.current, onScanSuccess, {
+        // Set options for QrScanner
+        onDecodeError: (error) => console.error('Decode error:', error),
         preferredCamera: 'environment',
         highlightScanRegion: true,
         highlightCodeOutline: true,
-        overlay: qrBoxEl?.current || undefined,
+        overlay: qrBoxEl.current || undefined,
       });
 
-      scanner?.current
-        ?.start()
+      // Start scanning
+      scanner.current
+        .start()
         .then(() => setQrOn(true))
         .catch((err) => {
-          if (err) setQrOn(false);
-        });
-    }
-
-    if (videoEl?.current && !scanner.current) {
-      scanner.current = new BrowserMultiFormatReader(
-        videoEl?.current,
-        onScanSuccess,
-        {
-          onDecodeError: () => {},
-          preferredCamera: 'environment',
-          highlightScanRegion: true,
-          highlightCodeOutline: true,
-          overlay: qrBoxEl?.current || undefined,
-        },
-      );
-
-      scanner?.current
-        ?.start()
-        .then(() => setQrOn(true))
-        .catch((err) => {
-          if (err) setQrOn(false);
+          console.error('Scanner start error:', err);
+          setQrOn(false);
         });
     }
 
     return () => {
-      if (!videoEl?.current) {
-        scanner?.current?.stop();
+      if (scanner.current) {
+        scanner.current.stop();
       }
     };
   }, []);
 
   useEffect(() => {
-    if (!qrOn)
+    if (!qrOn) {
       alert(
         'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
       );
+    }
   }, [qrOn]);
 
   return (
