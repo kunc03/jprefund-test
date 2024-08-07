@@ -149,6 +149,10 @@
   .scanner-box {
     top: -90px;
   }
+
+  .scanner {
+    top: 0;
+  }
 }
 
 input[type='number']::-webkit-inner-spin-button,
