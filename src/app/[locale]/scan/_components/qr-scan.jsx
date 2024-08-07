@@ -4,11 +4,12 @@
 
 'use client';
 
-import QrScanner from 'qr-scanner';
+// import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
+import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 
 const QrScan = () => {
   const scanner = useRef(null);
@@ -20,36 +21,48 @@ const QrScan = () => {
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.data);
+      onSelected(result.text);
       router.push('/home');
     }
   };
 
   useEffect(() => {
     if (videoEl?.current && !scanner.current) {
-      // Initialize QrScanner with video element and callback
-      scanner.current = new QrScanner(videoEl.current, onScanSuccess, {
-        // Set options for QrScanner
-        onDecodeError: (error) => console.error('Decode error:', error),
-        preferredCamera: 'environment',
-        highlightScanRegion: true,
-        highlightCodeOutline: true,
-        overlay: qrBoxEl.current || undefined,
-      });
-
-      // Start scanning
+      scanner.current = new BrowserMultiFormatReader();
       scanner.current
-        .start()
-        .then(() => setQrOn(true))
+        .listVideoInputDevices()
+        .then((videoInputDevices) => {
+          if (videoInputDevices.length > 0) {
+            scanner.current
+              .decodeFromVideoDevice(
+                videoInputDevices[0].deviceId,
+                videoEl.current,
+                (result, err) => {
+                  if (result) {
+                    onScanSuccess(result);
+                  }
+                  if (err && !(err instanceof NotFoundException)) {
+                    console.error('Decode error:', err);
+                  }
+                },
+              )
+              .then(() => setQrOn(true))
+              .catch((err) => {
+                console.error('Scanner start error:', err);
+                setQrOn(false);
+              });
+          }
+        })
         .catch((err) => {
-          console.error('Scanner start error:', err);
+          console.error('Video input devices error:', err);
           setQrOn(false);
         });
     }
 
     return () => {
       if (scanner.current) {
-        scanner.current.stop();
+        scanner.current.reset();
+        scanner.current = null;
       }
     };
   }, []);
