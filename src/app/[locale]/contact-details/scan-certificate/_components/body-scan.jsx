@@ -11,14 +11,14 @@ import { ButtonCamera } from '../../_components';
 const BodyScan = () => {
   const t = useTranslations('contactDetails');
   const webcamRef = useRef(null);
-  const [capturedImage, setCapturedImage] = useState(null);
+  const [, setCapturedImage] = useState(null);
 
   const captureImage = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
   };
 
-  console.log(capturedImage);
+  // console.log(capturedImage);
 
   return (
     <>
