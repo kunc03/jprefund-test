@@ -9,9 +9,11 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { BrowserMultiFormatReader } from '@zxing/browser';
 // import Image from 'next/image';
 
-const ScanCertificate = () => {
+const TakePortrait = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
@@ -44,6 +46,27 @@ const ScanCertificate = () => {
         });
     }
 
+    if (videoEl?.current && !scanner.current) {
+      scanner.current = new BrowserMultiFormatReader(
+        videoEl?.current,
+        onScanSuccess,
+        {
+          onDecodeError: () => {},
+          preferredCamera: 'environment',
+          highlightScanRegion: true,
+          highlightCodeOutline: true,
+          overlay: qrBoxEl?.current || undefined,
+        },
+      );
+
+      scanner?.current
+        ?.start()
+        .then(() => setQrOn(true))
+        .catch((err) => {
+          if (err) setQrOn(false);
+        });
+    }
+
     return () => {
       if (!videoEl?.current) {
         scanner?.current?.stop();
@@ -60,7 +83,7 @@ const ScanCertificate = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      router.push('/contact-details?s=sc');
+      router.push('/passport-information/not-complete');
     }, 4000);
 
     return () => clearTimeout(redirectTimeout);
@@ -88,4 +111,4 @@ const ScanCertificate = () => {
   );
 };
 
-export { ScanCertificate };
+export { TakePortrait };

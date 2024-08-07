@@ -4,8 +4,8 @@
 
 'use client';
 
-import Image from 'next/image';
-import QrScanner from 'qr-scanner';
+// import QrScanner from 'qr-scanner';
+import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
@@ -15,75 +15,98 @@ const QrScan = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
-  const [qrOn, setQrOn] = useState(true);
+  const [scannerActive, setScannerActive] = useState(false);
   const { onSelected } = useQrScan();
   const router = useRouter();
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.data);
+      onSelected(result.text || result.data);
       router.push('/home');
     }
   };
 
-  useEffect(() => {
-    if (videoEl?.current && !scanner.current) {
-      scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
-        onDecodeError: () => {},
-        preferredCamera: 'environment',
-        highlightScanRegion: true,
-        highlightCodeOutline: true,
-        overlay: qrBoxEl?.current || undefined,
-      });
+  const initializeScanners = () => {
+    if (videoEl.current && !scanner.current) {
+      scanner.current = new BrowserMultiFormatReader();
 
-      scanner?.current
-        ?.start()
-        .then(() => setQrOn(true))
+      scanner.current
+        .listVideoInputDevices()
+        .then((videoInputDevices) => {
+          if (videoInputDevices.length > 0) {
+            // Prefer the rear camera
+            const rearCamera =
+              videoInputDevices.find((device) =>
+                device.label.toLowerCase().includes('back'),
+              ) || videoInputDevices[0];
+            const { deviceId } = rearCamera;
+
+            scanner.current
+              .decodeFromVideoDevice(
+                deviceId,
+                videoEl.current,
+                (result, err) => {
+                  if (result) {
+                    onScanSuccess(result);
+                  }
+                  if (err && !(err instanceof NotFoundException)) {
+                    console.error('Decode error:', err);
+                  }
+                },
+              )
+              .then(() => setScannerActive(true))
+              .catch((err) => {
+                console.error('Scanner start error:', err);
+                setScannerActive(false);
+              });
+          } else {
+            console.error('No video input devices found.');
+            setScannerActive(false);
+          }
+        })
         .catch((err) => {
-          if (err) setQrOn(false);
+          console.error('Error listing video input devices:', err);
+          setScannerActive(false);
         });
     }
+  };
+
+  useEffect(() => {
+    initializeScanners();
 
     return () => {
-      if (!videoEl?.current) {
-        scanner?.current?.stop();
+      if (scanner.current) {
+        scanner.current.reset();
+        scanner.current = null;
       }
     };
   }, []);
 
   useEffect(() => {
-    if (!qrOn)
+    if (!scannerActive) {
       alert(
-        'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
+        'Camera is blocked or not accessible. Please allow camera in your browser permissions and reload.',
       );
-  }, [qrOn]);
+    }
+  }, [scannerActive]);
 
   return (
     <div
-      className={cn(
-        'relative flex flex-col justify-center items-center min-h-dvh',
-      )}
+      className={cn('camera-container')}
+      style={{ width: '100%', height: '100%' }}
     >
-      <video
-        ref={videoEl}
-        style={{ width: '100%', maxWidth: '100%', height: '100%' }}
-        autoPlay
-        playsInline
-        className={cn('object-cover absolute')}
-      />
       <div
-        ref={qrBoxEl}
-        className={cn('flex flex-col items-center justify-center pb-[150px]')}
+        className={cn(
+          'flex w-full h-screen items-center justify-center relative',
+        )}
       >
-        <Image
-          alt="Qr Frame"
-          className="qr-frame"
-          height={336}
-          src="/images/qr-frame.svg"
-          width={336}
-          priority
+        <div
+          ref={qrBoxEl}
+          className={cn('scanner absolute top-[100px]')}
+          style={{ width: '360px', height: '360px' }}
         />
       </div>
+      <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
     </div>
   );
 };

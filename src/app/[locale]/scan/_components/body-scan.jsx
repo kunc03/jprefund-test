@@ -1,20 +1,16 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-import { ButtonSend, QrScan } from './_components';
 import { Heading } from '@/components';
-import Image from 'next/image';
 import { cn } from '@/utils';
+import Image from 'next/image';
+import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
+import { QrScan } from './qr-scan';
+import { ButtonSend } from './button-send';
 
-export const generateMetadata = async ({ params }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'scan' });
-
-  return { title: t('metaTitle'), description: t('metaDescription') };
-};
-
-const Scan = async ({ params }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'scan' });
+const BodyScan = () => {
+  const t = useTranslations('scan');
+  const qrBoxEl = useRef(null);
 
   return (
     <div className="landscape relative min-h-dvh">
@@ -23,7 +19,7 @@ const Scan = async ({ params }) => {
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay px-2 mb-2')}>
+        <div ref={qrBoxEl} className={cn('overlay px-2 mb-2')}>
           <Image
             alt="Qr Frame"
             className="centered-image"
@@ -56,9 +52,9 @@ const Scan = async ({ params }) => {
         </div>
       </div>
 
-      <QrScan />
+      <QrScan qrBoxEl={qrBoxEl} />
     </div>
   );
 };
 
-export default Scan;
+export { BodyScan };

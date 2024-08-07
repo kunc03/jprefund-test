@@ -1,18 +1,19 @@
-/* eslint-disable tailwindcss/no-custom-classname */
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable no-alert */
 /* eslint-disable react-hooks/exhaustive-deps */
 
 'use client';
 
-import Image from 'next/image';
 import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
+import { cn } from '@/utils';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { BrowserMultiFormatReader } from '@zxing/browser';
+// import Image from 'next/image';
 
-const FaceScan = () => {
+const PassportScan = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
@@ -23,7 +24,7 @@ const FaceScan = () => {
   const onScanSuccess = (result) => {
     if (result) {
       onSelected(result.data);
-      //   router.push('/home');
+      router.push('/home');
     }
   };
 
@@ -36,6 +37,27 @@ const FaceScan = () => {
         highlightCodeOutline: true,
         overlay: qrBoxEl?.current || undefined,
       });
+
+      scanner?.current
+        ?.start()
+        .then(() => setQrOn(true))
+        .catch((err) => {
+          if (err) setQrOn(false);
+        });
+    }
+
+    if (videoEl?.current && !scanner.current) {
+      scanner.current = new BrowserMultiFormatReader(
+        videoEl?.current,
+        onScanSuccess,
+        {
+          onDecodeError: () => {},
+          preferredCamera: 'environment',
+          highlightScanRegion: true,
+          highlightCodeOutline: true,
+          overlay: qrBoxEl?.current || undefined,
+        },
+      );
 
       scanner?.current
         ?.start()
@@ -59,21 +81,34 @@ const FaceScan = () => {
       );
   }, [qrOn]);
 
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      router.push('/passport-information/form');
+    }, 4000);
+
+    return () => clearTimeout(redirectTimeout);
+  }, [router]);
+
   return (
-    <div className="qr-reader">
-      <video ref={videoEl} />
-      <div ref={qrBoxEl} className="qr-box">
-        <Image
-          alt="Face Frame"
-          className="Face-frame"
-          height={256}
-          src="/images/qr-frame.svg"
-          width={256}
-          priority
+    <div
+      className={cn('camera-container')}
+      style={{ width: '100%', height: '100%' }}
+    >
+      <div
+        className={cn(
+          'flex w-full h-screen items-center justify-center relative',
+        )}
+      >
+        <div
+          ref={qrBoxEl}
+          className={cn('scanner absolute top-[100px]')}
+          style={{ width: '360px', height: '360px' }}
         />
       </div>
+
+      <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
     </div>
   );
 };
 
-export { FaceScan };
+export { PassportScan };
