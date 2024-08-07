@@ -1,20 +1,20 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import React, { useEffect, useRef } from 'react';
+// import { useRouter } from 'next/navigation';
+import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
 const TakePortrait = () => {
   const webcamRef = useRef(null);
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/not-complete');
-    }, 4000);
+  // useEffect(() => {
+  //   const redirectTimeout = setTimeout(() => {
+  //     router.push('/passport-information/not-complete');
+  //   }, 4000);
 
-    return () => clearTimeout(redirectTimeout);
-  }, [router]);
+  //   return () => clearTimeout(redirectTimeout);
+  // }, [router]);
 
   const videoConstraints = {
     // facingMode: 'environment',
