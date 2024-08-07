@@ -4,14 +4,12 @@
 
 'use client';
 
-import QrScanner from 'qr-scanner';
+// import QrScanner from 'qr-scanner';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
-// eslint-disable-next-line import/no-extraneous-dependencies
-// import { BrowserMultiFormatReader } from '@zxing/browser';
-// import Image from 'next/image';
+import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 
 const QrScan = () => {
   const scanner = useRef(null);
@@ -22,37 +20,36 @@ const QrScan = () => {
   const router = useRouter();
 
   const onScanSuccess = (result) => {
-    if (result) {
-      onSelected(result.data);
+    if (result && result.length > 0) {
+      onSelected(result[0].barcodeText);
       router.push('/home');
     }
   };
 
   useEffect(() => {
-    if (videoEl?.current && !scanner.current) {
-      // Initialize QrScanner with video element and callback
-      scanner.current = new QrScanner(videoEl.current, onScanSuccess, {
-        // Set options for QrScanner
-        onDecodeError: (error) => console.error('Decode error:', error),
-        preferredCamera: 'environment',
-        highlightScanRegion: true,
-        highlightCodeOutline: true,
-        overlay: qrBoxEl.current || undefined,
-      });
+    const initializeScanner = async () => {
+      if (videoEl?.current && !scanner.current) {
+        try {
+          // Initialize Dynamsoft Barcode Reader
+          scanner.current = await BarcodeReader.createInstance();
 
-      // Start scanning
-      scanner.current
-        .start()
-        .then(() => setQrOn(true))
-        .catch((err) => {
+          // Start video scanning
+          await scanner.current.setVideoElement(videoEl.current);
+          scanner.current.onFrameRead = onScanSuccess;
+          await scanner.current.open();
+          setQrOn(true);
+        } catch (err) {
           console.error('Scanner start error:', err);
           setQrOn(false);
-        });
-    }
+        }
+      }
+    };
+
+    initializeScanner();
 
     return () => {
       if (scanner.current) {
-        scanner.current.stop();
+        scanner.current.destroyContext();
       }
     };
   }, []);

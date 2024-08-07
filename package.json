@@ -29,6 +29,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "dynamsoft-javascript-barcode": "^9.6.42",
     "eslint-plugin-filenames": "^1.3.2",
     "framer-motion": "^11.2.11",
     "html5-qrcode": "^2.3.8",
