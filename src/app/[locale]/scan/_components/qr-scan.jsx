@@ -23,7 +23,7 @@ const QrScan = () => {
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.getText());
+      onSelected(result.data);
       router.push('/home');
     }
   };
