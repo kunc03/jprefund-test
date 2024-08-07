@@ -34,7 +34,12 @@ const QrScan = () => {
         .listVideoInputDevices()
         .then((videoInputDevices) => {
           if (videoInputDevices.length > 0) {
-            const { deviceId } = videoInputDevices[0];
+            // Prefer the rear camera
+            const rearCamera =
+              videoInputDevices.find((device) =>
+                device.label.toLowerCase().includes('back'),
+              ) || videoInputDevices[0];
+            const { deviceId } = rearCamera;
 
             scanner.current
               .decodeFromVideoDevice(
