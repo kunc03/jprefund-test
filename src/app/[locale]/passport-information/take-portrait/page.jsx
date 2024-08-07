@@ -1,6 +1,5 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
-// import { BodyScan } from './_components';
 import { ButtonCamera, TakePortrait } from '../_components';
 import { Heading } from '@/components';
 import { cn } from '@/utils';

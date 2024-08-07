@@ -29,9 +29,6 @@ const QrScan = () => {
   };
 
   useEffect(() => {
-    const codeReader = new BrowserMultiFormatReader();
-    let videoStream;
-
     if (videoEl?.current && !scanner.current) {
       scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
         onDecodeError: () => {},
@@ -47,30 +44,32 @@ const QrScan = () => {
         .catch((err) => {
           if (err) setQrOn(false);
         });
+    }
 
-      codeReader
-        .decodeFromVideoDevice(null, videoEl.current, (result, err) => {
-          if (result) {
-            onScanSuccess(result);
-          }
-          if (err) {
-            console.error(err.message);
-          }
-        })
-        .then((stream) => {
-          videoStream = stream; // Menyimpan video stream untuk berhenti nanti
-        })
+    if (videoEl?.current && !scanner.current) {
+      scanner.current = new BrowserMultiFormatReader(
+        videoEl?.current,
+        onScanSuccess,
+        {
+          onDecodeError: () => {},
+          preferredCamera: 'environment',
+          highlightScanRegion: true,
+          highlightCodeOutline: true,
+          overlay: qrBoxEl?.current || undefined,
+        },
+      );
+
+      scanner?.current
+        ?.start()
+        .then(() => setQrOn(true))
         .catch((err) => {
-          console.error(err.message);
+          if (err) setQrOn(false);
         });
     }
 
     return () => {
-      if (scanner.current) {
-        scanner.current.stop();
-      }
-      if (videoStream) {
-        videoStream.getTracks().forEach((track) => track.stop()); // Berhenti semua track dari video stream
+      if (!videoEl?.current) {
+        scanner?.current?.stop();
       }
     };
   }, []);
