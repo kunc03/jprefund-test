@@ -5,20 +5,19 @@ import { cn } from '@/utils';
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { ScanCertificate } from '../../_components/scan-certificate';
-import { ButtonCamera } from '../../_components';
+import { ButtonCamera, ScanCertificate } from '../../_components';
 
 const BodyScan = () => {
   const t = useTranslations('contactDetails');
   const webcamRef = useRef(null);
-  const [, setCapturedImage] = useState(null);
+  const [capturedImage, setCapturedImage] = useState(null);
 
   const captureImage = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
   };
 
-  // console.log(capturedImage);
+  console.log(capturedImage);
 
   return (
     <>

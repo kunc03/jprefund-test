@@ -3,22 +3,21 @@
 import { Heading } from '@/components';
 import { cn } from '@/utils';
 import React, { useRef, useState } from 'react';
-import { ButtonCamera } from '../../_components/button-camera';
-import { PassportScan } from '../../_components';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { ButtonCamera, PassportScan } from '../../_components';
 
 const BodyScan = () => {
   const webcamRef = useRef(null);
   const t = useTranslations('passportInformation');
-  const [, setCapturedImage] = useState(null);
+  const [capturedImage, setCapturedImage] = useState(null);
 
   const captureImage = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
   };
 
-  //   console.log(capturedImage);
+  console.log(capturedImage);
   return (
     <>
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">

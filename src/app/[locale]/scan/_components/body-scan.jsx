@@ -4,9 +4,9 @@ import { Heading } from '@/components';
 import { cn } from '@/utils';
 import Image from 'next/image';
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { ButtonSend } from './button-send';
 import { QrScan } from './qr-scan';
-import { useTranslations } from 'next-intl';
 
 const BodyScan = () => {
   const t = useTranslations('scan');
