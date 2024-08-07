@@ -9,23 +9,29 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { BrowserMultiFormatReader } from '@zxing/browser';
 // import Image from 'next/image';
 
-const QrScan = ({ qrBoxEl }) => {
+const QrScan = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
+  const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(true);
   const { onSelected } = useQrScan();
   const router = useRouter();
 
   const onScanSuccess = (result) => {
     if (result) {
-      onSelected(result.data);
+      onSelected(result.getText());
       router.push('/home');
     }
   };
 
   useEffect(() => {
+    const codeReader = new BrowserMultiFormatReader();
+    let videoStream;
+
     if (videoEl?.current && !scanner.current) {
       scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
         onDecodeError: () => {},
@@ -41,11 +47,30 @@ const QrScan = ({ qrBoxEl }) => {
         .catch((err) => {
           if (err) setQrOn(false);
         });
+
+      codeReader
+        .decodeFromVideoDevice(null, videoEl.current, (result, err) => {
+          if (result) {
+            onScanSuccess(result);
+          }
+          if (err) {
+            console.error(err.message);
+          }
+        })
+        .then((stream) => {
+          videoStream = stream; // Menyimpan video stream untuk berhenti nanti
+        })
+        .catch((err) => {
+          console.error(err.message);
+        });
     }
 
     return () => {
       if (scanner.current) {
         scanner.current.stop();
+      }
+      if (videoStream) {
+        videoStream.getTracks().forEach((track) => track.stop()); // Berhenti semua track dari video stream
       }
     };
   }, []);

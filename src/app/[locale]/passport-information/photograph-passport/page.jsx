@@ -17,22 +17,19 @@ const ScanYourPassport = async ({ params }) => {
   const t = await getTranslations({ locale, namespace: 'passportInformation' });
 
   return (
-    <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
+    <div className="relative min-h-dvh">
+      <div className="absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
         <Heading className="pt-9 text-center text-1822 font-medium text-white">
           {t('photographingPassport')}
         </Heading>
 
-        <div className="overlay">
-          <Image
-            src="/images/scan-passport.svg"
-            width={265}
-            height={250}
-            alt="Passport Image"
-            className={cn('centered-image w-[60%]')}
-          />
-        </div>
-
+        <Image
+          src="/images/scan-passport.svg"
+          width={265}
+          height={250}
+          alt="Passport Image"
+          className={cn('centered-image w-[60%]')}
+        />
         <div
           className={cn(
             'relative flex w-full flex-col items-center justify-center px-7 py-4',
