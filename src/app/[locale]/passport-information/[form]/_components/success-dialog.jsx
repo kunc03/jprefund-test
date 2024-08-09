@@ -52,7 +52,9 @@ const SuccessDialog = ({ isOpen, form }) => {
 
   return (
     <AlertDialog open={open} className="">
-      <AlertDialogContent className={cn('flex flex-col justify-between w-324')}>
+      <AlertDialogContent
+        className={cn('flex flex-col justify-between min-w-324')}
+      >
         <div className={cn('flex flex-col items-start')}>
           <AlertDialogHeader>
             <AlertDialogTitle
@@ -62,9 +64,9 @@ const SuccessDialog = ({ isOpen, form }) => {
               className={cn('font-medium text-gray flex flex-col')}
             >
               {notes.map((note) => (
-                <span className=" text-center" key={note}>
+                <p className={cn('text-wrap text-center')} key={note}>
                   {t(note)}
-                </span>
+                </p>
               ))}
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -76,7 +78,10 @@ const SuccessDialog = ({ isOpen, form }) => {
           >
             {t('cancel')}
           </Button>
-          <Button onClick={handleClickSave} className={cn('!rounded-6 w-100')}>
+          <Button
+            onClick={handleClickSave}
+            className={cn('!rounded-6 min-w-100')}
+          >
             OK
           </Button>
         </AlertDialogFooter>

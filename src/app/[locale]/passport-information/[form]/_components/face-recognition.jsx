@@ -97,9 +97,9 @@ const FaceRecognition = ({ t, form }) => {
                   {t('faceRecognitionPhoto')}
                 </Heading>
 
-                <span
+                <div
                   className={cn(
-                    'flex flex-col items-center justify-center rounded-6 border border-gray-300 bg-white p-2 gap-10',
+                    'flex flex-col items-center justify-center rounded-6 border border-gray-300 bg-white p-2 gap-10 text-1518',
                   )}
                 >
                   {item.path === 'complete' ? (
@@ -118,7 +118,7 @@ const FaceRecognition = ({ t, form }) => {
                     />
                   )}
                   {item.ButtonRecognition && <ButtonRecognition t={t} />}
-                </span>
+                </div>
 
                 {item.urlFace && (
                   <ButtonReshoot path="/passport-information/take-portrait" />

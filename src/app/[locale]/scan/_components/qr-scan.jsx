@@ -15,7 +15,7 @@ const QrScan = () => {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
-  const [scannerActive, setScannerActive] = useState(false);
+  const [, setScannerActive] = useState(false);
   const { onSelected } = useQrScan();
   const router = useRouter();
 
@@ -81,14 +81,6 @@ const QrScan = () => {
       }
     };
   }, []);
-
-  useEffect(() => {
-    if (!scannerActive) {
-      alert(
-        'Camera is blocked or not accessible. Please allow camera in your browser permissions and reload.',
-      );
-    }
-  }, [scannerActive]);
 
   return (
     <div
