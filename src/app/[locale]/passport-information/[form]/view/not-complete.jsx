@@ -20,10 +20,6 @@ const NotComplete = ({
 
   const [isSuccess, setIsSuccess] = useState(false);
 
-  useEffect(() => {
-    setIsSuccess(false);
-  }, []);
-
   const handleSelectedDateOfBirth = (date) => {
     setIsForm((old) => {
       return { ...old, dateOfBirth: date };
@@ -39,6 +35,13 @@ const NotComplete = ({
   const handleClickSave = () => {
     setIsSuccess(true);
   };
+
+  useEffect(() => {
+    if (isSuccess === true) {
+      setIsSuccess(false);
+    }
+  }, [isSuccess]);
+
   return (
     <>
       <div className="flex w-full grow flex-col items-center justify-center gap-22 p-28">

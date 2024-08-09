@@ -33,7 +33,7 @@ const AdvancePreparation = () => {
     <Dialog>
       <DialogTrigger className="w-full">
         <div
-          className="flex h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
+          className="flex h-auto min-h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
           aria-hidden="true"
           role="button"
           tabIndex="0"

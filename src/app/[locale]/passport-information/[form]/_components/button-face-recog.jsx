@@ -3,6 +3,7 @@
 'use client';
 
 import { Button } from '@/components';
+import { cn } from '@/utils';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -15,7 +16,9 @@ const ButtonRecognition = ({ t }) => {
   return (
     <Button
       onClick={handleClick}
-      className="flex items-center justify-center rounded-6 border border-red bg-white py-2 font-bold  text-red hover:bg-white-dark"
+      className={cn(
+        'flex items-center justify-center rounded-6 border border-red bg-white p-2 font-bold text-red hover:bg-white-dark h-auto text-wrap',
+      )}
     >
       {t('photographFace')}
     </Button>
