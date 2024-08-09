@@ -82,14 +82,6 @@ const QrScan = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (!scannerActive) {
-  //     alert(
-  //       'Camera is blocked or not accessible. Please allow camera in your browser permissions and reload.',
-  //     );
-  //   }
-  // }, [scannerActive]);
-
   return (
     <div
       className={cn('camera-container')}
