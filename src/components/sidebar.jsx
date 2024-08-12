@@ -66,7 +66,9 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
 const MenuItem = ({ menu, t }) => {
   return (
     <div className="w-full">
-      <Heading className={cn('text-1718 font-bold text-gray sm:text-1416')}>
+      <Heading
+        className={cn('text-1718 font-bold text-gray sm:text-1416 pt-1')}
+      >
         {menu.label}
       </Heading>
       {menu.subMenu.map((item, index) => {
