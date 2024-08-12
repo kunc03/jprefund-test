@@ -38,7 +38,7 @@ const Login = async ({ params }) => {
       </div>
       <Link
         href="/account-information/account-deletion"
-        className="w-full cursor-pointer bg-white pb-30 text-center text-1422 font-bold text-red"
+        className="w-full cursor-pointer bg-white pb-24 text-center text-1422 font-bold text-red"
       >
         {t('deleteAccount')}
       </Link>

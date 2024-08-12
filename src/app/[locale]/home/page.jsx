@@ -43,22 +43,20 @@ const HomePage = async ({ params, searchParams }) => {
             </div>
           </Heading>
           <div
-            className={cn(
-              'inline-flex w-full py-12 gap-7 bg-white px-1 overflow-x-auto whitespace-nowrap',
-            )}
+            className={cn('grid grid-cols-3 w-full py-12 gap-6 bg-white px-1')}
           >
             <SummaryCard
-              number={99999999}
+              number={9999999}
               title={t('refundApplication')}
               status="refundApplication"
             />
             <SummaryCard
-              number={99999999}
+              number={9999999}
               title={t('remittanceProcedureCompleted')}
               status="remittanceProcedureCompleted"
             />
             <SummaryCard
-              number={99999999}
+              number={9999999}
               title={t('nonRefundable')}
               status="nonRefundable"
             />

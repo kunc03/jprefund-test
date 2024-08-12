@@ -44,9 +44,11 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
       <div className="inline-flex flex-row items-center justify-end gap-2 md:shrink-0">
         <div className="inline-flex flex-row flex-wrap justify-end gap-2 small:flex-col small:gap-0.5">
           {subMenu.isRequired && (
-            <span className="text-start text-1222 font-bold text-red small:text-1022">
-              {t('required')}
-            </span>
+            <div
+              className={cn(
+                'text-start text-1222 font-bold text-red small:text-1022',
+              )}
+            />
           )}
           {subMenu.isUnregister && (
             <span className="text-1222 font-normal text-gray small:text-1022">
@@ -124,7 +126,7 @@ const Sidebar = () => {
             label: t('routes.refundMethod'),
             active: pathname === `/refund-methods`,
             icon: <IconImage image="refund-method.svg" />,
-            isRequired: false,
+            isRequired: true,
             isUnregister: false,
           },
           {

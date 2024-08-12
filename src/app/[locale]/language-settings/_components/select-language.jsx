@@ -29,7 +29,8 @@ const SelectLanguage = () => {
             <div className="flex h-58 cursor-pointer flex-row items-center justify-between border-b border-b-gray-500 py-22.5 pl-8">
               <p className="text-1613 font-medium text-black">{t(language)}</p>
 
-              {selectedFinancialInstituteName === language && (
+              {(selectedFinancialInstituteName === language ||
+                language === 'english') && (
                 <Image
                   alt="checklist"
                   height={18}

@@ -1,20 +1,13 @@
-import { getTranslations } from 'next-intl/server';
+import React from 'react';
 import { Header } from '@/components';
 import { ChevronRight } from 'lucide-react';
 import { formatDateTime } from '@/utils';
 import NOTIFICATIONS from '@/dummy-notification.json';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-export const generateMetadata = async ({ params }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'notification' });
-
-  return { title: t('metaTitle'), description: t('metaDescription') };
-};
-
-const NotificationPage = async ({ params }) => {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'notification' });
+const NotifView = () => {
+  const t = useTranslations('notification');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -46,4 +39,4 @@ const NotificationPage = async ({ params }) => {
   );
 };
 
-export default NotificationPage;
+export { NotifView };

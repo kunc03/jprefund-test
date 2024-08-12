@@ -17,7 +17,7 @@ const InputForm = ({
   onChange,
 }) => {
   return (
-    <>
+    <div className="flex flex-col gap-1">
       <Heading level={5} className="text-1422 font-medium">
         {t(label)}
       </Heading>
@@ -33,7 +33,7 @@ const InputForm = ({
           className,
         )}
       />
-    </>
+    </div>
   );
 };
 
