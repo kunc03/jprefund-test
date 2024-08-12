@@ -23,7 +23,7 @@ const Scan = async ({ params }) => {
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay px-2 mb-2')}>
+        <div className={cn('overlay px-2 mb-2 ')}>
           <Image
             alt="Qr Frame"
             className="centered-image"
@@ -33,10 +33,9 @@ const Scan = async ({ params }) => {
             priority
           />
         </div>
-
         <div
           className={cn(
-            'flex w-full flex-col items-center justify-center bg-black px-7 pt-43 pb-65',
+            'flex w-full flex-col items-center justify-center px-7 pt-43 pb-65',
           )}
         >
           <div
@@ -47,7 +46,7 @@ const Scan = async ({ params }) => {
             <ButtonSend />
             <Heading
               className={cn(
-                'w-full max-w-258 text-center text-1626 font-medium text-white',
+                'w-full max-w-258 text-center text-1616 font-medium text-white',
               )}
             >
               {t('qrAlert')}
@@ -56,7 +55,7 @@ const Scan = async ({ params }) => {
         </div>
       </div>
 
-      <QrScan />
+      <QrScan className="z-10" />
     </div>
   );
 };

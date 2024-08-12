@@ -71,17 +71,19 @@ const PassportForm = ({
         type="text"
       />
 
-      <Heading level={5} className="text-1422 font-medium">
-        {t('birthday')}
-      </Heading>
+      <div className="flex flex-col gap-1">
+        <Heading level={5} className="text-1422 font-medium">
+          {t('birthday')}
+        </Heading>
 
-      <InputDate
-        selectedDate={formId.dateOfBirth}
-        label={t('birthday')}
-        defaultValue={defaultValue.dateOfBirth}
-        onHandleSelected={handleSelectedDateOfBirth}
-        filter={formId}
-      />
+        <InputDate
+          selectedDate={formId.dateOfBirth}
+          label={t('birthday')}
+          defaultValue={defaultValue.dateOfBirth}
+          onHandleSelected={handleSelectedDateOfBirth}
+          filter={formId}
+        />
+      </div>
 
       <InputForm
         t={t}
@@ -92,46 +94,54 @@ const PassportForm = ({
         type="number"
       />
 
-      <Heading level={5} className="text-1422 font-medium">
-        {t('dateOfExpiry')}
-      </Heading>
+      <div className="flex flex-col gap-1">
+        <Heading level={5} className="text-1422 font-medium">
+          {t('dateOfExpiry')}
+        </Heading>
 
-      <InputDate
-        selectedDate={formId.dateOfExpiry}
-        label={t('dateOfExpiry')}
-        onHandleSelected={handleSelectedDateOfExpiry}
-        filter={formId}
-      />
+        <InputDate
+          selectedDate={formId.dateOfExpiry}
+          label={t('dateOfExpiry')}
+          onHandleSelected={handleSelectedDateOfExpiry}
+          filter={formId}
+        />
+      </div>
 
-      <Heading level={5} className="text-1422 font-medium">
-        {t('passportIssuingCountry')}
-      </Heading>
-      <SelectOptions
-        values={['USA', 'IDN', 'JP']}
-        handleChange={handlePassportIssuing}
-        defaultValue={defaultValue.passportIssuingCountry}
-        t={t}
-      />
+      <div className="flex flex-col gap-1">
+        <Heading level={5} className="text-1422 font-medium">
+          {t('passportIssuingCountry')}
+        </Heading>
+        <SelectOptions
+          values={['USA', 'IDN', 'JP']}
+          handleChange={handlePassportIssuing}
+          defaultValue={defaultValue.passportIssuingCountry}
+          t={t}
+        />
+      </div>
 
-      <Heading level={5} className="text-1422 font-medium">
-        {t('countryOfIssueCode')}
-      </Heading>
-      <SelectOptions
-        values={['USA', 'IDN', 'JP']}
-        handleChange={handleCountryIssue}
-        defaultValue={defaultValue.countryOfIssueCode}
-        t={t}
-      />
+      <div className="flex flex-col gap-1">
+        <Heading level={5} className="text-1422 font-medium">
+          {t('countryOfIssueCode')}
+        </Heading>
+        <SelectOptions
+          values={['USA', 'IDN', 'JP']}
+          handleChange={handleCountryIssue}
+          defaultValue={defaultValue.countryOfIssueCode}
+          t={t}
+        />
+      </div>
 
-      <Heading level={5} className="text-1422 font-medium">
-        {t('gender')}
-      </Heading>
-      <SelectOptions
-        values={['Male', 'Female']}
-        handleChange={handleGender}
-        defaultValue={defaultValue.gender}
-        t={t}
-      />
+      <div className="flex flex-col gap-1">
+        <Heading level={5} className="text-1422 font-medium">
+          {t('gender')}
+        </Heading>
+        <SelectOptions
+          values={['Male', 'Female']}
+          handleChange={handleGender}
+          defaultValue={defaultValue.gender}
+          t={t}
+        />
+      </div>
     </div>
   );
 };

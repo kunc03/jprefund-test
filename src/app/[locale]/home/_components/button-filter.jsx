@@ -15,10 +15,10 @@ const ButtonFilter = ({ className, hasBack = false }) => {
       )}
     >
       {!hasBack && (
-        <div className="absolute right-2.5">
+        <div className={cn('absolute top-0 right-2.5 p-10 cursor-pointer')}>
           <Image
             alt="filter-button"
-            className="size-auto cursor-pointer"
+            className="size-auto"
             height={4}
             src="/icons/triple-dot.svg"
             width={20}

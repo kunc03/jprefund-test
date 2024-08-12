@@ -52,9 +52,7 @@ const SuccessDialog = ({ isOpen, form }) => {
 
   return (
     <AlertDialog open={open} className="">
-      <AlertDialogContent
-        className={cn('flex flex-col justify-between min-w-324')}
-      >
+      <AlertDialogContent className={cn('flex flex-col justify-between w-324')}>
         <div className={cn('flex flex-col items-start')}>
           <AlertDialogHeader>
             <AlertDialogTitle

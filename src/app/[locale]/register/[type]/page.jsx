@@ -1,7 +1,6 @@
 import { Heading, Logo } from '@/components';
 import { getTranslations } from 'next-intl/server';
 import { ButtonNext } from '../_components';
-import Link from 'next/link';
 import { Form } from './_components/form';
 
 export const generateMetadata = async ({ params }) => {
@@ -32,18 +31,6 @@ const RegisterEmailPhonePage = async ({ params }) => {
       </div>
 
       <div className="flex w-full flex-col items-center justify-center gap-38 pb-14">
-        <Heading className="text-1522 font-normal">
-          {t.rich('haveAccount', {
-            login: (
-              <Link href="/login" key="goToLogin">
-                <span className="cursor-pointer font-bold underline">
-                  {t('login')}
-                </span>
-              </Link>
-            ),
-          })}
-        </Heading>
-
         <ButtonNext />
       </div>
     </div>

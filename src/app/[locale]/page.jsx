@@ -8,7 +8,7 @@ export const generateMetadata = async ({ params }) => {
   return { title: t('metaTitle'), description: t('metaDescription') };
 };
 
-const Home = async () => {
+const Home = () => {
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center">
       <SplashLogo />

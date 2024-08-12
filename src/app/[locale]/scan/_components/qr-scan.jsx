@@ -98,6 +98,7 @@ const QrScan = () => {
           style={{ width: '360px', height: '360px' }}
         />
       </div>
+
       <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
     </div>
   );

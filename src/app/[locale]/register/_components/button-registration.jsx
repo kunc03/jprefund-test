@@ -31,7 +31,7 @@ const ButtonRegistration = ({ imageSrc, label, type, isDark = false }) => {
   return (
     <Button
       className={cn(
-        'w-full !justify-start !px-10 gap-8 !text-1222 text-wrap',
+        'w-full !justify-center items-center text-center !px-10 gap-8 !text-1222 text-wrap h-auto rounded-full',
         isDark
           ? '!bg-white !text-red !border !border-red hover:!bg-dark/30'
           : '!border !border-gray-500 !bg-white !text-gray hover:!bg-white/30',
@@ -45,7 +45,7 @@ const ButtonRegistration = ({ imageSrc, label, type, isDark = false }) => {
         height={24}
         className="size-auto"
       />
-      <p className="w-full text-center text-1322 font-bold">{label}</p>
+      {label}
     </Button>
   );
 };

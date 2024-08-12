@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
 import { cn } from '@/utils';
+import { Transition } from '@/components';
 
 const inter = notoSansJp({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -36,7 +37,7 @@ const RootLayout = async ({ children, params }) => {
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="relative min-h-dvh w-full max-w-md overflow-hidden border border-gray-50 bg-white-dark">
-            {children}
+            <Transition>{children}</Transition>
           </main>
         </NextIntlClientProvider>
       </body>

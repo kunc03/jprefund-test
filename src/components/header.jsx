@@ -42,6 +42,10 @@ const Header = ({
     }
   };
 
+  const handleNotificationClick = () => {
+    router.push('/notification');
+  };
+
   return (
     <div
       className={cn(
@@ -90,12 +94,11 @@ const Header = ({
               <Image
                 alt="notif"
                 className="cursor-pointer"
+                data-drilldown
                 height={24}
                 src="/images/notif.svg"
                 width={24}
-                onClick={() => {
-                  router.push('/notification');
-                }}
+                onClick={handleNotificationClick}
               />
               <span className="absolute left-4 top-0 size-[10px] rounded-full bg-red-light" />
             </div>
