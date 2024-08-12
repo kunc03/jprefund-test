@@ -31,7 +31,7 @@ const HomePage = async ({ params, searchParams }) => {
         <div className="border-b border-b-gray-500 bg-white">
           <Header />
           <Heading className="bg-white text-center text-lg font-medium ">
-            <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
+            <div className="relative mt-12 flex items-center justify-between gap-2 px-2.5">
               <p
                 className={cn(
                   'grow text-center text-1822 medium:text-1722 small:text-1422',
