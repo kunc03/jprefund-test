@@ -11,7 +11,6 @@ import { useQrScan } from '@/hooks';
 import { cn } from '@/utils';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserMultiFormatReader } from '@zxing/browser';
-// import Image from 'next/image';
 
 const PassportScan = () => {
   const scanner = useRef(null);
@@ -80,14 +79,6 @@ const PassportScan = () => {
         'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
       );
   }, [qrOn]);
-
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/form');
-    }, 4000);
-
-    return () => clearTimeout(redirectTimeout);
-  }, [router]);
 
   return (
     <div

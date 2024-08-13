@@ -1,7 +1,7 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import { ButtonCamera, TakePortrait } from '../_components';
-import { Heading } from '@/components';
+import { ButtonClose, Heading } from '@/components';
 import { cn } from '@/utils';
 import Image from 'next/image';
 
@@ -19,24 +19,48 @@ const TakePortraitView = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="pt-9 text-center text-1822 font-medium text-white">
-          {t('takePortrait')}
+        <Heading
+          className={cn(
+            'text-center text-1822 font-medium text-white bg-black/50 backdrop-blur-sm w-full pt-30 pb-29',
+          )}
+        >
+          {t('photographFace')}
         </Heading>
 
-        <div className="overlay">
-          <Image
-            alt="face Frame"
-            height={298}
-            src="/images/face-frame.svg"
-            width={360}
-            priority
-            className="centered-image"
-          />
+        <div className={cn('overlay px-2 h-full')}>
+          <div
+            className={cn('absolute w-full h-full flex flex-col items-center')}
+          >
+            <div
+              className={cn('w-full h-[20%] bg-black/50 backdrop-blur-sm')}
+            />
+            <div className={cn('bg-gray-container w-full')}>
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+              <Image
+                alt="Qr Frame"
+                className={cn('centered-camera mx-2 my-5')}
+                height={381.77}
+                src="/images/face-frame.svg"
+                width={302.96}
+                priority
+              />
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+            </div>
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
+          </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5',
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 bg-black/50 backdrop-blur-sm',
           )}
         >
           <Heading
@@ -50,6 +74,7 @@ const TakePortraitView = async ({ params }) => {
         </div>
       </div>
       <TakePortrait />
+      <ButtonClose path="face" />
     </div>
   );
 };

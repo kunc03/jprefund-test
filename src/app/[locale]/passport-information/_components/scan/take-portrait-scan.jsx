@@ -32,7 +32,7 @@ const TakePortrait = () => {
     if (videoEl?.current && !scanner.current) {
       scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
         onDecodeError: () => {},
-        preferredCamera: 'environment',
+        preferredCamera: 'user',
         highlightScanRegion: true,
         highlightCodeOutline: true,
         overlay: qrBoxEl?.current || undefined,
@@ -52,7 +52,7 @@ const TakePortrait = () => {
         onScanSuccess,
         {
           onDecodeError: () => {},
-          preferredCamera: 'environment',
+          preferredCamera: '',
           highlightScanRegion: true,
           highlightCodeOutline: true,
           overlay: qrBoxEl?.current || undefined,
@@ -80,14 +80,6 @@ const TakePortrait = () => {
         'Camera is blocked or not accessible. Please allow camera in your browser permissions and Reload.',
       );
   }, [qrOn]);
-
-  useEffect(() => {
-    const redirectTimeout = setTimeout(() => {
-      router.push('/passport-information/not-complete');
-    }, 4000);
-
-    return () => clearTimeout(redirectTimeout);
-  }, [router]);
 
   return (
     <div

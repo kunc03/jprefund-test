@@ -208,7 +208,7 @@ const Sidebar = () => {
   return (
     <div
       className={cn(
-        'fixed left-0 top-0 flex flex-col h-full w-10/12 overflow-y-auto bg-white px-15 mt-26.5 pt-24',
+        'fixed left-0 top-0 flex flex-col h-full w-10/12 overflow-y-auto bg-white px-15 mt-25.5 pt-24',
       )}
     >
       <div className="flex h-full flex-col gap-20">

@@ -6,16 +6,15 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-const handleFaceRecognition = ({ router, captureImage }) => {
-  captureImage();
+const handleFaceRecognition = ({ router }) => {
   router.push('/contact-details?s=sc');
 };
 
-const ButtonCamera = ({ form, captureImage }) => {
+const ButtonCamera = ({ form }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    if (form === 'certificate') handleFaceRecognition({ router, captureImage });
+    if (form === 'certificate') handleFaceRecognition({ router });
   };
 
   return (

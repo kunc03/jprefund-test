@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import { ButtonSend, QrScan } from './_components';
-import { Heading } from '@/components';
+import { ButtonClose, Heading } from '@/components';
 import Image from 'next/image';
 import { cn } from '@/utils';
 
@@ -18,24 +18,53 @@ const Scan = async ({ params }) => {
 
   return (
     <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-5 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="text-center text-1822 font-medium text-white">
+      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between ">
+        <Heading
+          className={cn(
+            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 backdrop-blur-sm',
+          )}
+        >
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay px-2 mb-2 ')}>
-          <Image
-            alt="Qr Frame"
-            className="centered-image"
-            height={250}
-            src="/images/qr-frame.svg"
-            width={336}
-            priority
-          />
+        <div className={cn('overlay px-2')}>
+          <div
+            className={cn('absolute w-full h-full flex flex-col items-center')}
+          >
+            <div
+              className={cn(
+                'w-full h-[20%] top-0 bg-black/50 backdrop-blur-sm',
+              )}
+            />
+            <div className={cn('bg-gray-container w-full')}>
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+              <Image
+                alt="Qr Frame"
+                className="centered-camera z-50"
+                height={250}
+                src="/images/qr-frame.svg"
+                width={336}
+                priority
+              />
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+            </div>
+            <div
+              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
+            />
+          </div>
         </div>
+
         <div
           className={cn(
-            'flex w-full flex-col items-center justify-center px-7 pt-43 pb-65',
+            'flex w-full flex-col items-center justify-center px-7 pt-43 pb-65 bg-black/50 backdrop-blur-sm',
           )}
         >
           <div
@@ -55,7 +84,8 @@ const Scan = async ({ params }) => {
         </div>
       </div>
 
-      <QrScan className="z-10" />
+      <QrScan />
+      <ButtonClose path="scan" />
     </div>
   );
 };

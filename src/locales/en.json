@@ -245,6 +245,7 @@
     "uploadDocumentInstruction": "Upload a document that proves your permanent residence: permit, visa If your permanent address is in a different tax jurisdiction than your passport country, please provide a residence certificate. Example: I have an EU passport but live outside the EU.",
     "documentType": "Document type",
     "photograph": "Photograph your ID",
+    "photographCertificate": "Photograph the certificate",
     "rescanYourPassport": "Rescan your passport",
     "save": "Save",
     "send": "Send",
