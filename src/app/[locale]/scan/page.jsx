@@ -21,7 +21,7 @@ const Scan = async ({ params }) => {
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between ">
         <Heading
           className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 backdrop-blur-sm',
+            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-5 backdrop-blur-sm',
           )}
         >
           {t('receiptScan')}
@@ -44,7 +44,7 @@ const Scan = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera')}
+                className={cn('centered-camera -m-3 z-30 h-auto')}
                 height={250}
                 src="/images/qr-frame.svg"
                 width={336}

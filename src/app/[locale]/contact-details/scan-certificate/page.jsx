@@ -23,7 +23,7 @@ const ScanCertificatePage = async ({ params }) => {
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
         <Heading
           className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-2 backdrop-blur-sm',
+            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-5 backdrop-blur-sm',
           )}
         >
           {t('photographCertificate')}
@@ -34,9 +34,7 @@ const ScanCertificatePage = async ({ params }) => {
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
             <div
-              className={cn(
-                'w-full h-[20%] top-0 bg-black/50 backdrop-blur-sm',
-              )}
+              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
             />
             <div className={cn('bg-gray-container w-full')}>
               <div
@@ -46,10 +44,10 @@ const ScanCertificatePage = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className="centered-camera"
+                className={cn('centered-camera -m-3 z-30 h-auto')}
                 height={260}
                 src="/icons/certif-scan.svg"
-                width={320}
+                width={350}
                 priority
               />
               <div
