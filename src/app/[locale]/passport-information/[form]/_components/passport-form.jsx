@@ -52,7 +52,7 @@ const PassportForm = ({
   };
 
   return (
-    <div className={cn('flex flex-col gap-3 w-full text-1616')}>
+    <div className={cn('flex flex-col gap-3 w-full text-1718')}>
       <InputForm
         t={t}
         label="firstName"

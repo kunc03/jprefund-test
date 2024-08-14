@@ -31,13 +31,11 @@ const TakePortraitView = async ({ params }) => {
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div
-              className={cn('w-full h-[20%] bg-black/50 backdrop-blur-sm')}
-            />
-            <div className={cn('bg-gray-container w-full')}>
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
+            <div className={cn('bg-gray-container w-full ')}>
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
                 )}
               />
               <Image
@@ -50,7 +48,7 @@ const TakePortraitView = async ({ params }) => {
               />
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
                 )}
               />
             </div>
@@ -60,7 +58,7 @@ const TakePortraitView = async ({ params }) => {
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 py-4 bg-black/50 backdrop-blur-sm',
           )}
         >
           <Heading

@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-// import { BodyScan } from './_components';
 import { ButtonClose, Heading } from '@/components';
 import { cn } from '@/utils';
 import { ButtonCamera, PassportScan } from '../_components';
@@ -29,11 +28,11 @@ const ScanYourPassport = async ({ params }) => {
 
         <div className={cn('overlay px-2 h-full')}>
           <div
-            className={cn('absolute w-full h-full flex flex-col items-center')}
+            className={cn(
+              'absolute w-full h-full min-h-full flex flex-col items-center',
+            )}
           >
-            <div
-              className={cn('w-full h-[20%] bg-black/50 backdrop-blur-sm')}
-            />
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
             <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
@@ -60,7 +59,7 @@ const ScanYourPassport = async ({ params }) => {
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-4 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 pb-4 bg-black/50 backdrop-blur-sm ',
           )}
         >
           <Heading
