@@ -33,7 +33,7 @@ const Scan = async ({ params }) => {
           >
             <div
               className={cn(
-                'w-full h-[20%] top-0 bg-black/50 backdrop-blur-sm',
+                'w-full h-auto pb-18 top-0 bg-black/50 backdrop-blur-sm',
               )}
             />
             <div className={cn('bg-gray-container w-full')}>
@@ -44,7 +44,7 @@ const Scan = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className="centered-camera z-50"
+                className={cn('centered-camera')}
                 height={250}
                 src="/images/qr-frame.svg"
                 width={336}
@@ -56,9 +56,7 @@ const Scan = async ({ params }) => {
                 )}
               />
             </div>
-            <div
-              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
-            />
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
           </div>
         </div>
 

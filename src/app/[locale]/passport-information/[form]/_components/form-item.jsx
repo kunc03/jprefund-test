@@ -5,11 +5,11 @@ import React from 'react';
 const FormItem = ({ label, value }) => {
   const t = useTranslations('passportInformation');
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-1">
       <Heading level={5} className="text-1422 font-medium">
         {t(label)}
       </Heading>
-      <p className="h-50 p-2 text-1616">{value}</p>
+      <p className="h-50 p-2 text-1818">{value}</p>
     </div>
   );
 };
