@@ -24,7 +24,7 @@ const ButtonClose = ({ onHandleBack = null }) => {
         'absolute top-3 right-3 p-2 z-50 bg-transparent hover:bg-transparent',
       )}
     >
-      <X size={24} className="cursor-pointer text-white" />
+      <X size={28} className="cursor-pointer text-white" />
     </Button>
   );
 };

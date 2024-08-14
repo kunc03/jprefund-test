@@ -19,23 +19,15 @@ const Scan = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between ">
-        <Heading
-          className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-5 backdrop-blur-sm',
-          )}
-        >
+        <Heading className="text-center text-1918 text-white font-medium bg-black/50 w-full pb-24 pt-46 backdrop-blur-sm">
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay px-2')}>
+        <div className={cn('overlay px-2 h-full')}>
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div
-              className={cn(
-                'w-full h-auto pb-18 top-0 bg-black/50 backdrop-blur-sm',
-              )}
-            />
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
             <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
@@ -44,10 +36,10 @@ const Scan = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera -m-3 z-30 h-auto')}
-                height={250}
+                className={cn('centered-camera -m-3 z-30 h-auto w-auto')}
+                height={260}
                 src="/images/qr-frame.svg"
-                width={336}
+                width={350}
                 priority
               />
               <div
@@ -62,12 +54,12 @@ const Scan = async ({ params }) => {
 
         <div
           className={cn(
-            'flex w-full flex-col items-center justify-center px-7 pt-43 pb-65 bg-black/50 backdrop-blur-sm',
+            'flex w-full flex-col items-center justify-center px-7 pt-5 bg-black/50 backdrop-blur-sm',
           )}
         >
           <div
             className={cn(
-              'flex flex-col w-full max-w-xs items-center justify-center gap-3',
+              'flex flex-col w-full max-w-xs items-center justify-center gap-3 pb-[25%]',
             )}
           >
             <ButtonSend />

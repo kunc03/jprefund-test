@@ -18,11 +18,7 @@ const ScanYourPassport = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading
-          className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-29 backdrop-blur-sm',
-          )}
-        >
+        <Heading className="text-center text-1918 font-medium text-white bg-black/50 w-full pt-46 pb-29 backdrop-blur-sm">
           {t('photographingPassport')}
         </Heading>
 

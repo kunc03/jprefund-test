@@ -19,11 +19,7 @@ const TakePortraitView = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading
-          className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 backdrop-blur-sm w-full pt-30 pb-29',
-          )}
-        >
+        <Heading className="text-center text-1918 font-medium text-white bg-black/50 backdrop-blur-sm w-full pt-46 pb-29">
           {t('photographFace')}
         </Heading>
 
@@ -40,7 +36,7 @@ const TakePortraitView = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera mx-2 my-5')}
+                className={cn('centered-camera mx-2 my-5 h-auto')}
                 height={381.77}
                 src="/images/face-frame.svg"
                 width={302.96}

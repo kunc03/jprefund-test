@@ -21,21 +21,15 @@ const ScanCertificatePage = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading
-          className={cn(
-            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-5 backdrop-blur-sm',
-          )}
-        >
+        <Heading className="text-center text-1918 font-medium text-white bg-black/50 w-full pt-30 pb-5 backdrop-blur-sm">
           {t('photographCertificate')}
         </Heading>
 
-        <div className={cn('overlay px-2')}>
+        <div className={cn('overlay px-2 h-full')}>
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div
-              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
-            />
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
             <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
@@ -44,7 +38,7 @@ const ScanCertificatePage = async ({ params }) => {
               />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera -m-3 z-30 h-auto')}
+                className={cn('centered-camera -m-3 z-30 h-auto w-auto')}
                 height={260}
                 src="/icons/certif-scan.svg"
                 width={350}
@@ -56,9 +50,7 @@ const ScanCertificatePage = async ({ params }) => {
                 )}
               />
             </div>
-            <div
-              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
-            />
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
           </div>
         </div>
 
