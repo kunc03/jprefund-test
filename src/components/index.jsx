@@ -13,6 +13,7 @@ export { OtpExpireTime } from './otp-expire-time';
 export { OtpForm } from './otp-form';
 export { OtpInformation } from './otp-information';
 export { Transition } from './transition';
+export { ButtonClose } from './button-close';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/drawer';

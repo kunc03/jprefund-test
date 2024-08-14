@@ -16,6 +16,7 @@ import {
 } from '@/components';
 import { AlertDialogTitle } from '@radix-ui/react-alert-dialog';
 import { useRegistrationOptions } from '../_hooks/use-registration-options';
+import { cn } from '@/utils';
 
 const ButtonDeleteRegistration = ({ item }) => {
   const t = useTranslations('refundMethod');
@@ -28,7 +29,11 @@ const ButtonDeleteRegistration = ({ item }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <div className="flex cursor-pointer flex-row items-center justify-between gap-11">
+        <div
+          className={cn(
+            'flex cursor-pointer flex-row items-center justify-between gap-11',
+          )}
+        >
           <p className="text-1212 font-bold">{t('delete')}</p>
           <TrashIcon />
         </div>

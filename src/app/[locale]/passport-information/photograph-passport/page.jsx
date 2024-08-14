@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 // import { BodyScan } from './_components';
-import { Heading } from '@/components';
+import { ButtonClose, Heading } from '@/components';
 import { cn } from '@/utils';
 import { ButtonCamera, PassportScan } from '../_components';
 import Image from 'next/image';
@@ -19,23 +19,48 @@ const ScanYourPassport = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="pt-9 text-center text-1822 font-medium text-white">
+        <Heading
+          className={cn(
+            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-29 backdrop-blur-sm',
+          )}
+        >
           {t('photographingPassport')}
         </Heading>
 
-        <div className="overlay">
-          <Image
-            src="/images/scan-passport.svg"
-            width={265}
-            height={250}
-            alt="Passport Image"
-            className={cn('centered-image w-[60%]')}
-          />
+        <div className={cn('overlay px-2 h-full')}>
+          <div
+            className={cn('absolute w-full h-full flex flex-col items-center')}
+          >
+            <div
+              className={cn('w-full h-[20%] bg-black/50 backdrop-blur-sm')}
+            />
+            <div className={cn('bg-gray-container w-full')}>
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+              <Image
+                alt="Qr Frame"
+                className={cn('centered-camera h-[98%] mx-7 my-1')}
+                height={428}
+                src="/images/scan-passport.svg"
+                width={336}
+                priority
+              />
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+            </div>
+            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
+          </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-4',
+            'relative flex w-full flex-col items-center justify-center px-7 py-4 bg-black/50 backdrop-blur-sm',
           )}
         >
           <Heading
@@ -49,6 +74,7 @@ const ScanYourPassport = async ({ params }) => {
         </div>
       </div>
       <PassportScan />
+      <ButtonClose path="passport" />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { Heading } from '@/components';
 import { cn } from '@/utils';
 import { ButtonCamera, ScanCertificate } from '../_components';
 import Image from 'next/image';
+import { ButtonClose } from '@/components/button-close';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -19,25 +20,53 @@ const ScanCertificatePage = async ({ params }) => {
 
   return (
     <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-5 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="text-center text-1822 font-medium text-white">
-          {t('photograph')}
+      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
+        <Heading
+          className={cn(
+            'text-center text-1822 font-medium text-white bg-black/50 w-full pt-30 pb-2 backdrop-blur-sm',
+          )}
+        >
+          {t('photographCertificate')}
         </Heading>
 
-        <div className="overlay">
-          <Image
-            className="centered-image"
-            alt="Qr Frame"
-            height={260}
-            src="/icons/certif-scan.svg"
-            width={300}
-            priority
-          />
+        <div className={cn('overlay px-2')}>
+          <div
+            className={cn('absolute w-full h-full flex flex-col items-center')}
+          >
+            <div
+              className={cn(
+                'w-full h-[20%] top-0 bg-black/50 backdrop-blur-sm',
+              )}
+            />
+            <div className={cn('bg-gray-container w-full')}>
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+              <Image
+                alt="Qr Frame"
+                className="centered-camera"
+                height={260}
+                src="/icons/certif-scan.svg"
+                width={320}
+                priority
+              />
+              <div
+                className={cn(
+                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                )}
+              />
+            </div>
+            <div
+              className={cn('w-full h-full top-0 bg-black/50 backdrop-blur-sm')}
+            />
+          </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5',
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 bg-black/50 backdrop-blur-sm',
           )}
         >
           <Heading
@@ -51,6 +80,7 @@ const ScanCertificatePage = async ({ params }) => {
         </div>
       </div>
       <ScanCertificate />
+      <ButtonClose path="certificate" />
     </div>
   );
 };
