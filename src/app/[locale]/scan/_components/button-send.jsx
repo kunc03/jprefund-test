@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Input } from '@/components';
+import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -15,13 +16,13 @@ const ButtonSend = () => {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className={cn('flex gap-2 w-full')}>
       <Input
         value={inputValue}
         onChange={handleInputChange}
         placeholder={t('enterTransactionNumber')}
         type="number"
-        className="!h-42 !rounded-21 p-0 !px-14 !py-13 !text-1616"
+        className={cn('!h-42 !rounded-21 text-center !px-14 !py-13 !text-1616')}
       />
       <Button
         aria-hidden="true"

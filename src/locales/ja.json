@@ -139,7 +139,7 @@
     "metaTitle": "スキャン",
     "metaDescription": "ページをスキャン",
     "title": "スキャン",
-    "receiptScan": "レシートスキャン",
+    "receiptScan": "領収書スキャン",
     "qrAlert": "QRコードが読み取れない場合は 取引番号を手入力ください",
     "send": "送信",
     "enterTransactionNumber": "取引番号を入力"

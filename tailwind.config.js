@@ -205,6 +205,7 @@ const remFontSize = {
   1718: [pxToEm(17), { lineHeight: pxToEm(18) }],
   1722: [pxToEm(17), { lineHeight: pxToEm(22) }],
   1818: [pxToEm(18), { lineHeight: pxToEm(18) }],
+  1918: [pxToEm(19), { lineHeight: pxToEm(18) }],
   1822: [pxToEm(18), { lineHeight: pxToEm(22) }],
   1826: [pxToEm(18), { lineHeight: pxToEm(26) }],
   2020: [pxToEm(20), { lineHeight: pxToEm(20) }],
