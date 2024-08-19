@@ -26,6 +26,8 @@ const ContentCreditCard = () => {
       cardNumber: '',
       dateOfExpired: '',
       securityCode: '',
+      firstName: '',
+      lastName: '',
     },
   });
 
@@ -61,7 +63,7 @@ const ContentCreditCard = () => {
 
   return (
     <>
-      <div className="flex w-full grow flex-col items-center gap-145 px-29">
+      <div className="flex w-full grow flex-col items-center gap-30 px-29">
         <div className="mt-27 w-full ">
           <UIForm {...form}>
             <form
@@ -164,6 +166,40 @@ const ContentCreditCard = () => {
                     {...field}
                   />
                 )}
+              />
+
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => {
+                  return (
+                    <Input
+                      hasForm
+                      value={field.value}
+                      label={t('firstName')}
+                      disabled={false}
+                      placeholder={t('placeholder.firstName')}
+                      {...field}
+                    />
+                  );
+                }}
+              />
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => {
+                  return (
+                    <Input
+                      hasForm
+                      value={field.value}
+                      label={t('lastName')}
+                      disabled={false}
+                      placeholder={t('placeholder.lastName')}
+                      className="!h-50  !px-14 !py-18"
+                      {...field}
+                    />
+                  );
+                }}
               />
             </form>
           </UIForm>

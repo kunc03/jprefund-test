@@ -21,7 +21,7 @@ const ScanCertificatePage = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="w-full bg-black/50 pb-5 pt-30 text-center text-1918 font-medium text-white backdrop-blur-sm">
+        <Heading className="w-full bg-gray/60 pb-24 pt-46 text-center text-1918 font-medium text-white backdrop-blur-md">
           {t('photographCertificate')}
         </Heading>
 
@@ -29,11 +29,11 @@ const ScanCertificatePage = async ({ params }) => {
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
+            <div className={cn('w-full h-full bg-gray/60 backdrop-blur-md')} />
             <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-full h-full bg-gray/60 backdrop-blur-md',
                 )}
               />
               <Image
@@ -46,17 +46,17 @@ const ScanCertificatePage = async ({ params }) => {
               />
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-full h-full bg-gray/60 backdrop-blur-md',
                 )}
               />
             </div>
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
+            <div className={cn('w-full h-full bg-gray/60 backdrop-blur-md')} />
           </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-5 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 py-5 bg-gray/60 backdrop-blur-md',
           )}
         >
           <Heading

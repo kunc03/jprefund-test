@@ -38,7 +38,7 @@ const ButtonDeleteRegistration = ({ item }) => {
           <TrashIcon />
         </div>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className="w-324">
         <AlertDialogTitle>{}</AlertDialogTitle>
         <AlertDialogHeader>
           <AlertDialogDescription className="text-center text-1822 font-medium text-gray">

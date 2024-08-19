@@ -28,7 +28,7 @@ const TakePortraitView = async ({ params }) => {
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
             <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
-            <div className={cn('bg-gray-container w-full ')}>
+            <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
                   'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',

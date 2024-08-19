@@ -31,7 +31,7 @@ const Scan = async ({ params }) => {
             <div className={cn('bg-gray-container w-full')}>
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
                 )}
               />
               <Image
@@ -44,7 +44,7 @@ const Scan = async ({ params }) => {
               />
               <div
                 className={cn(
-                  'bg-gray-cam w-full h-full bg-black/50 backdrop-blur-sm',
+                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
                 )}
               />
             </div>
