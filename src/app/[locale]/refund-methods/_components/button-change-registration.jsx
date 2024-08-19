@@ -23,7 +23,7 @@ const ButtonChangeRegistration = ({ item }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <p className="absolute right-3 top-3 w-324 min-w-324 cursor-pointer text-1118 text-black underline text-end">
+        <p className="absolute right-3 top-3 w-324 min-w-324 cursor-pointer text-end text-1118 text-black underline">
           {t('changeRefundMethod')}
         </p>
       </AlertDialogTrigger>
