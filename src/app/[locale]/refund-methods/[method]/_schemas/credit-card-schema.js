@@ -42,6 +42,28 @@ const creditCardSchema = z.object({
         message: 'securityCode.required',
       },
     ),
+  firstName: z
+    .string()
+    .optional()
+    .refine(
+      (value) => {
+        return value !== undefined && value.trim() !== '';
+      },
+      {
+        message: 'firstName.required',
+      },
+    ),
+  lastName: z
+    .string()
+    .optional()
+    .refine(
+      (value) => {
+        return value !== undefined && value.trim() !== '';
+      },
+      {
+        message: 'lastName.required',
+      },
+    ),
 });
 
 export { creditCardSchema };

@@ -85,7 +85,7 @@ const ContentBankTransfer = () => {
   console.log(form);
   return (
     <>
-      <div className="flex w-full grow flex-col items-center gap-9 pb-2 md:gap-98">
+      <div className="flex w-full grow flex-col items-center gap-9 pb-2">
         <div
           className={cn(' flex w-full flex-col ', !isSelected && 'grow mt-40')}
         >
@@ -174,7 +174,7 @@ const ContentBankTransfer = () => {
                 onSubmit={form.handleSubmit(handleSubmit)}
                 className="mt-25 flex flex-col gap-18 px-28"
               >
-                <div>
+                <div className="flex flex-col gap-16">
                   <p className="text-1422 font-medium text-gray">
                     {t('financialInstitutionName')}
                   </p>

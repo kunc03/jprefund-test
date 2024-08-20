@@ -21,7 +21,7 @@ const ScanCertificatePage = async ({ params }) => {
   return (
     <div className="landscape relative min-h-dvh">
       <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="w-full bg-black/50 pb-5 pt-30 text-center text-1918 font-medium text-white backdrop-blur-sm">
+        <Heading className="w-full pb-24 pt-46 text-center text-1918 font-medium text-white bg-black/50 backdrop-blur-sm">
           {t('photographCertificate')}
         </Heading>
 

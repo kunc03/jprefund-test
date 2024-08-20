@@ -86,10 +86,14 @@
   .overlay {
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .camera-landscape {
+    background-blend-mode: lighten;
   }
 
   .centered-image {
@@ -140,7 +144,6 @@
   .bg-gray-cam {
     width: 50%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* Media Queries for mobile screens */
