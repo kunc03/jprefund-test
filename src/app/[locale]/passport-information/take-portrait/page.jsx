@@ -18,8 +18,8 @@ const TakePortraitView = async ({ params }) => {
 
   return (
     <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="w-full bg-black/50 pb-29 pt-46 text-center text-1918 font-medium text-white backdrop-blur-sm">
+      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between bg-black/50 backdrop-blur-md">
+        <Heading className="w-full pb-29 pt-46 text-center text-1918 font-medium text-white">
           {t('photographFace')}
         </Heading>
 
@@ -27,34 +27,23 @@ const TakePortraitView = async ({ params }) => {
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
             <div className={cn('bg-gray-container w-full')}>
-              <div
-                className={cn(
-                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
-                )}
-              />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera mx-2 my-5 h-auto')}
+                className={cn('centered-camera absolute z-30 px-2 py-5')}
                 height={381.77}
                 src="/images/face-frame.svg"
                 width={302.96}
                 priority
               />
-              <div
-                className={cn(
-                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
-                )}
-              />
+              <TakePortrait />
             </div>
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
           </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-4 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 py-4',
           )}
         >
           <Heading

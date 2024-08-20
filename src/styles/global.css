@@ -134,11 +134,21 @@
     border-radius: 5px;
   }
 
-  .bg-gray-container {
+  /* .bg-gray-container {
     position: relative;
     display: flex;
     justify-content: space-between;
     height: 100%;
+    width: 80%;
+  } */
+
+  .bg-gray-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 80%;
   }
 
   .bg-gray-cam {
@@ -184,6 +194,10 @@
   .bg-gray-container {
     justify-content: center;
     width: 100%;
+  }
+
+  .frame-bg {
+    padding: 20px;
   }
 
   .bg-gray-cam {
