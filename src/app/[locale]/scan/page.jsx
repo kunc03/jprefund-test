@@ -23,7 +23,7 @@ const Scan = async ({ params }) => {
           {t('receiptScan')}
         </Heading>
 
-        <div className={cn('overlay px-2 h-full')}>
+        <div className={cn('overlay px-2 h-full w-full')}>
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
@@ -54,23 +54,17 @@ const Scan = async ({ params }) => {
 
         <div
           className={cn(
-            'flex w-full flex-col items-center justify-center px-7 pt-5 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 pt-4 pb-[25%] bg-black/50 backdrop-blur-sm',
           )}
         >
-          <div
+          <ButtonSend />
+          <Heading
             className={cn(
-              'flex flex-col w-full max-w-xs items-center justify-center gap-3 pb-[25%]',
+              'w-full max-w-258 text-center text-1616 font-medium text-white',
             )}
           >
-            <ButtonSend />
-            <Heading
-              className={cn(
-                'w-full max-w-258 text-center text-1616 font-medium text-white',
-              )}
-            >
-              {t('qrAlert')}
-            </Heading>
-          </div>
+            {t('qrAlert')}
+          </Heading>
         </div>
       </div>
 
