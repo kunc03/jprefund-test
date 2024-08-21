@@ -27,7 +27,7 @@ const TakePortraitView = async ({ params }) => {
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div className={cn('bg-gray-container w-full')}>
+            <div className={cn('bg-gray-container w-full max-h-423')}>
               <Image
                 alt="Qr Frame"
                 className={cn('centered-camera absolute z-30 px-2 py-5')}
