@@ -17,8 +17,8 @@ const ScanYourPassport = async ({ params }) => {
 
   return (
     <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between">
-        <Heading className="w-full pb-29 pt-46 text-center text-1918 font-medium text-white bg-black/50 backdrop-blur-sm">
+      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between overflow-y-auto bg-black/50 backdrop-blur-md">
+        <Heading className="flex min-h-[10%] w-full items-center justify-center text-1918 font-medium text-white ">
           {t('photographingPassport')}
         </Heading>
 
@@ -26,34 +26,23 @@ const ScanYourPassport = async ({ params }) => {
           <div
             className={cn('absolute w-full h-full flex flex-col items-center')}
           >
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
             <div className={cn('bg-gray-container w-full')}>
-              <div
-                className={cn(
-                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
-                )}
-              />
               <Image
                 alt="Qr Frame"
-                className={cn('centered-camera h-[98%] mx-7 my-1')}
+                className={cn('centered-camera absolute z-30 px-7 py-1')}
                 height={428}
                 src="/images/scan-passport.svg"
                 width={336}
                 priority
               />
-              <div
-                className={cn(
-                  'bg-gray-cam w-[50%] h-full bg-black/50 backdrop-blur-sm',
-                )}
-              />
+              <PassportScan />
             </div>
-            <div className={cn('w-full h-full bg-black/50 backdrop-blur-sm')} />
           </div>
         </div>
 
         <div
           className={cn(
-            'relative flex w-full flex-col items-center justify-center px-7 py-4 bg-black/50 backdrop-blur-sm',
+            'relative flex w-full flex-col items-center justify-center px-7 py-4',
           )}
         >
           <Heading

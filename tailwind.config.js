@@ -166,6 +166,8 @@ const remSize = {
   324: pxToEm(324),
   334: pxToEm(334),
   340: pxToEm(340),
+  423: pxToEm(423),
+  451: pxToEm(451),
 };
 
 const remFontSize = {
