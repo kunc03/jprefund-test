@@ -5,8 +5,6 @@
 
 'use client';
 
-import { StatusForm } from '../_components/status-form';
-import { useTranslations } from 'next-intl';
 import { NotComplete } from './not-complete';
 import { Pending } from './pending';
 import { Problem } from './problem';
@@ -14,8 +12,6 @@ import { Complete } from './complete';
 import { useState } from 'react';
 
 const Form = ({ form }) => {
-  const t = useTranslations('passportInformation');
-
   const defaultValue = {
     firstName: 'Joni',
     lastName: 'Mitchell',
@@ -46,7 +42,6 @@ const Form = ({ form }) => {
 
   return (
     <>
-      <StatusForm t={t} form={form} />
       {form === 'form' && (
         <NotComplete
           form={form}

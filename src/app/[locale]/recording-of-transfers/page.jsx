@@ -19,7 +19,7 @@ const RecordingOfTransferPage = async ({ params }) => {
   return (
     <div className="flex min-h-dvh flex-col">
       <Header hasBack title={t('title')} />
-      <div className="flex max-h-[calc(100dvh-60px)] grow flex-col items-center overflow-y-auto px-20 pt-20">
+      <div className="flex max-h-[calc(100dvh-80px)] grow flex-col items-center overflow-y-auto px-20 pt-20">
         {data.map((item) => {
           return (
             <div key={item.id} className="w-full text-center">

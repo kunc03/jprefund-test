@@ -249,7 +249,11 @@
     "rescanYourPassport": "Rescan your passport",
     "save": "Save",
     "send": "Send",
-    "scanCertificateInstruction": "In good light, a plain background will make the text and photos stand out clearly, making your ID stand out."
+    "either": "Enter either your email address or phone number",
+    "scanCertificateInstruction": "In good light, a plain background will make the text and photos stand out clearly, making your ID stand out.",
+    "not-complete": "Your contact information is not complete",
+    "completed": "Contact information registration completed",
+    "update": "Update"
   },
   "recordingOfTransfer": {
     "metaTitle": "Recording Of Transfer",
@@ -447,7 +451,8 @@
     },
     "phone": {
       "required": "Phone is required",
-      "invalid": "Format phone is wrong"
+      "invalid": "Format phone is wrong",
+      "minLength": "Phone number must be at least 11 characters"
     },
     "otp": {
       "required": "Otp is required",
@@ -503,19 +508,24 @@
       "min": "Min characters is 2 or more"
     },
     "addressStreet": {
-      "min": "Min characters is 2 or more"
+      "min": "Min characters is 2 or more",
+      "required": "Address and street is required"
     },
     "cityCountry": {
-      "min": "Min characters is 2 or more"
+      "min": "Min characters is 2 or more",
+      "required": "City and country is required"
     },
     "state": {
-      "min": "Min characters is 2 or more"
+      "min": "Min characters is 2 or more",
+      "required": "State is required"
     },
     "postCode": {
-      "min": "Min characters is 4 or more"
+      "min": "Min characters is 4 or more",
+      "required": "Post code is required"
     },
     "country": {
-      "min": "Min characters is 2 or more"
+      "min": "Min characters is 2 or more",
+      "required": "Country is required"
     }
   }
 }

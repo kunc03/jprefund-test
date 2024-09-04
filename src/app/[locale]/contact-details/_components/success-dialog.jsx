@@ -12,10 +12,12 @@ import { useTranslations } from 'next-intl';
 import { AlertDialogTitle } from '@radix-ui/react-alert-dialog';
 import { cn } from '@/utils';
 import { Check } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-const SuccessDialog = ({ isOpen }) => {
+const SuccessDialog = ({ isOpen, form }) => {
   const t = useTranslations('passportInformation');
   const [open, setOpen] = useState();
+  const router = useRouter();
 
   useEffect(() => {
     let timer;
@@ -23,6 +25,8 @@ const SuccessDialog = ({ isOpen }) => {
       timer = setTimeout(() => {
         setOpen(false);
       }, 2000);
+
+      return () => clearTimeout(timer);
     }
 
     return () => clearTimeout(timer);
@@ -33,6 +37,14 @@ const SuccessDialog = ({ isOpen }) => {
       setOpen(true);
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (open && form === 'not-complete') {
+      setTimeout(() => {
+        router.push('/contact-details/completed');
+      }, 1000);
+    }
+  }, [open, form, router]);
 
   return (
     <AlertDialog open={open} className="">

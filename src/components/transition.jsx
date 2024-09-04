@@ -57,7 +57,7 @@ const Transition = ({ children }) => {
     // return () => {
     //   gsap.killTweensOf(containerRef.current);
     // };
-  }, [pathname, children]);
+  }, [pathname, children, isAnimating, prevPathname]);
 
   return <div ref={containerRef}>{displayChildren}</div>;
 };

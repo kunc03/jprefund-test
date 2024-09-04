@@ -20,7 +20,7 @@ const ScanCertificatePage = async ({ params }) => {
 
   return (
     <div className="landscape relative min-h-dvh">
-      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between bg-black/50 backdrop-blur-md overflow-y-auto">
+      <div className="camera-landscape absolute inset-x-0 top-0 z-20 flex h-dvh flex-col items-center justify-between overflow-y-auto bg-black/50 backdrop-blur-md">
         <Heading className="w-full pb-2 pt-46 text-center text-1918 font-medium text-white">
           {t('photographCertificate')}
         </Heading>

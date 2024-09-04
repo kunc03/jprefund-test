@@ -20,6 +20,7 @@ const Input = React.forwardRef(
       description = null,
       labelClassName,
       className,
+      errors,
       type,
       ...props
     },
@@ -60,8 +61,9 @@ const Input = React.forwardRef(
         <div className="!mt-0 flex flex-1 flex-col ">
           <div
             className={cn(
-              'flex flex-1 items-center focus-within:ring-1 focus-within:ring-red border border-gray-300 focus-within:rounded-6 rounded-6 bg-white',
+              'flex flex-1 items-center border rounded-6 border-gray-300 bg-white',
               disabled ? 'cursor-not-allowed' : '',
+              errors ? '!border-red' : '',
             )}
           >
             {pre && PreInputComp}

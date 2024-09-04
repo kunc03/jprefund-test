@@ -5,3 +5,4 @@ export { InputForm } from './input-form.jsx';
 export { InputPhone } from './input-phone.jsx';
 export { SuccessDialog } from './success-dialog.jsx';
 export { ScanCertificate } from './scan-certificate.jsx';
+export { CompletedFormContactDetails } from './completed-form-contact.jsx';

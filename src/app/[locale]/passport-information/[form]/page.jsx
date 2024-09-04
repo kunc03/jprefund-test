@@ -1,6 +1,8 @@
 import { Header } from '@/components';
 import { getTranslations } from 'next-intl/server';
 import { Form } from './view';
+import { cn } from '@/utils';
+import { StatusForm } from './_components/status-form';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;
@@ -15,9 +17,14 @@ const FormPassportInformation = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh flex-col justify-between">
-      <div className="flex grow flex-col">
+      <div className="sticky top-0 z-10 bg-white shadow-md">
         <Header hasBack title={t('title')} />
-
+        <StatusForm form={form} />
+      </div>
+      <div
+        className={cn('flex-grow overflow-y-auto')}
+        style={{ height: 'calc(100vh - 120px)' }}
+      >
         <Form form={form} />
       </div>
     </div>
