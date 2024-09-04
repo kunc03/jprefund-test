@@ -12,14 +12,12 @@ const Transition = ({ children }) => {
   const [prevPathname, setPrevPathname] = useState(pathname);
 
   useEffect(() => {
-    if (isAnimating) return; // Hindari menjalankan animasi jika sudah ada animasi yang sedang berlangsung
+    if (isAnimating) return;
 
     setIsAnimating(true);
 
-    // Tentukan arah transisi berdasarkan perbandingan pathname
     const isForward = pathname > prevPathname;
 
-    // Set posisi awal elemen untuk halaman baru
     gsap.set(containerRef.current, {
       x: isForward ? '100%' : '-100%',
       opacity: 0,
@@ -29,13 +27,11 @@ const Transition = ({ children }) => {
     gsap.to(containerRef.current, {
       x: isForward ? '-100%' : '100%',
       opacity: 0,
-      duration: 0.2, // Mempercepat durasi transisi keluar
+      duration: 0.2,
       ease: 'power2.in',
       onComplete: () => {
-        // Ganti konten halaman setelah animasi keluar selesai
         setDisplayChildren(children);
 
-        // Set posisi awal halaman baru dan animasi masuk
         gsap.set(containerRef.current, {
           x: isForward ? '100%' : '-100%',
           opacity: 0,
@@ -43,21 +39,16 @@ const Transition = ({ children }) => {
         gsap.to(containerRef.current, {
           x: '0%',
           opacity: 1,
-          duration: 0.2, // Mempercepat durasi transisi masuk
+          duration: 0.2,
           ease: 'power2.out',
           onComplete: () => {
-            setIsAnimating(false); // Menandakan animasi selesai
-            setPrevPathname(pathname); // Update prevPathname setelah animasi selesai
+            setIsAnimating(false);
+            setPrevPathname(pathname);
           },
         });
       },
     });
-
-    // // Membersihkan animasi jika komponen di-unmount
-    // return () => {
-    //   gsap.killTweensOf(containerRef.current);
-    // };
-  }, [pathname, children, isAnimating, prevPathname]);
+  }, [pathname, children]);
 
   return <div ref={containerRef}>{displayChildren}</div>;
 };
