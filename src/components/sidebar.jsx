@@ -110,7 +110,7 @@ const Sidebar = () => {
             isUnregister: true,
           },
           {
-            href: `/${locale}/contact-details`,
+            href: `/${locale}/contact-details/not-complete`,
             label: t('routes.contactDetails'),
             active: pathname === `/contact-details`,
             icon: <IconImage image="contact-detail.svg" />,

@@ -10,6 +10,7 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
+  Heading,
 } from '@/components';
 import { cn } from '@/utils';
 import { useRef, useState } from 'react';
@@ -33,7 +34,12 @@ const PhoneNumberOption = ({ selectedPhoneArea, setSelectedPhoneArea }) => (
   </Select>
 );
 
-const FormContactDetails = ({ form, children, onSubmit }) => {
+const CompletedFormContactDetails = ({
+  form,
+  children,
+  onSubmit,
+  defaultValues,
+}) => {
   const t = useTranslations('contactDetails');
   const formRef = useRef();
   const [selectedPhoneArea, setSelectedPhoneArea] = useState();
@@ -91,22 +97,6 @@ const FormContactDetails = ({ form, children, onSubmit }) => {
 
     if (isDigit && currentLength >= maxLength) {
       event.preventDefault();
-    }
-  };
-
-  const handleNumberInput = (event) => {
-    const input = event.target.value.replace(/[^\d]/g, '');
-    let formattedInput = '';
-
-    if (input.length > 3) {
-      formattedInput = `${input.slice(0, 3)} - ${input.slice(3, 7)}`;
-    } else {
-      formattedInput = input;
-    }
-
-    if (event.target.value !== formattedInput) {
-      // eslint-disable-next-line no-param-reassign
-      event.target.value = formattedInput;
     }
   };
 
@@ -191,33 +181,19 @@ const FormContactDetails = ({ form, children, onSubmit }) => {
 
           <hr className={cn('bg-gray-400 w-full mt-7 mb-17')} />
 
-          {contactForms.map((contactForm) => (
-            <FormField
-              key={contactForm.name}
-              control={form.control}
-              name={contactForm.name}
-              render={({ field }) => {
-                const isPostCode = contactForm.name === 'postCode';
-                return (
-                  <Input
-                    hasForm
-                    label={contactForm.label}
-                    placeholder={contactForm.label}
-                    disabled={false}
-                    errors={errors[contactForm.name]}
-                    className={cn('!text-1422')}
-                    onInput={isPostCode ? handleNumberInput : undefined}
-                    onKeyDown={
-                      isPostCode
-                        ? (event) => handleOnlyNumeric(event, 7)
-                        : undefined
-                    }
-                    {...field}
-                  />
-                );
-              }}
-            />
-          ))}
+          <div className={cn('flex flex-col gap-22 w-full')}>
+            {contactForms.map((contactForm) => (
+              <div className="flex flex-col gap-4" key={contactForm.name}>
+                <Heading level={5} className="text-1422 font-medium">
+                  {contactForm.label}
+                </Heading>
+
+                <p className="h-50 p-2 text-1616">
+                  {defaultValues[contactForm.name]}
+                </p>
+              </div>
+            ))}
+          </div>
 
           <div
             className={cn(
@@ -232,4 +208,4 @@ const FormContactDetails = ({ form, children, onSubmit }) => {
   );
 };
 
-export { FormContactDetails };
+export { CompletedFormContactDetails };

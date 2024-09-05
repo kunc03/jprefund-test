@@ -29,6 +29,7 @@ const Header = ({
       '/passport-information/pending': true,
       '/passport-information/problem': true,
       '/passport-information/complete': true,
+      '/contact-details/completed': true,
       '/refund-methods': true,
       '/contact-details': true,
     };
