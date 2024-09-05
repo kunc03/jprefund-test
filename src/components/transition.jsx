@@ -64,15 +64,13 @@ const Transition = ({ children }) => {
     const isForward = pathname > prevPathnameRef.current;
     animateTransition(isForward);
 
-    // Simpan nilai ref saat ini
     const currentContainer = containerRef.current;
 
     // eslint-disable-next-line consistent-return
     return () => {
-      // Gunakan nilai yang disimpan dalam fungsi pembersihan
       gsap.killTweensOf(currentContainer);
     };
-  }, [pathname, children, animateTransition, containerRef]); // Tambahkan containerRef ke dependencies
+  }, [pathname, children, animateTransition, containerRef]);
 
   return <div ref={containerRef}>{displayChildren}</div>;
 };

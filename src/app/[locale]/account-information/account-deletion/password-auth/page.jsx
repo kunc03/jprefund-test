@@ -25,7 +25,7 @@ const PasswordAuth = () => {
           <h1 className={cn('text-1623 font-bold text-justify')}>
             {t('passwordAuth')}
           </h1>
-          <p className="text-1423">{t('toEnsureTheSafe')}</p>
+          <p className={cn('text-1423')}>{t('toEnsureTheSafe')}</p>
 
           <FormPassword setIsConfirm={setIsConfirm} />
         </div>

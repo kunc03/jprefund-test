@@ -87,6 +87,7 @@ const formatDateSimple = (dateTimeStr) => {
 
     return `${year} ${month}. ${day}`;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error);
     return dateTimeStr;
   }
