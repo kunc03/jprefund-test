@@ -1,63 +1,74 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { usePathname } from 'next/navigation';
 
 const Transition = ({ children }) => {
-  const containerRef = useRef();
+  const containerRef = useRef(null);
   const [displayChildren, setDisplayChildren] = useState(children);
   const pathname = usePathname();
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [prevPathname, setPrevPathname] = useState(pathname);
+  const isAnimatingRef = useRef(false);
+  const prevPathnameRef = useRef(pathname);
+  const prevChildrenRef = useRef(children);
 
-  useEffect(() => {
-    if (isAnimating) return; // Hindari menjalankan animasi jika sudah ada animasi yang sedang berlangsung
+  const animateTransition = useCallback(
+    (isForward) => {
+      if (!containerRef.current) return;
 
-    setIsAnimating(true);
+      const timeline = gsap.timeline({
+        onComplete: () => {
+          isAnimatingRef.current = false;
+          prevPathnameRef.current = pathname;
+          prevChildrenRef.current = children;
+        },
+      });
 
-    // Tentukan arah transisi berdasarkan perbandingan pathname
-    const isForward = pathname > prevPathname;
-
-    // Set posisi awal elemen untuk halaman baru
-    gsap.set(containerRef.current, {
-      x: isForward ? '100%' : '-100%',
-      opacity: 0,
-    });
-
-    // Transisi keluar halaman saat ini
-    gsap.to(containerRef.current, {
-      x: isForward ? '-100%' : '100%',
-      opacity: 0,
-      duration: 0.2, // Mempercepat durasi transisi keluar
-      ease: 'power2.in',
-      onComplete: () => {
-        // Ganti konten halaman setelah animasi keluar selesai
-        setDisplayChildren(children);
-
-        // Set posisi awal halaman baru dan animasi masuk
-        gsap.set(containerRef.current, {
+      timeline
+        .set(containerRef.current, {
           x: isForward ? '100%' : '-100%',
           opacity: 0,
-        });
-        gsap.to(containerRef.current, {
+        })
+        .to(containerRef.current, {
+          x: isForward ? '-100%' : '100%',
+          opacity: 0,
+          duration: 0.2,
+          ease: 'power2.in',
+        })
+        .call(() => setDisplayChildren(children))
+        .set(containerRef.current, {
+          x: isForward ? '100%' : '-100%',
+          opacity: 0,
+        })
+        .to(containerRef.current, {
           x: '0%',
           opacity: 1,
-          duration: 0.2, // Mempercepat durasi transisi masuk
+          duration: 0.2,
           ease: 'power2.out',
-          onComplete: () => {
-            setIsAnimating(false); // Menandakan animasi selesai
-            setPrevPathname(pathname); // Update prevPathname setelah animasi selesai
-          },
         });
-      },
-    });
+    },
+    [children, pathname],
+  );
 
-    // // Membersihkan animasi jika komponen di-unmount
-    // return () => {
-    //   gsap.killTweensOf(containerRef.current);
-    // };
-  }, [pathname, children, isAnimating, prevPathname]);
+  useEffect(() => {
+    if (
+      pathname === prevPathnameRef.current &&
+      children === prevChildrenRef.current
+    ) {
+      return;
+    }
+
+    if (isAnimatingRef.current) return;
+
+    isAnimatingRef.current = true;
+    const isForward = pathname > prevPathnameRef.current;
+    animateTransition(isForward);
+
+    // eslint-disable-next-line consistent-return
+    return () => {
+      gsap.killTweensOf(containerRef.current);
+    };
+  }, [pathname, children, animateTransition]);
 
   return <div ref={containerRef}>{displayChildren}</div>;
 };
