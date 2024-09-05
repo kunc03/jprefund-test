@@ -19,12 +19,12 @@ const FormPassportInformation = async ({ params }) => {
     <div className="flex min-h-dvh flex-col justify-between">
       <div className="sticky top-0 z-10 bg-white shadow-md">
         <Header hasBack title={t('title')} />
-        <StatusForm form={form} />
       </div>
       <div
         className={cn('flex-grow overflow-y-auto')}
         style={{ height: 'calc(100vh - 120px)' }}
       >
+        <StatusForm form={form} />
         <Form form={form} />
       </div>
     </div>
