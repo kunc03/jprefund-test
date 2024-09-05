@@ -20,7 +20,6 @@ const Page = async ({ params }) => {
       {/* Fixed Header */}
       <div className="sticky top-0 z-10 bg-white shadow-md">
         <Header hasBack title={t('title')} />
-        <FormLabel />
       </div>
 
       {/* Scrollable Content */}
@@ -28,6 +27,7 @@ const Page = async ({ params }) => {
         className={cn('flex-grow overflow-y-auto')}
         style={{ height: 'calc(100vh - 120px)' }}
       >
+        <FormLabel />
         <ContactDetails />
       </div>
     </div>
