@@ -31,7 +31,7 @@ const ConfirmDialog = ({ isConfirm, setIsConfirm, setIsSuccess }) => {
 
   return (
     <AlertDialog open={isConfirm}>
-      <AlertDialogContent className={cn('w-72')}>
+      <AlertDialogContent className={cn('w-292')}>
         <AlertDialogTitle>{}</AlertDialogTitle>
         <AlertDialogHeader>
           <AlertDialogDescription
@@ -51,7 +51,7 @@ const ConfirmDialog = ({ isConfirm, setIsConfirm, setIsSuccess }) => {
             className="w-100 rounded-6"
             onClick={handleSuccess}
           >
-            OK
+            {t('yes')}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

@@ -42,9 +42,10 @@
     "privacyPolicy": "プライバシーポリシー",
     "cookies": "Cookie の使用",
     "haveAccount": "すでにアカウントをお持ちですか? {login}",
-    "useNowWithoutRegistering": "登録せずに {useNow}",
+    "useNowWithoutRegistering": "登録せずに {tryNow}",
     "login": "ログイン",
     "useNow": "今すぐ使う",
+    "tryNow": "今すぐ試す",
     "next": "次へ",
     "form": {
       "label": {
@@ -59,12 +60,13 @@
       }
     },
     "verifyCodeSend": "認証コードを送信しました",
-    "enterAuthCodeEmail": "メールに記載されている{authCode}を入力して メールアドレスを認証してください。",
+    "enterAuthCodeEmail": "{authCode} があなたのメールアドレスに送信されます メールアドレスを確認するには、以下に入力してください。",
     "enterAuthCodePhone": "SMSに記載されている{authCode}を入力して電話番号を認証してください。",
-    "authCode": "認証コード",
-    "dateOfExpiry": "有効期限",
+    "authCode": "確認コード",
+    "dateOfExpiry": "確認コードを再送信",
     "reissueAuthCode": "認証コードを再発行",
-    "alertPhoneArea": "中国（+86）以外の電話番号では登録できません。"
+    "alertPhoneArea": "中国の電話番号（+86）以外の電話番号では登録できません。",
+    "verify": "確認する"
   },
   "login": {
     "metaTitle": "ログイン",
@@ -75,7 +77,7 @@
       "label": {
         "email": "メールアドレス、または電話番号",
         "password": "パスワード",
-        "forgetPass": "パスワードを忘れた方"
+        "forgetPass": "パスワードをお忘れですか ？"
       },
       "placeholder": {
         "email": "メールアドレス、または電話番号",
@@ -184,12 +186,13 @@
     "title": "アカウント",
     "change": "変更",
     "email": "変更",
-    "accountDeletion": "アカウント削除",
+    "accountDeletion": "アカウントを削除",
     "newEmail": "新しいメールアドレス",
     "newPhone": "新しい電話番号",
     "placeholder": {
       "newEmail": "メールアドレス",
       "currentPassword": "半角英数8文字以上",
+      "enterYourPassword": "パスワードを入力してください",
       "newPassword": "半角英数8文字以上",
       "passwordConfirmation": "確認のためもう一度入力"
     },
@@ -198,6 +201,7 @@
     "passwordConfirmation": "パスワード確認",
     "password": "パスワード",
     "cancel": "キャンセル",
+    "yes": "はい",
     "deleteAccount": "アカウントを削除",
     "sendVerificationCode": "認証コードを送信",
     "verificationCodeSent": "認証コードを送信しました",
@@ -205,11 +209,16 @@
     "beforeDelete": "アカウントを削除する前に",
     "ifYouDelete": "アカウントを削除した場合、このアカウントではログインすることも「JPrefund」のサービスが利用できなくなります。",
     "ifYouWishToReregister": "アカウント削除後に再登録を希望される場合、新規アカウントとして登録する必要があります。以前のデータや設定は引き継ぐことができません。",
-    "passwordAuth": "パスワードによる認証",
+    "passwordAuth": "パスワードを入力してください",
     "toEnsureTheSafe": "アカウント削除を安全に行うため、パスワード入力による認証を行います。",
+    "enterPassword": "アカウントを削除するにはパスワードを入力してください。この操作は元に戻せません。",
     "continue": "続ける",
     "doYouReallyWantToDelete": "本当にアカウント「example@mail.com」を削除しますか？",
-    "accountDeleted": "アカウントを削除しました"
+    "accountDeleted": "アカウントは削除されました。",
+    "warningDelete": "アカウントを削除すると、個人情報がシステムから削除されます。メールアドレスはシステムに永久に記録されます。そのため、同じメールアドレスを新しいアカウントとして登録することはできません。",
+    "thisAccountWillBeDeleted": "このアカウントは削除されます",
+    "ensureYou": "アカウントを削除すると、そのアカウントでログインしたり、JPrefund サービスを使用したりすることができなくなることを必ず理解してください。",
+    "youNeedRegister": "JPrefundサービスを再度ご利用いただくには、新しいアカウントを登録していただく必要がありますが、以前の設定や情報は引き継がれません。"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
@@ -326,10 +335,10 @@
   "resetPassword": {
     "metaTitle": "パスワード再設定",
     "metaDescription": "パスワード再設定ページ",
-    "title": "パスワード再設定",
-    "resetByEmail": "ご登録のメールアドレスへ パスワード再設定用のURLを送信します。",
-    "resetByPhone": "ご登録の電話番号へ パスワード再設定用のSMSを送信します。",
-    "passwordSetting": "パスワード再設定",
+    "title": "パスワードをリセット",
+    "resetByEmail": "パスワードをリセットするためのリンクが記載されたメールが、登録されたメールアドレスに送信されます。",
+    "resetByPhone": "パスワードをリセットするためのリンクが記載されたテキストメッセージが、登録された電話番号に送信されます。",
+    "passwordSetting": "新しいパスワードを入力してください",
     "resetCompleted": "パスワード再設定完了",
     "resetInform": "パスワードの再設定が完了しました引き続きサービスをご利用ください。",
     "form": {
@@ -343,18 +352,31 @@
         "email": "メールアドレス",
         "phone": "000-0000-0000",
         "password": "半角英数8文字以上",
-        "passwordConfirmation": "確認のためもう一度入力"
+        "passwordConfirmation": "パスワードを再入力してください"
       }
     },
     "send": "送信",
     "resetting": "再設定",
-    "resetEmailSendToYou": "再設定用メールをお送りしました",
-    "resetSmsSendToYou": "再設定用SMSをお送りしました",
-    "clickOnUrlInEmail": "メールに記載されているURLをクリックして パスワードを再設定してください。",
-    "clickOnUrlInSms": "SMSに記載されているURLをクリックして パスワードを再設定してください。",
-    "expiresUrl": "URLの有効期限は24時間です。",
-    "emailInstruction": "※メールが届かない場合はメールアドレスをご確認ください。※ドメイン受信設定をしている方は「jprefund.com」を受信できるようにしてください。※迷惑メールフォルダもお確かめください。",
-    "smsInstruction": "※SMSが届かない場合は電話番号をご確認ください。※通信圏外になっていないかご確認ください。※SMSが受け取れる設定になっているかお確かめください。"
+    "submit": "提出する",
+    "resetEmailSendToYou": "リセットメールが送信されました",
+    "resetSmsSendToYou": "SMSが携帯電話に送信されました",
+    "clickOnUrlInEmail": "メール内の指示に従ってパスワードをリセットしてください。",
+    "clickOnUrlInSms": "パスワードをリセットするには、SMS 内の指示に従ってください。",
+    "expiresUrl": "URLは24時間で期限切れになります。",
+    "emailInstruction": {
+      "head": "メールの受信に問題がある場合は、以下の条件を確認してください。",
+      "1": "正しいメールアドレスを入力しました。",
+      "2": "あなたのメールアドレスは「jprefund.com」からのメールを受信できる状態です。",
+      "3": "スパムフォルダはすでに確認済みです。",
+      "foot": "問題が解決しない場合は、example@jprefund.com までメールをお送りください。"
+    },
+    "smsInstruction": {
+      "head": "SMS の受信に問題がある場合は、次の条件を確認してください。",
+      "1": "正しい電話番号を入力しました。",
+      "2": "携帯電話の受信/信号を再度確認してください。",
+      "3": "お使いの携帯電話はSMSを受信できます。",
+      "foot": "問題が解決しない場合は、example@jprefund.com までメールをお送りください。"
+    }
   },
   "refundMethod": {
     "metaTitle": "返金方法",
@@ -449,6 +471,7 @@
     "password": {
       "required": "パスワードが必要",
       "min": "8文字以上で設定してください。",
+      "sameAsCurrent": "現在のパスワードと同じパスワードは使用できません。",
       "mismatch": "パスワードが一致しません。",
       "confPass": "パスワードの確認が必要です",
       "incorrect": "パスワードが違います。"

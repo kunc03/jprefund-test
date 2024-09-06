@@ -17,14 +17,22 @@ const ResetPasswordVerify = () => {
       sendUrl: t('resetEmailSendToYou'),
       clickOnUrl: t('clickOnUrlInEmail'),
       example: 'example@mail.com',
-      instruction: t('emailInstruction'),
+      instructionHead: t('emailInstruction.head'),
+      instruction1: t('emailInstruction.1'),
+      instruction2: t('emailInstruction.2'),
+      instruction3: t('emailInstruction.3'),
+      instructionFoot: t('emailInstruction.foot'),
       image: '/icons/mail.svg',
     },
     phones: {
       sendUrl: t('resetSmsSendToYou'),
       clickOnUrl: t('clickOnUrlInSms'),
       example: '090-0000-0000',
-      instruction: t('smsInstruction'),
+      instructionHead: t('smsInstruction.head'),
+      instruction1: t('smsInstruction.1'),
+      instruction2: t('smsInstruction.2'),
+      instruction3: t('smsInstruction.3'),
+      instructionFoot: t('smsInstruction.foot'),
       image: '/icons/sms.svg',
     },
   };
@@ -59,9 +67,15 @@ const ResetPasswordVerify = () => {
           <p className={cn('text-1420 font-medium')}>{verify.clickOnUrl}</p>
         </div>
         <p className={cn('text-1320')}>{t('expiresUrl')}</p>
-        <p className={cn('text-1116 flex justify-center text-center')}>
-          <span className="w-72">{verify.instruction}</span>
-        </p>
+        <div className={cn('text-1116 text-start flex flex-col gap-3')}>
+          <p>{verify.instructionHead}</p>
+          <p className="flex flex-col">
+            <span>1. {verify.instruction1}</span>
+            <span>2. {verify.instruction2}</span>
+            <span>3. {verify.instruction3}</span>
+          </p>
+          <p>{verify.instructionFoot}</p>
+        </div>
       </div>
     </div>
   );

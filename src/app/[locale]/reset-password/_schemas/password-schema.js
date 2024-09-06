@@ -2,53 +2,18 @@ import { z } from 'zod';
 
 const passwordSchema = z
   .object({
-    newPassword: z
+    password: z
       .string()
-      .optional()
-      .refine(
-        (value) => {
-          return value !== undefined && value.trim() !== '';
-        },
-        {
-          message: 'password.required',
-        },
-      )
-      .refine(
-        (value) => {
-          return value.length >= 8;
-        },
-        {
-          message: 'password.min',
-        },
-      ),
-    passwordConfirmation: z
+      .min(1, { message: 'password.required' })
+      .min(8, { message: 'password.min' }),
+    confPassword: z
       .string()
-      .optional()
-      .refine(
-        (value) => {
-          return value !== undefined && value.trim() !== '';
-        },
-        {
-          message: 'password.required',
-        },
-      )
-      .refine(
-        (value) => {
-          return value.length >= 8;
-        },
-        {
-          message: 'password.min',
-        },
-      ),
+      .min(1, { message: 'password.required' })
+      .min(8, { message: 'password.min' }),
   })
-  .refine(
-    (data) => {
-      return data.newPassword === data.passwordConfirmation;
-    },
-    {
-      message: 'password.mismatch',
-      path: ['passwordConfirmation'],
-    },
-  );
+  .refine((data) => data.password === data.confPassword, {
+    message: 'password.mismatch',
+    path: ['confPassword'],
+  });
 
 export { passwordSchema };

@@ -10,6 +10,7 @@ import { useFormRef } from '@/hooks';
 import { useEffect, useRef, useMemo } from 'react';
 import { otpSchema } from '../app/[locale]/register/_schemas';
 import { useRouter } from 'next/navigation';
+import { cn } from '@/utils';
 
 const OtpForm = ({ redirect = null }) => {
   const t = useTranslations('register');
@@ -56,12 +57,12 @@ const OtpForm = ({ redirect = null }) => {
               disabled={false}
               {...field}
             >
-              <InputOTPGroup className="mx-auto flex max-w-sm flex-row gap-10 px-28 md:px-0">
+              <InputOTPGroup className="mx-auto flex max-w-sm flex-row justify-between gap-10 px-28 md:px-0">
                 {slots.map((index) => (
                   <InputOTPSlot
                     key={index}
                     index={index}
-                    className="bg-white"
+                    className={cn('bg-white min-w-48 h-64')}
                   />
                 ))}
               </InputOTPGroup>

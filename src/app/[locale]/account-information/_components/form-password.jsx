@@ -9,8 +9,15 @@ import { passwordSchema } from '../_schemas';
 const FormPassword = () => {
   const t = useTranslations('accountInformation');
 
+  // Function to check current password
+  const checkCurrentPassword = (password) => {
+    return password === '12341234';
+  };
+
+  const schema = passwordSchema(checkCurrentPassword);
+
   const form = useForm({
-    resolver: zodResolver(passwordSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       password: '',
       newPassword: '',
@@ -18,7 +25,11 @@ const FormPassword = () => {
     },
   });
 
-  const handleSubmit = () => {};
+  const { errors } = form.formState;
+
+  const handleSubmit = (data) => {
+    console.log('Form data:', data);
+  };
 
   return (
     <UIForm {...form}>
@@ -38,6 +49,7 @@ const FormPassword = () => {
                 label={t('currentPassword')}
                 disabled={false}
                 placeholder={t('placeholder.currentPassword')}
+                errors={errors.password}
                 className="!h-50 bg-gray-80 !px-14 !py-18"
                 {...field}
               />
@@ -56,6 +68,7 @@ const FormPassword = () => {
                 value={field.value}
                 label={t('newPassword')}
                 disabled={false}
+                errors={errors.newPassword}
                 placeholder={t('placeholder.newPassword')}
                 className="!h-50 bg-gray-80 !px-14 !py-18"
                 {...field}
@@ -75,6 +88,7 @@ const FormPassword = () => {
                 value={field.value}
                 label={t('passwordConfirmation')}
                 disabled={false}
+                errors={errors.confPassword}
                 placeholder={t('placeholder.passwordConfirmation')}
                 className="!h-50 bg-gray-80 !px-14 !py-18"
                 {...field}
@@ -83,11 +97,7 @@ const FormPassword = () => {
           }}
         />
 
-        <Button
-          className="!w-fit px-11.5 py-14.5"
-          type="submit"
-          onClick={handleSubmit}
-        >
+        <Button className="!w-fit px-11.5 py-14.5" type="submit">
           {t('sendVerificationCode')}
         </Button>
       </form>

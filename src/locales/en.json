@@ -35,16 +35,17 @@
     "continueWithGoogle": "Continue with your Google account",
     "continueWithFacebook": "Continue with Facebook",
     "continueWithTwitter": "Continue with X account",
-    "continueWithEmail": "Email address",
-    "continueWithPhone": "Phone number (China+86 only)",
+    "continueWithEmail": "email address",
+    "continueWithPhone": "phone number (China+86 only)",
     "acceptTermCondition": "By registering, you agree to our {term}, {privacyPolicy} {cookies}.",
     "term": "Terms of Use",
     "privacyPolicy": "Privacy Policy",
     "cookies": "and Cookies",
     "haveAccount": "Already have an account? {login}",
-    "useNowWithoutRegistering": "{useNow} without registering",
+    "useNowWithoutRegistering": "{tryNow} without registering",
     "login": "Log in",
     "useNow": "Use now",
+    "tryNow": "Try Now",
     "next": "Next",
     "form": {
       "label": {
@@ -59,23 +60,24 @@
       }
     },
     "verifyCodeSend": "Verification code sent",
-    "enterAuthCodeEmail": "Please enter the {authCode} provided in the email to verify your email address.",
+    "enterAuthCodeEmail": "A {authCode} is sent to your email address To verify your email address, enter it below.",
     "enterAuthCodePhone": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
-    "authCode": "authentication code",
-    "dateOfExpiry": "Date of expiry",
+    "authCode": "verification code",
+    "dateOfExpiry": "Resend verification code in",
     "reissueAuthCode": "Reissue authentication code",
-    "alertPhoneArea": "You cannot register with a phone number other than China (+86)."
+    "alertPhoneArea": "You cannot register with a phone number other than China phone number (+86).",
+    "verify": "Verify"
   },
   "login": {
     "metaTitle": "Login",
     "metaDescription": "Login page",
     "title": "Login",
-    "login": "Login",
+    "login": "Log in",
     "form": {
       "label": {
         "email": "Email address or phone number",
         "password": "Password",
-        "forgetPass": "for those who have forgotten their password",
+        "forgetPass": "Forgot password ?",
         "otp": "for those who have forgotten their password"
       },
       "placeholder": {
@@ -111,7 +113,7 @@
     "goToRefund": "Register for refund method",
     "goToRefundComplete": "Refund method registration completed",
     "refundDeclaimer": "Please register at least one method for receiving your refund: credit card, bank account, or cashless service.",
-    "enjoyJapanRefundService": "Enjoy Japan even more JPrefound is a hassle-free tax refund service",
+    "enjoyJapanRefundService": "Unlock a better Japan experience with JPrefund, the seamless and hassle-free tax refund service ",
     "searchFilter": "Search filters",
     "resetFilter": "Reset filters",
     "applyFilter": "Apply Filter",
@@ -280,7 +282,7 @@
     "email": "Email address",
     "newEmail": "New Email address",
     "newPhone": "New phone number",
-    "accountDeletion": "Account deletion",
+    "accountDeletion": "Delete Account",
     "placeholder": {
       "newEmail": "New Email address",
       "enterYourPassword": "Enter your password",
@@ -293,6 +295,7 @@
     "passwordConfirmation": "Password confirmation",
     "password": "Password",
     "cancel": "Cancel",
+    "yes": "Yes",
     "deleteAccount": "Delete Account",
     "sendVerificationCode": "Send verification code",
     "verificationCodeSent": "Verification code sent",
@@ -300,11 +303,16 @@
     "beforeDelete": "Before you delete your account",
     "ifYouDelete": "If you delete your account, you will no longer be able to log in or use JPrefund services with that account.",
     "ifYouWishToReregister": "If you wish to re-register after deleting your account, you will need to register as a new account. Previous data and settings cannot be carried over.",
-    "passwordAuth": "Password authentication",
+    "passwordAuth": "Enter Password",
     "toEnsureTheSafe": "To ensure the safe deletion of your account, you will be asked to authenticate by entering your password.",
+    "enterPassword": "Please enter your password to delete your account. This action is irreversible.",
     "continue": "Continue",
     "doYouReallyWantToDelete": "Do you really want to delete the account \"example@mail.com\"?",
-    "accountDeleted": "Account deleted"
+    "accountDeleted": "Your account has been deleted.",
+    "warningDelete": "Deleting your account will remove your personal information from our system. Your email will be permanently recorded in our system. Hence, the same email can not be registered as a new account.",
+    "thisAccountWillBeDeleted": "This account will  be deleted",
+    "ensureYou": "Ensure you understand by deleting your account, you will no longer be able to log in or use JPrefund services with your account.",
+    "youNeedRegister": "You need to register a new account in order to use JPrefund services again, however your previous settings and information will not be carried over."
   },
   "detail": {
     "metaTitle": "Purchase details",
@@ -328,16 +336,16 @@
   "resetPassword": {
     "metaTitle": "Reset Password",
     "metaDescription": "Reset Password page",
-    "title": "Resetting a Password",
-    "resetByEmail": "A URL for resetting your password will be sent to your registered email address.",
-    "resetByPhone": "A password reset SMS will be sent to your registered phone number.",
-    "passwordSetting": "Password Setting",
+    "title": "Reset Password",
+    "resetByEmail": "An email with a link to reset your password will be sent to your registered email address.",
+    "resetByPhone": "A text message with a link to reset your password will be sent to your registered phone number.",
+    "passwordSetting": "Input your new password",
     "resetCompleted": "Password reset completed",
     "resetInform": "Your password has now been reset. Please continue to use our services.",
     "form": {
       "label": {
         "email": "Email address",
-        "phone": "Telephone number",
+        "phone": "Phone number",
         "password": "Password",
         "passwordConfirmation": "Password confirmation"
       },
@@ -345,18 +353,31 @@
         "email": "Email address",
         "phone": "000-0000-0000",
         "password": "At least 8 alphanumeric characters",
-        "passwordConfirmation": "Enter again to confirm"
+        "passwordConfirmation": "Re-enter your password"
       }
     },
     "send": "Send",
     "resetting": "Resetting",
+    "submit": "Submit",
     "resetEmailSendToYou": "A reset email has been sent to you",
-    "resetSmsSendToYou": "A reset SMS has been sent to you",
-    "clickOnUrlInEmail": "Click on the URL in the email to reset your password.",
-    "clickOnUrlInSms": "Click on the URL in the SMS to reset your password.",
+    "resetSmsSendToYou": "SMS has been sent to your mobile phone",
+    "clickOnUrlInEmail": "Follow the instruction within your email to reset your password.",
+    "clickOnUrlInSms": "Follow the instruction within your SMS to reset your password.",
     "expiresUrl": "The URL will expires in 24 hours.",
-    "emailInstruction": "*If you do not receive the email, please check your email address. *If you have set up your email reception settings to receive emails from domains, please make sure that you can receive emails from 'jprefund.com'. *Please also check your spam folder.",
-    "smsInstruction": "*If you don't receive an SMS, please check your phone number.*Please make sure you are not outside of the communication range. *Please make sure your phone is set up to receive SMS."
+    "emailInstruction": {
+      "head": "If you have a problem receiving the email, please check the following conditions:",
+      "1": "You have inputted the correct email address.",
+      "2": "Your email address is capable receiving emails from “jprefund.com”.",
+      "3": "ou have already checked your spam folder.",
+      "foot": "If the problem persist, let us know by sending an email to example@jprefund.com"
+    },
+    "smsInstruction": {
+      "head": "If you have a problem receiving the SMS, please check the following conditions:",
+      "1": "You have inputted the correct phone number.",
+      "2": "Double check your phone reception/signal.",
+      "3": "Your phone is capable of receiving SMS.",
+      "foot": "If the problem persist, let us know by sending an email to example@jprefund.com"
+    }
   },
   "refundMethod": {
     "metaTitle": "Refund Methods",
@@ -445,6 +466,7 @@
     "password": {
       "required": "Password is required",
       "min": "Please set it to 8 characters or more",
+      "sameAsCurrent": "Please set a different password from the current one",
       "mismatch": "Passwords do not match",
       "confPass": "Password confirmation is required",
       "incorrect": "Password is incorrect"

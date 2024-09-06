@@ -81,8 +81,13 @@ const Form = ({ type }) => {
       } else {
         router.push('/login');
       }
-    } else if (selectedPhoneArea && data) {
-      router.push('/register/phone/otp');
+    }
+    if (type === 'phone' && registerSchema) {
+      if (data.phone === '1234567890') {
+        router.push('/register/phone/otp');
+      } else {
+        router.push('/login');
+      }
     }
   };
 
@@ -98,7 +103,7 @@ const Form = ({ type }) => {
         <form
           ref={formRef}
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="mt-8 flex w-full flex-col gap-6"
+          className="flex w-full flex-col gap-6"
         >
           {type === 'email' && (
             <FormField
