@@ -37,6 +37,7 @@ const ContentCreditCard = () => {
       (value) => value !== '',
     );
     setIsAllFieldsFilled(isFilled);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.watch()]);
 
   const handleSubmitClick = () => {

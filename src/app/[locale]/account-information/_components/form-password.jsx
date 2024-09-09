@@ -5,9 +5,11 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { passwordSchema } from '../_schemas';
+import { useRouter } from 'next/navigation';
 
 const FormPassword = () => {
   const t = useTranslations('accountInformation');
+  const router = useRouter();
 
   // Function to check current password
   const checkCurrentPassword = (password) => {
@@ -27,8 +29,8 @@ const FormPassword = () => {
 
   const { errors } = form.formState;
 
-  const handleSubmit = (data) => {
-    console.log('Form data:', data);
+  const handleSubmit = () => {
+    router.push('/account-information/email/otp');
   };
 
   return (
