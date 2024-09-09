@@ -46,7 +46,7 @@ const ButtonDeleteRegistration = ({ item }) => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="w-111 rounded-6">
+          <AlertDialogCancel className={cn('w-111 rounded-6 my-auto')}>
             {t('cancel')}
           </AlertDialogCancel>
           <AlertDialogAction

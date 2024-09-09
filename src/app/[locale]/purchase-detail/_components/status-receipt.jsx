@@ -10,7 +10,7 @@ const getStatusClasses = (status, remittance) => {
       return 'bg-green text-white';
     case 'Partial Approval':
       return 'bg-transparent text-blue border-blue border';
-    case 'Denial':
+    case 'Rejected':
       return 'bg-red-dark text-white';
     case 'Application Fee':
       return 'bg-green text-white';

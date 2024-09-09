@@ -30,7 +30,7 @@ const RegistrationItem = ({ item }) => {
         <Image
           alt={item.type}
           height={50}
-          src={paymentImages[item.type]}
+          src={paymentImages[item.icon]}
           width={50}
         />
         <div className="flex flex-col gap-7 text-gray">
@@ -39,7 +39,7 @@ const RegistrationItem = ({ item }) => {
           </Heading>
           {!item.isRegister && (
             <p className="max-w-131 text-1218 font-normal text-gray ">
-              {t('noRegistration')}
+              {t('needToAdd')}
             </p>
           )}
           {item.isRegister && <RegistrationInformation item={item} t={t} />}
@@ -57,7 +57,7 @@ const RegistrationItem = ({ item }) => {
       {!item.isRegister && (
         <div className="flex grow flex-row flex-wrap items-center justify-between gap-11 ">
           <p className=" grow text-end text-1112 font-bold text-gray">
-            {t('registration')}
+            {t('add')}
           </p>
           <ButtonAddRegistration slug={item.slug} />
         </div>

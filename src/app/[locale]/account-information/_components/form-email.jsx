@@ -46,11 +46,7 @@ const FormEmail = () => {
           }}
         />
 
-        <Button
-          className="!w-fit px-11.5 py-14.5"
-          type="submit"
-          onClick={handleSubmit}
-        >
+        <Button className="!w-fit px-11.5 py-14.5" type="submit">
           {t('sendVerificationCode')}
         </Button>
       </form>

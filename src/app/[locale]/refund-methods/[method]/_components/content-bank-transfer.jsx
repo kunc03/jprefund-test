@@ -13,6 +13,7 @@ import {
   SelectValue,
   Input,
   SelectContent,
+  Header,
 } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useRef, useState, useEffect } from 'react';
@@ -36,6 +37,7 @@ const ContentBankTransfer = () => {
   const [isSelected, setIsSelected] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { registrationInformation } = registerOptionData[1];
+  const [isAllFieldsFilled, setIsAllFieldsFilled] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(bankTransferSchema),
@@ -47,6 +49,13 @@ const ContentBankTransfer = () => {
       lastName: '',
     },
   });
+
+  useEffect(() => {
+    const isFilled = Object.values(form.getValues()).every(
+      (value) => value !== '',
+    );
+    setIsAllFieldsFilled(isFilled);
+  }, [form.watch()]);
 
   const handleSubmitClick = () => {
     formRef.current.dispatchEvent(
@@ -82,8 +91,20 @@ const ContentBankTransfer = () => {
       setIsSelected(false);
     }
   }, [registrationInformation, isSelected]);
+
+  const handleHeaderTitle = () => {
+    if (!isSelected) {
+      return t('addBankLocation');
+    }
+    if (isAllFieldsFilled) {
+      return t('accountInform');
+    }
+    return t('addBankAccount');
+  };
+
   return (
     <>
+      <Header hasBack title={handleHeaderTitle()} />
       <div className="flex w-full grow flex-col items-center gap-9 pb-2">
         <div
           className={cn(' flex w-full flex-col ', !isSelected && 'grow mt-40')}
@@ -299,7 +320,7 @@ const ContentBankTransfer = () => {
             onClick={handleSubmitClick}
             disabled={!form.formState.isValid}
           >
-            {t('registration')}
+            {t('add')}
           </Button>
         )}
       </div>

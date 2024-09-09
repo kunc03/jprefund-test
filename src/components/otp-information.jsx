@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 
 const OtpInformation = ({ type }) => {
   const t = useTranslations('register');
+
   return (
     <Heading
       className={cn('mt-28.5 mb-17 text-center text-1522 font-normal')}

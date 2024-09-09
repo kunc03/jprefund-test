@@ -34,7 +34,6 @@ const ContentUnKyc = ({ t, setIsAuth, isAuth }) => {
   const [resetUnKyc, setResetUnKyc] = useState(true);
 
   useEffect(() => {
-    // Set isUnKyc to true only when selectedData is not empty
     if (resetUnKyc && !isObjectEmpty(selectedValue)) {
       setIsUnKyc(true);
       setResetUnKyc(false);
@@ -42,7 +41,6 @@ const ContentUnKyc = ({ t, setIsAuth, isAuth }) => {
   }, [selectedValue, resetUnKyc]);
 
   useEffect(() => {
-    // Reset isUnKyc to false when isAuth becomes true
     if (isAuth) {
       setIsUnKyc(false);
     }

@@ -24,34 +24,32 @@ const HomePage = ({ searchParams }) => {
         <div className="border-b border-b-gray-500 bg-white">
           <Header />
           <Heading className="bg-white text-center text-lg font-medium ">
-            <div className="mt-12 flex items-center justify-between gap-2 px-2.5">
+            <div className="relative mt-12 flex items-center justify-between gap-2 px-2.5">
               <p
                 className={cn(
                   'grow text-center text-1822 medium:text-1722 small:text-1422',
                 )}
               >
-                {t('recordOfTaxFreePurchases')}
+                {t('taxFreePurchases')}
               </p>
               <ButtonFilter className="shrink-0" />
             </div>
           </Heading>
           <div
-            className={cn(
-              'inline-flex w-full py-12 gap-7 bg-white px-1 overflow-x-auto whitespace-nowrap',
-            )}
+            className={cn('grid grid-cols-3 w-full py-12 gap-6 bg-white px-1')}
           >
             <SummaryCard
-              number={99999999}
-              title={t('refundApplication')}
-              status="refundApplication"
+              number={9999999}
+              title={t('transactionRecord')}
+              status="transactionRecord"
             />
             <SummaryCard
-              number={99999999}
-              title={t('remittanceProcedureCompleted')}
-              status="remittanceProcedureCompleted"
+              number={9999999}
+              title={t('completedRemittance')}
+              status="completedRemittance"
             />
             <SummaryCard
-              number={99999999}
+              number={9999999}
               title={t('nonRefundable')}
               status="nonRefundable"
             />

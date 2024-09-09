@@ -44,8 +44,8 @@ const SummaryCard = ({ title, number = 0, className, status }) => {
       className={cn(
         'py-1 px-2 min-h-68 rounded-lg flex flex-col justify-between cursor-pointer text-white outline-none w-full min-w-111',
         !isActive && 'bg-gray-500',
-        isActive && status === 'refundApplication' && 'bg-orange',
-        isActive && status === 'remittanceProcedureCompleted' && 'bg-blue',
+        isActive && status === 'transactionRecord' && 'bg-orange',
+        isActive && status === 'completedRemittance' && 'bg-blue',
         isActive && status === 'nonRefundable' && 'bg-red-dark',
         className,
       )}

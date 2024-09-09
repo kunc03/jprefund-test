@@ -9,7 +9,7 @@ import {
 } from '@/components';
 import { StatusReceipt } from './status-receipt';
 import { ReceiptItem } from './receipt-item';
-import { formatNumber, cn } from '@/utils';
+import { cn, formatNumberJpy } from '@/utils';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -50,22 +50,22 @@ const ReceiptList = ({ rows, remittance }) => {
                   <ReceiptItem
                     label="Sales Amount"
                     qty={item.qty}
-                    value={formatNumber(item.salesAmount, true)}
+                    value={formatNumberJpy(item.salesAmount, true)}
                   />
                 ) : (
                   <>
                     <ReceiptItem
                       label="Price"
                       qty={item.qty}
-                      value={formatNumber(item.price, true)}
+                      value={formatNumberJpy(item.price, true)}
                     />
                     <ReceiptItem
                       label="Subtotal"
-                      value={formatNumber(item.subtotal, true)}
+                      value={formatNumberJpy(item.subtotal, true)}
                     />
                     <ReceiptItem
                       label="Refund amount"
-                      value={formatNumber(item.refund, true)}
+                      value={formatNumberJpy(item.refund, true)}
                     />
                   </>
                 )}

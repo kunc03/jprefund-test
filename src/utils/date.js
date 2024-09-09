@@ -93,10 +93,29 @@ const formatDateSimple = (dateTimeStr) => {
   }
 };
 
+const formatMonthOnly = (dateTimeStr) => {
+  try {
+    const date = new Date(dateTimeStr);
+
+    const monthOptions = {
+      month: 'short', // Mengatur agar hanya bulan yang ditampilkan dalam format pendek (contoh: "Aug.")
+    };
+
+    const monthFormatter = new Intl.DateTimeFormat('en-US', monthOptions);
+
+    const formattedMonth = monthFormatter.format(date);
+
+    return formattedMonth;
+  } catch (error) {
+    return dateTimeStr;
+  }
+};
+
 export {
   formatDateTime,
   getDateOnly,
   formatSecondToTime,
   formatDateSimple,
   formatTimeOnly,
+  formatMonthOnly,
 };

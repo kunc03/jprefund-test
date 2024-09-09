@@ -37,7 +37,7 @@ const HomePage = async ({ params, searchParams }) => {
                   'grow text-center text-1822 medium:text-1722 small:text-1422',
                 )}
               >
-                {t('recordOfTaxFreePurchases')}
+                {t('taxFreePurchases')}
               </p>
               <ButtonFilter className="shrink-0" />
             </div>
@@ -47,13 +47,13 @@ const HomePage = async ({ params, searchParams }) => {
           >
             <SummaryCard
               number={9999999}
-              title={t('refundApplication')}
-              status="refundApplication"
+              title={t('transactionRecord')}
+              status="transactionRecord"
             />
             <SummaryCard
               number={9999999}
-              title={t('remittanceProcedureCompleted')}
-              status="remittanceProcedureCompleted"
+              title={t('completedRemittance')}
+              status="completedRemittance"
             />
             <SummaryCard
               number={9999999}
@@ -65,10 +65,10 @@ const HomePage = async ({ params, searchParams }) => {
         <AdvancePreparation />
         <Content />
         <ButtonCamera />
+        <AuthBottomDrawer />
       </div>
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
       <FilterBottomDrawer />
-      <AuthBottomDrawer />
     </>
   );
 };

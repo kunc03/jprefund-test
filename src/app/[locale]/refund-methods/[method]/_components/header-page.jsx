@@ -10,7 +10,8 @@ const HeaderPage = ({ method }) => {
   const { data, setData } = useRegistrationOptions();
   const router = useRouter();
 
-  if (method === 'cashless') return <Header hasBack title={t('cashLess')} />;
+  if (method === 'digital-wallet')
+    return <Header hasBack title={t('digitalWallet')} />;
   if (method === 'bank-transfer') {
     const handleBack = () => {
       if (data[1].registrationInformation?.financialInstituteName) {
@@ -26,7 +27,7 @@ const HeaderPage = ({ method }) => {
     );
   }
 
-  return <Header hasBack title={t('creditCard')} />;
+  return <Header hasBack title={t('addCreditCard')} />;
 };
 
 export { HeaderPage };

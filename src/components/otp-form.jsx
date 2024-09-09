@@ -44,7 +44,7 @@ const OtpForm = ({ redirect = null }) => {
       <form
         ref={formRef}
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="mt-8 flex w-full flex-col gap-6 "
+        className="mt-8 flex w-full flex-col gap-6"
       >
         <FormField
           control={form.control}
@@ -57,12 +57,12 @@ const OtpForm = ({ redirect = null }) => {
               disabled={false}
               {...field}
             >
-              <InputOTPGroup className="mx-auto flex max-w-sm flex-row justify-between gap-10 px-28 md:px-0">
+              <InputOTPGroup className={cn('w-full flex gap-6 items-center')}>
                 {slots.map((index) => (
                   <InputOTPSlot
                     key={index}
                     index={index}
-                    className={cn('bg-white min-w-48 h-64')}
+                    className={cn('bg-white h-64')}
                   />
                 ))}
               </InputOTPGroup>

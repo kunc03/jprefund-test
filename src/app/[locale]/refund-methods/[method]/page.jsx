@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import {
   ContentCreditCard,
   ContentBankTransfer,
-  HeaderPage,
   ContentCashLess,
 } from './_components';
 
@@ -18,11 +17,11 @@ const Register = async ({ params }) => {
 
   return (
     <div className="flex min-h-dvh w-full flex-col items-center">
-      <HeaderPage method={method} />
+      {/* <HeaderPage method={method} /> */}
       <div className="flex w-full grow flex-col items-center justify-center">
         {method === 'credit-card' && <ContentCreditCard />}
         {method === 'bank-transfer' && <ContentBankTransfer />}
-        {method === 'cashless' && <ContentCashLess />}
+        {method === 'digital-wallet' && <ContentCashLess />}
       </div>
     </div>
   );

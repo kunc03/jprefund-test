@@ -19,9 +19,9 @@ const RegisterOtpPage = ({ params }) => {
           <div className="flex w-full flex-col items-center px-28">
             <Logo className="mt-41 h-40.8 w-192" />
             <OtpInformation type={type} />
+            <OtpForm />
           </div>
 
-          <OtpForm />
           <div className="mt-17">
             <OtpExpireTime />
           </div>

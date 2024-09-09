@@ -7,7 +7,7 @@ import {
   ItemDetail,
 } from '@/components';
 import dataDummy from '@/dummy-data.json';
-import { cn, formatDateTime, formatNumber } from '@/utils';
+import { cn, formatDateTime, formatNumberJpy } from '@/utils';
 import { ReceiptList, TransactionProcess } from '../_components';
 import Image from 'next/image';
 
@@ -28,7 +28,7 @@ const DetailPage = async ({ params }) => {
   let colorLabelContainer = '';
 
   switch (selectedData.status) {
-    case 'remittanceProcedureCompleted':
+    case 'completedRemittance':
       colorLabelContainer = 'blue';
       break;
     case 'nonRefundable':
@@ -48,12 +48,12 @@ const DetailPage = async ({ params }) => {
     {
       id: 'salesAmount',
       key: 'Sales Amount',
-      value: formatNumber(selectedData.totalPurchasePrice, true),
+      value: formatNumberJpy(selectedData.totalPurchasePrice, true),
     },
     {
       id: 'refundAmount',
       key: 'Expected Refund Amount',
-      value: formatNumber(selectedData.expectedRefundAmount, true),
+      value: formatNumberJpy(selectedData.expectedRefundAmount, true),
     },
     {
       id: 'transactionID',

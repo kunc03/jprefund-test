@@ -132,8 +132,8 @@ const Sidebar = () => {
             isUnregister: false,
           },
           {
-            href: `/${locale}/recording-of-transfers`,
-            label: t('routes.recordingOfTransfer'),
+            href: `/${locale}/transaction-record`,
+            label: t('routes.transactionRecord'),
             active: pathname === `/recording-of-transfers`,
             icon: <IconImage image="recording-of-transfer.svg" />,
             isRequired: false,

@@ -48,7 +48,7 @@ const InputOTP = React.forwardRef(
     return (
       <FormItem className={cn('flex gap-3 flex-col')}>
         {label && (
-          <FormLabel className="shrink-0 px-28 text-1622">
+          <FormLabel className="shrink-0 text-1622">
             {label}
             {required && <span className="text-red">*</span>}
           </FormLabel>
