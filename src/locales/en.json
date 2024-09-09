@@ -61,9 +61,12 @@
       }
     },
     "verifyCodeSend": "Verification code sent",
-    "enterAuthCodeEmail": "A {authCode} is sent to your email address To verify your email address, enter it below.",
-    "enterAuthCodePhone": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
-    "authCode": "verification code",
+    "enterAuthCodeEmail": "A {verifyCode} is sent to your email address To verify your email address, enter it below.",
+    "enterAuthCodeEmailAccountInform": "Please enter the {authCode} provided in the email to verify your email address.",
+    "enterAuthCodePhone": "Please enter the {verifyCode} provided in the SMS to verify your Phone number.",
+    "enterAuthCodePhoneAccountInform": "Please enter the {authCode} provided in the SMS to verify your Phone number.",
+    "verifyCode": "verification code",
+    "authCode": "authentication code",
     "dateOfExpiry": "Resend verification code in",
     "reissueAuthCode": "Reissue authentication code",
     "alertPhoneArea": "You cannot register with a phone number other than China phone number (+86).",
@@ -142,8 +145,8 @@
     },
     "disabled": "Disabled",
     "receiptCantBeRegister": "This receipt cannot be registered because it has already been authenticated by another user.",
-    "disableItemNotification": "One of the scanned receipts has been authenticated by another user and has been invalidated.",
-    "receiptHaveBeenAuthenticated": "Now that three of the scanned receipts have been authenticated, your tax refund application will begin."
+    "disableItemNotification": "Your record(s) has been invalidated because it has been authenticated by another user.",
+    "receiptHaveBeenAuthenticated": "Your account has been validated. Your tax refund request will be processed accordingly"
   },
   "scan": {
     "metaTitle": "Scan",
