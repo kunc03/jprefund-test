@@ -33,10 +33,12 @@ const PassportInformationPage = async ({ params }) => {
           </div>
           <div className="text-justify text-1322">
             <p>{t('note.head')}</p>
-            <p>{t('note.1')}</p>
-            <p>{t('note.2')}</p>
-            <p>{t('note.3')}</p>
-            <p>{t('note.4')}</p>
+            <p>{t('note.inform')}</p>
+            <ul className="list-disc pl-5">
+              <li>{t('note.1')}</li>
+              <li>{t('note.2')}</li>
+              <li>{t('note.3')}</li>
+            </ul>
           </div>
           <ButtonScanPassport />
         </div>

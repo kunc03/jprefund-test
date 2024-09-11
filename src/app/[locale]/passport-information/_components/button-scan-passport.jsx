@@ -15,9 +15,9 @@ const ButtonScanPassport = () => {
       onClick={() => {
         router.push('/passport-information/photograph-passport');
       }}
-      className={cn('px-5 mb-2 text-1515 text-white')}
+      className={cn('px-9 mb-2 text-1515 text-white')}
     >
-      {t('photographingPassport')}
+      {t('scanYourPassport')}
     </Button>
   );
 };

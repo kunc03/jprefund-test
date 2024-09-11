@@ -52,7 +52,7 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
           )}
           {subMenu.isUnregister && (
             <span className="text-1222 font-normal text-gray small:text-1022">
-              {t('unregistered')}
+              {t('unProvided')}
             </span>
           )}
         </div>
@@ -66,9 +66,7 @@ const SubMenuItem = ({ subMenu, index, t, total }) => {
 const MenuItem = ({ menu, t }) => {
   return (
     <div className="w-full">
-      <Heading
-        className={cn('text-1718 font-bold text-gray sm:text-1416 pt-1')}
-      >
+      <Heading className="pt-2 text-1718 font-bold text-gray sm:text-1416">
         {menu.label}
       </Heading>
       {menu.subMenu.map((item, index) => {
@@ -114,7 +112,7 @@ const Sidebar = () => {
             label: t('routes.contactDetails'),
             active: pathname === `/contact-details`,
             icon: <IconImage image="contact-detail.svg" />,
-            isRequired: false,
+            isRequired: true,
             isUnregister: true,
           },
         ],
@@ -129,7 +127,7 @@ const Sidebar = () => {
             active: pathname === `/refund-methods`,
             icon: <IconImage image="refund-method.svg" />,
             isRequired: true,
-            isUnregister: false,
+            isUnregister: true,
           },
           {
             href: `/${locale}/transaction-record`,
