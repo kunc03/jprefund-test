@@ -17,7 +17,7 @@ const ButtonDelete = () => {
       className="mt-100 w-231 items-center justify-center"
       onClick={handleClick}
     >
-      {t('accountDeletion')}
+      {t('deleteAccount')}
     </Button>
   );
 };

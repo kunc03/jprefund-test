@@ -21,6 +21,7 @@ const FormResetting = ({ t, resetType, form }) => {
             render={({ field }) => (
               <Input
                 hasForm
+                type="email"
                 label={t('form.label.email')}
                 className={cn('!border rounded-6')}
                 placeholder={t('form.placeholder.email')}
@@ -55,10 +56,11 @@ const FormResetting = ({ t, resetType, form }) => {
         <div className={cn('flex flex-col gap-18 mt-22')}>
           <FormField
             control={form.control}
-            name="newPassword"
+            name="password"
             render={({ field }) => (
               <Input
                 hasForm
+                type="password"
                 label={t('form.label.password')}
                 className={cn('!border rounded-6')}
                 placeholder={t('form.placeholder.password')}
@@ -69,10 +71,11 @@ const FormResetting = ({ t, resetType, form }) => {
           />
           <FormField
             control={form.control}
-            name="passwordConfirmation"
+            name="confPassword"
             render={({ field }) => (
               <Input
                 hasForm
+                type="password"
                 label={t('form.label.passwordConfirmation')}
                 className={cn('!border rounded-6')}
                 placeholder={t('form.placeholder.passwordConfirmation')}

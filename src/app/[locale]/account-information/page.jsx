@@ -14,6 +14,7 @@ const ACCOUNT = {
   id: 1,
   email: 'example@mail.com',
   password: '11111111',
+  title: 'account',
 };
 
 const Login = async ({ params }) => {

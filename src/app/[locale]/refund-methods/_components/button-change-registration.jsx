@@ -15,6 +15,7 @@ import {
 } from '@/components';
 import { AlertDialogTitle } from '@radix-ui/react-alert-dialog';
 import { useRegistrationOptions } from '../_hooks/use-registration-options';
+import { cn } from '@/utils';
 
 const ButtonChangeRegistration = ({ item }) => {
   const t = useTranslations('refundMethod');
@@ -34,8 +35,8 @@ const ButtonChangeRegistration = ({ item }) => {
             {t('changeConfirmation', { name: t(item.type) })}
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="w-111 rounded-6">
+        <AlertDialogFooter className="flex items-center justify-center">
+          <AlertDialogCancel className={cn('w-111 rounded-6 my-auto')}>
             {t('cancel')}
           </AlertDialogCancel>
           <AlertDialogAction

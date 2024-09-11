@@ -39,7 +39,7 @@ const DetailBottomDrawer = (props) => {
     },
     {
       id: 'salesAmount',
-      key: 'Sales Amount',
+      key: 'Purchase Amount',
       value: 'JPY 7150',
     },
     {
@@ -80,21 +80,12 @@ const DetailBottomDrawer = (props) => {
               storeName="UNIQLO Ginza"
             />
 
-            {/* <div className="flex h-42 items-center justify-center rounded-sm border border-orange">
-              <Heading
-                className="text-center text-1422 font-bold text-orange"
-                level={3}
-              >
-                {t('purchaseHistoryHasBeenRegistered')}
-              </Heading>
-            </div> */}
-
             <ItemDetail rows={rows} />
           </div>
         </div>
         <DrawerFooter className="my-5 flex items-center justify-center">
           <Button className="w-fit px-65" onClick={onCloseDrawer}>
-            OK
+            {t('confirm')}
           </Button>
         </DrawerFooter>
       </DrawerContent>

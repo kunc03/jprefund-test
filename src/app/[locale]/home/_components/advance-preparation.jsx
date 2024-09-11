@@ -12,28 +12,19 @@ import {
   DialogTitle,
   Button,
 } from '@/components';
-import { useRouter } from 'next/navigation';
 import { cn } from '@/utils';
 
 const AdvancePreparation = () => {
   const t = useTranslations('home');
-  const router = useRouter();
   const [passportRegis, setPassportRegis] = useState(false);
-  const [refundRegis, setRefundRegis] = useState(false);
+  const [contactInformation, setContactInformation] = useState(false);
+  const [refundMethod, setRefundMethod] = useState(false);
 
-  const handlePassportRegistration = () => {
-    if (!passportRegis) {
-      router.push('/passport-information');
-      return;
-    }
-
-    setPassportRegis((old) => !old);
-  };
   return (
     <Dialog>
       <DialogTrigger className="w-full">
         <div
-          className="flex h-auto min-h-9 w-full cursor-pointer items-center justify-center gap-3 bg-gray-110 text-white small:gap-2"
+          className="flex h-auto min-h-9 w-full cursor-pointer items-center justify-center gap-4 bg-gray-110 text-white small:gap-2"
           aria-hidden="true"
           role="button"
           tabIndex="0"
@@ -45,7 +36,7 @@ const AdvancePreparation = () => {
               'text-1414 font-medium small:text-1022 medium:text-1315 flex items-center',
             )}
           >
-            {t('preparationHasNotBeenCompleted')}
+            {t('prerequisitesData')}
           </span>
           <ChevronRight />
         </div>
@@ -54,10 +45,12 @@ const AdvancePreparation = () => {
         <DialogHeader>
           <DialogTitle className="flex items-center justify-center">
             <p
-              className="w-187 text-center !text-2021 font-bold text-red"
-              key="necessaryAdvancePreparations"
+              className="w-249 text-center !text-2021 font-bold text-red"
+              key="thePrerequisitesData"
             >
-              {t('necessaryAdvancePreparations')}
+              {passportRegis && contactInformation && refundMethod
+                ? t('necessaryAdvancePreparations')
+                : t('thePrerequisitesData')}
             </p>
           </DialogTitle>
         </DialogHeader>
@@ -65,17 +58,35 @@ const AdvancePreparation = () => {
           className="flex flex-col items-center justify-center gap-22"
           key="content"
         >
-          <p className="text-center text-1522 font-medium" key="twoSteps">
-            {t.rich('information', {
-              redText: (
-                <span className="text-red" key="spanTwoSteps">
-                  {t('twoSteps')}
-                </span>
-              ),
-            })}
+          <p className="text-center text-1522 font-medium">
+            {passportRegis && contactInformation && refundMethod ? (
+              <>
+                {t.rich('informationComplete', {
+                  threeSteps: (
+                    <span className="text-red" key="span">
+                      {t('threeSteps')}
+                    </span>
+                  ),
+                })}
+              </>
+            ) : (
+              <>
+                {t.rich('information', {
+                  threeSteps: (
+                    <span className="text-red" key="span">
+                      {t('threeSteps')}
+                    </span>
+                  ),
+                })}
+              </>
+            )}
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div
+            className={cn(
+              'flex flex-col items-center justify-center gap-3 w-285',
+            )}
+          >
             <Image
               alt="refund regist icon"
               height={54}
@@ -85,9 +96,9 @@ const AdvancePreparation = () => {
 
             <Button
               variant={passportRegis ? 'default' : 'outline'}
-              onClick={handlePassportRegistration}
+              onClick={() => setPassportRegis((old) => !old)}
               className={cn(
-                'w-full gap-2 hover:bg-transparent hover:text-red',
+                'w-full gap-2 hover:bg-transparent hover:text-red relative',
                 passportRegis &&
                   '!flex items-center hover:bg-red hover:text-white',
               )}
@@ -98,17 +109,52 @@ const AdvancePreparation = () => {
                   height={26}
                   src="/icons/checked.svg"
                   width={26}
+                  className="absolute left-1"
                 />
               )}
-              <p className={cn('text-1315')}>
-                {passportRegis
-                  ? t('passportRegistrationCompleted')
-                  : t('goToPassportRegistration')}
-              </p>
+              <p className={cn('text-1515')}>{t('passportRegistration')}</p>
             </Button>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div
+            className={cn(
+              'flex flex-col items-center justify-center gap-3 w-285',
+            )}
+          >
+            <Image
+              alt="refund regist icon"
+              height={66}
+              src="/icons/contact-information.svg"
+              width={66}
+            />
+
+            <Button
+              variant={contactInformation ? 'default' : 'outline'}
+              onClick={() => setContactInformation((old) => !old)}
+              className={cn(
+                'w-full gap-2 hover:bg-transparent hover:text-red relative',
+                contactInformation &&
+                  '!flex items-center hover:bg-red hover:text-white',
+              )}
+            >
+              {contactInformation && (
+                <Image
+                  alt="check"
+                  height={26}
+                  src="/icons/checked.svg"
+                  width={26}
+                  className="absolute left-1"
+                />
+              )}
+              <p className={cn('text-1515')}>{t('contactInformation')}</p>
+            </Button>
+          </div>
+
+          <div
+            className={cn(
+              'flex flex-col items-center justify-center gap-3 w-285',
+            )}
+          >
             <Image
               alt="refund regist icon"
               height={53}
@@ -117,25 +163,24 @@ const AdvancePreparation = () => {
             />
 
             <Button
-              variant={refundRegis ? 'default' : 'outline'}
-              onClick={() => setRefundRegis((old) => !old)}
+              variant={refundMethod ? 'default' : 'outline'}
+              onClick={() => setRefundMethod((old) => !old)}
               className={cn(
-                'gap-2 hover:bg-transparent hover:text-red',
-                refundRegis &&
+                'gap-2 hover:bg-transparent hover:text-red w-full relative',
+                refundMethod &&
                   '!flex items-center border hover:bg-red hover:text-white',
               )}
             >
-              {refundRegis && (
+              {refundMethod && (
                 <Image
                   alt="check"
                   height={26}
                   src="/icons/checked.svg"
                   width={26}
+                  className="absolute left-1"
                 />
               )}
-              <p className={cn('text-1315')}>
-                {refundRegis ? t('goToRefundComplete') : t('goToRefund')}
-              </p>
+              <p className={cn('text-1515')}>{t('refundMethod')}</p>
             </Button>
           </div>
 
@@ -143,18 +188,37 @@ const AdvancePreparation = () => {
             className="relative mt-3 border border-green px-10 py-10.5  text-start !text-1217 font-semibold text-green"
             key="declaimer"
           >
-            {t.rich('declaimer', {
-              image: (
-                <Image
-                  alt="i"
-                  className="relative -top-px mr-1 inline-block size-[14px]"
-                  height={14}
-                  src="/icons/igreen.png"
-                  width={14}
-                  key="image"
-                />
-              ),
-            })}
+            {passportRegis && contactInformation && refundMethod ? (
+              <>
+                {t.rich('declaimerComplete', {
+                  image: (
+                    <Image
+                      alt="i"
+                      className="relative -top-px mr-1 inline-block size-[14px]"
+                      height={14}
+                      src="/icons/igreen.png"
+                      width={14}
+                      key="image"
+                    />
+                  ),
+                })}
+              </>
+            ) : (
+              <>
+                {t.rich('declaimer', {
+                  image: (
+                    <Image
+                      alt="i"
+                      className="relative -top-px mr-1 inline-block size-[14px]"
+                      height={14}
+                      src="/icons/igreen.png"
+                      width={14}
+                      key="image"
+                    />
+                  ),
+                })}
+              </>
+            )}
           </p>
         </div>
       </DialogContent>

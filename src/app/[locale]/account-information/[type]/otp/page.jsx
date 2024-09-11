@@ -22,14 +22,14 @@ const Login = async ({ params }) => {
   return (
     <div className="flex min-h-dvh flex-col justify-between bg-white">
       <div className="flex w-full grow flex-col ">
-        <Header hasBack title={t('title')} />
+        <Header hasBack title={t('account')} />
         <Heading className="mt-48 text-center text-2122 font-medium text-gray">
           {t('verificationCodeSent')}
         </Heading>
         <div className="px-28">
           <OtpInformation type={type} />
+          <OtpForm redirect="/account-information" />
         </div>
-        <OtpForm redirect="/account-information" />
         <div className="mt-17">
           <OtpExpireTime />
         </div>

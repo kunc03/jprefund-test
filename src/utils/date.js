@@ -87,7 +87,26 @@ const formatDateSimple = (dateTimeStr) => {
 
     return `${year} ${month}. ${day}`;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error);
+    return dateTimeStr;
+  }
+};
+
+const formatMonthOnly = (dateTimeStr) => {
+  try {
+    const date = new Date(dateTimeStr);
+
+    const monthOptions = {
+      month: 'short', // Mengatur agar hanya bulan yang ditampilkan dalam format pendek (contoh: "Aug.")
+    };
+
+    const monthFormatter = new Intl.DateTimeFormat('en-US', monthOptions);
+
+    const formattedMonth = monthFormatter.format(date);
+
+    return formattedMonth;
+  } catch (error) {
     return dateTimeStr;
   }
 };
@@ -98,4 +117,5 @@ export {
   formatSecondToTime,
   formatDateSimple,
   formatTimeOnly,
+  formatMonthOnly,
 };

@@ -14,7 +14,7 @@ const RegistrationInformation = ({ item, t }) => {
       </div>
     );
 
-  if (item.type === 'cashLess')
+  if (item.type === 'digitalWallet')
     return (
       <div className="text-1218 font-normal text-gray">
         <p>{item.registrationInformation?.type ?? 'asd'}</p>

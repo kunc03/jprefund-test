@@ -57,7 +57,7 @@ const Form = () => {
             />
             <Link
               href="/reset-password/email"
-              className={cn('mt-2 w-full text-end text-1522 font-medium')}
+              className={cn('mt-2 w-full text-end text-1322 font-medium')}
             >
               {t('form.label.forgetPass')}
             </Link>

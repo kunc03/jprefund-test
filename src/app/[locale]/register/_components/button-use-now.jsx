@@ -2,6 +2,7 @@
 
 import { Heading } from '@/components';
 import { useAuth } from '@/hooks';
+import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
@@ -11,30 +12,36 @@ const ButtonUseNow = () => {
   const { onAuth } = useAuth();
 
   const handleUseNow = () => {
-    const auth = {
+    const guestAuth = {
       status: 'guest',
       user: {},
     };
-    onAuth(auth);
+    onAuth(guestAuth);
     router.replace('/home');
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleUseNow();
+    }
   };
 
   return (
     <Heading className="mt-41 text-1722 font-normal text-gray">
-      {t.rich('useNowWithoutRegistering', {
-        useNow: (
-          <span
-            className="cursor-pointer font-bold underline"
-            onClick={handleUseNow}
-            key="useNow"
-            role="button"
-            tabIndex="0"
-            aria-hidden="true"
-          >
-            {t('useNow')}
-          </span>
-        ),
-      })}
+      <div className="flex flex-col items-center text-1322">
+        <span
+          className={cn(
+            'cursor-pointer font-bold underline underline-offset-[3px] decoration-1 text-1722',
+          )}
+          onClick={handleUseNow}
+          onKeyDown={handleKeyDown}
+          role="button"
+          tabIndex={0}
+        >
+          {t('tryNow')}
+        </span>{' '}
+        {t('useNowWithoutRegistering', { tryNow: '' })}
+      </div>
     </Heading>
   );
 };

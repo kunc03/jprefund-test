@@ -27,7 +27,7 @@ const SuccessDialog = ({ isOpen }) => {
 
   return (
     <AlertDialog open={open}>
-      <AlertDialogContent className={cn('w-72')}>
+      <AlertDialogContent className={cn('w-292')}>
         <AlertDialogTitle>{}</AlertDialogTitle>
         <AlertDialogHeader>
           <AlertDialogDescription

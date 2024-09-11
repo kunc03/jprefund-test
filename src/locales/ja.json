@@ -42,9 +42,10 @@
     "privacyPolicy": "プライバシーポリシー",
     "cookies": "Cookie の使用",
     "haveAccount": "すでにアカウントをお持ちですか? {login}",
-    "useNowWithoutRegistering": "登録せずに {useNow}",
+    "useNowWithoutRegistering": "登録せずに {tryNow}",
     "login": "ログイン",
     "useNow": "今すぐ使う",
+    "tryNow": "今すぐ試す",
     "next": "次へ",
     "form": {
       "label": {
@@ -59,12 +60,15 @@
       }
     },
     "verifyCodeSend": "認証コードを送信しました",
-    "enterAuthCodeEmail": "メールに記載されている{authCode}を入力して メールアドレスを認証してください。",
-    "enterAuthCodePhone": "SMSに記載されている{authCode}を入力して電話番号を認証してください。",
-    "authCode": "認証コード",
-    "dateOfExpiry": "有効期限",
+    "enterAuthCodeEmail": "{verifyCode} があなたのメールアドレスに送信されます メールアドレスを確認するには、以下に入力してください。",
+    "enterAuthCodeEmailAccountInform": "メールに記載されている {authCode} を入力してメール アドレスを確認してください。",
+    "enterAuthCodePhone": "SMSに記載されている{verifyCode}を入力して電話番号を認証してください。",
+    "enterAuthCodePhoneAccountInform": "電話番号を確認するには、SMS に記載されている {authCode} を入力してください。",
+    "verifyCode": "確認コード",
+    "dateOfExpiry": "確認コードを再送信",
     "reissueAuthCode": "認証コードを再発行",
-    "alertPhoneArea": "中国（+86）以外の電話番号では登録できません。"
+    "alertPhoneArea": "中国の電話番号（+86）以外の電話番号では登録できません。",
+    "verify": "確認する"
   },
   "login": {
     "metaTitle": "ログイン",
@@ -75,7 +79,7 @@
       "label": {
         "email": "メールアドレス、または電話番号",
         "password": "パスワード",
-        "forgetPass": "パスワードを忘れた方"
+        "forgetPass": "パスワードをお忘れですか ？"
       },
       "placeholder": {
         "email": "メールアドレス、または電話番号",
@@ -89,20 +93,26 @@
     "metaTitle": "家",
     "metaDescription": "ホームページ",
     "title": "家",
-    "recordOfTaxFreePurchases": "免税購入の記録",
-    "refundApplication": "購入履歴",
-    "remittanceProcedureCompleted": "送金記録",
+    "taxFreePurchases": "免税購入記録",
+    "transactionRecord": "取引記録",
+    "completedRemittance": "送金完了",
     "nonRefundable": "還付不可",
     "preparationHasNotBeenCompleted": "事前準備が完了していません",
+    "prerequisitesData": "前提条件データを完了する",
     "noTaxExemptionRecordsSaved": "免税記録が保存されていません",
     "voucherQrCodePleaseScan": "バウチャーのQRコードを スキャンしてください",
-    "checkReceipt": "レシートの確認",
+    "checkReceipt": "購入時の領収書",
     "purchaseHistoryHasBeenRegistered": "購買履歴が登録できました",
-    "passportRegistrationCompleted": "パスポート登録 完了",
+    "passportRegistration": "パスポート登録",
+    "refundMethod": "返金方法",
     "goToPassportRegistration": "パスポート登録 へ",
     "necessaryAdvancePreparations": "必要な事前準備",
-    "information": "下記の{redText}が完了すると税還付申請が自動的に開始されます。",
-    "twoSteps": "2つ",
+    "contactInformation": "連絡先",
+    "thePrerequisitesData": "前提条件データ",
+    "information": "次の {threeSteps} を完了すると、税金還付リクエストは自動的に処理されます ",
+    "informationComplete": "次の {threeSteps} を完了すると、税金還付申請が自動的に開始されます。",
+    "threeSteps": "3つのステップ。",
+    "declaimerComplete": "準備が完了しても、システムがアップデートされるまではホーム画面に{image}のアラートが表示されますのでご注意ください。審査プロセスには平均して約 24 時間かかります。",
     "declaimer": "事前準備完了後もシステム反映までホーム画面の {image}アラートが表示されますのでご了承ください。※審査は平均24時間ほどで完了します。",
     "pleaseTakeAPhoto": "パスポートを撮影して登録してください。各情報は自動的に入力されます。",
     "ifTakePhotoError": "※自動入力の情報が間違っている場合は 手入力で修正してください。",
@@ -127,13 +137,14 @@
     "youMustLoggedIn": "リファンド申請するにはサインインが必要です",
     "WhatIsJPrefund": "JPrefundとは？",
     "signUp": "新規登録",
+    "confirm": "確認する",
     "placeholder": {
       "status": "---"
     },
     "disabled": "無効化されました",
     "receiptCantBeRegister": "このレシートはすでに他のユーザーによって本人認証されているので、登録できません。",
-    "disableItemNotification": "スキャンしたレシートの内1点が他のユーザーによって認証されましたので無効化しました。",
-    "receiptHaveBeenAuthenticated": "スキャンしたレシートの内３点が本人認証されましたので、税還付申請が開始されます。"
+    "disableItemNotification": "あなたのレコードは別のユーザーによって認証されたため、無効になりました。",
+    "receiptHaveBeenAuthenticated": "あなたのアカウントは認証されました。税金還付リクエストはそれに応じて処理されます"
   },
   "scan": {
     "metaTitle": "スキャン",
@@ -184,12 +195,13 @@
     "title": "アカウント",
     "change": "変更",
     "email": "変更",
-    "accountDeletion": "アカウント削除",
+    "accountDeletion": "アカウントを削除",
     "newEmail": "新しいメールアドレス",
     "newPhone": "新しい電話番号",
     "placeholder": {
       "newEmail": "メールアドレス",
       "currentPassword": "半角英数8文字以上",
+      "enterYourPassword": "パスワードを入力してください",
       "newPassword": "半角英数8文字以上",
       "passwordConfirmation": "確認のためもう一度入力"
     },
@@ -198,6 +210,7 @@
     "passwordConfirmation": "パスワード確認",
     "password": "パスワード",
     "cancel": "キャンセル",
+    "yes": "はい",
     "deleteAccount": "アカウントを削除",
     "sendVerificationCode": "認証コードを送信",
     "verificationCodeSent": "認証コードを送信しました",
@@ -205,11 +218,16 @@
     "beforeDelete": "アカウントを削除する前に",
     "ifYouDelete": "アカウントを削除した場合、このアカウントではログインすることも「JPrefund」のサービスが利用できなくなります。",
     "ifYouWishToReregister": "アカウント削除後に再登録を希望される場合、新規アカウントとして登録する必要があります。以前のデータや設定は引き継ぐことができません。",
-    "passwordAuth": "パスワードによる認証",
+    "passwordAuth": "パスワードを入力してください",
     "toEnsureTheSafe": "アカウント削除を安全に行うため、パスワード入力による認証を行います。",
+    "enterPassword": "アカウントを削除するにはパスワードを入力してください。この操作は元に戻せません。",
     "continue": "続ける",
     "doYouReallyWantToDelete": "本当にアカウント「example@mail.com」を削除しますか？",
-    "accountDeleted": "アカウントを削除しました"
+    "accountDeleted": "アカウントは削除されました。",
+    "warningDelete": "アカウントを削除すると、個人情報がシステムから削除されます。メールアドレスはシステムに永久に記録されます。そのため、同じメールアドレスを新しいアカウントとして登録することはできません。",
+    "thisAccountWillBeDeleted": "このアカウントは削除されます",
+    "ensureYou": "アカウントを削除すると、そのアカウントでログインしたり、JPrefund サービスを使用したりすることができなくなることを必ず理解してください。",
+    "youNeedRegister": "JPrefundサービスを再度ご利用いただくには、新しいアカウントを登録していただく必要がありますが、以前の設定や情報は引き継がれません。"
   },
   "detail": {
     "metaTitle": "購入品の詳細",
@@ -326,10 +344,10 @@
   "resetPassword": {
     "metaTitle": "パスワード再設定",
     "metaDescription": "パスワード再設定ページ",
-    "title": "パスワード再設定",
-    "resetByEmail": "ご登録のメールアドレスへ パスワード再設定用のURLを送信します。",
-    "resetByPhone": "ご登録の電話番号へ パスワード再設定用のSMSを送信します。",
-    "passwordSetting": "パスワード再設定",
+    "title": "パスワードをリセット",
+    "resetByEmail": "パスワードをリセットするためのリンクが記載されたメールが、登録されたメールアドレスに送信されます。",
+    "resetByPhone": "パスワードをリセットするためのリンクが記載されたテキストメッセージが、登録された電話番号に送信されます。",
+    "passwordSetting": "新しいパスワードを入力してください",
     "resetCompleted": "パスワード再設定完了",
     "resetInform": "パスワードの再設定が完了しました引き続きサービスをご利用ください。",
     "form": {
@@ -343,37 +361,60 @@
         "email": "メールアドレス",
         "phone": "000-0000-0000",
         "password": "半角英数8文字以上",
-        "passwordConfirmation": "確認のためもう一度入力"
+        "passwordConfirmation": "パスワードを再入力してください"
       }
     },
     "send": "送信",
     "resetting": "再設定",
-    "resetEmailSendToYou": "再設定用メールをお送りしました",
-    "resetSmsSendToYou": "再設定用SMSをお送りしました",
-    "clickOnUrlInEmail": "メールに記載されているURLをクリックして パスワードを再設定してください。",
-    "clickOnUrlInSms": "SMSに記載されているURLをクリックして パスワードを再設定してください。",
-    "expiresUrl": "URLの有効期限は24時間です。",
-    "emailInstruction": "※メールが届かない場合はメールアドレスをご確認ください。※ドメイン受信設定をしている方は「jprefund.com」を受信できるようにしてください。※迷惑メールフォルダもお確かめください。",
-    "smsInstruction": "※SMSが届かない場合は電話番号をご確認ください。※通信圏外になっていないかご確認ください。※SMSが受け取れる設定になっているかお確かめください。"
+    "submit": "提出する",
+    "resetEmailSendToYou": "リセットメールが送信されました",
+    "resetSmsSendToYou": "SMSが携帯電話に送信されました",
+    "clickOnUrlInEmail": "メール内の指示に従ってパスワードをリセットしてください。",
+    "clickOnUrlInSms": "パスワードをリセットするには、SMS 内の指示に従ってください。",
+    "expiresUrl": "URLは24時間で期限切れになります。",
+    "emailInstruction": {
+      "head": "メールの受信に問題がある場合は、以下の条件を確認してください。",
+      "1": "正しいメールアドレスを入力しました。",
+      "2": "あなたのメールアドレスは「jprefund.com」からのメールを受信できる状態です。",
+      "3": "スパムフォルダはすでに確認済みです。",
+      "foot": "問題が解決しない場合は、example@jprefund.com までメールをお送りください。"
+    },
+    "smsInstruction": {
+      "head": "SMS の受信に問題がある場合は、次の条件を確認してください。",
+      "1": "正しい電話番号を入力しました。",
+      "2": "携帯電話の受信/信号を再度確認してください。",
+      "3": "お使いの携帯電話はSMSを受信できます。",
+      "foot": "問題が解決しない場合は、example@jprefund.com までメールをお送りください。"
+    }
   },
   "refundMethod": {
     "metaTitle": "返金方法",
     "metaDescription": "返金方法ページ",
     "title": "返金方法",
+    "account": "アカウント",
     "registration": "登録",
+    "add": "追加",
     "delete": "削除",
     "choosing": "選択中",
     "creditCard": "クレジットカード",
+    "addCreditCard": "クレジットカードを追加する",
+    "cardRegistration": "カード登録情報",
     "bankTransfer": "銀行口座",
+    "addBankAccount": "銀行口座を追加",
+    "addBankLocation": "銀行の所在地を追加",
+    "accountInform": "アカウント情報",
     "cashLess": "キャッシュレスサービス",
-    "noRegistration": "ご登録情報はありません。",
+    "digitalWallet": "デジタルウォレット",
+    "addDigitalWallet": "デジタルウォレットを追加する",
+    "selectYourOption": "オプションを選択してください",
+    "needToAdd": "追加する必要があります",
     "dateOfExpiry": "有効期限",
     "chooseYourService": "サービスを選択してください",
     "deleteConfirmation": "返金方法{}を削除しますか？",
-    "changeConfirmation": "払い戻し方法をこの {name} に変更しますか?",
+    "changeConfirmation": "払い戻し方法をこの {name} サービスに変更しますか?",
     "cancel": "キャンセル",
     "ok": "O K",
-    "registrationCompleted": "{name}登録完了",
+    "registrationCompleted": "あなたの {name} が追加されました",
     "cardNumber": "カード番号",
     "dateOfExpired": "有効期限",
     "securityCode": "セキュリティコード",
@@ -396,9 +437,7 @@
     "metaTitle": "プライバシーポリシー",
     "metaDescription": "プライバシーポリシーページ",
     "title": "プライバシーポリシー",
-    "content1": "At Refund Tax Company, we prioritize the confidentiality and security of your personal information. Our privacy policy ensures that any data shared with us during the refund process is treated with the utmost care and is strictly utilized for the purpose of facilitating tax-related services.",
-    "content2": "We commit to safeguarding your sensitive details, adhering to industry-standard encryption practices, and maintaining strict internal protocols to protect your privacy. Additionally, any financial transactions or refund-related information will be handled securely and in compliance with relevant legal regulations.",
-    "content3": "Our commitment to transparency and privacy underscores our dedication to providing you with a trusted and secure environment for all your tax refund needs."
+    "content1": "Refund Tax Company では、お客様の個人情報の機密性と安全性を最優先に考えています。当社のプライバシー ポリシーでは、返金手続き中に当社と共有されるデータは細心の注意を払って取り扱われ、税務関連サービスを促進する目的で厳密に利用されることが保証されています。当社は、お客様の機密情報を保護し、業界標準の暗号化慣行を遵守し、お客様のプライバシーを保護するための厳格な内部プロトコルを維持することに取り組んでいます。さらに、金融取引や返金関連の情報は、関連する法規制に従って安全に取り扱われます。透明性とプライバシーに対する当社の取り組みは、税金還付のあらゆるニーズに対応できる信頼できる安全な環境を提供するという当社の献身的な姿勢を強調しています。"
   },
   "userTerms": {
     "metaTitle": "ユーザー規約",
@@ -419,7 +458,7 @@
   "languageSettings": {
     "metaTitle": "言語設定",
     "metaDescription": "言語設定ページ",
-    "title": "言語設定",
+    "title": "言語",
     "english": "English",
     "chinese": "中文簡体",
     "korean": "한국어",
@@ -449,6 +488,7 @@
     "password": {
       "required": "パスワードが必要",
       "min": "8文字以上で設定してください。",
+      "sameAsCurrent": "現在のパスワードと同じパスワードは使用できません。",
       "mismatch": "パスワードが一致しません。",
       "confPass": "パスワードの確認が必要です",
       "incorrect": "パスワードが違います。"

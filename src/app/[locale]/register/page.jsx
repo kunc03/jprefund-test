@@ -37,7 +37,7 @@ const Register = async ({ params }) => {
           />
         </div>
 
-        <Heading className="mt-5 max-w-318 text-center text-1322 font-normal">
+        <Heading className="mt-9 max-w-318 text-center text-1322 font-normal">
           {t.rich('acceptTermCondition', {
             term: (
               <span className="font-bold text-blue-system" key="term">

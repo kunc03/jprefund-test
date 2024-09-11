@@ -1,8 +1,8 @@
 'use client';
 
-import { Input, Button, Form as UIForm, FormField } from '@/components';
+import { Input, Button, Form as UIForm, FormField, Header } from '@/components';
 import { useTranslations } from 'next-intl';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRegistrationOptions } from '../../_hooks/use-registration-options';
 import { SuccessDialog } from './success-dialog';
 import { useRouter } from 'next/navigation';
@@ -19,6 +19,7 @@ const ContentCreditCard = () => {
   const router = useRouter();
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
+  const [isAllFieldsFilled, setIsAllFieldsFilled] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(creditCardSchema),
@@ -30,6 +31,14 @@ const ContentCreditCard = () => {
       lastName: '',
     },
   });
+
+  useEffect(() => {
+    const isFilled = Object.values(form.getValues()).every(
+      (value) => value !== '',
+    );
+    setIsAllFieldsFilled(isFilled);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.watch()]);
 
   const handleSubmitClick = () => {
     formRef.current.dispatchEvent(
@@ -63,6 +72,11 @@ const ContentCreditCard = () => {
 
   return (
     <>
+      <Header
+        hasBack
+        title={isAllFieldsFilled ? t('cardRegistration') : t('addCreditCard')}
+      />
+
       <div className="flex w-full grow flex-col items-center gap-30 px-29">
         <div className="mt-27 w-full ">
           <UIForm {...form}>
@@ -209,7 +223,7 @@ const ContentCreditCard = () => {
           onClick={handleSubmitClick}
           disabled={!form.formState.isValid}
         >
-          {t('registration')}
+          {t('add')}
         </Button>
       </div>
       <SuccessDialog

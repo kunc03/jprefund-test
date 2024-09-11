@@ -17,6 +17,8 @@ const FormPassword = ({ setIsConfirm }) => {
     },
   });
 
+  const { errors } = form.formState;
+
   const handleSubmit = (data) => {
     if (data.password >= 8) {
       setIsConfirm(true);
@@ -39,6 +41,7 @@ const FormPassword = ({ setIsConfirm }) => {
                 type="password"
                 value={field.value}
                 label={t('password')}
+                errors={errors.password}
                 disabled={false}
                 placeholder={t('placeholder.enterYourPassword')}
                 className="!h-50 bg-gray-80 !px-14 !py-18"
@@ -53,7 +56,7 @@ const FormPassword = ({ setIsConfirm }) => {
           type="submit"
           onClick={handleSubmit}
         >
-          {t('continue')}
+          {t('deleteAccount')}
         </Button>
       </form>
     </UIForm>

@@ -30,7 +30,7 @@ const RecordingOfTransferPage = async ({ params }) => {
                 {item.transactions.map((transaction) => {
                   return (
                     <Link
-                      href={`/recording-of-transfers/${transaction.id}`}
+                      href={`/transaction-record/${transaction.id}`}
                       key={transaction.id}
                     >
                       <div className="rounded-8 border border-gray-500 bg-white px-14 py-15.5">

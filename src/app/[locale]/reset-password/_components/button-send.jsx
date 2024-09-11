@@ -19,7 +19,7 @@ const ButtonSend = () => {
       className="mb-9 w-249 items-center justify-center"
       onClick={handleClick}
     >
-      {pathname === '/reset-password/resetting' ? t('resetting') : t('send')}
+      {pathname === '/reset-password/resetting' ? t('submit') : t('send')}
     </Button>
   );
 };

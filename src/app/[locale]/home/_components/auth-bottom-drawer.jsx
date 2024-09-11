@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Drawer, DrawerContent, DrawerFooter, Button } from '@/components';
 import { useAuth } from '@/hooks';
+import { cn } from '@/utils';
 
 const AuthBottomDrawer = () => {
   const [open, setIsOpen] = useState();
@@ -24,7 +25,9 @@ const AuthBottomDrawer = () => {
 
   return (
     <Drawer onClose={onCloseDrawer} open={open} dismissible={false}>
-      <DrawerContent className="mx-auto w-full max-w-md !rounded-none px-5">
+      <DrawerContent
+        className={cn('mx-auto w-full max-w-md !rounded-none px-5 h-111 py-8')}
+      >
         <div className="w-full text-center text-1422 font-medium">
           {t('youMustLoggedIn')}
         </div>

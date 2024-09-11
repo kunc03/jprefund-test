@@ -159,6 +159,7 @@ const remSize = {
   254: pxToEm(254),
   265: pxToEm(265),
   285: pxToEm(285),
+  292: pxToEm(292),
   300: pxToEm(300),
   301: pxToEm(301),
   309.65: pxToEm(309.65),

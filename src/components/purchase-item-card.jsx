@@ -5,7 +5,7 @@
 import { StatusContainer } from './status-container';
 import { StoreInformation } from './store-information';
 import React, { useEffect } from 'react';
-import { formatTimeOnly, formatNumber, cn } from '@/utils';
+import { cn, formatDateTime, formatNumberJpy } from '@/utils';
 import { usePathname, useRouter } from 'next/navigation';
 
 const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
@@ -14,7 +14,7 @@ const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
   let colorLabelContainer = '';
 
   switch (item.status) {
-    case 'remittanceProcedureCompleted':
+    case 'completedRemittance':
       colorLabelContainer = 'blue';
       break;
     case 'nonRefundable':
@@ -65,7 +65,7 @@ const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
           isAuth={isAuth}
         />
         <p className="!text-1322 font-medium text-gray">
-          {formatTimeOnly(item.date)}
+          {formatDateTime(item.date)}
         </p>
       </div>
       <div>
@@ -74,7 +74,7 @@ const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
             Total purchase price
           </span>
           <span className="!text-1322 font-medium text-gray-200">
-            {formatNumber(item.totalPurchasePrice, true)}
+            {formatNumberJpy(item.totalPurchasePrice, true)}
           </span>
         </div>
         <div className="flex w-full flex-row justify-between">
@@ -82,7 +82,7 @@ const PurchaseItemCard = ({ item, setIsUnKyc, isAuth }) => {
             Expected refund amount
           </span>
           <span className="!text-2022 font-bold text-red">
-            {formatNumber(item.expectedRefundAmount, true)}
+            {formatNumberJpy(item.expectedRefundAmount, true)}
           </span>
         </div>
       </div>

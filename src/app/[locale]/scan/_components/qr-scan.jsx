@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable no-alert */
 /* eslint-disable react-hooks/exhaustive-deps */

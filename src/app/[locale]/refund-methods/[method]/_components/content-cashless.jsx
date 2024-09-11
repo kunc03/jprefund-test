@@ -7,11 +7,12 @@ import {
   RadioGroup,
   FormField,
   Button,
+  Header,
 } from '@/components';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cashLessSchema } from '../_schemas';
 import { useRegistrationOptions } from '../../_hooks/use-registration-options';
 import { SuccessDialog } from './success-dialog';
@@ -35,6 +36,7 @@ const ContentCashLess = () => {
   const { setData } = useRegistrationOptions();
   const router = useRouter();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isAllFieldsFilled, setIsAllFieldsFilled] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(cashLessSchema),
@@ -42,6 +44,14 @@ const ContentCashLess = () => {
       type: '',
     },
   });
+
+  useEffect(() => {
+    const isFilled = Object.values(form.getValues()).every(
+      (value) => value !== '',
+    );
+    setIsAllFieldsFilled(isFilled);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.watch()]);
 
   const handleSubmitClick = () => {
     formRef.current.dispatchEvent(
@@ -57,10 +67,14 @@ const ContentCashLess = () => {
 
   return (
     <>
+      <Header
+        hasBack
+        title={!isAllFieldsFilled ? t('addDigitalWallet') : t('title')}
+      />
       <div className="flex w-full grow flex-col items-center gap-145 px-29">
         <div className="mt-40 w-full">
           <Heading className="text-center text-1527 font-medium">
-            {t('chooseYourService')}
+            {t('selectYourOption')}
           </Heading>
           <UIForm {...form}>
             <form
@@ -100,12 +114,12 @@ const ContentCashLess = () => {
           onClick={handleSubmitClick}
           disabled={!form.formState.isValid}
         >
-          {t('registration')}
+          {t('add')}
         </Button>
       </div>
       <SuccessDialog
         isOpen={isSuccess}
-        type="cashLess"
+        type="digitalWallet"
         onHandleClose={() => router.push('/refund-methods')}
       />
     </>
