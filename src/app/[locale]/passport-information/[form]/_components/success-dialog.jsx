@@ -19,17 +19,6 @@ const SuccessDialog = ({ isOpen, form }) => {
   const [open, setOpen] = useState();
   const router = useRouter();
 
-  // useEffect(() => {
-  //   let timer;
-  //   if (open) {
-  //     timer = setTimeout(() => {
-  //       setOpen(false);
-  //     }, 2000);
-  //   }
-
-  //   return () => clearTimeout(timer);
-  // }, [open]);
-
   useEffect(() => {
     if (isOpen) {
       setOpen(true);
@@ -52,7 +41,7 @@ const SuccessDialog = ({ isOpen, form }) => {
 
   return (
     <AlertDialog open={open} className="">
-      <AlertDialogContent className={cn('flex flex-col justify-between w-324')}>
+      <AlertDialogContent className={cn('flex flex-col justify-between w-334')}>
         <div className={cn('flex flex-col items-start')}>
           <AlertDialogHeader>
             <AlertDialogTitle
@@ -62,9 +51,12 @@ const SuccessDialog = ({ isOpen, form }) => {
               className={cn('font-medium text-gray flex flex-col')}
             >
               {notes.map((note) => (
-                <p className={cn('text-wrap text-center')} key={note}>
+                <span
+                  className={cn('text-wrap text-center text-1626')}
+                  key={note}
+                >
                   {t(note)}
-                </p>
+                </span>
               ))}
             </AlertDialogDescription>
           </AlertDialogHeader>

@@ -11,7 +11,7 @@ const StatusForm = ({ form }) => {
 
   useEffect(() => {
     if (form === 'not-complete' || form === 'form') {
-      setBgColor('bg-gray');
+      setBgColor('bg-gray-110');
       setTextStatus(t('notComplete'));
     } else if (form === 'pending') {
       setBgColor('bg-orange');

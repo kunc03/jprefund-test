@@ -32,8 +32,8 @@ const Form = ({ form }) => {
   const [isForm, setIsForm] = useState({
     firstName: isFirstName,
     lastName: isLastName,
-    passportNumber: isPassportNumber,
     birthday: defaultValue.birthday,
+    passportNumber: isPassportNumber,
     dateOfExpiry: defaultValue.dateOfExpiry,
     passportIssuingCountry: defaultValue.passportIssuingCountry,
     countryOfIssueCode: defaultValue.countryOfIssueCode,
