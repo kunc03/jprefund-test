@@ -59,27 +59,13 @@ const AdvancePreparation = () => {
           key="content"
         >
           <p className="text-center text-1522 font-medium">
-            {passportRegis && contactInformation && refundMethod ? (
-              <>
-                {t.rich('informationComplete', {
-                  threeSteps: (
-                    <span className="text-red" key="span">
-                      {t('threeSteps')}
-                    </span>
-                  ),
-                })}
-              </>
-            ) : (
-              <>
-                {t.rich('information', {
-                  threeSteps: (
-                    <span className="text-red" key="span">
-                      {t('threeSteps')}
-                    </span>
-                  ),
-                })}
-              </>
-            )}
+            {t.rich('informationComplete', {
+              threeSteps: (
+                <span className="text-red" key="span">
+                  {t('threeSteps')}
+                </span>
+              ),
+            })}
           </p>
 
           <div
@@ -109,7 +95,7 @@ const AdvancePreparation = () => {
                   height={26}
                   src="/icons/checked.svg"
                   width={26}
-                  className="absolute left-1"
+                  className="absolute left-2"
                 />
               )}
               <p className={cn('text-1515')}>{t('passportRegistration')}</p>
@@ -143,7 +129,7 @@ const AdvancePreparation = () => {
                   height={26}
                   src="/icons/checked.svg"
                   width={26}
-                  className="absolute left-1"
+                  className="absolute left-2"
                 />
               )}
               <p className={cn('text-1515')}>{t('contactInformation')}</p>
@@ -177,7 +163,7 @@ const AdvancePreparation = () => {
                   height={26}
                   src="/icons/checked.svg"
                   width={26}
-                  className="absolute left-1"
+                  className="absolute left-2"
                 />
               )}
               <p className={cn('text-1515')}>{t('refundMethod')}</p>
