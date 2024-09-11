@@ -48,9 +48,7 @@ const AdvancePreparation = () => {
               className="w-249 text-center !text-2021 font-bold text-red"
               key="thePrerequisitesData"
             >
-              {passportRegis && contactInformation && refundMethod
-                ? t('necessaryAdvancePreparations')
-                : t('thePrerequisitesData')}
+              {t('necessaryAdvancePreparations')}
             </p>
           </DialogTitle>
         </DialogHeader>
