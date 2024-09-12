@@ -71,6 +71,7 @@ const TakePortrait = ({ isClick, form }) => {
         const stream = videoEl.current.srcObject;
         const tracks = stream.getTracks();
         tracks.forEach((track) => track.stop());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         videoEl.current.srcObject = null;
       }
     };
@@ -81,6 +82,7 @@ const TakePortrait = ({ isClick, form }) => {
     if (isClick) {
       takePicture();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isClick]);
 
   console.log('capturedImage:', capturedImage);
