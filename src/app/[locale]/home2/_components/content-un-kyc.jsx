@@ -8,7 +8,7 @@ import { useActiveSummary } from '../../home/_hooks/use-active-summary';
 import { AdvancePreparation } from '../../home/_components';
 
 const EmptyState = ({ t }) => (
-  <div className="mx-auto flex size-full grow flex-col gap-2  md:max-w-xs">
+  <div className="mx-auto flex size-full grow flex-col gap-2 md:max-w-xs">
     <div className="mt-14 flex shrink-0 flex-col items-center justify-center gap-2">
       <Heading className={cn('text-lg text-center font-bold small:text-1422')}>
         {t('noTaxExemptionRecordsSaved')}
@@ -28,10 +28,11 @@ const EmptyState = ({ t }) => (
 );
 
 const ContentUnKyc = ({ t, setIsAuth, isAuth }) => {
-  const { selectedData } = useActiveSummary();
-  const { selectedValue } = useActiveSummary();
+  const { selectedData, selectedValue } = useActiveSummary();
   const [isUnKyc, setIsUnKyc] = useState(null);
   const [resetUnKyc, setResetUnKyc] = useState(true);
+  const [showAuthDialog, setShowAuthDialog] = useState(true);
+  const [showUnKycDialog, setShowUnKycDialog] = useState(true);
 
   useEffect(() => {
     if (resetUnKyc && !isObjectEmpty(selectedValue)) {
@@ -43,47 +44,53 @@ const ContentUnKyc = ({ t, setIsAuth, isAuth }) => {
   useEffect(() => {
     if (isAuth) {
       setIsUnKyc(false);
+      setShowAuthDialog(false);
     }
   }, [isAuth]);
 
+  useEffect(() => {
+    if (isUnKyc && !isAuth) {
+      setShowUnKycDialog(true);
+    }
+  }, [isUnKyc, isAuth]);
+
+  const handleAuthClick = () => {
+    setIsAuth(true);
+    setShowAuthDialog(false);
+  };
+
   return (
     <>
-      {!isAuth && (
-        <div
-          className=""
-          onClick={() => setIsAuth(true)}
-          role="button"
-          aria-hidden="true"
-        >
+      {!isAuth && showAuthDialog && (
+        <div onClick={handleAuthClick} role="button" aria-hidden="true">
           <AdvancePreparation />
         </div>
       )}
 
       <section className="flex grow flex-col flex-wrap">
-        {isObjectEmpty(selectedData) && <EmptyState t={t} />}
-        {!isObjectEmpty(selectedData) && (
+        {isObjectEmpty(selectedData) ? (
+          <EmptyState t={t} />
+        ) : (
           <div
             className={cn(
               'flex max-h-[calc(100dvh-250px)] pb-2 flex-1 flex-col items-center overflow-y-auto',
             )}
           >
-            {Object.entries(selectedData).map(([date, items]) => {
-              return (
-                <PurchaseItemSection
-                  date={date}
-                  items={items}
-                  key={date}
-                  setIsUnKyc={setIsUnKyc}
-                  isAuth={isAuth}
-                />
-              );
-            })}
+            {Object.entries(selectedData).map(([date, items]) => (
+              <PurchaseItemSection
+                key={date}
+                date={date}
+                items={items}
+                setIsUnKyc={setIsUnKyc}
+                isAuth={isAuth}
+              />
+            ))}
           </div>
         )}
       </section>
       <DisabledDialog isOpen={isAuth} label="receiptHaveBeenAuthenticated" />
       <DisabledDialog
-        isOpen={isUnKyc && !isAuth}
+        isOpen={showUnKycDialog && isUnKyc && !isAuth}
         label="disableItemNotification"
       />
     </>
