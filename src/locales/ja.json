@@ -176,7 +176,7 @@
   "recordingOfTransfer": {
     "metaTitle": "転送の記録",
     "metaDescription": "転送ページの記録",
-    "title": "譲渡記録"
+    "title": "取引記録"
   },
   "refundStatus": {
     "metaTitle": "返金ステータス",
@@ -258,7 +258,7 @@
     "afterRegisteringYourPassport": "パスポート登録後かならず セルフィー写真で顔認証してください",
     "firstName": "ファーストネーム",
     "lastName": "ラストネーム",
-    "birthday": "誕生日",
+    "birthday": "生年月日",
     "passportNumber": "パスポート番号",
     "dateOfExpiry": "有効期限",
     "passportIssuingCountry": "パスポート発行国",

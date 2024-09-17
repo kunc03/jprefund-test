@@ -4,17 +4,22 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/utils';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const PassportScan = ({ isClick, form }) => {
   const videoEl = useRef(null);
   const canvasEl = useRef(null);
   const [capturedImage, setCapturedImage] = useState(null);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const retake = searchParams.get('retake') === 'true';
 
   const onCaptureSuccess = () => {
     if (form === 'passport') {
       router.push('/passport-information/form');
+    }
+    if (retake) {
+      router.back();
     }
   };
 
@@ -32,7 +37,7 @@ const PassportScan = ({ isClick, form }) => {
       );
       const image = canvasEl.current.toDataURL('image/png');
       setCapturedImage(image);
-      localStorage.setItem('IMAGE_PASSPORT', image);
+      sessionStorage.setItem('IMAGE_PASSPORT', image);
       onCaptureSuccess();
     }
   };
@@ -49,7 +54,9 @@ const PassportScan = ({ isClick, form }) => {
           }
 
           const stream = await navigator.mediaDevices.getUserMedia({
-            video: true,
+            video: {
+              facingMode: 'environment',
+            },
           });
           videoEl.current.srcObject = stream;
 

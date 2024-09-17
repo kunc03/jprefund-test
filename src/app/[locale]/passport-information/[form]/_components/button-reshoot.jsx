@@ -10,7 +10,7 @@ const ButtonReshoot = ({ path }) => {
   return (
     <div className="flex flex-col items-end">
       <Button
-        onClick={() => router.push(path)}
+        onClick={() => router.push(`${path}?retake=true`)}
         className={cn('bg-transparent text-red hover:bg-transparent p-0')}
       >
         {t('reshoot')}

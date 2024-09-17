@@ -193,7 +193,7 @@
     "afterRegisteringYourPassport": "After registering your passport, please take a selfie to verify your face.",
     "firstName": "First name",
     "lastName": "Last name",
-    "birthday": "Birthday",
+    "birthday": "Date of birth",
     "passportNumber": "Passport number",
     "dateOfExpiry": "Date of expiry",
     "passportIssuingCountry": "Passport issuing country",
@@ -272,7 +272,7 @@
   "recordingOfTransfer": {
     "metaTitle": "Recording Of Transfer",
     "metaDescription": "Recording Of Transfer page",
-    "title": "Transfer Record"
+    "title": "Transaction Record"
   },
   "faq": {
     "metaTitle": "FAQ",
