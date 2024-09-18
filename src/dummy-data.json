@@ -14,7 +14,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -77,7 +77,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -140,7 +140,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -203,7 +203,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -266,7 +266,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -327,7 +327,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -336,7 +336,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,
@@ -405,7 +405,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -414,7 +414,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,
@@ -483,7 +483,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -492,7 +492,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,
@@ -561,7 +561,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -570,7 +570,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,
@@ -639,7 +639,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -648,7 +648,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,
@@ -717,7 +717,7 @@
     "receiptData": [
       {
         "id": 1,
-        "status": "Approval",
+        "status": "Approved",
         "name": "Ultra Stretch Dry EX Full Zip Parka (Long Sleeve)",
         "qty": 1,
         "price": 1990,
@@ -726,7 +726,7 @@
       },
       {
         "id": 2,
-        "status": "Partial Approval",
+        "status": "Partially Approved",
         "name": "Suprima cotton pique socks",
         "qty": 3,
         "price": 390,

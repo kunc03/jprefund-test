@@ -3,12 +3,12 @@ import { cn } from '@/utils';
 
 const getStatusClasses = (status, remittance) => {
   switch (status) {
-    case 'Approval':
+    case 'Approved':
       if (remittance === 'remittanceProcedureCompleted') {
         return 'bg-blue text-white';
       }
       return 'bg-green text-white';
-    case 'Partial Approval':
+    case 'Partially Approved':
       return 'bg-transparent text-blue border-blue border';
     case 'Rejected':
       return 'bg-red-dark text-white';

@@ -41,14 +41,14 @@ const SuccessDialog = ({ isOpen, form }) => {
 
   return (
     <AlertDialog open={open} className="">
-      <AlertDialogContent className={cn('flex flex-col justify-between w-334')}>
+      <AlertDialogContent className={cn('flex flex-col justify-between w-353')}>
         <div className={cn('flex flex-col items-start')}>
           <AlertDialogHeader>
             <AlertDialogTitle
               className={cn('text-1826 font-medium text-gray')}
             />
             <AlertDialogDescription
-              className={cn('font-medium text-gray flex flex-col')}
+              className={cn('font-medium text-gray flex flex-col px-1')}
             >
               {notes.map((note) => (
                 <span

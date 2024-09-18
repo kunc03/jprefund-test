@@ -178,7 +178,7 @@
   "passportInformation": {
     "metaTitle": "Passport Information",
     "metaDescription": "Passport Information page",
-    "title": "Identity authentication",
+    "title": "Identity Authentication",
     "takePortrait": "Take a portrait",
     "takePortraitInstruction": "Taking a photo in a bright location with a simple background is recommended",
     "pleaseTakePhoto": "Please take a photo of your passport and register it. All information will be filled in automatically.",
@@ -193,7 +193,7 @@
     "afterRegisteringYourPassport": "After registering your passport, please take a selfie to verify your face.",
     "firstName": "First name",
     "lastName": "Last name",
-    "birthday": "Birthday",
+    "birthday": "Date of birth",
     "passportNumber": "Passport number",
     "dateOfExpiry": "Date of expiry",
     "passportIssuingCountry": "Passport issuing country",
@@ -244,7 +244,7 @@
   "contactDetails": {
     "metaTitle": "Contact information",
     "metaDescription": "Contact information page",
-    "title": "Contact information",
+    "title": "Contact Information",
     "contactInformation": "Contact information",
     "emailAddress": "Email address",
     "telephoneNumber": "Telephone number",
@@ -272,7 +272,7 @@
   "recordingOfTransfer": {
     "metaTitle": "Recording Of Transfer",
     "metaDescription": "Recording Of Transfer page",
-    "title": "Transfer Record"
+    "title": "Transaction Record"
   },
   "faq": {
     "metaTitle": "FAQ",
@@ -330,7 +330,7 @@
   "detail": {
     "metaTitle": "Purchase details",
     "metaDescription": "Purchase details page",
-    "title": "Purchase details",
+    "title": "Purchase Details",
     "purchaseDetails": "Purchase details",
     "receiptDetails": "Receipt details",
     "detailsClose": "Details close",

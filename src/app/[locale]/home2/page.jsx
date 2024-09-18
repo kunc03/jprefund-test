@@ -57,10 +57,10 @@ const HomePage = ({ searchParams }) => {
         </div>
         <ContentUnKyc isAuth={isAuth} setIsAuth={setIsAuth} t={t} />
         <ButtonCamera />
+        <AuthBottomDrawer />
       </div>
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />
       <FilterBottomDrawer />
-      <AuthBottomDrawer />
     </>
   );
 };
