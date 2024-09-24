@@ -104,7 +104,11 @@
     "preparationHasNotBeenCompleted": "Advance preparation is not complete",
     "prerequisitesData": "Complete the pre-requisites data",
     "noTaxExemptionRecordsSaved": "No tax exemption records saved",
-    "voucherQrCodePleaseScan": "Voucher QR code Please scan",
+    "voucherQrCodePleaseScan": {
+      "1": "Please scan the QR code/barcode on the receipt",
+      "2": "or",
+      "3": "Please manually enter the receipt date and amount."
+    },
     "checkReceipt": "Your Purchase Receipt",
     "purchaseHistoryHasBeenRegistered": "Purchase history has been registered",
     "passportRegistration": "Passport Registration",
@@ -156,7 +160,13 @@
     "receiptScan": "Receipt Scanning",
     "qrAlert": "If you cannot read the QR code Please enter the transaction number manually",
     "send": "Send",
-    "enterTransactionNumber": "Enter transaction number"
+    "enterTransactionNumber": "Enter transaction number",
+    "scanType": "QR code barcode",
+    "noCode": "If there is no code",
+    "manualInput": "Manually enter the receipt information",
+    "transactionDate": "Transaction Date",
+    "totalTransactionAmount": "Total Transaction Amount",
+    "submit": "Submit"
   },
   "passwordSetting": {
     "metaTitle": "Password Setting",

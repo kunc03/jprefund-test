@@ -1,6 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-unused-vars */
-
 'use client';
 
 import { useState } from 'react';
@@ -16,7 +13,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-const InputDate = ({
+const TransactionDate = ({
   label,
   onHandleSelected,
   selectedDate: propSelectedDate,
@@ -68,4 +65,4 @@ const InputDate = ({
   );
 };
 
-export { InputDate };
+export { TransactionDate };

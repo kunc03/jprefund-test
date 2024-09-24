@@ -4,11 +4,15 @@ import { Button, Input } from '@/components';
 import { cn } from '@/utils';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-
+import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
-const ButtonSend = () => {
+const ButtonSubmit = () => {
   const t = useTranslations('scan');
+
+  const searchParams = useSearchParams();
+  const checkreceipt = searchParams.get('checkreceipt');
+
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
@@ -33,8 +37,8 @@ const ButtonSend = () => {
       >
         <Link
           href={{
-            pathname: '/scan/receipt-information',
-            query: { checkreceipt: inputValue },
+            pathname: '/home',
+            query: { checkreceipt },
           }}
         >
           {t('send')}
@@ -44,4 +48,4 @@ const ButtonSend = () => {
   );
 };
 
-export { ButtonSend };
+export { ButtonSubmit };

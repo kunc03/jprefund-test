@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server';
 import { Header, Heading } from '@/components';
 
 import {
-  ButtonCamera,
   DetailBottomDrawer,
   SummaryCard,
   AdvancePreparation,
@@ -64,7 +63,6 @@ const HomePage = async ({ params, searchParams }) => {
         </div>
         <AdvancePreparation />
         <Content />
-        <ButtonCamera />
         <AuthBottomDrawer />
       </div>
       <DetailBottomDrawer isOpen={searchParams.checkreceipt} />

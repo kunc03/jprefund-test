@@ -101,7 +101,11 @@
     "preparationHasNotBeenCompleted": "事前準備が完了していません",
     "prerequisitesData": "前提条件データを完了する",
     "noTaxExemptionRecordsSaved": "免税記録が保存されていません",
-    "voucherQrCodePleaseScan": "バウチャーのQRコードを スキャンしてください",
+    "voucherQrCodePleaseScan": {
+      "1": "レシートの QR コード/バーコードをスキャンします",
+      "2": "または",
+      "3": "レシートの日付と金額を手動で入力します。"
+    },
     "checkReceipt": "購入時の領収書",
     "purchaseHistoryHasBeenRegistered": "購買履歴が登録できました",
     "passportRegistration": "パスポート登録",
@@ -154,7 +158,13 @@
     "receiptScan": "領収書スキャン",
     "qrAlert": "QRコードが読み取れない場合は 取引番号を手入力ください",
     "send": "送信",
-    "enterTransactionNumber": "取引番号を入力"
+    "enterTransactionNumber": "取引番号を入力",
+    "scanType": "QRコード バーコード",
+    "noCode": "コードがない場合",
+    "manualInput": "領収書情報を手動で入力する",
+    "transactionDate": "取引日",
+    "totalTransactionAmount": "総取引額",
+    "submit": "提出する"
   },
   "passwordSetting": {
     "metaTitle": "パスワード設定",
