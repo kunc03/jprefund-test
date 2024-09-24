@@ -15,6 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import Image from 'next/image';
 
 const InputDate = ({
   label,
@@ -44,7 +45,7 @@ const InputDate = ({
         <Button
           className={cn(
             'w-full rounded-6 justify-between text-1313 !py-6 px-10',
-            '!bg-white text-gray hover:!border-red border-gray-300 border  focus:!border-red overlay-none',
+            '!bg-white text-gray border-gray-300 border  focus:!border-red overlay-none',
           )}
         >
           {selectedDate ? (
@@ -52,7 +53,8 @@ const InputDate = ({
           ) : (
             <span className="font-medium text-gray-300">{label}</span>
           )}
-          <CalendarIcon size={24} className={cn('text-gray-105')} />
+          <Image src="/icons/date.svg" width={22} height={22} alt="date icon" />
+          {/* <CalendarIcon size={24} className={cn('text-gray-105')} /> */}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">

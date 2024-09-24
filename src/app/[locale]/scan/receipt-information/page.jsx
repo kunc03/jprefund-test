@@ -22,7 +22,7 @@ const ReceiptInformation = () => {
   }, [searchParams, router]);
 
   const handleBack = () => {
-    router.push('/scan');
+    router.back();
   };
 
   return (

@@ -54,7 +54,7 @@ const FormScan = ({ searchParams }) => {
 
   return (
     <div className={cn('flex flex-col gap-9 justify-center items-center')}>
-      <div className={cn('w-full flex flex-col gap-5')}>
+      <div className={cn('w-full flex flex-col gap-5 text-gray')}>
         <div className="flex flex-col gap-1">
           <Heading level={5} className="text-1422 font-medium">
             {t('transactionDate')}
@@ -72,10 +72,11 @@ const FormScan = ({ searchParams }) => {
         <InputForm
           t={t}
           label="totalTransactionAmount"
-          placeholder={t('totalTransactionAmount')}
+          // placeholder={t('totalTransactionAmount')}
           value={isForm.totalTransaction}
           onChange={handleTotalTransaction}
           type="text"
+          className={cn('text-2020 font-medium text-end')}
         />
       </div>
 
