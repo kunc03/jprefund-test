@@ -8,9 +8,8 @@ import { InputDate } from './_components/input-date';
 import { cn } from '@/utils';
 import Link from 'next/link';
 
-const FormScan = ({ searchParams }) => {
+const FormScan = () => {
   const t = useTranslations('scan');
-  const checkreceipt = searchParams.get('checkreceipt');
 
   const defaultValue = {
     transactionDate: '1997.9.25',
@@ -87,7 +86,7 @@ const FormScan = ({ searchParams }) => {
         <Link
           href={{
             pathname: '/home',
-            query: { checkreceipt },
+            query: { checkreceipt: 'submit' },
           }}
         >
           {t('submit')}

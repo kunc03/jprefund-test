@@ -33,7 +33,7 @@ const InputForm = ({
           className,
         )}
       />
-      <span className="absolute text-2020 font-medium bottom-[14.5px] right-3 text-gray">
+      <span className="absolute bottom-[14.5px] right-3 text-2020 font-medium text-gray">
         円
       </span>
     </div>

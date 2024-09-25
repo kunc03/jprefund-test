@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { Button } from './ui/button';
 
-const ButtonClose = ({ onHandleBack = null }) => {
+const ButtonClose = ({ onHandleBack = null, className }) => {
   const router = useRouter();
 
   const handleBack = () => {
@@ -24,7 +24,7 @@ const ButtonClose = ({ onHandleBack = null }) => {
         'absolute top-3 right-3 p-2 z-50 bg-transparent hover:bg-transparent',
       )}
     >
-      <X size={28} className="cursor-pointer text-white" />
+      <X size={28} className={`cursor-pointer text-white ${className}`} />
     </Button>
   );
 };
