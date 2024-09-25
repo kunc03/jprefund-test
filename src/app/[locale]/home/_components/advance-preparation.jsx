@@ -84,19 +84,25 @@ const AdvancePreparation = () => {
               className={cn(
                 'w-full gap-2 hover:bg-transparent hover:text-red relative',
                 passportRegis &&
-                  '!flex items-center hover:bg-red hover:text-white',
+                  '!flex items-center hover:bg-red hover:text-white ',
               )}
             >
-              {passportRegis && (
-                <Image
-                  alt="check"
-                  height={26}
-                  src="/icons/checked.svg"
-                  width={26}
-                  className="absolute left-2"
-                />
+              {passportRegis ? (
+                <>
+                  <Image
+                    alt="check"
+                    height={26}
+                    src="/icons/checked.svg"
+                    width={26}
+                    className="absolute left-2"
+                  />
+                  <p className={cn('text-1515 text-end pl-5')}>
+                    {t('passportRegistrationCompleted')}
+                  </p>
+                </>
+              ) : (
+                <p className={cn('text-1515')}>{t('passportRegistration')}</p>
               )}
-              <p className={cn('text-1515')}>{t('passportRegistration')}</p>
             </Button>
           </div>
 

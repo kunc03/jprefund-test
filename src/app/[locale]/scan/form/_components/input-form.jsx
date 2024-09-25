@@ -14,7 +14,6 @@ const InputForm = ({
   type,
   className,
   value,
-  symbol,
   onChange,
 }) => {
   return (
