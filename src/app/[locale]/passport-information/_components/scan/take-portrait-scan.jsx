@@ -108,7 +108,15 @@ const TakePortrait = ({ isClick, form }) => {
         />
       </div>
 
-      <video ref={videoEl} autoPlay playsInline className={cn('camera')} />
+      <video
+        ref={videoEl}
+        autoPlay
+        playsInline
+        className={cn('camera')}
+        style={{
+          transform: 'scaleX(-1)',
+        }}
+      />
 
       {/* Canvas to capture and display the image */}
       <canvas ref={canvasEl} style={{ display: 'none' }} />
