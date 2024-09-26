@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import { QrScan, ScanCamera, ScanType } from './_components';
-import { ButtonClose } from '@/components';
+import { QrScan, ScanType } from './_components';
 
 export const generateMetadata = async ({ params }) => {
   const { locale } = params;

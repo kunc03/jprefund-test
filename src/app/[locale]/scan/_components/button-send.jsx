@@ -33,8 +33,10 @@ const ButtonSend = () => {
       >
         <Link
           href={{
-            pathname: '/scan/receipt-information',
-            query: { checkreceipt: inputValue },
+            pathname: '/home',
+            query: {
+              checkreceipt: inputValue,
+            },
           }}
         >
           {t('send')}

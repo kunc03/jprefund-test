@@ -86,7 +86,9 @@ const FormScan = () => {
         <Link
           href={{
             pathname: '/home',
-            query: { checkreceipt: 'submit' },
+            query: {
+              checkreceipt: isForm.transactionDate + isForm.totalTransaction,
+            },
           }}
         >
           {t('submit')}
