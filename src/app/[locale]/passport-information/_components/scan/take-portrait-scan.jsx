@@ -28,13 +28,17 @@ const TakePortrait = ({ isClick, form }) => {
       const context = canvasEl.current.getContext('2d');
       canvasEl.current.width = videoEl.current.videoWidth;
       canvasEl.current.height = videoEl.current.videoHeight;
+
+      context.save();
+      context.scale(-1, 1); // Membalikkan pada sumbu X
       context.drawImage(
         videoEl.current,
-        0,
+        -canvasEl.current.width, // Posisi X diatur agar gambar tidak terpotong
         0,
         canvasEl.current.width,
         canvasEl.current.height,
       );
+
       const image = canvasEl.current.toDataURL('image/png');
       setCapturedImage(image);
       sessionStorage.setItem('IMAGE_PORTRAIT', image);
